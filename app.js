@@ -25,11 +25,11 @@
 
   // ---------- Devoirs : statut « rendu » ----------
   const dueId = (d) => d.id || (d.matiere + '|' + d.titre);
-  function isDone(d) { const m = store.get('rendus', {}); return dueId(d) in m ? m[dueId(d)] : !!d.rendu; }
-  function setDone(d, v) { const m = store.get('rendus', {}); m[dueId(d)] = v; store.set('rendus', m); }
+  function isDone(d) { return !!d.rendu; }
   const needsAction = (d) => d.type !== 'Info' && !isDone(d);
   function urgent() { return D.devoirs.filter((d) => needsAction(d) && hoursLeft(d.date) > 0 && hoursLeft(d.date) <= 24); }
 
+  const SUBJ = (m) => m ? `<b class="sname" style="color:${m.couleur}">${esc(m.nom)}</b>` : '';
   // ---------- Coque (en-tête + barre du bas) ----------
   function shell(title, opts = {}) {
     document.title = title + ' · Mes Cours';
@@ -43,11 +43,11 @@
     const nb = D.devoirs.filter((d) => needsAction(d) && hoursLeft(d.date) > 0 && daysLeft(d.date) <= 7).length;
     document.body.insertAdjacentHTML('beforeend', `
       <nav class="tabbar">
-        <a href="index.html" class="${tab === 'home' ? 'on' : ''}"><span>🏠</span>Accueil</a>
-        <a href="edt.html" class="${tab === 'edt' ? 'on' : ''}"><span>🗓️</span>Planning</a>
-        <a href="devoirs.html" class="${tab === 'dev' ? 'on' : ''}"><span>📝${nb ? `<i class="dot">${nb}</i>` : ''}</span>Devoirs</a>
-        <a href="notes.html" class="${tab === 'notes' ? 'on' : ''}"><span>🗒️</span>Notes</a>
-        <a href="vocab.html" class="${tab === 'voc' ? 'on' : ''}"><span>🔤</span>Lexique</a>
+        <a href="index.html" class="${tab === 'home' ? 'on' : ''}"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>Accueil</a>
+        <a href="edt.html" class="${tab === 'edt' ? 'on' : ''}"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span>Planning</a>
+        <a href="devoirs.html" class="${tab === 'dev' ? 'on' : ''}"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6M8 3h8v3H8z"/><rect x="5" y="5" width="14" height="16" rx="2"/><path d="M9 12l2 2 4-4"/></svg>${nb ? `<i class="dot">${nb}</i>` : ''}</span>Devoirs</a>
+        <a href="notes.html" class="${tab === 'notes' ? 'on' : ''}"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12l-4 4H4z"/><path d="M16 20v-4h4M8 9h8M8 13h5"/></svg></span>Notes</a>
+        <a href="vocab.html" class="${tab === 'voc' ? 'on' : ''}"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19l4-12 4 12M5.5 15h5M15 9h5l-5 10h5"/></svg></span>Lexique</a>
       </nav>`);
   }
 
@@ -64,7 +64,7 @@
   function urgentBanner() {
     const u = urgent();
     if (!u.length) return '';
-    return `<div class="alert">⏰ <div><b>À rendre dans moins de 24 h !</b>${u.map((d) => `<div>${D.matieres[d.matiere]?.icone || ''} ${esc(d.titre)} — ${new Date(d.date).toLocaleString('fr-FR', { weekday: 'short', hour: '2-digit', minute: '2-digit' })}</div>`).join('')}</div></div>`;
+    return `<div class="alert"><div><b>À rendre dans moins de 24 h !</b>${u.map((d) => `<div>${SUBJ(D.matieres[d.matiere])} — ${esc(d.titre)} — ${new Date(d.date).toLocaleString('fr-FR', { weekday: 'short', hour: '2-digit', minute: '2-digit' })}</div>`).join('')}</div></div>`;
   }
   function notifyUrgent() {
     if (!('Notification' in window) || Notification.permission !== 'granted') return;
@@ -73,17 +73,17 @@
       if (sent[dueId(d)]) return;
       const body = `${D.matieres[d.matiere]?.nom || ''} — à rendre le ${new Date(d.date).toLocaleString('fr-FR', { weekday: 'long', hour: '2-digit', minute: '2-digit' })}`;
       const show = () => navigator.serviceWorker && navigator.serviceWorker.ready
-        ? navigator.serviceWorker.ready.then((r) => r.showNotification('⏰ ' + d.titre, { body, icon: 'icon-192.png', tag: dueId(d) }))
-        : new Notification('⏰ ' + d.titre, { body, icon: 'icon-192.png' });
+        ? navigator.serviceWorker.ready.then((r) => r.showNotification('Rappel : ' + d.titre, { body, icon: 'icon-192.png', tag: dueId(d) }))
+        : new Notification('Rappel : ' + d.titre, { body, icon: 'icon-192.png' });
       try { show(); sent[dueId(d)] = Date.now(); } catch (e) {}
     });
     store.set('notifEnvoyees', sent);
   }
   function notifButton() {
-    if (!('Notification' in window)) return '<div class="hint">ℹ️ Sur iPhone, ajoute d\'abord l\'app à l\'écran d\'accueil pour pouvoir activer les notifications.</div>';
-    if (Notification.permission === 'granted') return '<div class="hint">🔔 Notifications activées : l\'app te prévient 24 h avant chaque devoir pas encore rendu (quand tu l\'ouvres), et Claude t\'envoie aussi un rappel chaque matin.</div>';
-    if (Notification.permission === 'denied') return '<div class="hint">🔕 Notifications bloquées dans les réglages du navigateur.</div>';
-    return '<button class="btn" id="notifBtn">🔔 Activer les rappels 24 h avant</button>';
+    if (!('Notification' in window)) return '<div class="hint">Sur iPhone, ajoute d\'abord l\'app à l\'écran d\'accueil pour pouvoir activer les notifications.</div>';
+    if (Notification.permission === 'granted') return '<div class="hint">Rappels activés : l\'app te prévient 24 h avant chaque devoir pas encore rendu (quand tu l\'ouvres), et Claude t\'envoie aussi un rappel chaque matin.</div>';
+    if (Notification.permission === 'denied') return '<div class="hint">Notifications bloquées dans les réglages du navigateur.</div>';
+    return '<button class="btn" id="notifBtn">Activer les rappels 24 h avant</button>';
   }
   function bindNotif() {
     const b = $('#notifBtn'); if (!b) return;
@@ -97,10 +97,10 @@
     const dt = new Date(d.date);
     const done = isDone(d), past = h < 0, info = d.type === 'Info';
     let badge;
-    if (done) badge = '<span class="pill ok">✅ Rendu</span>';
-    else if (info) badge = '<span class="pill">ℹ️ Info</span>';
+    if (done) badge = '<span class="pill ok">Rendu</span>';
+    else if (info) badge = '<span class="pill">Info</span>';
     else if (past) badge = '<span class="pill warn">En retard / passé</span>';
-    else if (h <= 24) badge = '<span class="pill hot">⏰ Moins de 24 h</span>';
+    else if (h <= 24) badge = '<span class="pill hot">Moins de 24 h</span>';
     else if (left <= 7) badge = `<span class="pill warn">J-${left}</span>`;
     else badge = `<span class="pill">dans ${left} j</span>`;
     const url = d.url || (m && m.bb ? `https://blackboard.soton.ac.uk/ultra/courses/${m.bb}/outline` : '#');
@@ -108,17 +108,11 @@
       <a class="due-main" href="${url}" target="_blank" rel="noopener">
         <div class="d"><b>${dt.getDate()}</b><small>${dt.toLocaleDateString('fr-FR', { month: 'short' })}</small></div>
         <div><div class="t">${esc(d.titre)} <span class="ext">↗</span></div>
-        <div class="s">${m ? m.icone + ' ' + esc(m.nom) + ' · ' : ''}${esc(d.type)} · ${badge}</div>
+        <div class="s">${m ? SUBJ(m) + ' · ' : ''}${esc(d.type)} · ${badge}</div>
         ${d.details ? `<div class="s" style="margin-top:4px">${d.details}</div>` : ''}</div></a>
-      ${info ? '' : `<button class="check ${done ? 'on' : ''}" data-due="${esc(dueId(d))}" aria-label="Marquer comme rendu">${done ? '✓' : ''}</button>`}
     </div>`;
   }
-  function bindDue(rerender) {
-    document.querySelectorAll('.check[data-due]').forEach((b) => b.onclick = () => {
-      const d = D.devoirs.find((x) => dueId(x) === b.dataset.due);
-      setDone(d, !isDone(d)); rerender();
-    });
-  }
+  function bindDue() {}
   function upcoming(filter) {
     return D.devoirs.filter((d) => (!filter || d.matiere === filter)).sort((a, b) => new Date(a.date) - new Date(b.date));
   }
@@ -131,16 +125,16 @@
     const c = m ? m.couleur : '#b9a99b';
     const g = s.groupes ? ' · Groupe ' + s.groupes.join('/') : '';
     return `<div class="slot" style="--c:${c}"><div class="h">${s.debut}<small>${s.fin}</small></div>
-      <div><div class="t">${m ? m.icone + ' ' : ''}${esc(s.titre)}</div><div class="s">${esc(s.type)} · ${esc(s.salle)} · ${esc(s.prof)}${g}</div></div></div>`;
+      <div><div class="t">${esc(s.titre)}</div><div class="s">${esc(s.type)} · ${esc(s.salle)} · ${esc(s.prof)}${g}</div></div></div>`;
   }
 
   // Sections d'un cours (chacune sur sa propre page)
   const SECTIONS = [
-    { id: 'en', ic: '🇬🇧', nom: 'Cours en anglais', sub: 'Le cours détaillé, comme sur Blackboard' },
-    { id: 'fr', ic: '🇫🇷', nom: 'Cours en français', sub: 'Expliqué simplement, avec des exemples concrets' },
-    { id: 'vocab', ic: '🔤', nom: 'Mots à connaître', sub: 'Vocabulaire scientifique anglais → français' },
+    { id: 'en', ic: 'EN', nom: 'Cours en anglais', sub: 'Le cours détaillé, comme sur Blackboard' },
+    { id: 'fr', ic: 'FR', nom: 'Cours en français', sub: 'Expliqué simplement, avec des exemples concrets' },
+    { id: 'vocab', ic: 'Aa', nom: 'Mots à connaître', sub: 'Vocabulaire scientifique anglais → français' },
     { id: 'formules', ic: '∑', nom: 'Formules', sub: 'Toutes les formules de la semaine' },
-    { id: 'exos', ic: '✏️', nom: 'Exercices', sub: 'Blackboard + bonus, avec corrections' }
+    { id: 'exos', ic: '✎', nom: 'Exercices', sub: 'Blackboard + bonus, avec corrections' }
   ];
 
   // ---------- Pages ----------
@@ -161,16 +155,16 @@
 
         <h2 class="sec">Mes matières</h2>
         <div class="grid">${ids.map((id) => { const m = D.matieres[id]; const n = Object.keys(m.semaines).length;
-          return `<a class="subj" style="--c:${m.couleur}" href="matiere.html?m=${id}"><div class="ico">${m.icone}</div>
+          return `<a class="subj" style="--c:${m.couleur}" href="matiere.html?m=${id}"><div class="ico">${id.toUpperCase()}</div>
             <div class="n">${esc(m.nom)}</div><div class="c">${m.code} · ${n} semaine${n > 1 ? 's' : ''}</div></a>`; }).join('')}</div>
 
         <h2 class="sec">Aujourd'hui${group ? ' · Groupe ' + group : ''}</h2>
-        <div>${dow > 4 ? '<div class="card muted">Week-end, pas de cours 🎉</div>'
+        <div>${dow > 4 ? '<div class="card muted">Week-end, pas de cours.</div>'
           : today.length ? today.map(slotHTML).join('') : '<div class="card muted">Rien de prévu.</div>'}
-          ${group ? '' : '<div class="card muted" style="font-size:14px">👉 Choisis ton groupe dans <a href="edt.html"><b>Planning</b></a> pour ne voir que tes cours.</div>'}</div>
+          ${group ? '' : '<div class="card muted" style="font-size:14px">Choisis ton groupe dans <a href="edt.html"><b>Planning</b></a> pour ne voir que tes cours.</div>'}</div>
 
         <h2 class="sec">Prochains devoirs</h2>
-        <div class="card">${next.length ? next.map(dueItem).join('') : '<div class="muted">Rien à rendre pour l\'instant 🎉</div>'}
+        <div class="card">${next.length ? next.map(dueItem).join('') : '<div class="muted">Rien à rendre pour l\'instant.</div>'}
           <a href="devoirs.html" class="more">Tout voir ›</a></div>
         ${notifButton()}`;
       bindDue(draw); bindNotif();
@@ -195,7 +189,7 @@
           : `<span class="chip off">S${n}</span>`).join('')}</div>
 
         <h2 class="sec">Devoirs — semaine ${sel}</h2>
-        <div class="card">${dues.length ? dues.map(dueItem).join('') : '<div class="muted">✅ Rien à rendre cette semaine.</div>'}</div>
+        <div class="card">${dues.length ? dues.map(dueItem).join('') : '<div class="muted">Rien à rendre cette semaine.</div>'}</div>
 
         <h2 class="sec">Cours de la semaine ${sel}</h2>
         ${w ? `<a class="card lessoncard" href="cours.html?m=${id}&w=${sel}" style="--c:${m.couleur}">
@@ -226,9 +220,9 @@
         ${w.resume ? `<p style="font-size:14px;margin-top:8px">${w.resume}</p>` : ''}</div>
       <div class="sections">${SECTIONS.map((s) => `<a class="secbtn" style="--c:${m.couleur}" href="section.html?m=${id}&w=${n}&s=${s.id}">
         <div class="ic">${s.ic}</div><div><div class="t">${s.nom}</div><div class="s">${s.sub}${count[s.id] ? ' · ' + count[s.id] : ''}</div></div><span class="chev">›</span></a>`).join('')}
-        <a class="secbtn" style="--c:${m.couleur}" href="notes.html?m=${id}&w=${n}"><div class="ic">🗒️</div><div><div class="t">Mes notes</div>
+        <a class="secbtn" style="--c:${m.couleur}" href="notes.html?m=${id}&w=${n}"><div class="ic">✎</div><div><div class="t">Mes notes</div>
         <div class="s">${nNotes ? nNotes + ' note' + (nNotes > 1 ? 's' : '') + ' pour ce cours' : 'Ajouter une note ou un « à réviser »'}</div></div><span class="chev">›</span></a></div>
-      ${w.sources ? `<div class="src">📄 Source : ${w.sources}</div>` : ''}
+      ${w.sources ? `<div class="src">Source : ${w.sources}</div>` : ''}
       <div class="pager">
         ${m.semaines[n - 1] ? `<a class="card" href="cours.html?m=${id}&w=${n - 1}">‹ Semaine ${n - 1}</a>` : '<span></span>'}
         ${m.semaines[n + 1] ? `<a class="card" href="cours.html?m=${id}&w=${n + 1}">Semaine ${n + 1} ›</a>` : '<span></span>'}
@@ -241,21 +235,21 @@
     const m = D.matieres[id]; const w = m && m.semaines[n]; const k = SECTIONS.findIndex((s) => s.id === sid);
     if (!w || k < 0) { location.href = 'index.html'; return; }
     const S = SECTIONS[k];
-    shell(`${S.ic} ${S.nom}`, { back: `cours.html?m=${id}&w=${n}`, color: m.couleur, sub: `${m.nom} · Semaine ${n} — ${w.titre}` });
+    shell(S.nom, { back: `cours.html?m=${id}&w=${n}`, color: m.couleur, sub: `${m.nom} · Semaine ${n} — ${w.titre}` });
     let body = '';
     if (sid === 'en') body = `<div class="card lesson" style="--c:${m.couleur}">${w.en}</div>`;
     if (sid === 'fr') body = `<div class="card lesson" style="--c:${m.couleur}">${w.fr}</div>`;
     if (sid === 'vocab') body = `<div class="card vocab">${w.vocab.map((v) => `<div class="v"><div class="e">${esc(v[0])}</div><div class="f">${esc(v[1])}${v[2] ? `<span class="x">${esc(v[2])}</span>` : ''}</div></div>`).join('')}</div>`;
     if (sid === 'formules') body = `<div class="card">${w.formules.length ? w.formules.map((f) => `<div class="formula"><div class="nm">${f.nom}</div><div class="tex">$$${f.tex}$$</div>${f.why ? `<div class="why">${f.why}</div>` : ''}</div>`).join('') : '<div class="muted">Pas de formule cette semaine.</div>'}</div>`;
     if (sid === 'exos') body = `<div class="card">${w.exos.map((e, i) => `<div class="exo"><div class="top2"><span class="num">${i + 1}.</span>
-        <span class="pill ${e.src === 'Blackboard' ? 'ok' : 'bonus'}">${e.src === 'Blackboard' ? '📘 Blackboard' : '✨ Bonus'}</span>
+        <span class="pill ${e.src === 'Blackboard' ? 'ok' : 'bonus'}">${e.src === 'Blackboard' ? 'Blackboard' : 'Bonus'}</span>
         ${e.niveau ? `<span class="pill">${'★'.repeat(e.niveau)}</span>` : ''}</div>
-        <div class="q">${e.en}</div><div class="qfr">🇫🇷 ${e.fr}</div>
+        <div class="q">${e.en}</div><div class="qfr">FR : ${e.fr}</div>
         ${e.sol ? `<details><summary>Voir la correction</summary><div class="sol">${e.sol}</div></details>` : ''}</div>`).join('')}</div>`;
     const prev = SECTIONS[k - 1], next = SECTIONS[k + 1];
     $('#app').innerHTML = body + `<div class="pager">
-      ${prev ? `<a class="card" href="section.html?m=${id}&w=${n}&s=${prev.id}">‹ ${prev.ic} ${prev.nom}</a>` : `<a class="card" href="cours.html?m=${id}&w=${n}">‹ Sommaire</a>`}
-      ${next ? `<a class="card" href="section.html?m=${id}&w=${n}&s=${next.id}">${next.ic} ${next.nom} ›</a>` : `<a class="card" href="notes.html?m=${id}&w=${n}">🗒️ Mes notes ›</a>`}
+      ${prev ? `<a class="card" href="section.html?m=${id}&w=${n}&s=${prev.id}">‹ ${prev.nom}</a>` : `<a class="card" href="cours.html?m=${id}&w=${n}">‹ Sommaire</a>`}
+      ${next ? `<a class="card" href="section.html?m=${id}&w=${n}&s=${next.id}">${next.nom} ›</a>` : `<a class="card" href="notes.html?m=${id}&w=${n}">Mes notes ›</a>`}
     </div>`;
     window.scrollTo(0, 0);
   };
@@ -280,16 +274,16 @@
   };
 
   pages.devoirs = function () {
-    shell('Devoirs', { tab: 'dev', sub: 'Appuie sur un devoir pour l\'ouvrir sur Blackboard · ✓ = rendu' });
+    shell('Devoirs', { tab: 'dev', sub: 'Appuie sur un devoir pour l\'ouvrir sur Blackboard. Le statut « rendu » est vérifié sur Blackboard.' });
     const draw = () => {
       const all = upcoming();
       const todo = all.filter((d) => !isDone(d) && hoursLeft(d.date) > 0);
       const done = all.filter((d) => isDone(d));
       const past = all.filter((d) => !isDone(d) && hoursLeft(d.date) <= 0);
       $('#app').innerHTML = `${urgentBanner()}
-        <h2 class="sec">À faire</h2><div class="card">${todo.length ? todo.map(dueItem).join('') : '<div class="muted">Rien à faire 🎉</div>'}</div>
+        <h2 class="sec">À faire</h2><div class="card">${todo.length ? todo.map(dueItem).join('') : '<div class="muted">Rien à faire.</div>'}</div>
         ${past.length ? `<h2 class="sec">Date passée (pas marqué rendu)</h2><div class="card">${past.map(dueItem).join('')}</div>` : ''}
-        ${done.length ? `<h2 class="sec">✅ Rendus</h2><div class="card">${done.map(dueItem).join('')}</div>` : ''}
+        ${done.length ? `<h2 class="sec">Rendus</h2><div class="card">${done.map(dueItem).join('')}</div>` : ''}
         ${notifButton()}`;
       bindDue(draw); bindNotif();
     };
@@ -307,19 +301,19 @@
       const opts = Object.entries(D.matieres).map(([k, m]) => `<option value="${k}" ${k === (fm || '') ? 'selected' : ''}>${m.icone} ${m.nom}</option>`).join('');
       $('#app').innerHTML = `
         <div class="card noteform">
-          <select id="nm"><option value="">📌 Général</option>${opts}</select>
+          <select id="nm"><option value="">Général</option>${opts}</select>
           <input id="nt" placeholder="Titre (ex. : Revoir le discriminant)" maxlength="120">
           <textarea id="nx" rows="3" placeholder="Ta note…"></textarea>
-          <label class="tick"><input type="checkbox" id="nr" checked> 📌 À réviser</label>
+          <label class="tick"><input type="checkbox" id="nr" checked> À réviser</label>
           <button class="btn" id="nadd">Ajouter la note</button>
         </div>
-        <div class="chips">${[['tout', 'Toutes'], ['reviser', '📌 À réviser'], ...Object.entries(D.matieres).map(([k, m]) => [k, m.icone + ' ' + m.nom])]
+        <div class="chips">${[['tout', 'Toutes'], ['reviser', 'À réviser'], ...Object.entries(D.matieres).map(([k, m]) => [k, m.nom])]
           .map(([k, l]) => `<button class="chip ${filtre === k ? 'on' : ''}" data-f="${k}">${l}</button>`).join('')}</div>
         <div>${list.length ? list.map((x) => { const m = D.matieres[x.m];
           return `<div class="note ${x.fait ? 'fait' : ''}" style="--c:${m ? m.couleur : 'var(--accent)'}">
-            <div class="nh"><span class="pill">${m ? m.icone + ' ' + esc(m.nom) : '📌 Général'}${x.w ? ' · S' + x.w : ''}</span>
-            ${x.reviser ? `<button class="pill ${x.fait ? 'ok' : 'hot'}" data-done="${x.id}">${x.fait ? '✅ Révisé' : '📌 À réviser'}</button>` : ''}
-            <button class="del" data-del="${x.id}" aria-label="Supprimer">🗑️</button></div>
+            <div class="nh"><span class="pill">${m ? SUBJ(m) : '<b>Général</b>'}${x.w ? ' · S' + x.w : ''}</span>
+            ${x.reviser ? `<button class="pill ${x.fait ? 'ok' : 'hot'}" data-done="${x.id}">${x.fait ? 'Révisé' : 'À réviser'}</button>` : ''}
+            <button class="del" data-del="${x.id}" aria-label="Supprimer">Supprimer</button></div>
             ${x.titre ? `<div class="t">${esc(x.titre)}</div>` : ''}${x.texte ? `<div class="nx">${esc(x.texte).replace(/\n/g, '<br>')}</div>` : ''}
             <div class="s">${new Date(x.t).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}
             ${m && x.w ? ` · <a href="cours.html?m=${x.m}&w=${x.w}">ouvrir le cours ›</a>` : ''}</div></div>`; }).join('')
@@ -352,7 +346,7 @@
       <div class="card vocab" id="list"></div>`;
     const draw = () => { const t = norm($('#q').value.trim());
       const l = all.filter((v) => !t || norm(v.en + ' ' + v.fr).includes(t));
-      $('#list').innerHTML = l.length ? l.map((v) => `<div class="v"><div class="e">${esc(v.en)}<span class="x">${v.m.icone} ${esc(v.m.nom)} · S${v.n}</span></div><div class="f">${esc(v.fr)}</div></div>`).join('') : '<div class="muted">Aucun mot.</div>'; };
+      $('#list').innerHTML = l.length ? l.map((v) => `<div class="v"><div class="e">${esc(v.en)}<span class="x">${SUBJ(v.m)} · S${v.n}</span></div><div class="f">${esc(v.fr)}</div></div>`).join('') : '<div class="muted">Aucun mot.</div>'; };
     $('#q').oninput = draw; draw();
   };
 

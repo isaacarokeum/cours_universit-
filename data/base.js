@@ -37,7 +37,7 @@ window.DATA = {
   // ---------- Emploi du temps (semaine type, d'après « EFY – W1 ») ----------
   // jour : 0 = lundi … 4 = vendredi · groupes : null = tout le monde
   edtInfo: 'Semaine type · Campus de Malaisie',
-  edtNote: '📄 Source : emploi du temps EFY Semaine 1 et annonces Blackboard. ⚠️ Semaine 3 : le cours de Routes to Success passe au lundi 12 oct, 14h–15h (2R014). Pas de labo CA en semaine 2. Les cours d\'Electricity & Electronics ne sont pas affichés.',
+  edtNote: 'Source : emploi du temps EFY Semaine 1 et annonces Blackboard. Attention, semaine 3 : le cours de Routes to Success passe au lundi 12 oct, 14h–15h (2R014). Pas de labo CA en semaine 2. Les cours d\'Electricity & Electronics ne sont pas affichés.',
   edt: [
     { jour: 0, debut: '10:00', fin: '11:00', matiere: 'ms', titre: 'Mechanical Science', type: 'Cours magistral', salle: '2R014', prof: 'Beh', groupes: null },
     { jour: 0, debut: '11:00', fin: '13:00', matiere: 'ma', titre: 'Mathematics A', type: 'Cours magistral', salle: '2R014', prof: 'Lee', groupes: null },

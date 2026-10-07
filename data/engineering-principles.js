@@ -226,7 +226,7 @@ Somme = 0 → \(37{,}5c=18\,951\) → \(c\approx505\) J/(kg·K).</div>
       { src: 'Blackboard', niveau: 1, en: 'The bit of a soldering iron is 3.3 g of copper (c = 385). The element power is 45 W. How long to heat from 15 °C to 370 °C, with no losses?', fr: 'La panne d\'un fer à souder (3,3 g de cuivre) chauffée par 45 W : combien de temps de 15 à 370 °C ?',
         sol: '<p>Q = 0,0033 × 385 × 355 ≈ 451 J → t = 451/45 ≈ <b>10 s</b>.</p>' },
       { src: 'Blackboard', niveau: 3, en: '* Mr Brown boils water by shaking it in a flask: 0.5 L at 23 °C, the water falls 30 cm per shake, 30 shakes per minute. Neglecting losses, how long until it boils?', fr: '* M. Brown fait bouillir de l\'eau en la secouant dans un thermos (0,5 L à 23 °C, chute de 30 cm, 30 secousses/min). Combien de temps ?',
-        sol: '<p>Par secousse : mgh = 0,5 × 9,81 × 0,3 = 1,47 J → 44,1 J/min. Il faut 0,5 × 4190 × 77 = 161 315 J → 3654 min ≈ 61 h ≈ <b>2,5 jours</b>. 😄</p>' },
+        sol: '<p>Par secousse : mgh = 0,5 × 9,81 × 0,3 = 1,47 J → 44,1 J/min. Il faut 0,5 × 4190 × 77 = 161 315 J → 3654 min ≈ 61 h ≈ <b>2,5 jours</b>.</p>' },
       { src: 'Claude', niveau: 1, en: 'How much energy is needed to heat 250 g of water for tea from 20 °C to 95 °C? How long with a 1.5 kW kettle?', fr: 'Combien d\'énergie pour chauffer 250 g d\'eau de 20 à 95 °C ? Combien de temps avec une bouilloire de 1,5 kW ?',
         sol: '<p>Q = 0,25 × 4190 × 75 ≈ 78,6 kJ → t = 78 600/1500 ≈ <b>52 s</b>.</p>' },
       { src: 'Claude', niveau: 2, en: 'In a constant-flow experiment: 10 V, 2 A with 1.0 × 10⁻³ kg/s, and 15 V, 2.5 A with 2.0 × 10⁻³ kg/s, temperature rise 4.0 K in both cases. Find c and the rate of heat loss.', fr: 'Calorimétrie à débit constant : trouve c et les pertes.',
