@@ -26,7 +26,8 @@
   // ---------- Devoirs : statut « rendu » ----------
   const dueId = (d) => d.id || (d.matiere + '|' + d.titre);
   function isDone(d) { return !!d.rendu; }
-  const needsAction = (d) => d.type !== 'Info' && !isDone(d);
+  const PREP = (d) => d.type === 'Info' || d.type === 'TD à préparer';
+  const needsAction = (d) => !PREP(d) && !isDone(d);
   function urgent() { return D.devoirs.filter((d) => needsAction(d) && hoursLeft(d.date) > 0 && hoursLeft(d.date) <= 24); }
 
   const SUBJ = (m) => m ? `<b class="sname" style="color:${m.couleur}">${esc(m.nom)}</b>` : '';
@@ -95,10 +96,11 @@
     const m = D.matieres[d.matiere];
     const left = daysLeft(d.date), h = hoursLeft(d.date);
     const dt = new Date(d.date);
-    const done = isDone(d), past = h < 0, info = d.type === 'Info';
+    const done = isDone(d), past = h < 0, info = d.type === 'Info', prep = d.type === 'TD à préparer';
     let badge;
     if (done) badge = '<span class="pill ok">Rendu</span>';
     else if (info) badge = '<span class="pill">Info</span>';
+    else if (prep) badge = past ? '<span class="pill">Passé</span>' : '<span class="pill">À préparer, rien à rendre</span>';
     else if (past) badge = '<span class="pill warn">En retard / passé</span>';
     else if (h <= 24) badge = '<span class="pill hot">Moins de 24 h</span>';
     else if (left <= 7) badge = `<span class="pill warn">J-${left}</span>`;
