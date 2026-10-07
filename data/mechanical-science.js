@@ -7,7 +7,7 @@
     titre: 'Lecture 1 — Units and Dimensions',
     titreFr: 'Cours 1 — Unités et dimensions',
     resume: 'Les 7 grandeurs de base du SI, les préfixes, les dimensions (M, L, T) et comment vérifier qu\'une formule est cohérente.',
-    sources: 'MS overview + Lecture 1 slides (filled) + Worksheet 1 (Blackboard)',
+    sources: '2026-27 MS overview.pdf · MS L1 slides (filled) · Course notes L1.pdf · Worksheet 1 (Blackboard)',
     en: String.raw`
 <h4>Module overview</h4>
 <ul><li><b>Lecture</b> (2R014, all students together) + <b>tutorial</b> (4 groups — attend your group only) + 2 <b>labs</b> in Weeks 6 & 8 (marked in GENG0015 Coursework).</li>
@@ -43,6 +43,13 @@
 <h4>Dimensionless quantities</h4>
 <p>Some quantities have no dimension and no unit, e.g. <b>strain</b> = change of length ÷ original length, <b>Mach number</b> = speed of object ÷ speed of sound.</p>
 
+<h4>From the course notes (L1)</h4>
+<p>The SI system has four advantages: <b>uniformity</b> (the same unit for the same quantity in all branches, e.g. the watt for mechanical and electrical power), <b>coherence</b> (the product or ratio of basic units gives the unit of the result: joule = watt × second), <b>consistency</b> (one basic unit per quantity) and <b>manageability</b> (powers of 10). Supplementary dimensionless units: radian (plane angle) and steradian (solid angle).</p>
+<p><b>Area</b>: 1 m² = 100 dm² = 10 000 cm² = 10⁶ mm². <b>Volume</b>: 1 m³ = 1000 dm³ = 10⁶ cm³ = 10⁹ mm³; 1 dm³ = 1 litre, 1 cm³ = 1 ml. <b>Mass</b>: 1 tonne = 1 Mg = 1000 kg. <b>Density</b> (kg m⁻³): water ≈ 1000 kg m⁻³. When converting from large to small units, the number must get BIGGER.</p>
+<p><b>Speed</b> has no direction and is always positive; <b>velocity</b> has a direction and can be negative. <b>Acceleration</b> (m s⁻²) is the rate of change of velocity: final velocity = initial velocity + acceleration × time. The acceleration due to gravity is \(g\approx9.81\) m s⁻² (standard 9.80665), independent of mass.</p>
+<p><b>Force</b> = mass × acceleration, unit the newton (1 N = 1 kg m s⁻²). The <b>weight</b> of a body is the force \(mg\). <b>Mass</b> is the quantity of matter and is not affected by gravity; weight depends on gravity.</p>
+<div class="ex"><div class="lab">Course notes examples</div>
+1a: triangle, base 300 cm and height 700 cm → 3 m × 7 m / 2 = 10.5 m². · 1c: tank 4 × 3 × 2 m = 24 m³ = 24 000 litres. · 1d: steel block 200 × 100 × 60 mm, 9.42 kg → V = 0.0012 m³ → ρ = 7850 kg m⁻³. · 1g: 120 m s⁻¹ = 120 × 3600 / 1000 = 432 km h⁻¹. · 1h: 20 km h⁻¹ for 5 min → (20 000/3600) × 300 = 1667 m. · 1m: from 35 m s⁻¹ at −5 m s⁻², time to stop = 35/5 = 7 s.</div>
 <h4>Dimensional consistency</h4>
 <p>In a valid equation, every term must have the same dimension. (a) \(v=u+at\): \(v\) and \(u\) are L T⁻¹, \(at\) is (L T⁻²)(T) = L T⁻¹ → consistent. (b) \(F=ma^2\): F is M L T⁻², \(ma^2\) is M L² T⁻⁴ → the equation is wrong.</p>
 <p>But consistency is not proof: \(s=ut+at^2\) is dimensionally consistent but the correct equation is \(s=ut+\tfrac12at^2\). A dimension check is an <b>initial check</b> that can detect a wrong equation.</p>`,
@@ -71,6 +78,14 @@
 <p><b>Multiplier / diviser</b> : toujours possible, et ça crée une nouvelle grandeur. Force × distance = travail (N·m = J).</p>
 <p><b>Grandeurs sans dimension</b> : un rapport de deux grandeurs de même dimension. La déformation (strain) = allongement ÷ longueur initiale : m ÷ m, donc pas d'unité. Le nombre de Mach : un avion à Mach 2 va 2 fois plus vite que le son.</p>
 
+<h4>Masse ≠ poids</h4>
+<p>La <b>masse</b> (kg), c'est la quantité de matière : la même sur Terre et sur la Lune. Le <b>poids</b>, c'est une <b>force</b> (en newtons) : \(P=mg\), avec \(g\approx9{,}81\) m/s². Un élève de 60 kg pèse 60 × 9,81 ≈ 589 N sur Terre, mais seulement ≈ 97 N sur la Lune (\(g\approx1{,}6\)). Sa masse reste 60 kg.</p>
+<div class="ex"><div class="lab">Exemples des notes de cours</div>
+• Une cuve de 4 m × 3 m × 2 m = 24 m³ = <b>24 000 litres</b> (1 m³ = 1000 L).<br>
+• Un bloc d'acier de 200 × 100 × 60 mm pèse 9,42 kg : V = 0,2 × 0,1 × 0,06 = 0,0012 m³ → ρ = 9,42 / 0,0012 = <b>7850 kg/m³</b>.<br>
+• Un train à 120 m/s : 120 × 3,6 = <b>432 km/h</b>.<br>
+• Une voiture à 20 km/h pendant 5 min : convertis tout en SI d'abord : 5,56 m/s × 300 s ≈ <b>1667 m</b>.</div>
+<div class="tip"><div class="lab">Astuce des notes</div>Quand tu passes d'une grande unité à une petite (m → mm), le nombre doit <b>grossir</b>. Dans l'autre sens, il doit <b>diminuer</b>.</div>
 <h4>Vérifier une formule avec les dimensions</h4>
 <p>Dans une formule juste, <b>tous les termes ont la même dimension</b>. C'est un super réflexe à l'examen pour repérer une erreur.</p>
 <div class="ex"><div class="lab">Exemple</div>
@@ -78,6 +93,7 @@
 \(F=ma^2\) : \([F]=\) M L T⁻² mais \([ma^2]=\) M L² T⁻⁴ ✗ → formule fausse.</div>
 <div class="tip"><div class="lab">Limite</div>Une formule cohérente n'est pas forcément juste : \(s=ut+at^2\) est cohérente mais la bonne formule est \(s=ut+\tfrac12at^2\). Les dimensions ne voient pas les nombres comme ½ ou 2π.</div>`,
     vocab: [
+      ['weight', 'poids (une force, en N)'], ['acceleration due to gravity (g)', 'accélération de la pesanteur'], ['litre / millilitre', 'litre / millilitre'], ['tonne', 'tonne (1000 kg)'],
       ['quantity', 'grandeur'], ['unit', 'unité'], ['dimension', 'dimension'],
       ['base / fundamental quantity', 'grandeur de base / fondamentale'], ['derived quantity', 'grandeur dérivée'],
       ['length', 'longueur'], ['mass', 'masse'], ['time', 'temps'],
@@ -107,6 +123,12 @@
         sol: String.raw`<p>3 L = 3 dm³ = 3 × 10⁶ mm³. Côté = \(\sqrt[3]{3\times10^6}\approx\) <b>144 mm</b>.</p>` },
       { src: 'Blackboard', niveau: 2, en: 'Find the dimension of: (a) density = mass ÷ volume (b) force = mass × acceleration (c) pressure = force ÷ area (d) energy = force × distance (e) power = energy ÷ time', fr: 'Trouve la dimension de chaque grandeur.',
         sol: '<p>(a) M L⁻³ · (b) M L T⁻² · (c) M L⁻¹ T⁻² · (d) M L² T⁻² · (e) M L² T⁻³</p>' },
+      { src: 'Blackboard', niveau: 1, en: 'Course notes 1e: A rectangular tank is 22 m long and 10 m wide. What depth of water is contained in it if the mass of the water is 660 tonnes?', fr: 'Une cuve fait 22 m × 10 m. Quelle est la hauteur d\'eau si la masse d\'eau est de 660 tonnes ?',
+        sol: '<p>profondeur = m / (L × l × ρ) = 660 000 / (22 × 10 × 1000) = <b>3 m</b>.</p>' },
+      { src: 'Blackboard', niveau: 1, en: 'Course notes 1i: A train travels 100 km in 1 hour 40 minutes. What is its average speed in m s⁻¹?', fr: 'Un train parcourt 100 km en 1 h 40. Vitesse moyenne en m/s ?',
+        sol: '<p>100 000 m / 6000 s ≈ <b>16,7 m/s</b>.</p>' },
+      { src: 'Blackboard', niveau: 1, en: 'Course notes 1k–1m: (k) A car decelerates uniformly at 5 m s⁻² from 20 m s⁻¹: speed after 3 s? (l) A train goes from 10 m s⁻¹ with 5 m s⁻² for 5 s: final speed? (m) It then slows down at 5 m s⁻²: time to stop?', fr: 'Accélérations : (k) vitesse après 3 s ; (l) vitesse finale ; (m) temps pour s\'arrêter.',
+        sol: '<p>(k) 20 − 5 × 3 = <b>5 m/s</b> · (l) 10 + 5 × 5 = <b>35 m/s</b> · (m) 35 / 5 = <b>7 s</b></p>' },
       { src: 'Claude', niveau: 1, en: String.raw`Is the equation \(v^2=u^2+2as\) dimensionally consistent?`, fr: 'Cette équation est-elle homogène ?',
         sol: String.raw`<p>\([v^2]=\) L² T⁻² ; \([as]=\) L T⁻² × L = L² T⁻² ✓ cohérente.</p>` },
       { src: 'Claude', niveau: 2, en: String.raw`A student writes the period of a pendulum as \(T=2\pi\sqrt{g/L}\). Use dimensions to show it is wrong, and correct it.`, fr: 'Un élève écrit la période d\'un pendule ainsi. Montre avec les dimensions que c\'est faux, puis corrige.',
@@ -123,7 +145,7 @@
     titre: 'Lectures 2 & 3 — Elasticity 1 & 2',
     titreFr: 'Cours 2 et 3 — Élasticité (ressorts, contraintes, coefficient de sécurité)',
     resume: 'Loi de Hooke, ressorts en série/parallèle, contrainte, déformation, module de Young, cisaillement, compression uniforme et coefficient de sécurité.',
-    sources: 'Lecture 2 & 3 slides (filled) + Worksheet 2 (Blackboard)',
+    sources: 'MS L2 & L3 slides (filled) · Course notes L2.pdf & L3.pdf · Worksheet 2 (Blackboard)',
     en: String.raw`
 <h4>Lecture 2 — Elasticity 1</h4>
 <p><b>Learning outcomes:</b> apply Hooke's Law to systems of springs and materials; calculate stress, strain and Young's modulus.</p>
@@ -141,6 +163,14 @@
 <p>Combining: \(E=\dfrac{FL}{A\,\Delta L}\Rightarrow \Delta L=\dfrac{FL}{AE}\), and from Hooke \(k=\dfrac{AE}{L}\): the spring constant is <b>not</b> the same as Young's modulus.</p>
 <div class="ex"><div class="lab">Example</div>A steel bar (E = 200 GPa), cross-section 5 mm × 20 mm, length 100 mm, supports 500 N. \(A=100\) mm² = 10⁻⁴ m², \(\sigma=500/10^{-4}=5\) MPa (compressive), \(\varepsilon=5\times10^6/200\times10^9=25\) µε.</div>
 
+<h5>From the course notes (L2)</h5>
+<p>Stiffness \(k\) depends on the wire's dimensions: twice the cross-section → half the extension; twice the length → twice the extension. Young's modulus \(E=\dfrac{kL}{A}\) is independent of the dimensions: an intrinsic property depending on the forces binding the atoms. Typical values ~100 GPa (1 GPa = 1 kN mm⁻²).</p>
+<table><tr><th>Material</th><th>E (GPa)</th><th>G (GPa)</th><th>B (GPa)</th><th>Tensile strength (MPa)</th></tr>
+<tr><td>Aluminium</td><td>71</td><td>26</td><td>74</td><td>150–450</td></tr><tr><td>Copper</td><td>130</td><td>48</td><td>138</td><td>300–500</td></tr>
+<tr><td>Iron</td><td>211</td><td>82</td><td>170</td><td>400–600</td></tr><tr><td>Lead</td><td>17</td><td>5.5</td><td>46</td><td>10–15</td></tr>
+<tr><td>Tin</td><td>45</td><td>18</td><td>58</td><td>100–150</td></tr><tr><td>Brass</td><td>37</td><td>37</td><td>112</td><td>350–550</td></tr>
+<tr><td>Mild steel</td><td>212</td><td>82</td><td>169</td><td>1000–1200</td></tr></table>
+<div class="ex"><div class="lab">Course notes examples</div>2a: bar 5 × 20 mm supports 500 kg → F = 4905 N, A = 10⁻⁴ m², σ = 49 MPa. · 2b: 2 m wire extends 0.25 mm → ε = 1.25 × 10⁻⁴. · 2c: 1 m steel rod, 100 MPa, extension 0.5 mm → ε = 5 × 10⁻⁴, E = 200 GPa.</div>
 <h4>Lecture 3 — Elasticity 2</h4>
 <p><b>Learning outcomes:</b> calculate normal, shear and bulk stresses; calculate the safety factor.</p>
 <h5>Shear stress</h5>
@@ -149,7 +179,10 @@
 <li>A rivet joining two plates pulled in opposite directions: the sheared area is the rivet cross-section, \(A=\pi d^2/4\).</li></ul>
 <h5>Bending</h5>
 <p>A deck of cards shears (edges stay straight); a block of jelly bends: one side is stretched, the other compressed — a combination of shear and normal effects.</p>
-<h5>Bulk stress</h5>
+<h5>Bulk (hydraulic) stress</h5>
+<p>From the course notes: a body taken down to the sea bed feels <b>hydrostatic pressure</b> in all directions: \(p=h\rho g\). At 1 km depth: \(10^3\times10^3\times10=10^7\) Pa (≈ 100 atmospheres). Hydraulic strain = \(\Delta V/V\), and hydraulic stress = bulk modulus × hydraulic strain, \(p=B\,\Delta V/V\). Example 3a: water (B = 2.2 GPa) at 4000 m: \(\Delta V/V=4\times10^7/2.2\times10^9=1.8\,\%\); for iron (B = 170 GPa) only 0.025 %.</p>
+<h5>Tensile testing (course notes)</h5>
+<p>On the stress–strain curve of a <b>ductile</b> material: O→P straight (P = <b>limit of proportionality</b>), Q = <b>elastic limit</b> (beyond it a permanent strain remains), R = <b>yield point</b> (extension with little extra load), S = maximum stress = <b>ultimate tensile strength</b>, T = <b>fracture</b>. A <b>brittle</b> material fails before or near the yield point. Compressive and shear strengths are defined similarly.</p>
 <p>Force applied equally in all directions, perpendicular to the surface. Bulk stress = force ÷ area; bulk strain = \(\Delta V/V\); bulk modulus \(B\) = bulk stress ÷ bulk strain.</p>
 <h5>Strength and safety factor</h5>
 <p>The <b>ultimate tensile strength (UTS)</b> is the maximum stress an object can support. In practice we apply less: applied stress = UTS ÷ safety factor. The safety factor is dimensionless and greater than 1. e.g. UTS 100 MPa with SF 2 → 50 MPa applied.</p>
@@ -185,6 +218,15 @@
 <h4>5. Compression uniforme (bulk)</h4>
 <p>Une pression qui s'applique <b>de tous les côtés</b> (comme un objet au fond de la mer). Contrainte = force/surface, déformation = \(\Delta V/V\), module de compressibilité \(B\).</p>
 
+<h4>Ce que montre un essai de traction</h4>
+<p>On tire sur une éprouvette de plus en plus fort et on trace contrainte/déformation :</p>
+<ol><li><b>P – limite de proportionnalité</b> : jusque-là, c'est une droite (loi de Hooke).</li>
+<li><b>Q – limite élastique</b> : au-delà, le matériau garde une déformation permanente.</li>
+<li><b>R – limite d'écoulement (yield)</b> : il s'allonge presque sans qu'on ajoute de force.</li>
+<li><b>S – résistance maximale (UTS)</b> : la contrainte la plus haute supportée.</li>
+<li><b>T – rupture</b>.</li></ol>
+<p>Un matériau <b>ductile</b> (acier doux, cuivre) s'allonge beaucoup avant de casser. Un matériau <b>fragile</b> (verre, fonte) casse presque sans prévenir, près de la limite élastique.</p>
+<div class="ex"><div class="lab">Pression sous l'eau (notes de cours)</div>\(p=h\rho g\) : à 4000 m de profondeur, \(p=4000\times1000\times10=4\times10^7\) Pa. L'eau (B = 2,2 GPa) se comprime de \(\Delta V/V=4\times10^7/2{,}2\times10^9\approx1{,}8\,\%\). Le fer (B = 170 GPa) seulement de 0,025 %.</div>
 <h4>6. Coefficient de sécurité</h4>
 <p>La <b>résistance maximale</b> (UTS) est la contrainte à laquelle le matériau casse. Un ingénieur ne travaille jamais à cette limite : il divise par un <b>coefficient de sécurité</b> (> 1).</p>
 <div class="ex"><div class="lab">Exemple concret</div>Un câble d'ascenseur en acier casse à 1000 MPa. Avec un coefficient de 10, on ne l'utilise qu'à 100 MPa. Si on veut savoir quelle masse il peut porter : \(F=\sigma_{appliquée}\times A\), puis \(m=F/g\).</div>`,
@@ -198,7 +240,7 @@
       ['shear force / shear stress', 'effort / contrainte de cisaillement'], ['shear modulus', 'module de cisaillement'],
       ['bending', 'flexion'], ['bulk stress / bulk modulus', 'contrainte / module de compressibilité'],
       ['ultimate tensile strength (UTS)', 'résistance à la rupture en traction'], ['safety factor', 'coefficient de sécurité'],
-      ['rivet', 'rivet'], ['load', 'charge'], ['wire', 'fil'], ['bar / column', 'barre / poteau']
+      ['rivet', 'rivet'], ['limit of proportionality', 'limite de proportionnalité'], ['yield point', 'limite d\'écoulement'], ['fracture', 'rupture'], ['ductile / brittle', 'ductile / fragile'], ['hydrostatic pressure', 'pression hydrostatique'], ['load', 'charge'], ['wire', 'fil'], ['bar / column', 'barre / poteau']
     ],
     formules: [
       { nom: 'Loi de Hooke', tex: 'F = k\\,\\Delta L \\quad\\Leftrightarrow\\quad \\Delta L = \\dfrac{F}{k}', why: 'Valable dans la zone élastique seulement.' },
@@ -211,6 +253,7 @@
       { nom: 'Raideur d\'une barre', tex: 'k = \\dfrac{A\\,E}{L}', why: '\\(k\\) dépend de la forme, \\(E\\) seulement du matériau.' },
       { nom: 'Cisaillement', tex: '\\tau = \\dfrac{F}{A}, \\qquad G = \\dfrac{\\tau}{\\gamma}', why: '\\(A\\) = surface parallèle à la force.' },
       { nom: 'Compressibilité', tex: 'B = \\dfrac{F/A}{\\Delta V / V}', why: '' },
+      { nom: 'Pression hydrostatique', tex: 'p = h\\,\\rho\\,g', why: 'h = profondeur, ρ = masse volumique du liquide.' },
       { nom: 'Coefficient de sécurité', tex: '\\sigma_{appliquée} = \\dfrac{\\text{UTS}}{\\text{coefficient de sécurité}}', why: '' }
     ],
     exos: [
@@ -227,13 +270,17 @@
       { src: 'Blackboard', niveau: 2, en: 'Calculate Young\'s modulus for aluminium from a tensile test: diameter 10 mm, length 500 mm, load 4 kN, extension 0.36 mm.', fr: 'Calcule le module de Young de l\'aluminium à partir de cet essai de traction.',
         sol: '<p>A = π × 5² = 78,54 mm² → σ = 4000/78,54 = 50,9 MPa. ε = 0,36/500 = 7,2 × 10⁻⁴. E = σ/ε ≈ <b>70,7 GPa</b>.</p>' },
       { src: 'Blackboard', niveau: 3, en: 'The ultimate shear strength of iron is 240 MPa. For a riveted joint, what is the maximum tension it will stand if the rivet diameter is 8 mm? If the diameter is only 5 mm with a safety factor of 10, what is the maximum tension?', fr: 'Rivet en fer (résistance au cisaillement 240 MPa) : tension max avec un rivet de 8 mm ? Et avec 5 mm et un coefficient de sécurité de 10 ?',
-        sol: '<p>(Rivet en simple cisaillement, une seule section coupée.) A = π × 4² = 50,3 mm² → F = 240 × 50,3 ≈ <b>12,1 kN</b>.<br>5 mm : A = 19,6 mm², contrainte permise = 24 MPa → F ≈ <b>471 N</b>.<br><i>Si le schéma montre un double cisaillement (deux sections), il faut multiplier par 2.</i></p>' },
+        sol: '<p>(Rivet en simple cisaillement, une seule section coupée.) A = π × 4² = 50,3 mm² → F = 240 × 50,3 ≈ <b>12,1 kN</b>.<br>5 mm : A = 19,6 mm², contrainte permise = 24 MPa → F ≈ <b>471 N</b>.<br><i>(Réponses confirmées par les notes de cours, question 3b : 12,064 kN et 471 N.)</i></p>' },
       { src: 'Blackboard', niveau: 2, en: 'A mass of 25 kg is suspended by a wire of diameter 2 mm and ultimate tensile strength 700 MPa. What is the safety factor applied to the wire?', fr: 'Une masse de 25 kg pend à un fil de 2 mm (UTS = 700 MPa). Quel est le coefficient de sécurité ?',
         sol: '<p>F = 245 N ; A = π × 1² = 3,14 mm² → σ = 78,1 MPa. Coefficient = 700/78,1 ≈ <b>9</b>.</p>' },
       { src: 'Blackboard', niveau: 1, en: 'A wire is 2 m long and made from steel with Young\'s modulus 150 GPa. By what distance will it stretch under a tensile stress of 3 MPa?', fr: 'Un fil d\'acier de 2 m (E = 150 GPa) subit 3 MPa. De combien s\'allonge-t-il ?',
         sol: '<p>ε = 3 × 10⁶ / 150 × 10⁹ = 2 × 10⁻⁵ → ΔL = 2 × 2 × 10⁻⁵ = <b>0,04 mm</b>.</p>' },
       { src: 'Blackboard', niveau: 1, en: 'Lecture example: springs kA = 2 N m⁻¹ and kB = 3 N m⁻¹ in series. Find k_total. Repeat for two springs of 3 N m⁻¹.', fr: 'Exemple du cours : raideur totale en série.',
         sol: '<p>(2×3)/(2+3) = <b>1,2 N/m</b> ; (3×3)/(3+3) = <b>1,5 N/m</b>.</p>' },
+      { src: 'Blackboard', niveau: 1, en: 'Course notes 2a–2c: (a) A bar 5 mm × 20 mm supports 500 kg: find the stress. (b) A 2 m wire extends by 0.25 mm: find the strain. (c) A 1 m steel rod under 100 MPa extends 0.5 mm: find E.', fr: 'Notes de cours : (a) contrainte, (b) déformation, (c) module de Young.',
+        sol: '<p>(a) 4905 N / 10⁻⁴ m² = <b>49 MPa</b> · (b) 0,25/2000 = <b>1,25 × 10⁻⁴</b> · (c) ε = 5 × 10⁻⁴ → E = <b>200 GPa</b></p>' },
+      { src: 'Blackboard', niveau: 2, en: 'Course notes 3a: The bulk modulus of water is 2.2 GPa. Calculate the fractional change in the density of water at the bottom of the Pacific Ocean, 4000 m deep.', fr: 'Variation relative de la masse volumique de l\'eau à 4000 m de profondeur (B = 2,2 GPa) ?',
+        sol: '<p>p = hρg ≈ 4 × 10⁷ Pa → ΔV/V = p/B ≈ <b>1,8 %</b> (donc la masse volumique augmente d\'environ 1,8 %).</p>' },
       { src: 'Claude', niveau: 1, en: 'Two identical springs (k = 400 N/m) support a 20 kg mass side by side (in parallel). Find the extension.', fr: 'Deux ressorts identiques (400 N/m) en parallèle portent 20 kg. Allongement ?',
         sol: '<p>k_tot = 800 N/m ; F = 196,2 N → ΔL = 0,245 m = <b>24,5 cm</b>.</p>' },
       { src: 'Claude', niveau: 2, en: 'A hole of diameter 20 mm is punched in a steel plate 3 mm thick. The shear strength of the steel is 300 MPa. What force is needed?', fr: 'On perce un trou de 20 mm dans une tôle de 3 mm (résistance au cisaillement 300 MPa). Quelle force faut-il ?',

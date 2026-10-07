@@ -7,16 +7,19 @@
     titre: 'Linear Equations, Cartesian Coordinates & Factorising',
     titreFr: 'Systèmes d\'équations linéaires, repère cartésien et factorisation',
     resume: '3 chapitres : résoudre 2 équations à 2 inconnues, tracer une droite et trouver une loi à partir de mesures, factoriser une expression.',
-    sources: 'Lecture notes Ch. 01–03 (Blackboard) + Online notes & exercises de Jan Spakula',
+    sources: 'GENG0001 Ch. 01 (filled) · Ch. 02–03 · Online notes & exercises de Jan Spakula (Blackboard)',
     en: String.raw`
 <h4>Chapter 01 — Simultaneous Linear Equations</h4>
 <p><b>Learning outcomes:</b> (1) solve simultaneous linear equations with two equations and two unknowns; (2) use the <b>substitution method</b> and the <b>elimination method</b>.</p>
+<p><b>Terminology:</b> in \(x+2=x^2-3\), \(y=3x+4\), \(xy=4\): terms in \(x, y\) (power 1) are <b>linear</b>; terms like \(x^2, y^2, xy\) are <b>non-linear</b>.</p>
 <p>An <b>equation</b> is a mathematical statement that relates two expressions with the equal sign "=" (e.g. \(x+2=x^2-3\), \(y=3x+4\), \(xy=4\)). A <b>function</b> shows how the inputs (independent variables) are related to the output (dependent variable), e.g. \(f(x)=2x-3\).</p>
 <h5>Linear equations</h5>
 <ul>
 <li>One unknown: \(ax=b\) with \(a\neq 0\) has the single solution \(x=b/a\).</li>
 <li>Two unknowns: \(ax+by=c\) has infinitely many solutions; plotted, they form a <b>straight line</b>. If \(c=0\) the equation is called <i>homogeneous</i>.</li>
 </ul>
+<div class="ex"><div class="lab">Slides — one unknown</div>\(10x=15\Rightarrow x=\frac{15}{10}=1.5=\frac32\). In general the solution of \(ax=b\) is \(x=\frac ba\).</div>
+<div class="ex"><div class="lab">Slides — two unknowns</div>\(3x-2y=4\): make \(x\) the subject, \(x=\frac{4+2y}{3}\); or \(y\), \(y=\frac{3x-4}{2}\). For each value of \(x\) we get one value of \(y\) (and vice versa), so the equation has infinitely many solutions. Table for \(y=\frac32x-2\): \(x=-2,-1,0,1,2\) gives \(y=-5,-\frac72,-2,-\frac12,1\). Linear functions always give straight-line graphs.</div>
 <h5>Solving a pair of equations</h5>
 <p><b>Substitution method:</b> express one variable from one equation, substitute it into the other equation, solve, then back-substitute.</p>
 <p><b>Elimination method:</b> multiply one or both equations by constants so that one variable has the same coefficient, then add or subtract the equations to eliminate it.</p>
@@ -24,6 +27,7 @@
 Solve \(x+2y=-2\) …(A) and \(2x+3y=1\) …(B).<br>
 From (A): \(x=-2-2y\). Into (B): \(2(-2-2y)+3y=1 \Rightarrow -4-y=1 \Rightarrow y=-5\). Then \(x=-2-2(-5)=8\).<br>
 <b>Solution: \(x=8,\ y=-5\).</b> Check in (B): \(16-15=1\) ✓</div>
+<div class="ex"><div class="lab">Slides — a pair of linear equations</div>Solve \(4x+y=9\) (A) and \(-x+y=-1\) (B).<br>(a) <b>By substitution</b>: from (B) \(y=x-1\); into (A): \(4x+x-1=9\Rightarrow x=2\), \(y=1\).<br>(b) <b>By elimination</b>: (A) − (B): \(5x=10\Rightarrow x=2\), then \(y=1\). On the graph the two lines cross at (2, 1).</div>
 <h5>Graphical interpretation</h5>
 <p>Each equation is a line; the solution is where the lines meet. Three cases: one intersection point (unique solution), the same line (infinitely many solutions), parallel lines (no solution).</p>
 
@@ -117,6 +121,10 @@ Dans une cuve, \(p\) passe de 248 kPa à 270 kPa quand \(T\) passe de 273 K à 2
     exos: [
       { src: 'Blackboard', niveau: 1, en: String.raw`Solve the following equations simultaneously: \(x+2y=-2\) and \(2x+3y=1\).`, fr: 'Résous le système : x + 2y = −2 et 2x + 3y = 1.',
         sol: String.raw`<p>Substitution : \(x=-2-2y\) → \(2(-2-2y)+3y=1\) → \(-4-y=1\) → \(y=-5\), \(x=8\).</p>` },
+      { src: 'Blackboard', niveau: 1, en: String.raw`Slides: solve \(4x+y=9\) and \(-x+y=-1\) (a) by substitution, (b) by elimination.`, fr: 'Exemple du cours : résous le système (a) par substitution, (b) par élimination.',
+        sol: String.raw`<p>(a) \(y=x-1\) → \(5x-1=9\) → \(x=2, y=1\). (b) (A) − (B) : \(5x=10\) → même résultat. Les droites se coupent en (2 ; 1).</p>` },
+      { src: 'Blackboard', niveau: 1, en: String.raw`Slides: complete the table of values for \(y=\frac32x-2\) for \(x=-2,-1,0,1,2\) and plot the graph.`, fr: 'Exemple du cours : complète le tableau de valeurs et trace la droite.',
+        sol: String.raw`<p>\(y=-5;\ -3{,}5;\ -2;\ -0{,}5;\ 1\). Les points sont alignés : droite de pente 1,5 qui coupe l'axe des y en −2.</p>` },
       { src: 'Blackboard', niveau: 1, en: String.raw`Use the elimination method: \(3x+4y=11\), \(x+7y=15\).`, fr: 'Utilise la méthode par élimination.',
         sol: String.raw`<p>×3 sur la 2e : \(3x+21y=45\). On soustrait : \(17y=34\) → \(y=2\), puis \(x=1\).</p>` },
       { src: 'Blackboard', niveau: 1, en: String.raw`Use the elimination method: \(2x+3y=16\), \(3x+2y=14\).`, fr: 'Utilise la méthode par élimination.',
@@ -153,23 +161,26 @@ Dans une cuve, \(p\) passe de 248 kPa à 270 kPa quand \(T\) passe de 273 K à 2
     titre: 'Quadratic Equations',
     titreFr: 'Équations du second degré',
     resume: 'Résoudre \\(ax^2+bx+c=0\\) par factorisation ou avec la formule (discriminant), tracer une parabole, et résoudre un système droite + parabole.',
-    sources: 'Lecture notes Ch. 04 (Blackboard) + Online notes & Tutorial Topic 4 de Jan Spakula',
+    sources: 'GENG0001 04 Quadratic Equations (diapos) · Online notes & Tutorial Topic 4 de Jan Spakula (Blackboard)',
     en: String.raw`
 <h4>Chapter 04 — Quadratic Equations</h4>
 <p><b>Learning outcomes:</b> (1) determine the roots of quadratic equations using factorisation and the formula; (2) solve simultaneous equations involving one linear and one quadratic equation; (3) sketch the graphs of quadratic functions.</p>
 <h5>Definitions</h5>
+<p class="muted" style="font-size:13px">(Slides: graphs of \(y=x^2\), \(y=x^2-2\), \(y=(x-2)^2\), \(y=(x-2)^2-5\), \(y=-x^2\), and \(y=\frac12x^2, x^2, 2x^2\): adding a constant shifts the parabola up/down, replacing \(x\) by \(x-2\) shifts it right, a minus sign flips it, a bigger coefficient makes it narrower.)</p>
 <p>A <b>quadratic polynomial</b> is \(ax^2+bx+c\) with \(a\neq0\). A <b>root</b> is a value of \(x\) such that \(ax^2+bx+c=0\). The graph of \(y=ax^2+bx+c\) is a <b>parabola</b>: it opens upwards if \(a>0\), downwards if \(a&lt;0\). Its roots are where it crosses the x-axis.</p>
 <h5>Method 1 — Factorisation</h5>
+<p><b>Slide problems:</b> find the roots of \(2x^2-7x-4\), \(9x^2-6x+1\), \(-x^2-5x-6\); factorise and find the roots of \(2x^2+7x+3\) and \(4x^2-4x-3\).</p>
 <p>If \(ax^2+bx+c=(px+q)(rx+s)\), then the product is zero when one factor is zero. Example: \(2x^2-x-6=(2x+3)(x-2)=0 \Rightarrow x=-\tfrac32\) or \(x=2\).</p>
 <h5>Method 2 — The quadratic formula</h5>
 <p>The <b>discriminant</b> \(b^2-4ac\) tells us how many real roots there are:</p>
 <ul><li>\(b^2-4ac&lt;0\): no real roots;</li><li>\(b^2-4ac=0\): one (repeated) root \(x=-\frac{b}{2a}\);</li><li>\(b^2-4ac>0\): two roots \(x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}\).</li></ul>
-<p>Example: \(x^2+3x+1=0\Rightarrow x=\dfrac{-3\pm\sqrt5}{2}\).</p>
+<p>Example: \(x^2+3x+1=0\Rightarrow x=\dfrac{-3\pm\sqrt5}{2}\). <b>"You need to learn this formula by heart!"</b> Slide problems: \(x^2-8x+5\), \(x^2-16\), \(4x^2+4x+1\).</p>
 <h5>Method 3 — Completing the square</h5>
 <p>Rewrite \(x^2+bx+c\) as \(\left(x+\frac b2\right)^2-\left(\frac b2\right)^2+c\), then take square roots. The formula is derived this way (derivation non-examinable).</p>
 <h5>Sketching</h5>
 <p>Find: the y-intercept (\(x=0\)), the x-intercepts (roots), and the vertex. In the form \(y=a(x-h)^2+k\) the vertex is \((h,k)\).</p>
-<h5>Linear + quadratic systems</h5>
+<h5>Linear + quadratic systems (4.2)</h5>
+<p><b>Slide problem:</b> solve \(y=x^2-3x+4\) (A) and \(y-x=1\) (B). The graph shows the line crossing the parabola at two points. Then: <b>sketch</b> \(y=3x^2-17x+10\).</p>
 <p>Make one variable the subject of the linear equation, substitute into the quadratic, solve the resulting quadratic, then find the other variable. There can be 2, 1 or 0 solutions (line cuts, touches or misses the parabola).</p>
 <p class="muted" style="font-size:13px">Note: general formulas exist for polynomials up to degree 4 only.</p>`,
     fr: String.raw`
@@ -236,6 +247,16 @@ Bonus : cette forme donne directement le <b>sommet</b> de la parabole : \((-3 ; 
       { nom: 'Compléter le carré', tex: 'x^2 + bx = \\left(x + \\tfrac{b}{2}\\right)^2 - \\left(\\tfrac{b}{2}\\right)^2', why: 'Donne la forme \\(a(x-h)^2+k\\), sommet \\((h ; k)\\).' }
     ],
     exos: [
+      { src: 'Blackboard', niveau: 1, en: String.raw`Slides: find the roots of (a) \(2x^2-7x-4\) (b) \(9x^2-6x+1\) (c) \(-x^2-5x-6\).`, fr: 'Diapos : trouve les racines.',
+        sol: String.raw`<p>(a) \((2x+1)(x-4)\) → \(-\tfrac12\) ; 4 · (b) \((3x-1)^2\) → \(\tfrac13\) (double) · (c) \(-(x+2)(x+3)\) → −2 ; −3</p>` },
+      { src: 'Blackboard', niveau: 1, en: String.raw`Slides: factorise and find the roots of (a) \(2x^2+7x+3\) (b) \(4x^2-4x-3\).`, fr: 'Diapos : factorise puis trouve les racines.',
+        sol: String.raw`<p>(a) produit 6, somme 7 → 6 et 1 : \((2x+1)(x+3)\) → \(-\tfrac12\) ; −3<br>(b) produit −12, somme −4 → −6 et 2 : \((2x+1)(2x-3)\) → \(-\tfrac12\) ; \(\tfrac32\)</p>` },
+      { src: 'Blackboard', niveau: 1, en: String.raw`Slides: use the formula to find the roots of (a) \(x^2-8x+5\) (b) \(x^2-16\) (c) \(4x^2+4x+1\).`, fr: 'Diapos : utilise la formule.',
+        sol: String.raw`<p>(a) Δ = 64 − 20 = 44 → \(x=4\pm\sqrt{11}\) ≈ 7,32 ; 0,68 · (b) Δ = 64 → ±4 · (c) Δ = 0 → \(x=-\tfrac12\) (double)</p>` },
+      { src: 'Blackboard', niveau: 2, en: String.raw`Slides: solve simultaneously \(y=x^2-3x+4\) (A) and \(y-x=1\) (B).`, fr: 'Diapos : résous le système droite + parabole.',
+        sol: String.raw`<p>(B) : \(y=x+1\). Donc \(x^2-3x+4=x+1\) → \(x^2-4x+3=0\) → \((x-1)(x-3)=0\). Solutions : (1 ; 2) et (3 ; 4), les deux points d'intersection du graphique.</p>` },
+      { src: 'Blackboard', niveau: 2, en: String.raw`Slides: sketch a graph of \(y=3x^2-17x+10\).`, fr: 'Diapos : esquisse la courbe.',
+        sol: String.raw`<p>\(a=3>0\) → ∪. Ordonnée à l'origine : 10. Racines : \((3x-2)(x-5)=0\) → \(\tfrac23\) et 5. Sommet en \(x=\tfrac{17}{6}\approx2{,}83\), \(y\approx-14{,}1\).</p>` },
       { src: 'Blackboard', niveau: 1, en: String.raw`Solve by factorisation: (a) \(x^2-x-6=0\) (b) \(x^2-16=0\) (c) \(x^2-2x=0\) (d) \(x^2-6x+9=0\)`, fr: 'Résous en factorisant.',
         sol: String.raw`<p>(a) \((x-3)(x+2)\) → 3 ; −2 · (b) \((x-4)(x+4)\) → ±4 · (c) \(x(x-2)\) → 0 ; 2 · (d) \((x-3)^2\) → 3 (double)</p>` },
       { src: 'Blackboard', niveau: 2, en: String.raw`Solve by factorisation: (a) \(6x^2+18x+12=0\) (b) \(6x^2-11x-7=0\) (c) \(14x^2=29x-12\)`, fr: 'Résous en factorisant.',

@@ -120,71 +120,88 @@
   };
 
   S[2] = {
-    titre: 'CA Week 2 — Information Literacy',
-    titreFr: 'Applications informatiques S2 — Maîtrise de l\'information',
-    resume: 'Trouver, évaluer et utiliser des sources fiables (bibliothèque, bases de données), éviter le plagiat, et ressources Office / LinkedIn Learning. Lecture obligatoire avant le 30 oct.',
-    sources: 'Information Literacy slides, ESSENTIAL READING – Information Literacy, DigiSkills Metro Map, Office tutorials, LinkedIn Learning (Blackboard) — slides PowerPoint non lisibles automatiquement, contenu reconstitué',
+    titre: 'CA Week 2 — Digital Literacy & Information Literacy',
+    titreFr: 'Applications informatiques S2 — Culture numérique et maîtrise de l\'information',
+    resume: 'Ce qu\'est la culture numérique, ton empreinte numérique, la sécurité en ligne, les outils de l\'université (Microsoft 365, SharePoint, logiciels) et la recherche d\'informations fiables. Pas de labo : crée ton profil LinkedIn.',
+    sources: 'Digital literacy.pptx (Dr Lim) · CA Week 2 « Information Literacy » · DigiSkills Metro Map · Annonce « No CA lab » (Blackboard)',
     en: String.raw`
-<div class="warnbox"><div class="lab">Note</div>This week's slides are a PowerPoint file. This summary follows the Blackboard structure (Information Literacy, Essential reading, DigiSkills Metro Map, Office & LinkedIn Learning resources) plus general knowledge. Check the original on Blackboard. <b>No CA lab this week</b> (announcement of 5 Oct).</div>
-<h4>What is information literacy?</h4>
-<p>Information literacy is the ability to <b>recognise</b> when information is needed, and to <b>find</b>, <b>evaluate</b>, <b>use</b> and <b>reference</b> it effectively and ethically.</p>
-<h4>Finding information</h4>
-<ul><li>Use the university <b>library search</b> and subject databases (e.g. engineering databases, e-books, journals) rather than only general web search.</li>
-<li>Choose good <b>keywords</b>, synonyms, and use search operators: AND (narrows), OR (broadens), quotation marks for exact phrases, truncation (engin* → engine, engineer, engineering).</li>
-<li>Know the types of source: books, journal articles (peer-reviewed), conference papers, standards, patents, reports, websites.</li></ul>
-<h4>Evaluating sources — the CRAAP test</h4>
-<ul><li><b>Currency</b> — is it recent enough?</li><li><b>Relevance</b> — does it answer my question, at the right level?</li>
-<li><b>Authority</b> — who wrote it? Are they qualified?</li><li><b>Accuracy</b> — is it supported by evidence, reviewed?</li>
-<li><b>Purpose</b> — why was it written: to inform, sell, persuade?</li></ul>
-<h4>Using information ethically</h4>
-<p>Always <b>cite</b> your sources in the text and in a reference list, using a consistent style (e.g. Harvard or IEEE in engineering). Copying, or paraphrasing without citing, is <b>plagiarism</b> — a breach of academic integrity.</p>
-<h4>Digital literacy resources</h4>
-<ul><li><b>Essential reading</b>: Information Literacy (Blackboard, complete by 30 Oct) and the <b>DigiSkills Metro Map</b>.</li>
-<li>Additional: Excel in Microsoft Windows, Office tutorials, setting up and using <b>LinkedIn Learning</b> (free via the university), creating a LinkedIn profile, specialist digital skills resources for engineering students.</li></ul>`,
+<h4>Digital literacy (Dr Kok-Geng Lim)</h4>
+<p><b>Learning outcomes:</b> describe what digital literacy is and why it is important; use the university computing environment.</p>
+<h5>What is digital literacy?</h5>
+<ul><li>Use digital technology effectively.</li><li>Find, analyse and evaluate digital information.</li>
+<li>Communicate and collaborate online.</li><li>Act safely, responsibly and appropriately online.</li></ul>
+<p>It is more than knowing how to use a computer.</p>
+<blockquote>"In an increasingly digital world, where the workplace is often virtual, we see it is our responsibility to equip students with 'digital literacies' so they develop skills to flourish, influence and lead in that environment." — Professor Hugh Davis</blockquote>
+<h5>Why does digital literacy matter?</h5>
+<ul><li>Study and work are increasingly digital.</li><li>It supports lifelong learning and informed decision-making.</li>
+<li>We need to judge whether online information is reliable.</li><li>What we do online can affect our reputation and future opportunities.</li></ul>
+<h5>Your digital footprint</h5>
+<p>Posts, comments, searches and shared information leave a digital footprint. Deleting something does not guarantee that it disappears; information can be copied or shared beyond your intended audience. Before you post: <b>who can see this — now and later?</b></p>
+<h5>Stay safe online</h5>
+<ul><li>Use strong, unique passwords.</li><li>Protect personal information and avoid oversharing.</li>
+<li>Be cautious with unexpected messages, links and attachments.</li><li>Check the sender and verify unusual requests directly.</li>
+<li>Review your privacy and account settings regularly.</li><li>If something feels suspicious, stop and check first.</li></ul>
+
+<h4>Your University computing environment</h4>
+<p>Use your University account (username and password) to access the main services:</p>
+<ul><li><b>Microsoft 365</b>: Outlook (email & calendar), OneDrive (cloud file storage), Teams (chat & collaboration), Word, Excel, PowerPoint. Tip: save coursework in OneDrive so your files are backed up and available across devices (southampton.ac.uk/365).</li>
+<li><b>SharePoint</b>: University sites, shared resources, team and project content.</li>
+<li><b>Software for students</b>: many packages can be installed on your own device — e.g. Python, MATLAB, Visual Studio, SolidWorks, RStudio. If an application cannot run on your device, use the <b>Southampton Virtual Environment (SVE)</b>.</li></ul>
+
+<h4>Information literacy (Blackboard, CA Week 2)</h4>
+<p>Develop your information literacy skills by learning how to <b>find, evaluate and use reliable information</b>: identify appropriate sources and consider the quality, relevance and credibility of information when researching a topic. Essential reading: <i>Information Literacy</i> (complete by 30 Oct) and the <i>DigiSkills Metro Map</i>. Additional reading: Excel in Microsoft Windows, Office tutorials, setting up and using LinkedIn Learning, creating a LinkedIn profile, specialist digital skills resources for engineering students.</p>
+
+<h4>This week: no lab session</h4>
+<p>At home, create your LinkedIn account: (1) open the University LinkedIn Learning link (go.soton.ac.uk/lil); (2) sign in / create your LinkedIn account; (3) create a basic professional profile. <b>Bring your completed LinkedIn profile to the next session.</b></p>`,
     fr: String.raw`
-<div class="warnbox"><div class="lab">À savoir</div>Diapos en PowerPoint : ce résumé se base sur la structure Blackboard. <b>Pas de labo CA cette semaine</b> (annonce du 5 oct.). À faire : la lecture obligatoire « Information Literacy » avant le <b>30 octobre</b>.</div>
-<h4>C'est quoi « information literacy » ?</h4>
-<p>C'est savoir <b>trouver</b> la bonne information, <b>juger si elle est fiable</b>, l'<b>utiliser</b> correctement et <b>citer d'où elle vient</b>. À l'université, c'est indispensable pour tes rapports de TP et ton portfolio de Routes to Success (partie B).</p>
+<h4>1. C'est quoi la culture numérique (digital literacy) ?</h4>
+<p>Ce n'est pas juste « savoir se servir d'un ordinateur ». C'est savoir :</p>
+<ul><li>utiliser les outils numériques <b>efficacement</b> ;</li><li><b>trouver, analyser et juger</b> une information en ligne ;</li>
+<li><b>communiquer et travailler à plusieurs</b> en ligne ;</li><li>se comporter en ligne de façon <b>sûre et responsable</b>.</li></ul>
+<p>Pourquoi c'est important : les études et le travail se font de plus en plus en ligne, il faut savoir repérer les infos fiables, et <b>ce que tu fais en ligne peut jouer sur ta réputation et ton avenir</b>.</p>
 
-<h4>1. Trouver de l'info (mieux que Google)</h4>
-<ul><li>Utilise la <b>recherche de la bibliothèque</b> de l'université : livres numériques, articles scientifiques, normes…</li>
-<li>Choisis bien tes <b>mots-clés</b> (en anglais !) et combine-les :<br>
-<b>AND</b> = les deux mots (moins de résultats, plus précis) · <b>OR</b> = l'un ou l'autre (plus de résultats) · <b>"guillemets"</b> = expression exacte · <b>engin*</b> = engine, engineer, engineering…</li></ul>
-<div class="ex"><div class="lab">Exemple</div>Tu cherches des infos sur l'isolation thermique des maisons : <code>"thermal insulation" AND (house OR building)</code>.</div>
+<h4>2. Ton empreinte numérique</h4>
+<p>Tout ce que tu postes, commentes, cherches ou partages laisse une trace. <b>Supprimer ne veut pas dire disparaître</b> : quelqu'un a pu faire une capture ou le partager.</p>
+<div class="ex"><div class="lab">Exemple concret</div>Une blague postée à 16 ans peut ressortir quand un recruteur tape ton nom sur Google 5 ans plus tard. Avant de publier, demande-toi : <b>qui peut voir ça, maintenant et plus tard ?</b></div>
 
-<h4>2. Vérifier si une source est fiable : le test CRAAP</h4>
-<ul><li><b>C</b>urrency (actualité) : c'est récent ?</li>
-<li><b>R</b>elevance (pertinence) : ça répond à ma question ?</li>
-<li><b>A</b>uthority (autorité) : qui l'a écrit ? un expert, une université, un anonyme ?</li>
-<li><b>A</b>ccuracy (exactitude) : il y a des preuves, des sources, une relecture par des pairs ?</li>
-<li><b>P</b>urpose (but) : informer, vendre, convaincre ?</li></ul>
-<div class="ex"><div class="lab">Exemple concret</div>Un article de blog d'une marque de panneaux solaires qui dit que « leurs panneaux sont les meilleurs » → objectif = <b>vendre</b>, pas fiable. Un article publié dans une revue scientifique relue par des pairs → bien plus fiable.</div>
+<h4>3. Rester en sécurité en ligne</h4>
+<ul><li>Un mot de passe <b>fort et différent</b> pour chaque compte (un gestionnaire de mots de passe aide beaucoup).</li>
+<li>Ne partage pas trop d'infos perso.</li><li>Méfie-toi des messages, liens et pièces jointes inattendus.</li>
+<li>Vérifie l'expéditeur. Si on te demande quelque chose d'inhabituel, vérifie par un autre moyen.</li>
+<li>Revois régulièrement tes paramètres de confidentialité.</li><li>Si c'est louche : <b>stop, et vérifie d'abord</b>.</li></ul>
+<div class="ex"><div class="lab">Exemple concret : le phishing</div>Tu reçois un mail « Ton compte Southampton va être supprimé, clique ici pour te reconnecter ». C'est un piège classique : vérifie l'adresse de l'expéditeur, ne clique pas, et va directement sur le site officiel.</div>
 
-<h4>3. Citer ses sources (et éviter le plagiat)</h4>
-<p>Chaque idée, chiffre ou image qui ne vient pas de toi doit être <b>cité</b> : dans le texte, puis dans une liste de références à la fin, toujours dans le même style (Harvard ou IEEE en ingénierie). Copier, ou reformuler sans citer, c'est du <b>plagiat</b>, et les sanctions sont sévères à l'université.</p>
+<h4>4. Les outils de l'université</h4>
+<p>Tout passe par ton <b>compte université</b> :</p>
+<ul><li><b>Microsoft 365</b> : Outlook (mails, agenda), <b>OneDrive</b> (stockage en ligne), Teams, Word, Excel, PowerPoint. Le conseil du prof : <b>enregistre tes devoirs dans OneDrive</b>, ils seront sauvegardés et accessibles partout.</li>
+<li><b>SharePoint</b> : les sites et documents partagés de l'université.</li>
+<li><b>Logiciels gratuits</b> : Python, MATLAB, Visual Studio, SolidWorks, RStudio… à installer sur ton PC. S'ils ne marchent pas sur ton ordi, utilise le <b>SVE</b> (environnement virtuel de Southampton).</li></ul>
 
-<h4>4. Ressources pour progresser</h4>
-<p>Sur Blackboard : la <b>DigiSkills Metro Map</b> (lecture obligatoire), des tutos Office et Excel, et <b>LinkedIn Learning</b> (gratuit avec ton compte de l'université) : il y a plein de cours vidéo sur Excel, Word, la rédaction de rapports…</p>`,
+<h4>5. Trouver des informations fiables</h4>
+<p>La partie « Information Literacy » sur Blackboard t'apprend à trouver, évaluer et utiliser des <b>sources fiables</b> : est-ce que la source est adaptée, de qualité, pertinente et crédible ? La lecture obligatoire est à faire avant le <b>30 octobre</b>.</p>
+
+<h4>6. Cette semaine : pas de labo</h4>
+<p>À la maison, crée ton compte <b>LinkedIn</b> via le lien de l'université (go.soton.ac.uk/lil) et fais un <b>profil professionnel de base</b> (photo, formation, compétences). <b>Apporte-le à la prochaine séance.</b></p>`,
     vocab: [
-      ['information literacy', 'maîtrise de l\'information'], ['library search', 'catalogue / moteur de la bibliothèque'],
-      ['database', 'base de données'], ['keyword', 'mot-clé'], ['search operator (AND / OR)', 'opérateur de recherche'],
-      ['truncation', 'troncature (engin*)'], ['peer-reviewed', 'relu par des pairs (évalué par des experts)'], ['journal article', 'article de revue scientifique'],
-      ['source', 'source'], ['reliable / credible', 'fiable / crédible'], ['to evaluate', 'évaluer'], ['bias', 'biais, parti pris'],
-      ['to cite / citation', 'citer / citation'], ['reference list', 'bibliographie (liste de références)'], ['referencing style (Harvard, IEEE)', 'norme de citation'],
-      ['plagiarism', 'plagiat'], ['academic integrity', 'intégrité académique'], ['to paraphrase', 'reformuler'], ['essential reading', 'lecture obligatoire']
+      ['digital literacy', 'culture numérique'], ['information literacy', 'maîtrise de l\'information'],
+      ['to evaluate', 'évaluer, juger'], ['reliable / credible', 'fiable / crédible'], ['lifelong learning', 'apprentissage tout au long de la vie'],
+      ['digital footprint', 'empreinte numérique'], ['to overshare', 'trop partager (d\'infos perso)'], ['attachment', 'pièce jointe'],
+      ['privacy settings', 'paramètres de confidentialité'], ['suspicious', 'suspect, louche'], ['strong, unique password', 'mot de passe fort et unique'],
+      ['cloud file storage', 'stockage de fichiers en ligne (cloud)'], ['backed up', 'sauvegardé'], ['virtual environment (SVE)', 'environnement virtuel'],
+      ['professional profile', 'profil professionnel'], ['essential reading', 'lecture obligatoire']
     ],
     formules: [],
     exos: [
-      { src: 'Blackboard', niveau: 1, en: 'Complete the ESSENTIAL READING – Information Literacy activity on Blackboard (due 30 Oct).', fr: 'Fais la lecture obligatoire « Information Literacy » sur Blackboard (avant le 30 oct.).',
-        sol: '<p>À faire sur Blackboard, section « CA Week 2 ».</p>' },
-      { src: 'Blackboard', niveau: 1, en: 'Read the DigiSkills Metro Map and choose two "stations" (skills) you will develop this term.', fr: 'Lis la DigiSkills Metro Map et choisis deux compétences à développer ce semestre.',
-        sol: '<p>Exercice personnel. Astuce : relie-les à ton plan GROW de la semaine 1.</p>' },
-      { src: 'Claude', niveau: 1, en: 'Write a library search string to find articles about the specific heat capacity of building materials.', fr: 'Écris une requête de recherche pour trouver des articles sur la chaleur massique des matériaux de construction.',
-        sol: '<p>Ex. : <code>"specific heat capacity" AND ("building material*" OR concrete OR brick)</code></p>' },
-      { src: 'Claude', niveau: 2, en: 'Apply the CRAAP test to a Wikipedia page about Young\'s modulus. Can you cite it in a lab report?', fr: 'Applique le test CRAAP à une page Wikipédia sur le module de Young. Peut-on la citer dans un rapport ?',
-        sol: '<p>Currency : souvent à jour · Relevance : bonne pour comprendre · Authority : auteurs anonymes ✗ · Accuracy : variable · Purpose : informer. Conclusion : bien pour démarrer et trouver des sources, mais cite plutôt un manuel ou un article (les références en bas de la page Wikipédia peuvent t\'aider).</p>' },
-      { src: 'Claude', niveau: 1, en: 'What is the difference between AND and OR in a database search?', fr: 'Quelle différence entre AND et OR dans une recherche ?',
-        sol: '<p>AND : les deux termes doivent apparaître → moins de résultats, plus précis. OR : l\'un ou l\'autre → plus de résultats (utile pour les synonymes).</p>' }
+      { src: 'Blackboard', niveau: 1, en: 'At home, create your LinkedIn account through the University LinkedIn Learning link and create a basic professional profile. Bring it to the next session.', fr: 'À la maison, crée ton compte LinkedIn via le lien de l\'université et un profil professionnel de base. Apporte-le à la prochaine séance.',
+        sol: '<p>Lien : go.soton.ac.uk/lil. Profil minimum : photo, titre (« Engineering Foundation Year student – University of Southampton »), formation, 3 à 5 compétences.</p>' },
+      { src: 'Blackboard', niveau: 1, en: 'Complete the ESSENTIAL READING – Information Literacy on Blackboard (due 30 October).', fr: 'Fais la lecture obligatoire « Information Literacy » sur Blackboard (avant le 30 octobre).',
+        sol: '<p>À faire sur Blackboard, dans « CA Week 2 ».</p>' },
+      { src: 'Claude', niveau: 1, en: 'List the four things that digital literacy includes, according to the lecture.', fr: 'Cite les quatre éléments de la culture numérique vus en cours.',
+        sol: '<p>Utiliser les outils efficacement ; trouver, analyser et évaluer l\'information ; communiquer et collaborer en ligne ; agir de façon sûre, responsable et appropriée.</p>' },
+      { src: 'Claude', niveau: 2, en: 'You receive an e-mail: "Your University account will be closed today. Click here to verify your password." List three things you should do.', fr: 'Tu reçois un mail : « Ton compte université sera fermé aujourd\'hui, clique ici pour vérifier ton mot de passe. » Cite trois choses à faire.',
+        sol: '<p>Ne pas cliquer ; vérifier l\'adresse de l\'expéditeur ; aller soi-même sur le site officiel ou contacter le service informatique ; signaler le mail comme phishing.</p>' },
+      { src: 'Claude', niveau: 1, en: 'Where should you save your coursework so that it is backed up, and what can you use if MATLAB does not run on your laptop?', fr: 'Où enregistrer tes devoirs pour qu\'ils soient sauvegardés, et que faire si MATLAB ne marche pas sur ton PC ?',
+        sol: '<p>Dans <b>OneDrive</b> ; utiliser le <b>SVE</b> (Southampton Virtual Environment).</p>' }
     ]
   };
 })();

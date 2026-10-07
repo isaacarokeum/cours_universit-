@@ -22,6 +22,8 @@ window.DATA = {
       details: 'Premier TD d\'Engineering Principles cette semaine. Questions dans l\'app (S2 › Exercices).' },
     { matiere: 'ma', titre: 'Exercices Topic 4 — Quadratic Equations', type: 'TD à préparer', date: '2026-10-08T14:00:00+08:00',
       details: 'Tutorial de Jan Spakula (Topic 4) — à faire avant ton TD de maths.' },
+    { matiere: 'cw', titre: 'Créer ton profil LinkedIn (à apporter en séance)', type: 'À faire', date: '2026-10-12T14:00:00+08:00',
+      details: 'Pas de labo CA en semaine 2 : crée ton compte via go.soton.ac.uk/lil et un profil pro de base, à montrer à la prochaine séance.' },
     { matiere: 'rs', titre: 'Part A — sortie du devoir d\'analyse de données', type: 'Info', date: '2026-10-19T17:00:00+08:00',
       details: 'Le sujet du devoir (20 %) est publié ce jour-là sur Blackboard. Il faudra Excel.' },
     { matiere: 'cw', titre: 'ESSENTIAL READING — Information Literacy', type: 'Lecture obligatoire', date: '2026-10-30T18:00:00+00:00',
