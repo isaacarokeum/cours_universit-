@@ -10,6 +10,12 @@ App perso d'Isaac (University of Southampton Malaysia, Foundation Year) : ses co
 - Electricity & Electronics (GENG0004) : NE PAS inclure (demande d'Isaac).
 - Semaine 1 = lundi 28 sept 2026 (calcul automatique dans app.js).
 
+## Pages et fonctions
+- `cours.html` = sommaire du cours (5 boutons) ; chaque partie s'ouvre sur sa propre page `section.html?m&w&s=en|fr|vocab|formules|exos`.
+- `notes.html` : notes perso + « à réviser » (localStorage du téléphone).
+- Devoirs (base.js) : `url` = page Blackboard du devoir (assessment : `/ultra/courses/{cid}/assessment/{contentId}/overview?courseId={cid}`), `rendu: true` si une tentative existe (`/v2/courses/{cid}/gradebook/columns/{col}/attempts?userId=_1186863_1`). Isaac peut aussi cocher « rendu » dans l'app.
+- Rappel : bandeau + notification quand un devoir non rendu est à moins de 24 h. Thème clair et chaleureux (pas de mode sombre).
+
 ## Ajouter une semaine
 Dans le fichier de la matière : `S[n] = { titre, titreFr, resume, sources, en, fr, vocab, formules, exos }`
 - `en` : le cours détaillé en anglais, fidèle au support (HTML : h4, h5, p, ul, table, <div class="ex">…).

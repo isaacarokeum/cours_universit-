@@ -4,29 +4,29 @@
 // ============================================================
 window.DATA = {
   matieres: {
-    ma: { code: 'GENG0001', nom: 'Mathematics A', icone: '📐', couleur: '#2563eb', prof: 'Dr Lee', semaines: {} },
-    ms: { code: 'GENG0003', nom: 'Mechanical Science', icone: '⚙️', couleur: '#c2410c', prof: 'Dr Beh Shiao Lin', semaines: {} },
-    ep: { code: 'GENG0005', nom: 'Engineering Principles', icone: '🔥', couleur: '#7c3aed', prof: 'Dr Kok-Geng Lim', semaines: {} },
-    rs: { code: 'GENG0014', nom: 'Routes to Success', icone: '🧭', couleur: '#0f766e', prof: 'Dr Beh · Mr Ivan Lai · Mr Lee Shing Chuan', semaines: {} },
-    cw: { code: 'GENG0015', nom: 'Coursework', icone: '💻', couleur: '#b45309', prof: 'Dr Kok-Geng Lim', semaines: {} }
+    ma: { code: 'GENG0001', nom: 'Mathematics A', icone: '📐', couleur: '#f0a04b', bb: '_237607_1', prof: 'Dr Lee', semaines: {} },
+    ms: { code: 'GENG0003', nom: 'Mechanical Science', icone: '⚙️', couleur: '#e5736b', bb: '_237611_1', prof: 'Dr Beh Shiao Lin', semaines: {} },
+    ep: { code: 'GENG0005', nom: 'Engineering Principles', icone: '🔥', couleur: '#b47ccf', bb: '_237615_1', prof: 'Dr Kok-Geng Lim', semaines: {} },
+    rs: { code: 'GENG0014', nom: 'Routes to Success', icone: '🧭', couleur: '#5aae8f', bb: '_237619_1', prof: 'Dr Beh · Mr Ivan Lai · Mr Lee Shing Chuan', semaines: {} },
+    cw: { code: 'GENG0015', nom: 'Coursework', icone: '💻', couleur: '#5a9fd6', bb: '_237621_1', prof: 'Dr Kok-Geng Lim', semaines: {} }
   },
 
   // ---------- Devoirs / échéances ----------
   // date en ISO (heure de Malaisie = UTC+8)
   devoirs: [
-    { matiere: 'cw', titre: 'Digital Capabilities Worksheet', type: 'Questionnaire Blackboard', date: '2026-10-05T17:00:00+08:00',
+    { matiere: 'cw', titre: 'Digital Capabilities Worksheet', type: 'Questionnaire Blackboard', rendu: true, url: 'https://blackboard.soton.ac.uk/ultra/courses/_237621_1/assessment/_8267422_1/overview?courseId=_237621_1', date: '2026-10-05T17:00:00+08:00',
       details: 'Fiche « Digital Capabilities » (CA Semaine 1) à remplir sur Blackboard.' },
-    { matiere: 'ms', titre: 'Préparer la Worksheet 2 (Elasticity)', type: 'TD à préparer', date: '2026-10-07T10:00:00+08:00',
+    { matiere: 'ms', titre: 'Préparer la Worksheet 2 (Elasticity)', type: 'TD à préparer', url: 'https://blackboard.soton.ac.uk/ultra/courses/_237611_1/outline', date: '2026-10-07T10:00:00+08:00',
       details: 'Essaie les 9 questions avant ton TD du mercredi. Elles sont aussi dans l\'app (S2 › Exercices).' },
-    { matiere: 'ep', titre: 'Préparer l\'Example Sheet 1 (Temperature & Heat)', type: 'TD à préparer', date: '2026-10-07T11:00:00+08:00',
+    { matiere: 'ep', titre: 'Préparer l\'Example Sheet 1 (Temperature & Heat)', type: 'TD à préparer', url: 'https://blackboard.soton.ac.uk/ultra/courses/_237615_1/document/_8251022_1?view=content&state=view', date: '2026-10-07T11:00:00+08:00',
       details: 'Premier TD d\'Engineering Principles cette semaine. Questions dans l\'app (S2 › Exercices).' },
-    { matiere: 'ma', titre: 'Exercices Topic 4 — Quadratic Equations', type: 'TD à préparer', date: '2026-10-08T14:00:00+08:00',
+    { matiere: 'ma', titre: 'Exercices Topic 4 — Quadratic Equations', type: 'TD à préparer', url: 'https://spakula.github.io/fyA/exercises-4-quadratic-equations.html', date: '2026-10-08T14:00:00+08:00',
       details: 'Tutorial de Jan Spakula (Topic 4) — à faire avant ton TD de maths.' },
-    { matiere: 'cw', titre: 'Créer ton profil LinkedIn (à apporter en séance)', type: 'À faire', date: '2026-10-12T14:00:00+08:00',
+    { matiere: 'cw', titre: 'Créer ton profil LinkedIn (à apporter en séance)', type: 'À faire', url: 'https://go.soton.ac.uk/lil', date: '2026-10-12T14:00:00+08:00',
       details: 'Pas de labo CA en semaine 2 : crée ton compte via go.soton.ac.uk/lil et un profil pro de base, à montrer à la prochaine séance.' },
     { matiere: 'rs', titre: 'Part A — sortie du devoir d\'analyse de données', type: 'Info', date: '2026-10-19T17:00:00+08:00',
       details: 'Le sujet du devoir (20 %) est publié ce jour-là sur Blackboard. Il faudra Excel.' },
-    { matiere: 'cw', titre: 'ESSENTIAL READING — Information Literacy', type: 'Lecture obligatoire', date: '2026-10-30T18:00:00+00:00',
+    { matiere: 'cw', titre: 'ESSENTIAL READING — Information Literacy', type: 'Lecture obligatoire', url: 'https://blackboard.soton.ac.uk/ultra/courses/_237621_1/outline', date: '2026-10-30T18:00:00+00:00',
       details: 'Lecture « Information Literacy » à faire sur Blackboard (CA Semaine 2).' },
     { matiere: 'rs', titre: 'Part A — Quiz en classe (Errors & Uncertainty)', type: 'Quiz (10 %)', date: '2026-11-16T09:00:00+08:00',
       details: 'Semaine 8 (16–20 nov), dans ton créneau de groupe. 45 min, documents autorisés.' },
