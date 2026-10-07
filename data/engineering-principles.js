@@ -7,7 +7,7 @@
     titre: 'Introduction · Heat 1: Temperature & Fixed Points · Heat 2: Thermometry',
     titreFr: 'Introduction · Température, points fixes et thermométrie',
     resume: 'Organisation du module, les échelles de température (kelvin, Celsius, Fahrenheit), les points fixes et le fonctionnement des thermomètres.',
-    sources: '0-Introduction.pptx · Celsius to fahrenheit.docx (notes du tableau) · Lecture notes « 1. Temperature and Heat » · GENG0005 Timetable (Blackboard)',
+    sources: '0-Introduction.pptx · thermometry.pdf · Celsius to fahrenheit.docx (notes du tableau) · Lecture notes « 1. Temperature and Heat » · GENG0005 Timetable (Blackboard)',
     en: String.raw`
 <h4>Introduction to the module (Dr Lim Kok Geng)</h4>
 <ul><li><b>Lectures</b>: 2 hours per week, mainly PowerPoint; slides are available on Blackboard after the lecture, and all lecture notes are on Blackboard.</li>
@@ -36,6 +36,7 @@
 <p>Board notes: \(T_{°F}=T_{°C}\times\frac95+32\); \(T(\mathrm K)=\theta(°\mathrm C)+273.15\), so 0 K ⇔ −273.15 °C, and \(T_2-T_1=\theta_2-\theta_1\) (\(\Delta T=\Delta\theta\)). A thermometric property varies linearly between the calibration points (\(y=mx+c\)): \(\Delta V\propto\Delta T\) (liquid expansion), \(\Delta R\propto\Delta T\) (resistance), \(\Delta P\propto\Delta T\) (constant-volume gas, since \(PV/T\) = constant).</p>
 <p>Each thermometer has its own scale and they only agree at the fixed points. With a property \(X\) that takes values \(X_0\) at 0 °C and \(X_{100}\) at 100 °C:</p>
 <p>$$\theta=\frac{X_\theta-X_0}{X_{100}-X_0}\times100$$</p>
+<p>Derivation (handwritten notes, "Measuring Temperature"): on the straight-line graph of \(X\) against \(\theta\), the gradient from 0 to \(\theta\), \(m_1=\frac{X_\theta-X_0}{\theta}\), equals the gradient from 0 to 100, \(m_2=\frac{X_{100}-X_0}{100}\). Setting \(m_1=m_2\) gives the formula.</p>
 
 `,
     fr: String.raw`
@@ -68,6 +69,8 @@
 <li><b>Thermomètre à gaz à volume constant</b> : la pression est proportionnelle à T. Encombrant mais très reproductible.</li></ul>
 
 <h4>4. Calculer une température avec un thermomètre</h4>
+<div class="tip"><div class="lab">La démo du prof (thermometry.pdf)</div>On trace la propriété \(X\) en fonction de \(\theta\) : c'est une droite de \((0 ; X_0)\) à \((100 ; X_{100})\). La pente entre 0 et \(\theta\) est la même qu'entre 0 et 100 :
+\(m_1=\frac{X_\theta-X_0}{\theta-0}\) et \(m_2=\frac{X_{100}-X_0}{100-0}\). Comme \(m_1=m_2\), on obtient \(\theta=\frac{X_\theta-X_0}{X_{100}-X_0}\times100\) °C.</div>
 <p>On étalonne : on mesure la grandeur \(X\) (longueur de liquide, résistance…) à 0 °C (\(X_0\)) et à 100 °C (\(X_{100}\)). On suppose que \(X\) varie <b>linéairement</b> entre les deux. Alors :</p>
 <p>$$\theta=\frac{X_\theta-X_0}{X_{100}-X_0}\times100$$</p>
 <div class="ex"><div class="lab">Exemple pas à pas</div>Un thermomètre à alcool : la colonne mesure 11,82 cm dans la glace et 22,85 cm dans l'eau bouillante. Elle mesure 16,70 cm. Quelle température ?<br>

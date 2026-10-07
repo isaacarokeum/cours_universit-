@@ -22,7 +22,9 @@ Dans le fichier de la matière : `S[n] = { titre, titreFr, resume, sources, en, 
 ## Récupérer les cours sur Blackboard (navigateur intégré, session d'Isaac)
 - API : `fetch('https://blackboard.soton.ac.uk/learn/api/public/v1/courses/{id}/contents…', {credentials:'include'})` (URL absolue).
 - IDs : ma `_237607_1`, ms `_237611_1`, ep `_237615_1`, rs `_237619_1`, cw `_237621_1`.
-- PDF : naviguer vers le lien de téléchargement (redirige vers prod01-euc1-prod01-xythos.prod.files.blackboard.com), puis extraire le texte avec pdf.js (cdnjs) via fetch(location.href). Les PowerPoint/Word ne s'ouvrent pas dans le navigateur.
+- PDF texte : naviguer (navigateur intégré) vers le lien de téléchargement (redirige vers prod01-euc1-prod01-xythos.prod.files.blackboard.com), puis extraire le texte avec pdf.js (cdnjs) via fetch(location.href).
+- PowerPoint / Word / PDF en images (diapos de maths, notes manuscrites) : utiliser **Chrome (Claude in Chrome)**. Ouvrir un NOUVEL onglet par fichier, naviguer vers le lien de téléchargement, attendre 2 s, puis sur la page xythos : `fetch(location.href)` → blob → `<a download="nom">` .click(). Le fichier arrive dans C:\Users\ISHAQ\Downloads (dossier connecté) → device_stage_files → lire (zip XML pour pptx/docx, `pdftoppm` + lecture des images pour les PDF scannés). Fermer les onglets ensuite.
+- Les diapos de Maths A sont des IMAGES : toujours les rendre en images et les lire visuellement.
 - Annonces : `/courses/{id}/announcements`. Échéances : `/v2/courses/{id}/gradebook/columns`.
 
 ## Avant de pousser

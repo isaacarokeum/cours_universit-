@@ -7,7 +7,7 @@
     titre: 'Linear Equations, Cartesian Coordinates & Factorising',
     titreFr: 'Systèmes d\'équations linéaires, repère cartésien et factorisation',
     resume: '3 chapitres : résoudre 2 équations à 2 inconnues, tracer une droite et trouver une loi à partir de mesures, factoriser une expression.',
-    sources: 'GENG0001 Ch. 01 (filled) · Ch. 02–03 · Online notes & exercises de Jan Spakula (Blackboard)',
+    sources: 'GENG0001 Ch. 01, 02, 03 (filled, diapos) · Online notes & exercises de Jan Spakula (Blackboard)',
     en: String.raw`
 <h4>Chapter 01 — Simultaneous Linear Equations</h4>
 <p><b>Learning outcomes:</b> (1) solve simultaneous linear equations with two equations and two unknowns; (2) use the <b>substitution method</b> and the <b>elimination method</b>.</p>
@@ -35,12 +35,19 @@ From (A): \(x=-2-2y\). Into (B): \(2(-2-2y)+3y=1 \Rightarrow -4-y=1 \Rightarrow 
 <p><b>Learning outcomes:</b> (1) plot the graph of an equation on the \((x,y)\)-plane; (2) solve real-world problems by plotting Cartesian coordinates.</p>
 <p>A point \(P\) is located by two perpendicular axes; \((x,y)\) are its <b>Cartesian (rectangular) coordinates</b>. The axes split the plane into four <b>quadrants</b>.</p>
 <p>The graph of \(f(x)=mx+c\) is a straight line: \(m\) is the <b>slope (gradient)</b> and \(c=f(0)\) is the <b>y-intercept</b>. Through two points: \(m=\dfrac{y_2-y_1}{x_2-x_1}\).</p>
+<div class="ex"><div class="lab">Slides — quadrants and slope</div>1st quadrant: \(x>0, y>0\) · 2nd: \(x<0, y>0\) · 3rd: \(x<0, y<0\) · 4th: \(x>0, y<0\).<br>The line \(y=\frac32+\frac12x\) passes through \(P_1=(1,2)\) and \(P_2=(5,4)\): \(m=\frac{4-2}{5-1}=\frac12\) and \(c=f(0)=\frac32\).</div>
 <h5>Guessing a law from experimental data</h5>
 <p>If measured points \((x,y)\) lie approximately on a line, we suspect a <b>linear law</b> \(y=mx+c\). Draw the best straight line, read \(c\) where it crosses the y-axis and compute \(m\) from two points far apart on the line. Data can also look quadratic, exponential or trigonometric. Today, <b>linear regression</b> gives the best-fit line.</p>
+<div class="ex"><div class="lab">Slides — velocity data</div>
+<table><tr><th>t (s)</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr><tr><th>v (m s⁻¹)</th><td>7.7</td><td>10.5</td><td>13.3</td><td>15.5</td><td>16.3</td><td>20.5</td><td>23.0</td></tr></table>
+The points lie roughly on a line, so we look for \(v=at+u\).</div>
 
 <h4>Chapter 03 — Factorising</h4>
 <p><b>Learning outcomes:</b> (1) factorise algebraic expressions by common factors and by grouping; (2) use the products of simple factors to factorise.</p>
 <p>Expanding uses the distributive law: \(a(b+c)=ab+ac\). <b>Factorising</b> is the reverse: writing an expression as a <b>product</b>. The factors of a whole number \(a\) always include 1 and \(a\). A <b>prime number</b> \(p\neq1\) has no other factors than 1 and \(p\): 2, 3, 5, 7, 11, 13, 17, 19, 23, 29…</p>
+<div class="ex"><div class="lab">Slides — multiplying out</div>\(3(2+4)=3\cdot6=18=3\cdot2+3\cdot4\). Examples: \(3(2y-7)=6y-21\) · \((2x+y)(3y-1)=6xy-2x+3y^2-y\) · \((a+2b-3)(2a+5)=2a^2+4ab-a+10b-15\) · \((x+2)(3y-1)(x-y)\).</div>
+<p><b>Factors</b> are the constituents of a product: \(1\cdot2\cdot2\cdot3\), \(x(y+z)\), \((a+b)(b+3)\). A whole number \(a>0\) is a factor of \(b\) if \(b/a\) is a whole number. Factors of 24: 1, 2, 3, 4, 6, 8, 12, 24, and \(24=2^3\times3\); 31 is prime. \(27+81=27(1+3)\) with \(27=3^3\), \(81=3^4\).</p>
+<p><b>Comments:</b> it is not always possible to sensibly factorise an expression; positive whole numbers can always be factorised uniquely as a product of primes.</p>
 <h5>1. Highest common factor (HCF)</h5><p>\(10x+8=2(5x+4)\), \(x^3-3x^2y=x^2(x-3y)\).</p>
 <h5>2. Grouping (four terms)</h5><p>\(2ac+6bc+ad+3bd=2c(a+3b)+d(a+3b)=(a+3b)(2c+d)\). Sometimes you must re-order the terms first.</p>
 <h5>3. Special products</h5><p>\((a+b)^2=a^2+2ab+b^2\), \((a-b)^2=a^2-2ab+b^2\), \((a+b)(a-b)=a^2-b^2\). Read backwards, they factorise.</p>
@@ -75,8 +82,11 @@ Un taxi prend 7 MAD de prise en charge + 4 MAD par km : \(prix = 4\times km + 7\
 <div class="ex"><div class="lab">Exemple — pression d'un gaz</div>
 Dans une cuve, \(p\) passe de 248 kPa à 270 kPa quand \(T\) passe de 273 K à 298 K. Pente : \(m=\frac{270-248}{298-273}=\frac{22}{25}=0{,}88\) kPa/K. Donc \(p\approx0{,}88\,T+8\) kPa.</div>
 
+<div class="ex"><div class="lab">Exemple des diapos — vitesse d'un mobile</div>On mesure \(v\) = 7,7 ; 10,5 ; 13,3 ; 15,5 ; 16,3 ; 20,5 ; 23,0 m/s pour \(t\) = 1 à 7 s. Les points sont presque alignés, donc \(v=at+u\). Droite d'ajustement : \(v\approx2{,}5\,t+5{,}4\). Interprétation : accélération ≈ 2,5 m/s² et vitesse de départ ≈ 5,4 m/s.</div>
+<div class="tip"><div class="lab">Signes dans les quadrants (au tableau)</div>1er quadrant : x +, y + · 2e : x −, y + · 3e : x −, y − · 4e : x +, y −.</div>
 <h4>3. Factoriser</h4>
 <p><b>Développer</b>, c'est transformer un produit en somme : \(4(6x-2)=24x-8\). <b>Factoriser</b>, c'est l'inverse : écrire une somme sous forme de <b>produit</b>. C'est super utile pour simplifier et pour résoudre des équations (un produit est nul si un des facteurs est nul).</p>
+<p><b>Facteurs d'un nombre</b> : \(24=2\times2\times2\times3=2^3\times3\) ; 31 est premier (pas d'autres facteurs que 1 et 31). Pour \(27+81\) : \(27=3^3\) et \(81=3^4\), donc \(27+81=27(1+3)=108\).</p>
 <p><b>Méthode 1 — facteur commun</b> : on cherche ce qui est dans tous les termes. \(10x+8=2(5x+4)\) ; \(x^3-3x^2y=x^2(x-3y)\).</p>
 <p><b>Méthode 2 — regroupement</b> (4 termes) : on fait deux paquets qui ont un facteur commun.<br>\(6ax+3ay+2bx+by=3a(2x+y)+b(2x+y)=(2x+y)(3a+b)\).</p>
 <p><b>Méthode 3 — identités remarquables</b> (à connaître par cœur) :<br>\(a^2+2ab+b^2=(a+b)^2\) · \(a^2-2ab+b^2=(a-b)^2\) · \(a^2-b^2=(a+b)(a-b)\).<br>Exemple : \(25x^2y^2-30xy+9=(5xy-3)^2\) ; \(x^2-49=(x+7)(x-7)\).</p>
@@ -145,6 +155,12 @@ Dans une cuve, \(p\) passe de 248 kPa à 270 kPa quand \(T\) passe de 273 K à 2
         sol: String.raw`<p>(a) \(27(1+3)=108=2^2\times3^3\)<br>(b) \(x^2(2x^2+5y^2)\)<br>(c) \(2a(5x+y)+b(5x+y)=(5x+y)(2a+b)\)</p>` },
       { src: 'Blackboard', niveau: 2, en: String.raw`Factorise: (a) \(20x^2-3y^2+4xy^2-15x\) (b) \(2x^2-7xy-15y^2\) (c) \(21a^2+5ab-6b^2\)`, fr: 'Factorise (regroupement et trinômes).',
         sol: String.raw`<p>(a) on réordonne : \(5x(4x-3)+y^2(4x-3)=(4x-3)(5x+y^2)\)<br>(b) produit −30, somme −7 → −10 et 3 : \((2x+3y)(x-5y)\)<br>(c) produit −126, somme 5 → 14 et −9 : \((3a+2b)(7a-3b)\)</p>` },
+      { src: 'Blackboard', niveau: 1, en: String.raw`Slides: multiply out (a) \(3(2y-7)\) (b) \((2x+y)(3y-1)\) (c) \((a+2b-3)(2a+5)\) (d) \((x+2)(3y-1)(x-y)\).`, fr: 'Diapos : développe.',
+        sol: String.raw`<p>(a) \(6y-21\) · (b) \(6xy-2x+3y^2-y\) · (c) \(2a^2+4ab-a+10b-15\) · (d) \(3x^2y-x^2+7xy-2x-3xy^2-6y^2+2y\)</p>` },
+      { src: 'Blackboard', niveau: 2, en: 'Slides: the velocity v of a body is measured at times t = 1…7 s: 7.7, 10.5, 13.3, 15.5, 16.3, 20.5, 23.0 m/s. Plot the data and find a law v = at + u.', fr: 'Diapos : trace les mesures et trouve une loi v = at + u.',
+        sol: String.raw`<p>Les points sont presque alignés. Droite d'ajustement : \(a\approx2{,}46\) m/s², \(u\approx5{,}4\) m/s, donc \(v\approx2{,}5t+5{,}4\).</p>` },
+      { src: 'Blackboard', niveau: 1, en: 'Slides: write 24 and 31 as products of prime numbers.', fr: 'Diapos : décompose 24 et 31 en facteurs premiers.',
+        sol: String.raw`<p>\(24=2^3\times3\) ; 31 est premier.</p>` },
       { src: 'Claude', niveau: 1, en: 'A cinema ticket for an adult and two children costs 110 MAD. Two adults and one child cost 130 MAD. Find the price of each ticket.', fr: 'Au cinéma, 1 adulte + 2 enfants = 110 MAD ; 2 adultes + 1 enfant = 130 MAD. Trouve le prix de chaque billet.',
         sol: String.raw`<p>\(a+2e=110\) et \(2a+e=130\). 1re ×2 : \(2a+4e=220\) ; on soustrait : \(3e=90\) → \(e=30\), \(a=50\).</p>` },
       { src: 'Claude', niveau: 1, en: 'A line passes through (1, 3) and (4, 12). Find its equation.', fr: 'Une droite passe par (1 ; 3) et (4 ; 12). Trouve son équation.',
