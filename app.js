@@ -109,7 +109,7 @@
     return `<div class="due ${done ? 'done' : ''} ${past && !done ? 'past' : ''}">
       <a class="due-main" href="${url}" target="_blank" rel="noopener">
         <div class="d"><b>${dt.getDate()}</b><small>${dt.toLocaleDateString('fr-FR', { month: 'short' })}</small></div>
-        <div><div class="t">${esc(d.titre)} <span class="ext">↗</span></div>
+        <div><div class="t">${esc(d.titre)}</div>
         <div class="s">${m ? SUBJ(m) + ' · ' : ''}${esc(d.type)} · ${badge}</div>
         ${d.details ? `<div class="s" style="margin-top:4px">${d.details}</div>` : ''}</div></a>
     </div>`;
@@ -245,7 +245,7 @@
     if (sid === 'formules') body = `<div class="card">${w.formules.length ? w.formules.map((f) => `<div class="formula"><div class="nm">${f.nom}</div><div class="tex">$$${f.tex}$$</div>${f.why ? `<div class="why">${f.why}</div>` : ''}</div>`).join('') : '<div class="muted">Pas de formule cette semaine.</div>'}</div>`;
     if (sid === 'exos') body = `<div class="card">${w.exos.map((e, i) => `<div class="exo"><div class="top2"><span class="num">${i + 1}.</span>
         <span class="pill ${e.src === 'Blackboard' ? 'ok' : 'bonus'}">${e.src === 'Blackboard' ? 'Blackboard' : 'Bonus'}</span>
-        ${e.niveau ? `<span class="pill">${'★'.repeat(e.niveau)}</span>` : ''}</div>
+        ${e.niveau ? `<span class="pill">${['Facile','Moyen','Difficile'][e.niveau-1]}</span>` : ''}</div>
         <div class="q">${e.en}</div><div class="qfr">FR : ${e.fr}</div>
         ${e.sol ? `<details><summary>Voir la correction</summary><div class="sol">${e.sol}</div></details>` : ''}</div>`).join('')}</div>`;
     const prev = SECTIONS[k - 1], next = SECTIONS[k + 1];

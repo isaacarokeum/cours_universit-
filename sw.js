@@ -1,5 +1,5 @@
 // Réseau d'abord (pour avoir toujours les derniers cours), cache si hors ligne.
-const CACHE = 'mes-cours-v4';
+const CACHE = 'mes-cours-v5';
 self.addEventListener('install', e => self.skipWaiting());
 self.addEventListener('activate', e => e.waitUntil(self.clients.claim()));
 self.addEventListener('fetch', e => {
