@@ -1,6 +1,5 @@
 # Mes Cours
 
-App perso de cours, semaine par semaine, en français avec le vocabulaire scientifique en anglais.
+App perso (PWA) pour suivre mes cours de Foundation Year à Southampton Malaysia : chaque matière semaine par semaine, avec le cours en anglais, le cours expliqué en français, le vocabulaire EN → FR, les formules et des exercices corrigés. Il y a aussi l'emploi du temps par groupe et les devoirs.
 
-- Les cours sont dans `cours.js`.
-- En ligne via GitHub Pages ; à ajouter à l'écran d'accueil du téléphone.
+À ouvrir sur le téléphone, puis « Ajouter à l'écran d'accueil ».

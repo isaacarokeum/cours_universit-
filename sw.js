@@ -1,9 +1,9 @@
 // Réseau d'abord (pour avoir toujours les derniers cours), cache si hors ligne.
-const CACHE = 'mes-cours-v1';
+const CACHE = 'mes-cours-v2';
 self.addEventListener('install', e => self.skipWaiting());
 self.addEventListener('activate', e => e.waitUntil(self.clients.claim()));
 self.addEventListener('fetch', e => {
-  if (e.request.method !== 'GET') return;
+  if (e.request.method !== 'GET' || new URL(e.request.url).origin !== location.origin) return;
   e.respondWith(
     fetch(e.request).then(r => {
       const copy = r.clone();

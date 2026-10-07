@@ -1,7 +1,29 @@
 # Mes Cours — consignes pour Claude
 
-- Ajouter un cours = ajouter un objet dans le tableau `COURS` de `cours.js` (ne pas toucher à index.html sauf demande).
-- Champs : matiere, semaine, titre, date (AAAA-MM-JJ), contenu (HTML simple en français : h3, p, ul/li, b, table, <span class="en">, <div class="box">), lexique [{en, fr}].
-- Cours rédigé en français, clair et structuré ; termes scientifiques anglais listés dans `lexique`.
-- Supprimer l'exemple (matiere "Exemple") dès le premier vrai cours.
-- Vérifier la syntaxe (`node -e "require('./cours.js')"` ne marche pas car const global : utiliser `node --check cours.js`), puis commit + push sur main.
+App perso d'Isaac (University of Southampton Malaysia, Foundation Year) : ses cours Blackboard, semaine par semaine.
+**Ne JAMAIS rien modifier sur Blackboard : lecture seule.**
+
+## Structure
+- Pages : `index.html` (accueil), `matiere.html?m=ID`, `cours.html?m=ID&w=N`, `edt.html`, `devoirs.html`, `vocab.html`. Rendu dans `app.js`, style dans `style.css`.
+- Données : `data/base.js` (matières, devoirs, emploi du temps) + un fichier par matière :
+  `math-a.js` (ma), `mechanical-science.js` (ms), `engineering-principles.js` (ep), `routes-to-success.js` (rs), `coursework.js` (cw).
+- Electricity & Electronics (GENG0004) : NE PAS inclure (demande d'Isaac).
+- Semaine 1 = lundi 28 sept 2026 (calcul automatique dans app.js).
+
+## Ajouter une semaine
+Dans le fichier de la matière : `S[n] = { titre, titreFr, resume, sources, en, fr, vocab, formules, exos }`
+- `en` : le cours détaillé en anglais, fidèle au support (HTML : h4, h5, p, ul, table, <div class="ex">…).
+- `fr` : le même cours expliqué en français, simple, avec BEAUCOUP d'exemples concrets (`<div class="ex"><div class="lab">Exemple concret</div>…</div>`, `tip`, `warnbox`).
+- `vocab` : `[anglais, français, note?]`. `formules` : `{nom, tex (KaTeX), why}`.
+- `exos` : `{src:'Blackboard'|'Claude', niveau:1-3, en, fr, sol}`. Consigne en anglais + traduction FR. Corrections vérifiées.
+- Maths : `\( … \)` en ligne, `$$ … $$` en bloc. Utiliser String.raw pour les chaînes avec des backslashes.
+- Ajouter les nouvelles échéances dans `devoirs` (base.js).
+
+## Récupérer les cours sur Blackboard (navigateur intégré, session d'Isaac)
+- API : `fetch('https://blackboard.soton.ac.uk/learn/api/public/v1/courses/{id}/contents…', {credentials:'include'})` (URL absolue).
+- IDs : ma `_237607_1`, ms `_237611_1`, ep `_237615_1`, rs `_237619_1`, cw `_237621_1`.
+- PDF : naviguer vers le lien de téléchargement (redirige vers prod01-euc1-prod01-xythos.prod.files.blackboard.com), puis extraire le texte avec pdf.js (cdnjs) via fetch(location.href). Les PowerPoint/Word ne s'ouvrent pas dans le navigateur.
+- Annonces : `/courses/{id}/announcements`. Échéances : `/v2/courses/{id}/gradebook/columns`.
+
+## Avant de pousser
+`for f in data/*.js app.js; do node --check $f; done`, puis commit + push sur main.
