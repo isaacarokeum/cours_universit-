@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mes Cours</title>
+<meta name="theme-color" content="#1f3a5f">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Mes Cours">
+<style>
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --ink:#1b1f24; --muted:#6b7280; --line:#e6e2d8;
+  --accent:#1f3a5f; --accent-2:#f4d35e; --en:#0f766e; --en-bg:#e6f4f1;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#111418; --card:#1a1f26; --ink:#eceff3; --muted:#9aa3ae; --line:#2a313b;
+         --accent:#8fb3e0; --accent-2:#f4d35e; --en:#5eead4; --en-bg:#123330; }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  padding-bottom:env(safe-area-inset-bottom);min-height:100vh}
+header{position:sticky;top:0;z-index:5;background:var(--accent);color:#fff;
+  padding:calc(env(safe-area-inset-top) + 12px) 16px 12px}
+@media (prefers-color-scheme: dark){ header{background:#0b1a2c} }
+.bar{display:flex;align-items:center;gap:10px}
+.bar h1{font-size:20px;font-weight:700;flex:1;letter-spacing:.2px}
+.back{background:none;border:0;color:#fff;font-size:26px;line-height:1;padding:0 6px 0 0;cursor:pointer;display:none}
+.search{margin-top:10px;width:100%;border:0;border-radius:10px;padding:10px 12px;font-size:16px;background:rgba(255,255,255,.15);color:#fff;outline:none}
+.search::placeholder{color:rgba(255,255,255,.7)}
+.tabs{display:flex;gap:6px;margin-top:10px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:0;border-radius:999px;padding:6px 14px;font-size:14px;background:rgba(255,255,255,.15);color:#fff;cursor:pointer}
+.tab.on{background:var(--accent-2);color:#1b1f24;font-weight:600}
+main{max-width:720px;margin:0 auto;padding:16px}
+.group{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:18px 4px 8px;font-weight:600}
+.group:first-child{margin-top:4px}
+.item{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:10px;cursor:pointer;width:100%;text-align:left;color:inherit;font:inherit}
+.item:active{transform:scale(.99)}
+.wk{flex:none;width:48px;height:48px;border-radius:12px;background:var(--accent);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+@media (prefers-color-scheme: dark){ .wk{background:#24476f} }
+.wk small{font-size:10px;opacity:.8;margin-bottom:3px}
+.wk b{font-size:18px}
+.item .t{font-weight:600}
+.item .s{font-size:13px;color:var(--muted)}
+.empty{text-align:center;color:var(--muted);padding:40px 10px}
+article{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 18px}
+.meta{font-size:13px;color:var(--muted);margin-bottom:4px}
+article h2{font-size:22px;line-height:1.3;margin-bottom:14px}
+.content h3{font-size:17px;margin:18px 0 6px;color:var(--accent)}
+.content p{margin:8px 0}
+.content ul,.content ol{margin:8px 0 8px 22px}
+.content li{margin:4px 0}
+.content table{border-collapse:collapse;margin:10px 0;width:100%;font-size:14px;display:block;overflow-x:auto}
+.content td,.content th{border:1px solid var(--line);padding:6px 8px}
+.content .en{color:var(--en);font-style:italic}
+.content .box{background:var(--en-bg);border-radius:10px;padding:10px 12px;margin:10px 0}
+.lex{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.lex h3{font-size:15px;display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.lex h3 span{background:var(--en-bg);color:var(--en);font-size:12px;padding:2px 8px;border-radius:999px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0}
+.row .e{color:var(--en);font-weight:600}
+.row .f{color:var(--muted);text-align:right}
+.lexsrc{font-size:12px;color:var(--muted)}
+mark{background:var(--accent-2);color:#1b1f24;border-radius:3px;padding:0 2px}
+.nav{display:flex;gap:10px;margin-top:16px}
+.nav button{flex:1;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:12px;font:inherit;font-size:14px;cursor:pointer}
+.nav button:disabled{opacity:.35}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <button class="back" id="back" aria-label="Retour">‹</button>
+    <h1 id="title">Mes Cours</h1>
+  </div>
+  <div id="tools">
+    <input class="search" id="q" type="search" placeholder="Rechercher un cours ou un mot…" autocomplete="off">
+    <div class="tabs" id="tabs"></div>
+  </div>
+</header>
+<main id="app"></main>
+
+<script src="cours.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const app = $('#app'), q = $('#q'), tabs = $('#tabs'), back = $('#back'), title = $('#title'), tools = $('#tools');
+const data = COURS.map((c,i)=>({...c,id:i})).sort((a,b)=> a.matiere.localeCompare(b.matiere) || a.semaine-b.semaine);
+const matieres = [...new Set(data.map(c=>c.matiere))];
+let filtre = 'Tout';
+
+const esc = s => String(s).replace(/[&<>"]/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+const norm = s => String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+const strip = h => { const d=document.createElement('div'); d.innerHTML=h; return d.textContent; };
+const hl = (txt, term) => { if(!term) return esc(txt); const n=norm(txt), i=n.indexOf(norm(term)); if(i<0) return esc(txt);
+  return esc(txt.slice(0,i))+'<mark>'+esc(txt.slice(i,i+term.length))+'</mark>'+esc(txt.slice(i+term.length)); };
+
+function renderTabs(){
+  const list = ['Tout', ...matieres, 'Lexique'];
+  tabs.innerHTML = list.map(m=>`<button class="tab ${m===filtre?'on':''}" data-m="${esc(m)}">${m==='Lexique'?'🔤 Lexique':esc(m)}</button>`).join('');
+}
+tabs.onclick = e => { const b=e.target.closest('.tab'); if(!b) return; filtre=b.dataset.m; renderTabs(); renderList(); };
+
+function renderList(){
+  const term = q.value.trim();
+  if(filtre==='Lexique') return renderLexique(term);
+  let list = data.filter(c=> filtre==='Tout' || c.matiere===filtre);
+  if(term){ const t=norm(term);
+    list = list.filter(c=> norm(c.titre+' '+c.matiere+' '+strip(c.contenu)+' '+(c.lexique||[]).map(l=>l.en+' '+l.fr).join(' ')).includes(t)); }
+  if(!list.length){ app.innerHTML = `<div class="empty">${term?'Aucun résultat.':'Aucun cours pour le moment.'}</div>`; return; }
+  let html='', last=null;
+  for(const c of list){
+    if(c.matiere!==last){ html+=`<div class="group">${esc(c.matiere)}</div>`; last=c.matiere; }
+    const n=(c.lexique||[]).length;
+    html+=`<button class="item" data-id="${c.id}"><div class="wk"><small>SEM</small><b>${c.semaine}</b></div>
+      <div><div class="t">${hl(c.titre,term)}</div><div class="s">${c.date?fmt(c.date)+' · ':''}${n} mot${n>1?'s':''} anglais</div></div></button>`;
+  }
+  app.innerHTML = html;
+}
+
+function renderLexique(term){
+  let all=[]; data.forEach(c=>(c.lexique||[]).forEach(l=>all.push({...l,c})));
+  if(term){ const t=norm(term); all=all.filter(l=>norm(l.en+' '+l.fr).includes(t)); }
+  all.sort((a,b)=>a.en.localeCompare(b.en));
+  if(!all.length){ app.innerHTML='<div class="empty">Aucun mot.</div>'; return; }
+  app.innerHTML = `<div class="lex"><h3>Tous les mots <span>${all.length}</span></h3>`+
+    all.map(l=>`<div class="row"><div><div class="e">${hl(l.en,term)}</div><div class="lexsrc">${esc(l.c.matiere)} · Sem. ${l.c.semaine}</div></div><div class="f">${hl(l.fr,term)}</div></div>`).join('')+'</div>';
+}
+
+function fmt(d){ try{ return new Date(d+'T12:00').toLocaleDateString('fr-FR',{day:'numeric',month:'short'}); }catch(e){ return d; } }
+
+function renderCours(id){
+  const c = data.find(x=>x.id==id); if(!c) return go('');
+  const same = data.filter(x=>x.matiere===c.matiere), i = same.indexOf(c);
+  const prev = same[i-1], next = same[i+1];
+  title.textContent = `${c.matiere} · Sem. ${c.semaine}`;
+  back.style.display='block'; tools.style.display='none';
+  const lex = c.lexique||[];
+  app.innerHTML = `<article><div class="meta">Semaine ${c.semaine}${c.date?' · '+fmt(c.date):''}</div>
+    <h2>${esc(c.titre)}</h2><div class="content">${c.contenu}</div></article>
+    ${lex.length?`<section class="lex"><h3>🔤 Vocabulaire scientifique <span>EN → FR</span></h3>
+      ${lex.map(l=>`<div class="row"><div class="e">${esc(l.en)}</div><div class="f">${esc(l.fr)}</div></div>`).join('')}</section>`:''}
+    <div class="nav"><button ${prev?`data-id="${prev.id}"`:'disabled'}>‹ Sem. ${prev?prev.semaine:''}</button>
+      <button ${next?`data-id="${next.id}"`:'disabled'}>Sem. ${next?next.semaine:''} ›</button></div>`;
+  window.scrollTo(0,0);
+}
+
+function go(h){ location.hash = h; }
+function route(){
+  const m = location.hash.match(/^#c(\d+)$/);
+  if(m) return renderCours(m[1]);
+  title.textContent='Mes Cours'; back.style.display='none'; tools.style.display='block';
+  renderTabs(); renderList();
+}
+app.onclick = e => { const b=e.target.closest('[data-id]'); if(b) go('c'+b.dataset.id); };
+back.onclick = () => history.length>1 ? history.back() : go('');
+q.oninput = renderList;
+window.onhashchange = route;
+route();
+
+if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
+</body>
+</html>
