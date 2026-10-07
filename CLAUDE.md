@@ -23,7 +23,7 @@ Dans le fichier de la matière : `S[n] = { titre, titreFr, resume, sources, en, 
 - `vocab` : `[anglais, français, note?]`. `formules` : `{nom, tex (KaTeX), why}`.
 - `exos` : `{src:'Blackboard'|'Claude', niveau:1-3, en, fr, sol}`. Consigne en anglais + traduction FR. Corrections vérifiées.
 - Maths : `\( … \)` en ligne, `$$ … $$` en bloc. Utiliser String.raw pour les chaînes avec des backslashes.
-- Ajouter les nouvelles échéances dans `devoirs` (base.js).
+- `devoirs` (base.js) = UNIQUEMENT les vrais devoirs à rendre/déposer sur Blackboard (pas les exercices de TD à préparer, pas les infos, pas les quiz en classe).
 
 ## Récupérer les cours sur Blackboard (navigateur intégré, session d'Isaac)
 - API : `fetch('https://blackboard.soton.ac.uk/learn/api/public/v1/courses/{id}/contents…', {credentials:'include'})` (URL absolue).
