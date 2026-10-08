@@ -7,7 +7,7 @@
     titre: 'Lecture 1 — Units and Dimensions',
     titreFr: 'Cours 1 — Unités et dimensions',
     resume: 'Les 7 grandeurs de base du SI, les préfixes, les dimensions (M, L, T) et comment vérifier qu\'une formule est cohérente.',
-    sources: '2026-27 MS overview.pdf · MS L1 slides (filled) · Course notes L1.pdf · Worksheet 1 (Blackboard)',
+    sources: '2026-27 MS overview.pdf · MS L1 slides (filled) · Course notes L1.pdf · Worksheet 1 · WS1 marked student working (corrigé du prof, 8 oct.) (Blackboard)',
     en: String.raw`
 <h4>Module overview</h4>
 <ul><li><b>Lecture</b> (2R014, all students together) + <b>tutorial</b> (4 groups — attend your group only) + 2 <b>labs</b> in Weeks 6 & 8 (marked in GENG0015 Coursework).</li>
@@ -86,6 +86,13 @@
 • Un train à 120 m/s : 120 × 3,6 = <b>432 km/h</b>.<br>
 • Une voiture à 20 km/h pendant 5 min : convertis tout en SI d'abord : 5,56 m/s × 300 s ≈ <b>1667 m</b>.</div>
 <div class="tip"><div class="lab">Astuce des notes</div>Quand tu passes d'une grande unité à une petite (m → mm), le nombre doit <b>grossir</b>. Dans l'autre sens, il doit <b>diminuer</b>.</div>
+<div class="warnbox"><div class="lab">Les erreurs corrigées par le prof (Worksheet 1)</div>
+Le Dr Beh a publié les copies corrigées des étudiants. Les erreurs qu'il entoure le plus :
+<ul><li><b>Confondre unité et dimension</b> : la dimension de la masse est <b>M</b>, pas « kg ». Écrire « Force = kg m s⁻² » donne l'<i>unité</i>, pas la <i>dimension</i> (M L T⁻²). Pareil pour la puissance : « J s⁻¹ » est une unité, la dimension est M L² T⁻³.</li>
+<li><b>Les puissances négatives</b> : m s⁻² donne L T⁻² (et pas L T⁻¹).</li>
+<li><b>Diviser par une dimension</b> : M ÷ L³ = M L⁻³ (on passe l'exposant en négatif).</li>
+<li><b>Écrire l'unité finale</b> : une réponse sans unité (ex. « 2034 » au lieu de « 2034 mm ») est incomplète.</li></ul>
+Les bonnes réponses de la feuille sont celles de la page Exercices (2034 mm ; 3,004005 g ; 2002,002 GB ; 3,2 L ; 128 km/h ; 4,2 cm² et 420 mm² ; 144 mm ; M L⁻³, M L T⁻², M L⁻¹ T⁻², M L² T⁻², M L² T⁻³).</div>
 <h4>Vérifier une formule avec les dimensions</h4>
 <p>Dans une formule juste, <b>tous les termes ont la même dimension</b>. C'est un super réflexe à l'examen pour repérer une erreur.</p>
 <div class="ex"><div class="lab">Exemple</div>
