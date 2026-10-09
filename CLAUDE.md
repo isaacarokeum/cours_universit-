@@ -8,6 +8,7 @@ App perso d'Isaac (University of Southampton Malaysia, Foundation Year) : ses co
 - Données : `data/base.js` (matières, devoirs, emploi du temps) + un fichier par matière :
   `math-a.js` (ma), `mechanical-science.js` (ms), `engineering-principles.js` (ep), `routes-to-success.js` (rs), `coursework.js` (cw).
 - Electricity & Electronics (GENG0004) : NE PAS inclure (demande d'Isaac).
+- Mathematics B (GENG0002) : commence au semestre 2, ne pas l'ajouter avant (demande d'Isaac).
 - Semaine 1 = lundi 28 sept 2026 (calcul automatique dans app.js).
 
 ## Pages et fonctions
