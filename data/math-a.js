@@ -177,7 +177,7 @@ Dans une cuve, \(p\) passe de 248 kPa à 270 kPa quand \(T\) passe de 273 K à 2
     titre: 'Quadratic Equations',
     titreFr: 'Équations du second degré',
     resume: 'Résoudre \\(ax^2+bx+c=0\\) par factorisation ou avec la formule (discriminant), tracer une parabole, et résoudre un système droite + parabole.',
-    sources: 'GENG0001 04 Quadratic Equations (diapos) · Online notes & Tutorial Topic 4 de Jan Spakula (Blackboard)',
+    sources: 'GENG0001 04 Quadratic Equations (diapos + version corrigée « filled » du 9 oct.) · Online notes & Tutorial Topic 4 de Jan Spakula (Blackboard)',
     en: String.raw`
 <h4>Chapter 04 — Quadratic Equations</h4>
 <p><b>Learning outcomes:</b> (1) determine the roots of quadratic equations using factorisation and the formula; (2) solve simultaneous equations involving one linear and one quadratic equation; (3) sketch the graphs of quadratic functions.</p>
@@ -272,7 +272,7 @@ Bonus : cette forme donne directement le <b>sommet</b> de la parabole : \((-3 ; 
       { src: 'Blackboard', niveau: 2, en: String.raw`Slides: solve simultaneously \(y=x^2-3x+4\) (A) and \(y-x=1\) (B).`, fr: 'Diapos : résous le système droite + parabole.',
         sol: String.raw`<p>(B) : \(y=x+1\). Donc \(x^2-3x+4=x+1\) → \(x^2-4x+3=0\) → \((x-1)(x-3)=0\). Solutions : (1 ; 2) et (3 ; 4), les deux points d'intersection du graphique.</p>` },
       { src: 'Blackboard', niveau: 2, en: String.raw`Slides: sketch a graph of \(y=3x^2-17x+10\).`, fr: 'Diapos : esquisse la courbe.',
-        sol: String.raw`<p>\(a=3>0\) → ∪. Ordonnée à l'origine : 10. Racines : \((3x-2)(x-5)=0\) → \(\tfrac23\) et 5. Sommet en \(x=\tfrac{17}{6}\approx2{,}83\), \(y\approx-14{,}1\).</p>` },
+        sol: String.raw`<p>\(a=3>0\) → ∪. Ordonnée à l'origine : 10. Racines : \((3x-2)(x-5)=0\) → \(\tfrac23\) et 5. Sommet en \(x=-\tfrac{b}{2a}=\tfrac{17}{6}\approx2{,}83\), \(y=3\left(\tfrac{17}{6}\right)^2-17\cdot\tfrac{17}{6}+10=-\tfrac{169}{12}\approx-14{,}1\). <i>(Même méthode et même résultat que la correction du prof : x = 0 → y = 10 ; y = 0 → racines ; sommet en −b/2a.)</i></p>` },
       { src: 'Blackboard', niveau: 1, en: String.raw`Solve by factorisation: (a) \(x^2-x-6=0\) (b) \(x^2-16=0\) (c) \(x^2-2x=0\) (d) \(x^2-6x+9=0\)`, fr: 'Résous en factorisant.',
         sol: String.raw`<p>(a) \((x-3)(x+2)\) → 3 ; −2 · (b) \((x-4)(x+4)\) → ±4 · (c) \(x(x-2)\) → 0 ; 2 · (d) \((x-3)^2\) → 3 (double)</p>` },
       { src: 'Blackboard', niveau: 2, en: String.raw`Solve by factorisation: (a) \(6x^2+18x+12=0\) (b) \(6x^2-11x-7=0\) (c) \(14x^2=29x-12\)`, fr: 'Résous en factorisant.',
