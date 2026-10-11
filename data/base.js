@@ -19,7 +19,8 @@ window.DATA = {
     { matiere: 'cw', titre: 'ESSENTIAL READING — Information Literacy', type: 'Lecture obligatoire', url: 'https://blackboard.soton.ac.uk/ultra/courses/_237621_1/outline', date: '2026-10-30T18:00:00+00:00',
       details: 'Lecture « Information Literacy » à faire sur Blackboard (CA Semaine 2).' },
     { matiere: 'rs', titre: 'Part A — Devoir d\'analyse de données', type: 'Devoir (20 %)', date: '2026-11-30T17:00:00+08:00',
-      details: 'À rendre avant 17 h (heure de Malaisie). Remplir aussi l\'Academic Responsibility Agreement.' }
+      url: 'https://blackboard.soton.ac.uk/ultra/courses/_237619_1/outline',
+      details: 'Devoir individuel d\'analyse de données (Excel ou logiciel équivalent). Sujet publié le lundi 19 oct. à 17 h, à rendre le lundi 30 nov. avant 17 h (heure de Malaisie). Remplir aussi l\'Academic Responsibility Agreement (sur Blackboard) avant la même date. À noter : le quiz Part A (10 %, sur R5 Errors and Uncertainty, 45 min, documents autorisés) aura lieu en semaine 8 (16–20 nov.) en TD. Source : Part A assessment info.pdf (10 oct.).' }
   ],
 
   // ---------- Emploi du temps (semaine type, d'après « EFY – W1 ») ----------

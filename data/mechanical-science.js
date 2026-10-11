@@ -1,4 +1,4 @@
-// GENG0003 Mechanical Science — Semaines 1 et 2
+// GENG0003 Mechanical Science — Semaines 1 à 3
 (function () {
   const S = DATA.matieres.ms.semaines;
 
@@ -294,6 +294,124 @@ Les bonnes réponses de la feuille sont celles de la page Exercices (2034 mm ; 3
         sol: '<p>A = π D h = π × 20 × 3 = 188,5 mm² → F = 300 × 188,5 ≈ <b>56,5 kN</b>.</p>' },
       { src: 'Claude', niveau: 3, en: 'A climbing rope (steel core equivalent) must hold a 90 kg climber with a safety factor of 5. The material UTS is 500 MPa. What minimum diameter is needed?', fr: 'Un câble doit tenir un grimpeur de 90 kg avec un coefficient de sécurité de 5 (UTS = 500 MPa). Diamètre minimum ?',
         sol: String.raw`<p>σ permise = 100 MPa ; F = 883 N → A = 8,83 mm² → \(d=\sqrt{4A/\pi}\approx\) <b>3,35 mm</b>.</p>` }
+    ]
+  };
+
+  // =========================== SEMAINE 3 ===========================
+  S[3] = {
+    titre: 'Lecture 4 — Vectors 1',
+    titreFr: 'Cours 4 — Vecteurs (1) : composantes et vecteur résultant',
+    resume: 'Scalaires et vecteurs, notations, composantes x, y, z, norme et direction, multiplication par un scalaire, addition et soustraction de vecteurs (calcul et schéma), exemple du bateau sur la rivière.',
+    sources: '2026-27 MS L4 Vectors 1 (diapos « blank », 10 oct.) · Course notes L4.pdf (Blackboard)',
+    en: String.raw`
+<h4>Lecture 4 — Vectors 1</h4>
+<p><b>Learning outcomes:</b> (1) resolve a vector in \(x\)-, \(y\)- and \(z\)-directions; (2) find the resultant vector by applying vector addition or subtraction.</p>
+<h5>Scalar and vector</h5>
+<p>A <b>scalar</b> is a quantity with magnitude (a number) and unit. It has no direction. e.g. mass = 2.5 kg (we don't say 2.5 kg to the right), time = 3 minutes.</p>
+<p>A <b>vector</b> has both magnitude (with unit) and direction. e.g. force (7 N to the north), velocity (−2 m s⁻¹: the negative sign could mean to the left or down).</p>
+<p>A vector can be shown by: (1) an arrow on a diagram; (2) an underscore (<u>a</u>); (3) bold print (<b>a</b>); (4) two end points with an arrow above, \(\overrightarrow{AB}\).</p>
+<p>From the course notes: other vector quantities include velocity (wind maps), momentum (mass × velocity: a scalar times a vector is a vector), acceleration and force (\(F=ma\)). A vector may be drawn in any position as long as its magnitude and direction are preserved. The magnitude of \(\mathbf{A}\) is written \(|\mathbf{A}|\) or simply \(A\), and it is a scalar.</p>
+<h5>Representing a vector</h5>
+<p>A 3-dimensional vector is represented by its \(x\)-, \(y\)- and \(z\)-components, using the unit vectors \(\mathbf{i},\mathbf{j},\mathbf{k}\):</p>
+$$\mathbf{a}=a_x\mathbf{i}+a_y\mathbf{j}+a_z\mathbf{k}=\begin{pmatrix}a_x\\a_y\\a_z\end{pmatrix},\qquad |\mathbf{a}|=\sqrt{a_x^2+a_y^2+a_z^2}$$
+<p>A 2-dimensional vector is the case where one component (usually \(a_z\)) is zero: \(\mathbf{a}=a_x\mathbf{i}+a_y\mathbf{j}\), \(|\mathbf{a}|=\sqrt{a_x^2+a_y^2}\).</p>
+<p>The <b>direction</b> of a 2-D vector is the angle \(\theta\) measured <b>anticlockwise from the +\(x\) axis</b>, where \(\tan\theta=a_y/a_x\). Conversely, if the magnitude and angle are given, the vector is <b>resolved</b> as</p>
+$$\mathbf{a}=\begin{pmatrix}|\mathbf{a}|\cos\theta\\|\mathbf{a}|\sin\theta\end{pmatrix}$$
+<p>Course notes: a <b>unit vector</b> has magnitude one and just represents a direction (\(\mathbf{i},\mathbf{j},\mathbf{k}\), also written \(\hat{x},\hat{y},\hat{z}\) or \(\mathbf{e}_x,\mathbf{e}_y,\mathbf{e}_z\)). The <b>projection</b> of \(\mathbf{A}\) onto the direction of \(\mathbf{B}\), with angle \(\alpha\) between them, is \(A_B=A\cos\alpha\).</p>
+<h5>Multiplying a scalar and a vector</h5>
+<p>The result is a vector: all components are multiplied by the scalar.</p>
+<div class="ex"><div class="lab">Example (slides)</div>If \(\mathbf{a}=\begin{pmatrix}-1\\3\end{pmatrix}\): \(-\mathbf{a}=\begin{pmatrix}1\\-3\end{pmatrix}\), \(2\mathbf{a}=\begin{pmatrix}-2\\6\end{pmatrix}\), \(-\tfrac12\mathbf{a}=\begin{pmatrix}1/2\\-3/2\end{pmatrix}\).</div>
+<p>The magnitude changes. The direction stays the same if the scalar is positive, and becomes the opposite direction if the scalar is negative.</p>
+<h5>Resultant vector</h5>
+<p>The outcome of adding or subtracting vectors is the <b>resultant vector</b>. It can be found by (i) vector algebra or (ii) sketching.</p>
+<p><b>Vector algebra:</b> add or subtract the corresponding components.</p>
+$$\mathbf{a}\pm\mathbf{b}=(a_x\pm b_x)\mathbf{i}+(a_y\pm b_y)\mathbf{j}+(a_z\pm b_z)\mathbf{k}$$
+<p>In general \(\mathbf{a}+\mathbf{b}=\mathbf{b}+\mathbf{a}\) and \(\mathbf{a}-\mathbf{b}=\mathbf{a}+(-\mathbf{b})\).</p>
+<div class="ex"><div class="lab">Example (slides)</div>\(\mathbf{a}=\mathbf{i}-3\mathbf{j}+4\mathbf{k}\), \(\mathbf{b}=-5\mathbf{i}+2\mathbf{j}-\mathbf{k}\), \(\mathbf{c}=6\mathbf{j}-7\mathbf{k}\). Then \(\mathbf{a}+\mathbf{b}-\mathbf{c}=(1-5-0)\mathbf{i}+(-3+2-6)\mathbf{j}+(4-1+7)\mathbf{k}=-4\mathbf{i}-7\mathbf{j}+10\mathbf{k}\).</div>
+<p><b>Sketching</b> is suitable for 2-D vectors; trigonometry is needed to find the resultant. Course notes: to add \(\mathbf{B}\) to \(\mathbf{A}\), slide \(\mathbf{B}\) (without changing it) so that its tail sits on the head of \(\mathbf{A}\) ("tip to tail"); \(\mathbf{C}=\mathbf{A}+\mathbf{B}\) goes from the start of \(\mathbf{A}\) to the end of \(\mathbf{B}\). It is the diagonal of the parallelogram built on \(\mathbf{A}\) and \(\mathbf{B}\); \(\mathbf{A}-\mathbf{B}\) is the other diagonal. \(\overrightarrow{PR}=\overrightarrow{PQ}+\overrightarrow{QR}\).</p>
+<div class="ex"><div class="lab">Course notes example</div>\(\mathbf{A}=(2,5,1)\), \(\mathbf{B}=(3,-7,4)\): \(\mathbf{A}+\mathbf{B}=(5,-2,5)\), \(\mathbf{A}-\mathbf{B}=(-1,12,-3)\).</div>
+<h5>Resultant vector example: the boat</h5>
+<p>A boat attempts to travel straight across a river at 2 m s⁻¹, but the current flows at 1.20 m s⁻¹ to the right. What is the actual velocity of the boat? Then: if the boat really wants to reach straight across, with the same speeds, what should its direction be? (Worked in the exercises.)</p>
+<h5>Summary</h5>
+<ul><li>A 2-D vector is resolved into \(x\)- and \(y\)-components.</li><li>The resultant vector is the outcome of adding or subtracting vectors.</li></ul>
+<p><i>Note : les diapos 5 (« Resolve the following vectors ») et 8 (somme et différence par schéma) sont des figures complétées en cours ; elles seront ajoutées avec la version « filled ».</i></p>`,
+    fr: String.raw`
+<h4>1. Scalaire ou vecteur ?</h4>
+<p>Un <b>scalaire</b>, c'est juste un nombre avec une unité : ta masse (70 kg), la durée d'un cours (1 h), une température. Ça n'a pas de sens de dire « 70 kg vers la gauche ».</p>
+<p>Un <b>vecteur</b>, c'est un nombre <b>et une direction</b> : « je pousse la porte avec 20 N <b>vers l'avant</b> », « le vent souffle à 30 km/h <b>vers l'est</b> ». Les forces, vitesses, accélérations et déplacements sont des vecteurs.</p>
+<div class="ex"><div class="lab">Exemple concret</div>« J'ai marché 3 km » : c'est une distance (scalaire). « J'ai marché 3 km vers le nord » : c'est un déplacement (vecteur). Si tu fais 3 km vers le nord puis 3 km vers le sud, tu as marché 6 km mais ton déplacement total est <b>zéro</b>.</div>
+<p>Comment on l'écrit : une flèche sur un dessin, une lettre en <b>gras</b> (\(\mathbf{a}\)), une lettre soulignée (<u>a</u>) à la main, ou \(\overrightarrow{AB}\) (de A vers B). La <b>norme</b> (la longueur) se note \(|\mathbf{a}|\) ou juste \(a\) : c'est un scalaire.</p>
+<div class="tip"><div class="lab">Astuce</div>À l'examen, à la main, <b>souligne</b> toujours tes vecteurs : sinon on ne sait pas si tu parles du vecteur ou de sa longueur.</div>
+
+<h4>2. Les composantes : découper un vecteur en x et y</h4>
+<p>Imagine que tu traverses une place en diagonale. On peut décrire ce trajet par « combien vers la droite » (\(a_x\)) et « combien vers le haut » (\(a_y\)). Ce sont les <b>composantes</b>. On écrit \(\mathbf{a}=a_x\mathbf{i}+a_y\mathbf{j}\) : \(\mathbf{i}\) = « un pas vers la droite », \(\mathbf{j}\) = « un pas vers le haut » (et \(\mathbf{k}\) = « un pas vers toi » en 3D). Ce sont des <b>vecteurs unitaires</b> (longueur 1).</p>
+<p><b>Longueur</b> (Pythagore) : \(|\mathbf{a}|=\sqrt{a_x^2+a_y^2}\) (en 3D on ajoute \(a_z^2\)).</p>
+<p><b>Direction</b> : l'angle \(\theta\) mesuré <b>depuis l'axe +x, dans le sens inverse des aiguilles d'une montre</b>, avec \(\tan\theta=a_y/a_x\).</p>
+<div class="ex"><div class="lab">Exemple concret</div>Tu marches 4 m vers l'est et 3 m vers le nord : \(\mathbf{d}=4\mathbf{i}+3\mathbf{j}\). Longueur : \(\sqrt{16+9}=5\) m. Angle : \(\tan^{-1}(3/4)=36{,}9°\) au-dessus de l'axe des x.</div>
+<div class="warnbox"><div class="lab">Piège de la calculatrice</div>\(\tan^{-1}\) donne un angle entre −90° et 90° seulement. Si \(a_x\) est <b>négatif</b>, le vecteur pointe vers la gauche : il faut <b>ajouter 180°</b>. Ex : \(\mathbf{a}=-3\mathbf{i}+3\mathbf{j}\) → la calculatrice donne −45°, mais le vrai angle est 135°. Fais toujours un petit croquis pour vérifier le quadrant.</div>
+<p><b>Résoudre</b> un vecteur (resolve), c'est le chemin inverse : on connaît la longueur et l'angle, on cherche les composantes :</p>
+<p>\(a_x=|\mathbf{a}|\cos\theta\) et \(a_y=|\mathbf{a}|\sin\theta\).</p>
+<div class="ex"><div class="lab">Exemple concret</div>Tu tires une valise avec une force de 50 N, la poignée fait 30° avec le sol. Partie utile (horizontale) : \(50\cos30°=43{,}3\) N. Partie qui soulève (verticale) : \(50\sin30°=25\) N. C'est pour ça qu'une poignée trop inclinée te fatigue : tu soulèves au lieu d'avancer.</div>
+
+<h4>3. Multiplier un vecteur par un nombre</h4>
+<p>On multiplie <b>chaque composante</b>. Avec \(\mathbf{a}=(-1,\,3)\) : \(2\mathbf{a}=(-2,\,6)\) (deux fois plus long, même direction), \(-\mathbf{a}=(1,\,-3)\) (même longueur, sens <b>opposé</b>), \(-\tfrac12\mathbf{a}=(\tfrac12,\,-\tfrac32)\) (moitié moins long, sens opposé).</p>
+<div class="ex"><div class="lab">Exemple concret</div>Tu roules à vélo à \(\mathbf{v}\). Si tu doubles ta vitesse dans la même direction : \(2\mathbf{v}\). Si tu fais demi-tour à la même allure : \(-\mathbf{v}\).</div>
+
+<h4>4. Additionner et soustraire : le vecteur résultant</h4>
+<p><b>Par le calcul</b> : on additionne (ou soustrait) composante par composante. C'est la méthode la plus sûre.</p>
+<div class="ex"><div class="lab">Exemple du cours, pas à pas</div>\(\mathbf{a}=\mathbf{i}-3\mathbf{j}+4\mathbf{k}\), \(\mathbf{b}=-5\mathbf{i}+2\mathbf{j}-\mathbf{k}\), \(\mathbf{c}=6\mathbf{j}-7\mathbf{k}\). On cherche \(\mathbf{a}+\mathbf{b}-\mathbf{c}\).<br>
+i : \(1+(-5)-0=-4\) · j : \(-3+2-6=-7\) · k : \(4+(-1)-(-7)=10\).<br>Résultat : \(-4\mathbf{i}-7\mathbf{j}+10\mathbf{k}\).</div>
+<div class="warnbox"><div class="lab">Piège des signes</div>Soustraire \(-7\mathbf{k}\), c'est <b>ajouter</b> 7. Écris chaque ligne avec des parenthèses pour ne pas te tromper.</div>
+<p><b>Par le dessin</b> (« tip to tail », bout à bout) : on pose le début de \(\mathbf{b}\) au bout de \(\mathbf{a}\) ; le résultant va du départ de \(\mathbf{a}\) à l'arrivée de \(\mathbf{b}\). C'est la diagonale du parallélogramme construit sur \(\mathbf{a}\) et \(\mathbf{b}\). Pour \(\mathbf{a}-\mathbf{b}\), on ajoute \(-\mathbf{b}\) (la flèche retournée).</p>
+<div class="ex"><div class="lab">Exemple concret</div>Tu vas de chez toi (P) à l'épicerie (Q), puis de l'épicerie à la fac (R). Ton déplacement total est la flèche directe de chez toi à la fac : \(\overrightarrow{PR}=\overrightarrow{PQ}+\overrightarrow{QR}\). Le chemin réel ne compte pas, seulement le départ et l'arrivée.</div>
+
+<h4>5. L'exemple du bateau (à savoir refaire)</h4>
+<p>Un bateau veut traverser une rivière tout droit à 2 m/s, mais le courant le pousse à 1,2 m/s vers la droite.</p>
+<p><b>Question 1 : vitesse réelle ?</b> Les deux vitesses sont perpendiculaires, donc Pythagore : \(\sqrt{2^2+1{,}2^2}=\sqrt{5{,}44}\approx2{,}33\) m/s. Direction : \(\tan^{-1}(1{,}2/2)\approx31{,}0°\) vers la droite par rapport à la traversée tout droit. Le bateau arrive donc plus loin en aval.</p>
+<p><b>Question 2 : pour arriver juste en face ?</b> Il faut viser un peu <b>vers l'amont</b> (contre le courant) pour que la partie « gauche » de sa vitesse annule le courant : \(2\sin\theta=1{,}2\Rightarrow\sin\theta=0{,}6\Rightarrow\theta\approx36{,}9°\) vers la gauche par rapport à la traversée tout droit. Il ne lui reste alors que \(2\cos36{,}9°=1{,}6\) m/s pour traverser.</p>
+<div class="tip"><div class="lab">Même idée dans la vie</div>Un avion avec du vent de travers, un nageur dans un courant, toi qui marches dans un train : on additionne toujours les vecteurs vitesse.</div>`,
+    vocab: [
+      ['scalar', 'scalaire'], ['vector', 'vecteur'], ['magnitude', 'norme, intensité (longueur du vecteur)'], ['direction', 'direction (et sens)'],
+      ['component', 'composante'], ['to resolve a vector', 'décomposer un vecteur (trouver ses composantes)'], ['resultant vector', 'vecteur résultant'],
+      ['unit vector', 'vecteur unitaire'], ['projection', 'projection'], ['anticlockwise / clockwise', 'sens inverse / sens des aiguilles d\'une montre'],
+      ['displacement', 'déplacement'], ['velocity', 'vitesse (vectorielle)'], ['speed', 'vitesse (valeur, scalaire)'], ['momentum', 'quantité de mouvement'],
+      ['bold print', 'caractères gras'], ['underscore', 'soulignement'], ['tip to tail', 'bout à bout'], ['parallelogram', 'parallélogramme'],
+      ['current (river)', 'courant'], ['upstream / downstream', 'en amont / en aval'], ['sketch', 'schéma, croquis']
+    ],
+    formules: [
+      { nom: 'Vecteur en composantes', tex: '\\mathbf{a}=a_x\\mathbf{i}+a_y\\mathbf{j}+a_z\\mathbf{k}', why: '\\(\\mathbf{i},\\mathbf{j},\\mathbf{k}\\) : vecteurs unitaires selon x, y, z.' },
+      { nom: 'Norme', tex: '|\\mathbf{a}|=\\sqrt{a_x^2+a_y^2+a_z^2}', why: 'Pythagore. En 2D, sans \\(a_z\\).' },
+      { nom: 'Direction (2D)', tex: '\\tan\\theta=\\dfrac{a_y}{a_x}', why: 'Angle depuis +x, sens inverse des aiguilles. Vérifie le quadrant (ajoute 180° si \\(a_x<0\\)).' },
+      { nom: 'Décomposer (resolve)', tex: 'a_x=|\\mathbf{a}|\\cos\\theta,\\qquad a_y=|\\mathbf{a}|\\sin\\theta', why: '' },
+      { nom: 'Multiplication par un scalaire', tex: 'c\\,\\mathbf{a}=(c\\,a_x,\;c\\,a_y,\;c\\,a_z)', why: 'c < 0 : sens opposé.' },
+      { nom: 'Somme et différence', tex: '\\mathbf{a}\\pm\\mathbf{b}=(a_x\\pm b_x)\\mathbf{i}+(a_y\\pm b_y)\\mathbf{j}+(a_z\\pm b_z)\\mathbf{k}', why: '' },
+      { nom: 'Projection', tex: 'A_B=A\\cos\\alpha', why: 'Projection de A sur la direction de B (α = angle entre les deux).' }
+    ],
+    exos: [
+      { src: 'Blackboard', niveau: 1, en: 'Slides: if a = (−1, 3), find −a, 2a and −½a.', fr: 'Diapos : avec a = (−1, 3), calcule −a, 2a et −½a.',
+        sol: '<p>−a = <b>(1, −3)</b> ; 2a = <b>(−2, 6)</b> ; −½a = <b>(½, −3/2)</b>.</p>' },
+      { src: 'Blackboard', niveau: 1, en: 'Slides: if a = i − 3j + 4k, b = −5i + 2j − k and c = 6j − 7k, find a + b − c.', fr: 'Diapos : calcule a + b − c.',
+        sol: '<p>(1 − 5 − 0)i + (−3 + 2 − 6)j + (4 − 1 + 7)k = <b>−4i − 7j + 10k</b>.</p>' },
+      { src: 'Blackboard', niveau: 1, en: 'Course notes: A = (2, 5, 1) and B = (3, −7, 4). Find A + B and A − B.', fr: 'Notes de cours : calcule A + B et A − B.',
+        sol: '<p>A + B = <b>(5, −2, 5)</b> ; A − B = <b>(−1, 12, −3)</b>.</p>' },
+      { src: 'Blackboard', niveau: 2, en: 'Slides: a boat attempts to travel straight across a river at 2 m s⁻¹. The current flows at 1.20 m s⁻¹ to the right. What is the actual velocity of the boat?', fr: 'Diapos : un bateau traverse à 2 m/s, le courant va à 1,2 m/s vers la droite. Vitesse réelle du bateau ?',
+        sol: '<p>|v| = √(2² + 1,2²) = √5,44 ≈ <b>2,33 m/s</b>, à tan⁻¹(1,2/2) ≈ <b>31,0°</b> vers la droite (en aval) par rapport à la traversée perpendiculaire (soit ≈ 59,0° par rapport à la berge).</p>' },
+      { src: 'Blackboard', niveau: 3, en: 'Slides: continuing, if the boat really wants to reach straight across the river, with the same current and boat speed, what should the direction of the boat be?', fr: 'Diapos : suite. Pour arriver juste en face, dans quelle direction le bateau doit-il viser ?',
+        sol: '<p>La composante du bateau vers l\'amont doit annuler le courant : 2 sin θ = 1,2 → sin θ = 0,6 → <b>θ ≈ 36,9° vers l\'amont (à gauche)</b> par rapport à la perpendiculaire aux berges. Vitesse de traversée : 2 cos 36,9° = 1,6 m/s.</p>' },
+      { src: 'Claude', niveau: 1, en: 'Resolve a force of 50 N acting at 30° above the +x axis into x- and y-components.', fr: 'Décompose une force de 50 N à 30° au-dessus de l\'axe +x.',
+        sol: '<p>Fx = 50 cos 30° = <b>43,3 N</b> ; Fy = 50 sin 30° = <b>25,0 N</b>.</p>' },
+      { src: 'Claude', niveau: 1, en: 'Find the magnitude of a = 2i − 3j + 6k.', fr: 'Trouve la norme de a = 2i − 3j + 6k.',
+        sol: '<p>√(4 + 9 + 36) = √49 = <b>7</b>.</p>' },
+      { src: 'Claude', niveau: 2, en: 'Find the magnitude and direction (anticlockwise from +x) of a = 3i − 4j.', fr: 'Norme et direction (depuis +x, sens inverse des aiguilles) de a = 3i − 4j.',
+        sol: '<p>|a| = √(9 + 16) = <b>5</b>. tan⁻¹(−4/3) = −53,1° : le vecteur est en bas à droite (4e quadrant), donc θ = 360° − 53,1° = <b>306,9°</b> (ou 53,1° sous l\'axe +x).</p>' },
+      { src: 'Claude', niveau: 2, en: 'a = (−1, 3) and b = (4, −2). Find 2a − b, its magnitude and its direction.', fr: 'a = (−1, 3), b = (4, −2). Calcule 2a − b, sa norme et sa direction.',
+        sol: '<p>2a − b = (−2 − 4, 6 + 2) = <b>(−6, 8)</b>. Norme = √(36 + 64) = <b>10</b>. tan⁻¹(8/−6) donne −53,1° sur la calculatrice, mais x < 0 et y > 0 (2e quadrant) : θ = −53,1° + 180° = <b>126,9°</b>.</p>' },
+      { src: 'Claude', niveau: 2, en: 'A plane heads due north at 200 m s⁻¹ while the wind blows due east at 50 m s⁻¹. Find the resultant velocity.', fr: 'Un avion vole plein nord à 200 m/s, le vent souffle plein est à 50 m/s. Vitesse résultante ?',
+        sol: '<p>√(200² + 50²) = √42 500 ≈ <b>206 m/s</b>, à tan⁻¹(50/200) ≈ <b>14,0° à l\'est du nord</b>.</p>' },
+      { src: 'Claude', niveau: 3, en: 'A student walks 3 km due east, then 4 km at 60° north of east. Find the resultant displacement.', fr: 'Un étudiant marche 3 km plein est, puis 4 km à 60° au nord de l\'est. Déplacement résultant ?',
+        sol: '<p>2e trajet : (4 cos 60°, 4 sin 60°) = (2 ; 3,46). Total : (5 ; 3,46) km. Norme = √(25 + 12) = √37 ≈ <b>6,08 km</b>, direction tan⁻¹(3,46/5) ≈ <b>34,7° au nord de l\'est</b>.</p>' },
+      { src: 'Claude', niveau: 1, en: 'Vector A has magnitude 10 N and makes an angle of 60° with vector B. Find the projection of A onto the direction of B.', fr: 'A vaut 10 N et fait 60° avec B. Projection de A sur la direction de B ?',
+        sol: '<p>A cos 60° = 10 × 0,5 = <b>5 N</b>.</p>' }
     ]
   };
 })();
