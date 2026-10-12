@@ -16,7 +16,7 @@ window.DATA = {
   devoirs: [
     { matiere: 'cw', titre: 'Digital Capabilities Worksheet', type: 'Questionnaire Blackboard', rendu: true, url: 'https://blackboard.soton.ac.uk/ultra/courses/_237621_1/assessment/_8267422_1/overview?courseId=_237621_1', date: '2026-10-05T17:00:00+08:00',
       details: 'Fiche « Digital Capabilities » (CA Semaine 1) à remplir sur Blackboard.' },
-    { matiere: 'cw', titre: 'ESSENTIAL READING — Information Literacy', type: 'Lecture obligatoire', url: 'https://blackboard.soton.ac.uk/ultra/courses/_237621_1/outline', date: '2026-10-30T18:00:00+00:00',
+    { matiere: 'cw', titre: 'ESSENTIAL READING — Information Literacy', type: 'Lecture obligatoire', url: 'https://blackboard.soton.ac.uk/ultra/courses/_237621_1/assessment/_8271320_1/overview?courseId=_237621_1', date: '2026-10-30T18:00:00+00:00',
       details: 'Lecture « Information Literacy » à faire sur Blackboard (CA Semaine 2).' },
     { matiere: 'rs', titre: 'Part A — Devoir d\'analyse de données', type: 'Devoir (20 %)', date: '2026-11-30T17:00:00+08:00',
       url: 'https://blackboard.soton.ac.uk/ultra/courses/_237619_1/outline',

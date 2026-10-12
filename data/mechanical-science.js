@@ -152,7 +152,7 @@ Les bonnes réponses de la feuille sont celles de la page Exercices (2034 mm ; 3
     titre: 'Lectures 2 & 3 — Elasticity 1 & 2',
     titreFr: 'Cours 2 et 3 — Élasticité (ressorts, contraintes, coefficient de sécurité)',
     resume: 'Loi de Hooke, ressorts en série/parallèle, contrainte, déformation, module de Young, cisaillement, compression uniforme et coefficient de sécurité.',
-    sources: 'MS L2 & L3 slides (filled) · Course notes L2.pdf & L3.pdf · Worksheet 2 (Blackboard)',
+    sources: 'MS L2 & L3 slides (filled) · Course notes L2.pdf & L3.pdf · Worksheet 2 · WS2 marked student working (corrigé du prof, 12 oct.) (Blackboard)',
     en: String.raw`
 <h4>Lecture 2 — Elasticity 1</h4>
 <p><b>Learning outcomes:</b> apply Hooke's Law to systems of springs and materials; calculate stress, strain and Young's modulus.</p>
@@ -236,7 +236,18 @@ Les bonnes réponses de la feuille sont celles de la page Exercices (2034 mm ; 3
 <div class="ex"><div class="lab">Pression sous l'eau (notes de cours)</div>\(p=h\rho g\) : à 4000 m de profondeur, \(p=4000\times1000\times10=4\times10^7\) Pa. L'eau (B = 2,2 GPa) se comprime de \(\Delta V/V=4\times10^7/2{,}2\times10^9\approx1{,}8\,\%\). Le fer (B = 170 GPa) seulement de 0,025 %.</div>
 <h4>6. Coefficient de sécurité</h4>
 <p>La <b>résistance maximale</b> (UTS) est la contrainte à laquelle le matériau casse. Un ingénieur ne travaille jamais à cette limite : il divise par un <b>coefficient de sécurité</b> (> 1).</p>
-<div class="ex"><div class="lab">Exemple concret</div>Un câble d'ascenseur en acier casse à 1000 MPa. Avec un coefficient de 10, on ne l'utilise qu'à 100 MPa. Si on veut savoir quelle masse il peut porter : \(F=\sigma_{appliquée}\times A\), puis \(m=F/g\).</div>`,
+<div class="ex"><div class="lab">Exemple concret</div>Un câble d'ascenseur en acier casse à 1000 MPa. Avec un coefficient de 10, on ne l'utilise qu'à 100 MPa. Si on veut savoir quelle masse il peut porter : \(F=\sigma_{appliquée}\times A\), puis \(m=F/g\).</div>
+<div class="warnbox"><div class="lab">Les remarques du prof sur la Worksheet 2</div>
+Le Dr Beh a publié les copies corrigées des étudiants (Q1 à Q9). Toutes les réponses finales sont justes, mais voici ce qu'il souligne :
+<ul><li><b>Lire la question jusqu'au bout</b> (Q1) : « how much <i>more</i> » demande l'allongement <i>en plus</i>. Avec 140 kg le ressort s'allonge de 21 mm au total, mais la réponse est 21 − 6 = <b>15 mm</b>. Il écrit « not final ans » à côté des 21 mm.</li>
+<li><b>Masse ≠ force</b> : il entoure « 40 kg » et écrit N et kg à côté. Dans F = kx, il faut le <b>poids</b> F = mg = 40 × 9,81 N.</li>
+<li><b>Faire un schéma</b> : pour chaque question il dessine le montage (ressorts en série, fil tiré par 1,25 kN, rivet vu de dessus). Ça aide à trouver la bonne surface.</li>
+<li><b>Toujours une unité</b> (Q3) : « L = 1,6 » est incomplet, il écrit « unit? (metres) ». Et il conseille de mettre « ⇒ » au début de chaque ligne de calcul.</li>
+<li><b>Rejeter la solution impossible</b> (Q5) : x² = 0,0225 donne x = ±0,15 m ; une longueur négative n'a pas de sens, donc x = <b>0,15 m</b>.</li>
+<li><b>Cisaillement, pas traction</b> (Q7) : il écrit « not tensile » : la contrainte du rivet est une contrainte de cisaillement τ = F/A, avec A = section du rivet.</li>
+<li><b>Vérifier l'ordre de grandeur</b> (Q7) : un étudiant a écrit 4,71 N au lieu de <b>471 N</b> (24 MPa × 19,6 mm² = 471 N). Rappel : 1 MPa × 1 mm² = 1 N.</li>
+<li><b>Coefficient de sécurité</b> (Q8) : contrainte appliquée = UTS / coefficient, donc coefficient = 700 / 78,06 ≈ <b>8,97</b>.</li>
+<li><b>3 chiffres significatifs</b> : il note « 3 s.f. » (Q2 : 3,57 mm ; Q4 : 99,5 MPa).</li></ul></div>`,
     vocab: [
       ['Hooke\'s Law', 'loi de Hooke'], ['spring constant / stiffness', 'raideur (constante de raideur)'],
       ['extension', 'allongement'], ['tensile force', 'force de traction'], ['compressive force', 'force de compression'],
@@ -279,7 +290,7 @@ Les bonnes réponses de la feuille sont celles de la page Exercices (2034 mm ; 3
       { src: 'Blackboard', niveau: 3, en: 'The ultimate shear strength of iron is 240 MPa. For a riveted joint, what is the maximum tension it will stand if the rivet diameter is 8 mm? If the diameter is only 5 mm with a safety factor of 10, what is the maximum tension?', fr: 'Rivet en fer (résistance au cisaillement 240 MPa) : tension max avec un rivet de 8 mm ? Et avec 5 mm et un coefficient de sécurité de 10 ?',
         sol: '<p>(Rivet en simple cisaillement, une seule section coupée.) A = π × 4² = 50,3 mm² → F = 240 × 50,3 ≈ <b>12,1 kN</b>.<br>5 mm : A = 19,6 mm², contrainte permise = 24 MPa → F ≈ <b>471 N</b>.<br><i>(Réponses confirmées par les notes de cours, question 3b : 12,064 kN et 471 N.)</i></p>' },
       { src: 'Blackboard', niveau: 2, en: 'A mass of 25 kg is suspended by a wire of diameter 2 mm and ultimate tensile strength 700 MPa. What is the safety factor applied to the wire?', fr: 'Une masse de 25 kg pend à un fil de 2 mm (UTS = 700 MPa). Quel est le coefficient de sécurité ?',
-        sol: '<p>F = 245 N ; A = π × 1² = 3,14 mm² → σ = 78,1 MPa. Coefficient = 700/78,1 ≈ <b>9</b>.</p>' },
+        sol: '<p>F = 245 N ; A = π × 1² = 3,14 mm² → σ = 78,1 MPa. Coefficient = 700/78,1 ≈ <b>8,97 ≈ 9</b>.</p>' },
       { src: 'Blackboard', niveau: 1, en: 'A wire is 2 m long and made from steel with Young\'s modulus 150 GPa. By what distance will it stretch under a tensile stress of 3 MPa?', fr: 'Un fil d\'acier de 2 m (E = 150 GPa) subit 3 MPa. De combien s\'allonge-t-il ?',
         sol: '<p>ε = 3 × 10⁶ / 150 × 10⁹ = 2 × 10⁻⁵ → ΔL = 2 × 2 × 10⁻⁵ = <b>0,04 mm</b>.</p>' },
       { src: 'Blackboard', niveau: 1, en: 'Lecture example: springs kA = 2 N m⁻¹ and kB = 3 N m⁻¹ in series. Find k_total. Repeat for two springs of 3 N m⁻¹.', fr: 'Exemple du cours : raideur totale en série.',
