@@ -1,4 +1,4 @@
-// GENG0001 Mathematics A — Semaines 1 et 2
+// GENG0001 Mathematics A — Semaines 1 à 3
 (function () {
   const S = DATA.matieres.ma.semaines;
 
@@ -295,6 +295,210 @@ Bonus : cette forme donne directement le <b>sommet</b> de la parabole : \((-3 ; 
         sol: String.raw`<p>\(L+l=17\), \(Ll=60\) → \(l(17-l)=60\) → \(l^2-17l+60=0\) → \((l-5)(l-12)=0\). Dimensions : 12 cm × 5 cm.</p>` },
       { src: 'Claude', niveau: 3, en: String.raw`For which values of \(k\) does \(x^2+kx+9=0\) have a repeated root?`, fr: 'Pour quelles valeurs de k l\'équation a-t-elle une racine double ?',
         sol: String.raw`<p>Racine double ⇔ Δ = 0 : \(k^2-36=0\) → \(k=6\) ou \(k=-6\).</p>` }
+    ]
+  };
+
+  // =========================== SEMAINE 3 ===========================
+  S[3] = {
+    titre: 'Inequalities & Indices',
+    titreFr: 'Inéquations et puissances (indices)',
+    resume: '2 chapitres : résoudre une inéquation (linéaire, du second degré, rationnelle) et l\'écrire sur la droite des réels ; les lois des puissances et l\'écriture scientifique / ingénieur des nombres.',
+    sources: 'GENG0001 05 Inequalities et GENG0001 06 Indices (Blank Lecture Notes, diapos, publiées le 12 oct.)',
+    en: String.raw`
+<h4>Chapter 05 — Inequalities</h4>
+<p><b>Learning outcomes:</b> (1) write inequality statements involving different inequality symbols; (2) determine the range of values of a variable that satisfies an inequality statement.</p>
+<h5>Symbols</h5>
+<p>For two numbers \(a\) and \(b\):</p>
+<ul><li>\(a&lt;b\) means that \(a\) is less than \(b\);</li>
+<li>\(a>b\) means that \(a\) is greater than \(b\);</li>
+<li>\(a\le b\) means that \(a\) is less than or equal to \(b\);</li>
+<li>\(a\ge b\) means that \(a\) is greater than or equal to \(b\).</li></ul>
+<p>For example: \(1&lt;2\), \(-10&lt;-5\), \(-3\le-3\), \(-2\ge-4\). Note: \(a>0\) means the same as "\(a\) is positive".</p>
+<h5>Number line and set notation</h5>
+<p>On the number line, a number further to the left is smaller. The notation \(\{x : x>2\}\) means "the set of all numbers that are greater than 2". The slides ask you to depict on a number line: \(\{x : x>2\}\), \(\{x : x\le-2\}\), \(\{x : -3\le x&lt;4\}\) and \(\{x : x&lt;1 \text{ or } x\ge3\}\).</p>
+<p class="muted" style="font-size:13px">Convention: an <b>open</b> circle at an end point that is excluded (\(&lt;\), \(>\)), a <b>filled</b> circle at an end point that is included (\(\le\), \(\ge\)), and a thick line over all the values in the set.</p>
+<h5>Axioms of inequalities</h5>
+<ol><li>If \(a&lt;b\) then \(a+c&lt;b+c\).</li>
+<li>If \(a&lt;b\) then \(a-c&lt;b-c\).</li>
+<li>If \(a&lt;b\) <b>and</b> \(c>0\) then \(ac&lt;bc\).</li>
+<li>If \(a&lt;b\) <b>and</b> \(c&lt;0\) then \(ac>bc\).</li></ol>
+<p>So adding or subtracting the same number keeps the inequality; multiplying (or dividing) by a <b>negative</b> number <b>reverses</b> it.</p>
+<h5>Problems on the slides</h5>
+<ul><li>Solve \(-3x+2>11\).</li>
+<li>Determine the set \(\{x : 2x+x^2&lt;5x+10\}\).</li>
+<li>Solve \(\dfrac{2x-5}{x-7}&lt;0\).</li>
+<li>Solve \(\dfrac{3x+8}{x-1}\ge-2\).</li>
+<li>Solve \(\dfrac{x-1}{x-2}&lt;0\).</li>
+<li>Solve \(\dfrac{3x-2}{1+x}\le1\).</li></ul>
+<p>Method for quadratic and rational inequalities: bring everything to one side so that the other side is 0, factorise (or write as a single fraction), find the critical values (zeros of each factor, and values where the denominator is 0), then study the sign of each factor in a sign table. Never multiply both sides by an expression whose sign you don't know (e.g. \(x-7\)).</p>
+
+<h4>Chapter 06 — Indices</h4>
+<p><b>Learning outcomes:</b> (1) apply the laws of exponents to simplify expressions with indices; (2) write numbers in standard and engineering scientific notations.</p>
+<h5>6.1 Indices</h5>
+<p>Subscripts and superscripts are also called <b>indices</b> (singular: <b>index</b>). Subscripts are usually used to denote a family of variables, e.g. \(a_1,a_2,a_3\) (instead of \(a,b,c\)). Superscripts usually denote an <b>exponent</b>, i.e. the power to which a given number is raised.</p>
+<p>Examples: \(4^3=4\cdot4\cdot4=64\), \(2^5=2\cdot2\cdots2=32\) (5 times), \(x^4=x\cdot x\cdot x\cdot x\).</p>
+<p>In general, we <b>define</b>:</p>
+<ul><li>\(x^n:=x\cdot x\cdots x\) (\(n\) times), when \(n>0\);</li>
+<li>\(x^0:=1\);</li>
+<li>\(x^{-n}:=\dfrac{1}{x\cdot x\cdots x}\) (\(n\) times), when \(n>0\);</li>
+<li>\(x^{1/2}:=\sqrt{x}\) for \(x\ge0\), \(x^{1/3}:=\sqrt[3]{x}\).</li></ul>
+<p>Assume \(x\ge0\) and \(m,n>0\). Then \(x^{1/n}:=\sqrt[n]{x}\), \(x^{m/n}:=\sqrt[n]{x^m}\), \(x^{-m/n}:=\dfrac{1}{\sqrt[n]{x^m}}\).</p>
+<h5>6.2 Laws of exponents</h5>
+<p>The basic ones are: (1) \(a^r\cdot a^s=a^{r+s}\); (2) \((a\cdot b)^r=a^r\cdot b^r\); (3) \((a^r)^s=a^{r\cdot s}\).</p>
+<p>From these, one can derive: (4) \(\dfrac{a^r}{a^s}=a^{r-s}\); (5) \(\left(\sqrt[n]{a}\right)^m=a^{m/n}\).</p>
+<p>Deriving 4: \(\frac{a^r}{a^s}=a^r\cdot\frac{1}{a^s}=a^r\cdot a^{-s}\overset{1.}{=}a^{r-s}\). Deriving 5: \(\left(\sqrt[n]{a}\right)^m=\left(a^{1/n}\right)^m\overset{3.}{=}a^{\frac1n\cdot m}=a^{m/n}\).</p>
+<p><b>Problems on the slides:</b> write using only positive indices: \(x^{-4}\), \(2x^{-5}\), \((2x)^{-5}\), \(\dfrac{3}{y^{-5}}\). Write using only a single index: \((x^3)^{-2}\), \(((-x)^4)^{-5}\), \(\left(\dfrac{t}{t^{-3}}\right)^2\). Simplify so that it uses only positive indices: \(\dfrac{3\left(xy^{1/3}\right)^3}{2x^{-2}y^2}\div\dfrac{\sqrt[3]{27x^2y^6}}{\sqrt{4y^4}}\).</p>
+<h5>6.3 Scientific notation of numbers</h5>
+<p><b>Standard</b> (or <b>normalised</b>) scientific notation is \(a\cdot10^n\) where \(1\le|a|&lt;10\) and \(n\) is an integer.</p>
+<p><b>Engineering</b> scientific notation is \(a\cdot10^n\) where \(1\le|a|&lt;1000\) and \(n\) is a multiple of 3.</p>
+<p>The "\(a\)" is called the <b>mantissa</b>, the "\(n\)" is called the <b>exponent</b>.</p>
+<table><tr><th>Decimal expansion</th><th>Standard</th><th>Engineering</th></tr>
+<tr><td>17</td><td>\(1.7\cdot10^1\)</td><td>17</td></tr>
+<tr><td>21</td><td>\(2.1\cdot10^1\)</td><td>21</td></tr>
+<tr><td>17 425</td><td>\(1.7425\cdot10^4\)</td><td>\(17.425\cdot10^3\)</td></tr>
+<tr><td>150, −242, 713 527, 0.0002, −0.00007</td><td colspan="2">to complete (see exercises)</td></tr></table>`,
+    fr: String.raw`
+<h4>Partie 1 — Les inéquations</h4>
+<p>Une <b>inéquation</b>, c'est comme une équation, mais avec un signe de comparaison à la place du « = ». La réponse n'est plus un seul nombre mais <b>tout un intervalle</b> de nombres.</p>
+<ul><li>\(&lt;\) : strictement plus petit · \(>\) : strictement plus grand</li>
+<li>\(\le\) : plus petit <b>ou égal</b> · \(\ge\) : plus grand <b>ou égal</b></li></ul>
+<div class="ex"><div class="lab">Exemple concret — une limite de vitesse</div>
+Sur l'autoroute en Malaisie, la vitesse \(v\) (km/h) doit vérifier \(v\le110\). Rouler à 110 est autorisé (le « égal »), à 111 non. Et si une voie impose aussi un minimum de 60 km/h : \(60\le v\le110\).</div>
+<p>Avec les négatifs, attention : \(-10&lt;-5\) (−10 est plus à gauche sur la droite, donc plus petit).</p>
+
+<h4>La droite des réels et la notation d'ensemble</h4>
+<p>\(\{x : x>2\}\) se lit « l'ensemble des \(x\) tels que \(x>2\) ». Sur la droite :</p>
+<ul><li>rond <b>vide</b> (○) quand la borne est exclue (\(&lt;\) ou \(>\)) ;</li>
+<li>rond <b>plein</b> (●) quand la borne est incluse (\(\le\) ou \(\ge\)) ;</li>
+<li>on surligne toute la partie qui marche.</li></ul>
+<div class="ex"><div class="lab">Les 4 dessins des diapos</div>
+\(\{x : x>2\}\) : ○ en 2, trait vers la droite.<br>
+\(\{x : x\le-2\}\) : ● en −2, trait vers la gauche.<br>
+\(\{x : -3\le x&lt;4\}\) : ● en −3, ○ en 4, trait entre les deux.<br>
+\(\{x : x&lt;1 \text{ ou } x\ge3\}\) : ○ en 1 avec trait vers la gauche, et ● en 3 avec trait vers la droite (deux morceaux séparés).</div>
+
+<h4>Les règles (axiomes)</h4>
+<p>On peut <b>ajouter ou retirer</b> le même nombre des deux côtés : rien ne change. On peut <b>multiplier ou diviser</b> par un nombre <b>positif</b> : rien ne change. Mais si on multiplie ou divise par un nombre <b>négatif</b>, <b>le sens s'inverse</b>.</p>
+<div class="ex"><div class="lab">Pourquoi le sens s'inverse</div>
+\(2&lt;5\). Multiplie par −1 : \(-2\) et \(-5\). Or \(-2>-5\) ! Le « plus petit » est devenu « plus grand ». C'est exactement l'axiome 4.</div>
+<div class="ex"><div class="lab">Exemple des diapos — \(-3x+2>11\)</div>
+On retire 2 : \(-3x>9\).<br>
+On divise par −3 (négatif !) donc on retourne le signe : \(x&lt;-3\).<br>
+Vérification avec \(x=-4\) : \(-3(-4)+2=14>11\) ✓.</div>
+<div class="warnbox"><div class="lab">Piège classique</div>Oublier de retourner le signe quand on divise par un nombre négatif. Réflexe : dès que tu vois un « − » devant le \(x\) au moment de diviser, retourne le signe.</div>
+
+<h4>Inéquation du second degré</h4>
+<p>Méthode : tout mettre d'un côté (l'autre côté = 0), factoriser, puis regarder le signe.</p>
+<div class="ex"><div class="lab">Exemple des diapos — \(\{x : 2x+x^2&lt;5x+10\}\)</div>
+\(x^2-3x-10&lt;0\) → \((x-5)(x+2)&lt;0\).<br>
+Un produit est négatif quand les deux facteurs ont des signes contraires. Les valeurs « frontières » sont −2 et 5.<br>
+Avec une parabole ∪ qui coupe l'axe en −2 et 5 : elle est sous l'axe <b>entre</b> les racines. Réponse : \(\{x : -2&lt;x&lt;5\}\).<br>
+Vérif : \(x=0\) → \(0&lt;10\) ✓ ; \(x=6\) → \(48&lt;40\) ✗.</div>
+
+<h4>Inéquation avec une fraction (rationnelle)</h4>
+<p>On ne multiplie <b>jamais</b> par le dénominateur (on ne sait pas s'il est positif ou négatif). On fait plutôt un <b>tableau de signes</b>.</p>
+<div class="ex"><div class="lab">Exemple des diapos — \(\dfrac{2x-5}{x-7}&lt;0\)</div>
+Valeurs frontières : \(2x-5=0\) → \(x=2{,}5\) ; \(x-7=0\) → \(x=7\) (interdite).<br>
+<table><tr><th></th><th>x &lt; 2,5</th><th>2,5 &lt; x &lt; 7</th><th>x &gt; 7</th></tr>
+<tr><td>2x − 5</td><td>−</td><td>+</td><td>+</td></tr>
+<tr><td>x − 7</td><td>−</td><td>−</td><td>+</td></tr>
+<tr><td>fraction</td><td>+</td><td><b>−</b></td><td>+</td></tr></table>
+Réponse : \(2{,}5&lt;x&lt;7\).</div>
+<div class="ex"><div class="lab">Quand il n'y a pas 0 à droite — \(\dfrac{3x+8}{x-1}\ge-2\)</div>
+On ramène à 0 : \(\dfrac{3x+8}{x-1}+2\ge0\) → \(\dfrac{3x+8+2(x-1)}{x-1}\ge0\) → \(\dfrac{5x+6}{x-1}\ge0\).<br>
+Frontières : \(x=-\tfrac65\) (incluse, car la fraction peut valoir 0) et \(x=1\) (exclue, division par 0).<br>
+Réponse : \(x\le-\tfrac65\) ou \(x>1\).</div>
+<div class="warnbox"><div class="lab">À retenir</div>La valeur qui annule le <b>dénominateur</b> est <b>toujours exclue</b> (rond vide), même avec \(\le\) ou \(\ge\).</div>
+
+<h4>Partie 2 — Les puissances (indices)</h4>
+<p>En anglais, « index » (pluriel « indices ») désigne les petits nombres en haut ou en bas. En bas (\(a_1, a_2\)) c'est juste une étiquette. En haut, c'est un <b>exposant</b> : \(4^3=4\times4\times4=64\).</p>
+<h4>Les définitions</h4>
+<ul><li>\(x^0=1\) (toujours, pour \(x\neq0\)).</li>
+<li>Exposant négatif = « 1 sur » : \(x^{-3}=\dfrac{1}{x^3}\). Exemple : \(2^{-3}=\frac18\).</li>
+<li>Exposant fraction = racine : \(x^{1/2}=\sqrt x\), \(x^{1/3}=\sqrt[3]{x}\), \(x^{m/n}=\sqrt[n]{x^m}\). Exemple : \(8^{2/3}=(\sqrt[3]{8})^2=2^2=4\).</li></ul>
+<h4>Les 5 lois des puissances</h4>
+<ol><li>\(a^r\times a^s=a^{r+s}\) — même base, on <b>additionne</b> les exposants : \(2^3\times2^4=2^7=128\).</li>
+<li>\((ab)^r=a^rb^r\) : \((3x)^2=9x^2\).</li>
+<li>\((a^r)^s=a^{rs}\) — puissance de puissance, on <b>multiplie</b> : \((x^2)^5=x^{10}\).</li>
+<li>\(\dfrac{a^r}{a^s}=a^{r-s}\) — on <b>soustrait</b> : \(\dfrac{x^7}{x^3}=x^4\).</li>
+<li>\((\sqrt[n]{a})^m=a^{m/n}\) : \((\sqrt{x})^3=x^{3/2}\).</li></ol>
+<div class="ex"><div class="lab">Exemple concret — la mémoire d'un téléphone</div>
+1 Go = \(2^{30}\) octets et 1 Mo = \(2^{20}\) octets. Combien de Mo dans 1 Go ? \(\dfrac{2^{30}}{2^{20}}=2^{10}=1024\). Loi 4 !</div>
+<div class="warnbox"><div class="lab">Pièges classiques</div>
+\(2x^{-5}=\dfrac{2}{x^5}\) (le −5 ne touche que le \(x\)), mais \((2x)^{-5}=\dfrac{1}{32x^5}\) (il touche tout ce qui est dans la parenthèse).<br>
+\(x^2+x^3\neq x^5\) : les lois marchent pour les <b>produits</b>, pas pour les sommes.</div>
+
+<h4>Écriture scientifique et écriture « ingénieur »</h4>
+<p><b>Scientifique (standard)</b> : un seul chiffre non nul avant la virgule, \(1\le|a|&lt;10\). <b>Ingénieur</b> : l'exposant est un multiple de 3 (\(10^3, 10^6, 10^{-3}\)…) et \(1\le|a|&lt;1000\). C'est l'écriture des préfixes kilo, méga, milli, micro !</p>
+<div class="ex"><div class="lab">Exemple concret — des résistances et des courants</div>
+Une résistance de 4 700 Ω : scientifique \(4{,}7\times10^3\) Ω, ingénieur \(4{,}7\times10^3\) Ω = 4,7 kΩ.<br>
+Un courant de 0,00035 A : scientifique \(3{,}5\times10^{-4}\) A, ingénieur \(350\times10^{-6}\) A = 350 µA.<br>
+Une distance de 384 400 km : scientifique \(3{,}844\times10^5\) km, ingénieur \(384{,}4\times10^3\) km.</div>
+<p>Astuce : pour l'écriture ingénieur, déplace la virgule <b>par paquets de 3 chiffres</b>.</p>`,
+    vocab: [
+      ['inequality', 'inégalité / inéquation'],
+      ['less than / greater than', 'inférieur à / supérieur à (strictement)'],
+      ['less than or equal to', 'inférieur ou égal à'],
+      ['greater than or equal to', 'supérieur ou égal à'],
+      ['number line', 'droite des réels (droite graduée)'],
+      ['set', 'ensemble', '{x : x > 2} = « l\'ensemble des x tels que x > 2 »'],
+      ['range of values', 'intervalle (plage) de valeurs'],
+      ['axiom', 'axiome (règle de base)'],
+      ['to reverse the inequality', 'changer le sens de l\'inégalité'],
+      ['critical value', 'valeur critique (frontière)'],
+      ['sign table', 'tableau de signes'],
+      ['index (pl. indices)', 'indice / exposant', 'en anglais, « indices » = les puissances'],
+      ['subscript / superscript', 'indice (en bas) / exposant (en haut)'],
+      ['exponent / power', 'exposant / puissance'],
+      ['laws of exponents', 'règles de calcul sur les puissances'],
+      ['positive / negative index', 'exposant positif / négatif'],
+      ['n-th root', 'racine n-ième'],
+      ['standard (normalised) form', 'écriture scientifique'],
+      ['engineering notation', 'notation ingénieur', 'exposant multiple de 3'],
+      ['mantissa', 'mantisse'],
+      ['decimal expansion', 'écriture décimale']
+    ],
+    formules: [
+      { nom: 'Multiplier par un négatif', tex: 'a<b \\text{ et } c<0 \\;\\Rightarrow\\; ac>bc', why: 'Le sens de l\'inégalité s\'inverse.' },
+      { nom: 'Exposant nul et négatif', tex: 'x^0 = 1 \\qquad x^{-n} = \\dfrac{1}{x^n}', why: '' },
+      { nom: 'Exposant fractionnaire', tex: 'x^{m/n} = \\sqrt[n]{x^m} \\qquad x^{-m/n} = \\dfrac{1}{\\sqrt[n]{x^m}}', why: 'Pour x ≥ 0.' },
+      { nom: 'Produit et quotient', tex: 'a^r a^s = a^{r+s} \\qquad \\dfrac{a^r}{a^s} = a^{r-s}', why: 'Même base : on additionne / soustrait les exposants.' },
+      { nom: 'Puissance de puissance et de produit', tex: '(a^r)^s = a^{rs} \\qquad (ab)^r = a^r b^r', why: '' },
+      { nom: 'Racine et puissance', tex: '\\left(\\sqrt[n]{a}\\right)^m = a^{m/n}', why: '' },
+      { nom: 'Écriture scientifique', tex: 'a \\cdot 10^n,\\; 1 \\le |a| < 10', why: 'n entier.' },
+      { nom: 'Écriture ingénieur', tex: 'a \\cdot 10^n,\\; 1 \\le |a| < 1000', why: 'n multiple de 3 (k, M, m, µ…).' }
+    ],
+    exos: [
+      { src: 'Blackboard', niveau: 1, en: String.raw`Slides: solve \(-3x+2>11\).`, fr: 'Diapos : résous l\'inéquation.',
+        sol: String.raw`<p>\(-3x>9\) → on divise par −3 et on retourne le signe : \(x&lt;-3\).</p>` },
+      { src: 'Blackboard', niveau: 2, en: String.raw`Slides: determine the set \(\{x : 2x+x^2&lt;5x+10\}\).`, fr: 'Diapos : détermine l\'ensemble des solutions.',
+        sol: String.raw`<p>\(x^2-3x-10&lt;0\) → \((x-5)(x+2)&lt;0\) → \(\{x : -2&lt;x&lt;5\}\).</p>` },
+      { src: 'Blackboard', niveau: 2, en: String.raw`Slides: solve \(\dfrac{2x-5}{x-7}&lt;0\).`, fr: 'Diapos : résous l\'inéquation rationnelle.',
+        sol: String.raw`<p>Frontières 2,5 et 7. Tableau de signes : la fraction est négative entre les deux → \(\tfrac52&lt;x&lt;7\).</p>` },
+      { src: 'Blackboard', niveau: 3, en: String.raw`Slides: solve \(\dfrac{3x+8}{x-1}\ge-2\).`, fr: 'Diapos : résous l\'inéquation.',
+        sol: String.raw`<p>\(\dfrac{3x+8}{x-1}+2\ge0\) → \(\dfrac{5x+6}{x-1}\ge0\). Frontières \(-\tfrac65\) (incluse) et 1 (exclue). Réponse : \(x\le-\tfrac65\) ou \(x>1\).<br>Vérif : \(x=0\) → \(-8\ge-2\) ✗ (0 est bien exclu) ; \(x=2\) → \(14\ge-2\) ✓.</p>` },
+      { src: 'Blackboard', niveau: 2, en: String.raw`Slides: solve \(\dfrac{x-1}{x-2}&lt;0\).`, fr: 'Diapos : résous l\'inéquation.',
+        sol: String.raw`<p>Frontières 1 et 2 ; la fraction est négative entre les deux : \(1&lt;x&lt;2\).</p>` },
+      { src: 'Blackboard', niveau: 3, en: String.raw`Slides: solve \(\dfrac{3x-2}{1+x}\le1\).`, fr: 'Diapos : résous l\'inéquation.',
+        sol: String.raw`<p>\(\dfrac{3x-2}{1+x}-1\le0\) → \(\dfrac{2x-3}{x+1}\le0\). Frontières −1 (exclue) et \(\tfrac32\) (incluse). Réponse : \(-1&lt;x\le\tfrac32\).<br>Vérif : \(x=0\) → \(-2\le1\) ✓ ; \(x=-2\) → \(8\le1\) ✗.</p>` },
+      { src: 'Blackboard', niveau: 1, en: String.raw`Slides: depict on a number line \(\{x : x\le-2\}\), \(\{x : -3\le x&lt;4\}\) and \(\{x : x&lt;1 \text{ or } x\ge3\}\).`, fr: 'Diapos : représente ces ensembles sur la droite des réels.',
+        sol: String.raw`<p>● en −2, trait vers la gauche · ● en −3 et ○ en 4, trait entre les deux · ○ en 1 trait vers la gauche, et ● en 3 trait vers la droite.</p>` },
+      { src: 'Blackboard', niveau: 1, en: String.raw`Slides: write using only positive indices: \(x^{-4}\), \(2x^{-5}\), \((2x)^{-5}\), \(\dfrac{3}{y^{-5}}\).`, fr: 'Diapos : écris avec uniquement des exposants positifs.',
+        sol: String.raw`<p>\(\dfrac1{x^4}\) · \(\dfrac2{x^5}\) · \(\dfrac1{32x^5}\) · \(3y^5\)</p>` },
+      { src: 'Blackboard', niveau: 1, en: String.raw`Slides: write using only a single index: \((x^3)^{-2}\), \(((-x)^4)^{-5}\), \(\left(\dfrac{t}{t^{-3}}\right)^2\).`, fr: 'Diapos : écris avec une seule puissance.',
+        sol: String.raw`<p>\(x^{-6}\) · \((-x)^4=x^4\) donc \(x^{-20}\) · \(\dfrac{t}{t^{-3}}=t^4\) donc \(t^8\)</p>` },
+      { src: 'Blackboard', niveau: 3, en: String.raw`Slides: simplify so that it uses only positive indices: \(\dfrac{3\left(xy^{1/3}\right)^3}{2x^{-2}y^2}\div\dfrac{\sqrt[3]{27x^2y^6}}{\sqrt{4y^4}}\).`, fr: 'Diapos : simplifie avec uniquement des exposants positifs.',
+        sol: String.raw`<p>1re fraction : \(\dfrac{3x^3y}{2x^{-2}y^2}=\tfrac32x^5y^{-1}\).<br>2e fraction : \(\sqrt[3]{27x^2y^6}=3x^{2/3}y^2\) et \(\sqrt{4y^4}=2y^2\), donc \(\tfrac32x^{2/3}\).<br>Division : \(\tfrac32x^5y^{-1}\div\tfrac32x^{2/3}=x^{5-\frac23}y^{-1}=\dfrac{x^{13/3}}{y}\).</p>` },
+      { src: 'Blackboard', niveau: 1, en: 'Slides: write in standard and engineering notation: 150, −242, 713 527, 0.0002, −0.00007.', fr: 'Diapos : écris en notation scientifique et ingénieur.',
+        sol: String.raw`<p>150 = \(1.5\cdot10^2\) = 150 · −242 = \(-2.42\cdot10^2\) = −242 · 713 527 = \(7.13527\cdot10^5\) = \(713.527\cdot10^3\) · 0.0002 = \(2\cdot10^{-4}\) = \(200\cdot10^{-6}\) · −0.00007 = \(-7\cdot10^{-5}\) = \(-70\cdot10^{-6}\)</p>` },
+      { src: 'Claude', niveau: 1, en: String.raw`Solve \(5-2x\ge11\) and show the answer on a number line.`, fr: 'Résous et représente sur la droite des réels.',
+        sol: String.raw`<p>\(-2x\ge6\) → \(x\le-3\) (signe retourné). ● en −3, trait vers la gauche.</p>` },
+      { src: 'Claude', niveau: 2, en: String.raw`Solve \(x^2\ge4x\).`, fr: 'Résous l\'inéquation du second degré.',
+        sol: String.raw`<p>\(x^2-4x\ge0\) → \(x(x-4)\ge0\) → \(x\le0\) ou \(x\ge4\). (Ne divise pas par \(x\) : tu perdrais des solutions !)</p>` },
+      { src: 'Claude', niveau: 1, en: String.raw`Evaluate without a calculator: \(16^{3/4}\), \(27^{-2/3}\), \(5^0\).`, fr: 'Calcule sans calculatrice.',
+        sol: String.raw`<p>\(16^{3/4}=(\sqrt[4]{16})^3=2^3=8\) · \(27^{-2/3}=\dfrac1{(\sqrt[3]{27})^2}=\dfrac19\) · \(5^0=1\)</p>` },
+      { src: 'Claude', niveau: 2, en: 'A capacitor has C = 0.000047 F and a resistor has R = 2 200 000 Ω. Write both in engineering notation and compute RC (in seconds).', fr: 'Écris C et R en notation ingénieur, puis calcule RC (en secondes).',
+        sol: String.raw`<p>\(C=47\cdot10^{-6}\) F (47 µF), \(R=2.2\cdot10^{6}\) Ω (2,2 MΩ). \(RC=47\times2{,}2\times10^{-6+6}=103{,}4\) s.</p>` }
     ]
   };
 })();
