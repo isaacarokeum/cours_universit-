@@ -128,4 +128,104 @@
         sol: String.raw`<p>\(t=\dfrac{v-u}{a}=\dfrac{25-5}{4}=5\) s.</p>` }
     ]
   };
+
+  S[3] = {
+    titre: 'R2 — Science and Engineering Problem Solving Skills',
+    titreFr: 'R2 — Méthode pour résoudre un problème de sciences ou d\'ingénierie',
+    resume: 'Comment attaquer un problème : bien lire (infos explicites et implicites), faire un schéma, choisir une stratégie, travailler avec des lettres, puis vérifier la réponse. Quatre activités d\'analyse de problème et une auto-évaluation.',
+    sources: 'R2 Science and Engineering Problem Solving Skills.pdf (diapos) · vidéo R2 (.mp4) (Blackboard)',
+    en: String.raw`
+<h4>Route 2 — what we will discuss</h4>
+<ul><li>How to analyse a problem initially.</li><li>Get an overview of strategies for solution.</li><li>Investigate the benefits of working in symbols.</li><li>Consider ways to tell if your solution is working.</li></ul>
+<p>This is not a step-by-step recipe, only general advice found effective when solving problems. The more you interact with a problem, the more you learn — you experience it by doing the exercises.</p>
+<h4>The problem-solving process</h4>
+<table><tr><th>1. Thinking</th><th>2. Doing</th></tr>
+<tr><td>Understanding the problem · devising the strategy</td><td>Carrying out the strategy · writing down the steps · checking your answer</td></tr></table>
+<h5>Thinking</h5>
+<ul><li>What are you being asked to find?</li><li>Do you understand all the words in the problem?</li><li>What information and/or relationships are you given?</li><li>Will you need other facts or relationships that are not explicitly given?</li></ul>
+<h5>Doing</h5>
+<ul><li>What technique will you use? Carry out the solution with it.</li><li>Is it working? Are you making progress? Are you being accurate?</li>
+<li>Is your answer correct? If not: are you sure what you are doing? Did you assume anything that was not given? Were your assumptions correct? Can you try another technique or variation?</li></ul>
+<h4>Read the problem carefully</h4>
+<p>You need to know exactly what information the problem gives and what it asks you to determine.</p>
+<ul><li><b>Explicit</b> (direct) information: e.g. "a person has a mass of 70 kg".</li>
+<li><b>Implicit</b> (indirect) information: "a car starts from rest" means its initial speed is zero; "a 5 kg mass" means its weight is 50 N (taking g = 10 m s⁻²).</li></ul>
+<p>Careful reading is the essential first step. In an exam, see what is given and understand clearly what the question asks.</p>
+<p><b>Expert knowledge:</b> to solve your problem you need the given information <i>plus</i> part of everything you already know (the expert knowledge needed for the problem).</p>
+<h4>Sketch the system</h4>
+<p>Don't skip this. A sketch gives you a physical feeling for the system and lets you label the known quantities and those to be determined. Some exam questions ask you to sketch the system.</p>
+<h4>Strategise</h4>
+<p>The most difficult but most creative part. From your sketch, identify the physical processes at work; ask which concepts or principles are involved; then develop a game plan (written down or visualised).</p>
+<h4>Identify appropriate equations and solve</h4>
+<p>Find the specific equations needed. Work with <b>symbols</b> (x, y, or physics symbols such as m for mass) for most of the working: it is easier to go back and find mistakes, and to explore limits and special cases.</p>
+<h4>Check your answer</h4>
+<ul><li>Does it make sense? Correct dimensions/units? Is the number reasonable?</li><li>Are you confident each step is correct?</li><li>Have you used all the information given?</li></ul>
+<h4>Getting extra help</h4>
+<p>Timetabled workshops or support sessions; your tutor's office hours; it is OK to email your lecturer.</p>
+<h4>Activities</h4>
+<ol><li><b>What are you looking for?</b> Identify what you are trying to find and what form the solution will take (apples problem, "design an efficient tin opener", a pair of simultaneous equations).</li>
+<li><b>Identifying the given:</b> list the information given in each of the same three problems.</li>
+<li><b>Expert knowledge:</b> a wheel problem — which knowledge is assumed but not given?</li>
+<li><b>Problem analysis:</b> a right-angled triangle — what to find, what is given, expert knowledge, diagram.</li></ol>
+<h4>Self-reflection</h4>
+<p>Grade your confidence from 1 (poor) to 5 (good), with plans to improve: getting started on a problem; choosing a method for solution; working with symbols; knowing if you are heading the right way.</p>`,
+    fr: String.raw`
+<h4>1. Deux temps : réfléchir, puis faire</h4>
+<p>Résoudre un problème, ce n'est pas foncer dans les calculs. Il y a d'abord une phase <b>« réfléchir »</b> (comprendre l'énoncé, choisir une stratégie), puis une phase <b>« faire »</b> (appliquer, écrire les étapes, vérifier).</p>
+<div class="tip"><div class="lab">Les 4 questions avant de calculer</div>Qu'est-ce qu'on me demande ? Est-ce que je comprends tous les mots ? Qu'est-ce qu'on me donne ? De quoi d'autre ai-je besoin qui n'est pas écrit ?</div>
+
+<h4>2. Bien lire : l'explicite et l'implicite</h4>
+<p>Certaines infos sont <b>écrites noir sur blanc</b> (explicites), d'autres sont <b>cachées dans les mots</b> (implicites).</p>
+<div class="ex"><div class="lab">Exemples concrets</div>• « Une voiture démarre » → vitesse initiale \(u = 0\).<br>• « Une masse de 5 kg » → poids \(= 5\times10 = 50\) N (avec g = 10).<br>• « Un objet lâché » → il part sans vitesse, et seule la gravité agit.<br>• « Surface lisse » → pas de frottement.</div>
+<p>Pour résoudre, tu combines ce qu'on te donne avec tes <b>connaissances</b> (formules, lois, définitions). Le prof appelle ça l'« expert knowledge ».</p>
+
+<h4>3. Toujours faire un schéma</h4>
+<p>Même si ça paraît inutile. Le schéma t'aide à « voir » la situation et à noter ce que tu connais et ce que tu cherches. En examen, on te demande parfois explicitement de le faire.</p>
+
+<h4>4. Choisir une stratégie</h4>
+<p>C'est la partie la plus difficile et la plus créative : quels phénomènes sont en jeu (chaleur, forces, mouvement…) ? Quelles lois s'appliquent ? Quel plan d'attaque ?</p>
+
+<h4>5. Calculer avec des lettres</h4>
+<p>Écris les équations avec les symboles (m, v, x…) et ne remplace par les nombres <b>qu'à la fin</b>.</p>
+<div class="ex"><div class="lab">Exemple concret</div>On cherche la vitesse finale d'un objet lâché de \(h = 20\) m. En lettres : \(v^2 = 2gh\) donc \(v = \sqrt{2gh}\). Avantages : tu vois tout de suite que si \(h\) est multiplié par 4, \(v\) double ; et si tu t'es trompé, tu retrouves l'erreur facilement. Seulement maintenant : \(v = \sqrt{2\times10\times20} = 20\) m/s.</div>
+
+<h4>6. Vérifier la réponse</h4>
+<ul><li>Est-ce que ça a du sens ? Les <b>unités</b> sont-elles bonnes ? L'ordre de grandeur est-il raisonnable ?</li><li>Chaque étape est-elle juste ?</li><li>As-tu utilisé <b>toutes</b> les données ? (Si une donnée n'a pas servi, méfie-toi.)</li></ul>
+<div class="warnbox">Une voiture qui roule à 3000 m/s, une masse négative, une aire en mètres : il y a une erreur quelque part.</div>
+
+<h4>7. Demander de l'aide</h4>
+<p>Les séances de soutien, les heures de consultation des profs, et un mail au prof : c'est normal et encouragé.</p>
+
+<h4>8. Auto-évaluation</h4>
+<p>Note-toi de 1 à 5 : démarrer un problème, choisir une méthode, travailler avec des lettres, savoir si tu vas dans la bonne direction. Pour chaque note basse, écris une action concrète pour progresser.</p>`,
+    vocab: [
+      ['problem solving', 'résolution de problèmes'], ['to devise a strategy', 'élaborer une stratégie'], ['to carry out', 'réaliser, appliquer'],
+      ['explicit / implicit', 'explicite (écrit) / implicite (sous-entendu)'], ['given', 'donnée(s) de l\'énoncé'], ['to determine', 'déterminer, trouver'],
+      ['to start from rest', 'partir de l\'arrêt (vitesse initiale nulle)'], ['weight', 'poids'], ['sketch', 'schéma, croquis'],
+      ['to strategise / game plan', 'établir un plan d\'attaque'], ['symbol', 'symbole, lettre'], ['special case', 'cas particulier'],
+      ['dimensions / units', 'dimensions / unités'], ['reasonable', 'plausible'], ['office hours', 'heures de consultation'],
+      ['revolution', 'tour (rotation)'], ['axle', 'essieu'], ['hypotenuse', 'hypoténuse'], ['confidence level', 'niveau de confiance']
+    ],
+    formules: [
+      { nom: 'Poids', tex: 'W = mg', why: 'Info implicite : « une masse de 5 kg » donne W = 50 N avec g = 10 m/s².' },
+      { nom: 'Périmètre du cercle', tex: 'C = 2\\pi r', why: 'Connaissance « experte » nécessaire pour l\'activité de la roue.' },
+      { nom: 'Pythagore', tex: 'c^2 = a^2 + b^2', why: 'Activité 4 (triangle rectangle).' }
+    ],
+    exos: [
+      { src: 'Blackboard', niveau: 1, en: 'If Tom has three times as many apples as Susan and Susan has a quarter as many as Joe, who has four, how many does Mary have if Mary has two more than Tom? Identify what you are looking for, what you are given, then solve.', fr: 'Tom a trois fois plus de pommes que Susan, Susan en a quatre fois moins que Joe, qui en a 4. Combien Mary en a-t-elle si elle en a deux de plus que Tom ? Dis ce que tu cherches, ce qu\'on te donne, puis résous.',
+        sol: '<p>On cherche un nombre (les pommes de Mary). Données : J = 4, S = J/4, T = 3S, M = T + 2. Donc S = 1, T = 3, <b>M = 5</b>.</p>' },
+      { src: 'Blackboard', niveau: 1, en: String.raw`Solve \(2x+3y=1\), \(x-4y=17\). What form will the answer take, and what are you given?`, fr: 'Résous le système. Quelle forme aura la réponse, et que te donne-t-on ?',
+        sol: String.raw`<p>Réponse : deux nombres x et y. On donne deux relations entre x et y. \(x=17+4y\) → \(2(17+4y)+3y=1\) → \(11y=-33\) → \(y=-3\), \(x=5\). Vérif : \(10-9=1\) ✓, \(5+12=17\) ✓.</p>` },
+      { src: 'Blackboard', niveau: 1, en: '"Design an efficient tin opener." What are you looking for, and what are you given?', fr: '« Conçois un ouvre-boîte efficace. » Que cherches-tu, et que te donne-t-on ?',
+        sol: '<p>La réponse sera un schéma ou une description en mots. On ne te donne presque rien : tu sais à quoi sert un ouvre-boîte, mais tu dois d\'abord <b>définir « efficace »</b> (rapide ? peu d\'effort ? sûr ?).</p>' },
+      { src: 'Blackboard', niveau: 2, en: 'A round wheel with a radius of 37 cm rolls at a constant speed of 3 revolutions per second. How far does the axle move in 8 seconds? Which expert knowledge is needed?', fr: 'Une roue de rayon 37 cm roule à 3 tours par seconde. Quelle distance parcourt l\'essieu en 8 s ? Quelles connaissances faut-il ?',
+        sol: String.raw`<p>Il faut savoir ce que veulent dire roue, rouler, rayon, tours par seconde, essieu, et que \(C=2\pi r\). Un tour = \(2\pi\times0{,}37\approx2{,}325\) m ; 24 tours en 8 s → \(\approx\) <b>55,8 m</b>.</p>` },
+      { src: 'Blackboard', niveau: 2, en: 'In a right-angled triangle the hypotenuse is twice as long as one of the sides forming the right angle. The remaining side is 80 mm long. Calculate the area of the triangle.', fr: 'Dans un triangle rectangle, l\'hypoténuse est deux fois plus longue qu\'un des côtés de l\'angle droit. L\'autre côté mesure 80 mm. Calcule l\'aire.',
+        sol: String.raw`<p>Côtés x et 80, hypoténuse 2x. Pythagore : \(4x^2=x^2+6400\) → \(x^2=6400/3\) → \(x\approx46{,}2\) mm. Aire \(=\frac12\times46{,}2\times80\approx\) <b>1848 mm²</b>.</p>` },
+      { src: 'Claude', niveau: 1, en: 'List the implicit information in: "A 2 kg box is released from rest on a smooth slope."', fr: 'Quelles infos implicites dans : « Une boîte de 2 kg est lâchée sans vitesse sur une pente lisse » ?',
+        sol: '<p>Vitesse initiale nulle ; poids 20 N (g = 10) ; pas de frottement (« lisse »).</p>' },
+      { src: 'Claude', niveau: 2, en: 'A student finds that a kettle takes 3 hours to boil 1 L of water. Use the "check your answer" questions to explain why this is suspicious.', fr: 'Un étudiant trouve qu\'une bouilloire met 3 heures à faire bouillir 1 L d\'eau. Avec les questions de vérification, explique pourquoi c\'est louche.',
+        sol: '<p>L\'ordre de grandeur n\'est pas raisonnable (une bouilloire met quelques minutes). Vérifier les unités (kW et W ? minutes et secondes ?) et chaque étape.</p>' }
+    ]
+  };
 })();

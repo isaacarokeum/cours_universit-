@@ -236,10 +236,10 @@ Somme = 0 → \(37{,}5c=18\,951\) → \(c\approx505\) J/(kg·K).</div>
 
   // =========================== SEMAINE 3 ===========================
   S[3] = {
-    titre: 'Heat 5: Latent Heat (Heat 6: Thermal Expansion à venir)',
-    titreFr: 'Chaleur latente (dilatation thermique : à venir)',
-    resume: 'Les changements d\'état : chaleur latente de fusion et de vaporisation, et le palier de température. Example Sheet 1 (suite). La partie « Thermal expansion » sera ajoutée quand elle sera publiée.',
-    sources: 'Lecture notes « 2. Heat Capacity and Latent Heat », section 3 · GENG0005 Timetable (Blackboard)',
+    titre: 'Heat 5: Latent Heat · Heat 6: Thermal Expansion 1',
+    titreFr: 'Chaleur latente · Dilatation thermique',
+    resume: 'Les changements d\'état (chaleur latente, paliers de température), puis la dilatation thermique : linéaire, surfacique et volumique, liquides, dilatation apparente, cas de l\'eau, et applications (frettage, bilame, pendule compensé). Example Sheet 2.',
+    sources: 'Lecture notes « 2. Heat Capacity and Latent Heat », section 3 · Lecture notes « 3. Thermal Expansion » · diapos « Thermal Expansion (part 1) » (Prof Ling Wang) · Example Sheet 2 · GENG0005 Timetable (Blackboard)',
     en: String.raw`
 <h4>Heat 5 — Latent heat</h4>
 <p>During a change of state, the heat absorbed or released changes the bonds between molecules; <b>there is no temperature change</b>. Heating ice from −5 °C: (A) ice warms to 0 °C, (B) ice melts at 0 °C, (C) water warms to 100 °C, (D) water boils at 100 °C, (E) steam is superheated.</p>
@@ -247,7 +247,32 @@ Somme = 0 → \(37{,}5c=18\,951\) → \(c\approx505\) J/(kg·K).</div>
 <li><b>Specific latent heat of vaporisation</b>: heat to turn 1 kg of liquid into vapour (or released in reverse).</li></ul>
 <p>\(\Delta Q=m\,l\). Applications: wind chill, steam scalds being worse than hot-water scalds, refrigerators, steam engines.</p>
 <div class="ex"><div class="lab">Example</div>1 kg of vegetables (c = 2200) at 373 K plunged into ice water at 273 K. Heat given: \(1\times2200\times100=220\) kJ = \(m\times330\times10^3\) → \(m=0.67\) kg of ice melted.</div>
-<p class="muted">Heat 6 (Thermal expansion 1) will be added when the material is published on Blackboard.</p>`,
+
+<h4>Heat 6 — Thermal expansion (part 1)</h4>
+<p><b>Learning outcomes:</b> explain what thermal expansion is; calculate the coefficient of linear expansion for solids; describe applications of thermal expansion.</p>
+<h5>1. Solids — linear expansion</h5>
+<p>When a body heats up (ignoring phase changes), the amplitude of molecular vibration increases; this also increases the average distance between molecules slightly, so the body gets slightly larger. For small temperature changes the change in size is proportional to the change in temperature, and also proportional to the original size (two 1 m bars that each grow by 0.1 mm behave like one 2 m bar growing by 0.2 mm).</p>
+<p>$$\delta L=\alpha L\,\delta\theta \qquad\text{or}\qquad \alpha=\frac{\delta L}{L}\,(\delta\theta)^{-1}$$</p>
+<p>\(\alpha\) is the <b>linear expansivity</b> (coefficient of thermal expansion), in K⁻¹ (or °C⁻¹); it depends on the material and the mean temperature. \(\delta L/L\) is the <b>strain</b>: a ratio of two lengths, so it is dimensionless. Because \(\alpha\) is tiny it is often quoted ×10⁶, in μm/(m K) (μstrain).</p>
+<table><tr><th>Material</th><th>α (K⁻¹)</th></tr>
+<tr><td>Steel, cast iron</td><td>12×10⁻⁶</td></tr><tr><td>Aluminium</td><td>24×10⁻⁶</td></tr><tr><td>Brass</td><td>21×10⁻⁶</td></tr><tr><td>Glass</td><td>8×10⁻⁶</td></tr><tr><td>Wood</td><td>4×10⁻⁶</td></tr><tr><td>Polyethylene</td><td>220×10⁻⁶</td></tr><tr><td>Nylon</td><td>120×10⁻⁶</td></tr><tr><td>Rubber</td><td>600×10⁻⁶</td></tr></table>
+<p>Polymers tend to have much higher values than metals (a version of this table is in the data booklet).</p>
+<div class="ex"><div class="lab">Example — steam boiler</div>A steel boiler has a diameter of 1.2 m at 20 °C. Diameter at 100 °C? The metal that actually expands is the circumference, but \(C=\pi D\) before and after, so \(\delta C/C=\delta D/D\): we can treat the diameter like a piece of material. \(\delta D=\alpha D\delta\theta=12\times10^{-6}\times1.2\times80=0.0012\) m = 1.2 mm → new diameter <b>1.2012 m</b>. (80 °C is not strictly small, but α is so small that the change in size stays small.)</div>
+<h5>Applications</h5>
+<ul><li><b>Shrink fitting:</b> the hole is made slightly smaller than the shaft; the part with the hole is heated (or the shaft is cooled, e.g. in liquid nitrogen at −196 °C), they are assembled and, on returning to room temperature, a very strong joint forms. They cannot be separated by re-heating, since both heat up together.</li>
+<li><b>Bimetal strip</b> (sensors, thermostats): two metals with different α bonded together; the strip bends when heated, converting a temperature change into a mechanical displacement. Coiled versions are more compact and more sensitive.</li>
+<li><b>Temperature compensation:</b> John Harrison's gridiron pendulum (1725) uses alternating brass and steel rods; with the right lengths the brass expansion cancels the steel expansion and the pendulum length stays constant.</li></ul>
+<h5>2. Area</h5>
+<p>Isotropic materials (e.g. metals) expand equally in every direction; anisotropic ones (wood, glass-reinforced plastic, many composites) do not. For a plate \(a\times b\): \(A+\delta A=(a+\delta a)(b+\delta b)=ab+a\delta b+b\delta a+\delta a\delta b\). The term \(\delta a\,\delta b\) is a <b>second-order small quantity</b> and is neglected, so \(\dfrac{\delta A}{A}=\dfrac{\delta a}{a}+\dfrac{\delta b}{b}=2\alpha\,\delta\theta\): the area expansivity is <b>2α</b>.</p>
+<h5>3. Volume</h5>
+<p>$$\frac{\delta V}{V}=3\alpha\,\delta\theta=\beta\,\delta\theta$$ The volume (cubical) expansivity is \(\beta=3\alpha\).</p>
+<p><b>Liquids and gases</b> have no fixed shape, only a volume expansivity \(\beta\) — typically about 100 times larger than α for solids. For a perfect gas \(\beta=1/T\) (seen later).</p>
+<table><tr><th>Fluid</th><th>β (K⁻¹)</th></tr><tr><td>Water</td><td>0.21×10⁻³</td></tr><tr><td>Ethyl alcohol</td><td>1.08×10⁻³</td></tr><tr><td>Engine oil</td><td>0.8×10⁻³</td></tr><tr><td>Mercury</td><td>0.18×10⁻³</td></tr><tr><td>Gases</td><td>3×10⁻³</td></tr></table>
+<div class="ex"><div class="lab">Example — whisky bottle</div>A 1 L bottle is filled at 35 °C. Short measure at 15 °C? \(\delta V=V\beta\delta\theta=1000\times1.08\times10^{-3}\times(-20)=-21.6\) ml.</div>
+<h5>Apparent expansion</h5>
+<p>The container also expands, with the volume expansivity of its own material (imagine a solid glass insert that fits exactly). Glass bottle: \(\delta V=1000\times(3\times8\times10^{-6})\times(-20)=-0.48\) ml. The expansivity measured ignoring the container is the <b>apparent</b> expansivity: \(\beta_{true}=\beta_{apparent}+\beta_{container}=\beta_{apparent}+3\alpha_{container}\).</p>
+<h5>4. Properties of water</h5>
+<p>When cooled, water contracts until about <b>4 °C</b> (minimum volume, maximum density), then expands again down to 0 °C. On freezing it expands significantly (ice ≈ 900 kg/m³): this bursts pipes, makes ice float, and makes water freeze from the top (the coldest water, below 4 °C, rises).</p>`,
     fr: String.raw`
 <h4>La chaleur latente (changement d'état)</h4>
 <p>Quand la glace fond ou que l'eau bout, on continue à fournir de la chaleur mais <b>la température ne bouge pas</b> : toute l'énergie sert à casser les liaisons entre molécules. C'est la <b>chaleur latente</b>.</p>
@@ -259,16 +284,53 @@ Somme = 0 → \(37{,}5c=18\,951\) → \(c\approx505\) J/(kg·K).</div>
 • Tu as froid en sortant de la piscine : l'eau qui s'évapore prend de la chaleur à ta peau.<br>
 • Un frigo fait évaporer un fluide à l'intérieur (absorbe la chaleur) et le condense à l'arrière (rejette la chaleur).</div>
 <div class="ex"><div class="lab">Exemple complet</div>Transformer 0,5 kg de glace à −10 °C en eau à 20 °C (c<sub>glace</sub> = 2100) :<br>
-① chauffer la glace : 0,5 × 2100 × 10 = 10 500 J<br>② la faire fondre : 0,5 × 330 000 = 165 000 J<br>③ chauffer l'eau : 0,5 × 4190 × 20 = 41 900 J<br>Total ≈ <b>217 kJ</b>. La fusion représente la plus grosse part !</div>`,
+① chauffer la glace : 0,5 × 2100 × 10 = 10 500 J<br>② la faire fondre : 0,5 × 330 000 = 165 000 J<br>③ chauffer l'eau : 0,5 × 4190 × 20 = 41 900 J<br>Total ≈ <b>217 kJ</b>. La fusion représente la plus grosse part !</div>
+
+<h4>La dilatation thermique</h4>
+<p>Quand on chauffe un objet, ses molécules vibrent plus fort et s'écartent un tout petit peu : <b>l'objet grandit</b>. C'est la dilatation.</p>
+<p>$$\Delta L=\alpha\,L\,\Delta\theta$$</p>
+<ul><li>\(L\) = longueur de départ, \(\Delta\theta\) = variation de température, \(\alpha\) = coefficient de dilatation linéaire (en K⁻¹), qui dépend du matériau.</li>
+<li>\(\alpha\) est minuscule : acier 12×10⁻⁶, aluminium 24×10⁻⁶, laiton 21×10⁻⁶, verre 8×10⁻⁶. Les plastiques se dilatent bien plus (nylon 120×10⁻⁶, caoutchouc 600×10⁻⁶).</li></ul>
+<div class="ex"><div class="lab">Exemple concret : les rails</div>Un rail d'acier de 20 m posé à 25 °C, la nuit descend à 0 °C : \(\Delta L=12\times10^{-6}\times20\times(-25)=-0{,}006\) m. Le rail raccourcit de <b>6 mm</b>, un trou de 6 mm apparaît entre deux rails. À l'inverse, en été, sans joints, les rails flambent.</div>
+<div class="ex"><div class="lab">Exemple concret : la chaudière</div>Diamètre 1,2 m à 20 °C, acier, chauffée à 100 °C : \(\Delta D=12\times10^{-6}\times1{,}2\times80=1{,}2\) mm. Astuce : même si c'est la tôle (le périmètre) qui s'allonge, on peut appliquer la formule directement au diamètre, car \(C=\pi D\) garde la même proportion.</div>
+<div class="tip"><div class="lab">Retenir</div>Le rapport \(\Delta L/L\) s'appelle la <b>déformation</b> (strain). C'est un rapport de deux longueurs, donc <b>sans unité</b>.</div>
+
+<h4>Surface et volume</h4>
+<p>Un objet se dilate dans toutes les directions. Pour un matériau isotrope (comme un métal) :</p>
+<ul><li><b>surface</b> : \(\Delta A/A=2\alpha\,\Delta\theta\) ;</li><li><b>volume</b> : \(\Delta V/V=3\alpha\,\Delta\theta=\beta\,\Delta\theta\).</li></ul>
+<p>Pourquoi 2 et 3 ? Parce qu'on néglige les produits de deux petites variations (\(\Delta a\,\Delta b\)) : c'est comme un centime sur 100 millions d'euros.</p>
+<div class="ex"><div class="lab">Exemple concret : la sphère d'aluminium</div>+50 °C : diamètre \(+24\times10^{-6}\times50=0{,}12\,\%\), surface \(+0{,}24\,\%\), volume \(+0{,}36\,\%\).</div>
+
+<h4>Liquides et gaz</h4>
+<p>Ils n'ont pas de forme, seulement un volume : on utilise \(\beta\), environ 100 fois plus grand que \(\alpha\) des solides (alcool 1,08×10⁻³, eau 0,21×10⁻³, gaz ≈ 3×10⁻³).</p>
+<div class="ex"><div class="lab">Exemple concret : la bouteille</div>Une bouteille de 1 L d'alcool remplie à 35 °C, refroidie à 15 °C : \(\Delta V=1000\times1{,}08\times10^{-3}\times(-20)=-21{,}6\) ml. C'est pour ça que l'essence achetée par forte chaleur te donne un peu moins de « vrai » carburant.</div>
+<p><b>Dilatation apparente</b> : le récipient se dilate aussi (avec le \(\beta=3\alpha\) de son matériau). La bouteille en verre perd 0,48 ml. Donc \(\beta_{vrai}=\beta_{apparent}+3\alpha_{récipient}\).</p>
+
+<h4>L'eau, un liquide bizarre</h4>
+<p>En refroidissant, l'eau se contracte jusqu'à <b>4 °C</b> (densité maximale), puis se dilate à nouveau jusqu'à 0 °C. En gelant, elle gonfle beaucoup (glace ≈ 900 kg/m³) : les tuyaux éclatent, les glaçons flottent, et un lac gèle <b>par le dessus</b>.</p>
+
+<h4>À quoi ça sert</h4>
+<ul><li><b>Frettage</b> (shrink fitting) : on chauffe la pièce percée (ou on refroidit l'arbre dans l'azote liquide à −196 °C), on assemble, et en revenant à température ambiante les pièces se serrent très fort.</li>
+<li><b>Bilame</b> : deux métaux collés qui ne se dilatent pas pareil ; en chauffant, la lame se courbe. C'est le principe des thermostats (grille-pain, fer à repasser).</li>
+<li><b>Pendule compensé</b> de Harrison (1725) : des tiges de laiton et d'acier dont les dilatations s'annulent, pour que l'horloge reste juste quelle que soit la température.</li></ul>`,
     vocab: [
       ['latent heat', 'chaleur latente'], ['specific latent heat of fusion', 'chaleur latente massique de fusion'],
       ['specific latent heat of vaporisation', 'chaleur latente massique de vaporisation'], ['change of state / phase change', 'changement d\'état'],
       ['to melt / to freeze', 'fondre / geler'], ['to boil / to condense', 'bouillir / se condenser'], ['to evaporate', 's\'évaporer'],
-      ['superheated steam', 'vapeur surchauffée'], ['wind chill', 'refroidissement éolien'], ['scald', 'brûlure (par liquide ou vapeur)']
+      ['superheated steam', 'vapeur surchauffée'], ['wind chill', 'refroidissement éolien'], ['scald', 'brûlure (par liquide ou vapeur)'],
+      ['thermal expansion', 'dilatation thermique'], ['linear expansivity (α)', 'coefficient de dilatation linéaire'], ['volume (cubical) expansivity (β)', 'coefficient de dilatation volumique'],
+      ['strain', 'déformation (allongement relatif)'], ['dimensionless', 'sans dimension (sans unité)'], ['isotropic / anisotropic', 'isotrope / anisotrope'],
+      ['second-order small quantity', 'petite quantité du second ordre (négligeable)'], ['apparent expansion', 'dilatation apparente'],
+      ['shrink fitting', 'frettage (assemblage par dilatation)'], ['bimetal strip', 'bilame'], ['shaft', 'arbre (axe)'], ['push fit', 'emmanchement juste'],
+      ['radius of curvature', 'rayon de courbure'], ['to contract', 'se contracter'], ['density', 'masse volumique']
     ],
     formules: [
       { nom: 'Chaleur latente', tex: '\\Delta Q = m\\,l', why: 'Pas de variation de température pendant le changement d\'état.' },
-      { nom: 'Chauffer puis changer d\'état', tex: 'Q_{tot} = m c_1 \\Delta T_1 + m l + m c_2 \\Delta T_2', why: 'On additionne chaque étape (paliers + montées).' }
+      { nom: 'Chauffer puis changer d\'état', tex: 'Q_{tot} = m c_1 \\Delta T_1 + m l + m c_2 \\Delta T_2', why: 'On additionne chaque étape (paliers + montées).' },
+      { nom: 'Dilatation linéaire', tex: '\\delta L = \\alpha L\\,\\delta\\theta', why: 'α en K⁻¹ ; δL/L est la déformation (sans unité).' },
+      { nom: 'Dilatation surfacique', tex: '\\dfrac{\\delta A}{A} = 2\\alpha\\,\\delta\\theta', why: 'On néglige δa·δb (second ordre).' },
+      { nom: 'Dilatation volumique', tex: '\\dfrac{\\delta V}{V} = \\beta\\,\\delta\\theta,\\quad \\beta = 3\\alpha', why: 'Pour un solide isotrope ; pour un liquide, β est donné directement.' },
+      { nom: 'Dilatation apparente', tex: '\\beta_{true} = \\beta_{apparent} + 3\\alpha_{container}', why: 'Le récipient se dilate aussi.' }
     ],
     exos: [
       { src: 'Blackboard', niveau: 2, en: '1 kg of vegetables (c = 2200 J kg⁻¹ K⁻¹) at 373 K are plunged into a mixture of ice and water at 273 K. How much ice is melted? (l_f = 330 × 10³ J kg⁻¹)', fr: '1 kg de légumes à 373 K plongés dans de l\'eau glacée à 273 K : quelle masse de glace fond ?',
@@ -276,7 +338,29 @@ Somme = 0 → \(37{,}5c=18\,951\) → \(c\approx505\) J/(kg·K).</div>
       { src: 'Claude', niveau: 2, en: 'How much heat is needed to turn 0.2 kg of ice at 0 °C into steam at 100 °C? (l_f = 330 kJ/kg, l_v = 2260 kJ/kg)', fr: 'Quelle chaleur pour transformer 0,2 kg de glace à 0 °C en vapeur à 100 °C ?',
         sol: '<p>Fusion : 66 kJ · chauffage : 0,2 × 4190 × 100 = 83,8 kJ · vaporisation : 452 kJ → total ≈ <b>602 kJ</b>.</p>' },
       { src: 'Claude', niveau: 1, en: 'Why is a scald from steam at 100 °C worse than one from water at 100 °C?', fr: 'Pourquoi une brûlure par la vapeur à 100 °C est-elle pire que par l\'eau à 100 °C ?',
-        sol: '<p>En se condensant sur la peau, la vapeur libère en plus sa chaleur latente de vaporisation (≈ 2260 kJ/kg), bien plus que l\'eau qui refroidit seulement.</p>' }
+        sol: '<p>En se condensant sur la peau, la vapeur libère en plus sa chaleur latente de vaporisation (≈ 2260 kJ/kg), bien plus que l\'eau qui refroidit seulement.</p>' },
+      { src: 'Blackboard', niveau: 2, en: 'Example Sheet 2, Q1.1 — An electric kettle with a 2.0 kW heating element has a heat capacity of 400 J K⁻¹. 1 kg of water at 20 °C is placed in the kettle. The kettle is switched on and after 13 minutes 0.5 kg of water remains. Ignoring heat losses, calculate the specific latent heat of vaporisation of water.', fr: 'Bouilloire de 2,0 kW, capacité thermique 400 J/K, 1 kg d\'eau à 20 °C. Après 13 min il reste 0,5 kg d\'eau. Sans pertes, calcule la chaleur latente de vaporisation de l\'eau.',
+        sol: String.raw`<p>Énergie fournie : \(2000\times780=1{,}56\times10^6\) J. Chauffer eau + bouilloire de 20 à 100 °C : \(1\times4190\times80+400\times80=367\,200\) J. Reste pour vaporiser 0,5 kg : \(1{,}193\times10^6\) J → \(l_v=\dfrac{1{,}193\times10^6}{0{,}5}\approx\) <b>2,39×10⁶ J/kg</b>.</p>` },
+      { src: 'Blackboard', niveau: 2, en: 'Q1.2 — An ice cube of mass 50 g is taken from a fridge at −10 °C and dropped into a glass of water at 0 °C. If no heat is gained or lost from the outside, how much water will freeze onto the ice cube?', fr: 'Un glaçon de 50 g à −10 °C tombe dans de l\'eau à 0 °C. Sans échange avec l\'extérieur, quelle masse d\'eau gèle sur le glaçon ?',
+        sol: String.raw`<p>Le glaçon se réchauffe jusqu'à 0 °C : \(0{,}05\times2100\times10=1050\) J, pris à de l'eau à 0 °C qui gèle : \(m=\dfrac{1050}{330\,000}\approx\) <b>3,2 g</b> (le corrigé donne 3,17 g avec \(c_{glace}\approx2090\)).</p>` },
+      { src: 'Blackboard', niveau: 2, en: 'Q1.3 — A 3 kW kettle is filled with 1.6 kg of water at 20 °C. Neglecting heat losses: (a) the least possible time to bring the water to the boil; (b) if 0.5 kg of water is needed to cover the element, the minimum time to boil away enough water at 100 °C to expose the element.', fr: 'Bouilloire de 3 kW, 1,6 kg d\'eau à 20 °C. (a) Temps minimum pour atteindre l\'ébullition. (b) Il faut 0,5 kg d\'eau pour couvrir la résistance : temps minimum pour en vaporiser assez pour la découvrir.',
+        sol: String.raw`<p>(a) \(t=\dfrac{1{,}6\times4190\times80}{3000}\approx\) <b>179 s</b>. (b) Il faut vaporiser \(1{,}6-0{,}5=1{,}1\) kg : \(t=\dfrac{1{,}1\times2{,}25\times10^6}{3000}\approx\) <b>825 s</b>.</p>` },
+      { src: 'Blackboard', niveau: 1, en: 'Q1.4 — Sketch a graph of temperature against time as ice is heated from −2 °C until it all boils away to steam. Explain what happens at each stage.', fr: 'Trace la température en fonction du temps quand on chauffe de la glace de −2 °C jusqu\'à tout vaporiser. Explique chaque étape.',
+        sol: '<p>Montée de −2 à 0 °C (la glace se réchauffe) ; <b>palier à 0 °C</b> (fusion, chaleur latente) ; montée de 0 à 100 °C, plus lente car c de l\'eau > c de la glace ; <b>long palier à 100 °C</b> (ébullition, l<sub>v</sub> très grande) ; puis, si on continue, la vapeur se réchauffe.</p>' },
+      { src: 'Blackboard', niveau: 2, en: 'Q1.5 — In a factory heating system water enters the radiators at 60 °C and leaves at 38 °C. It is replaced by steam at 100 °C condensing in the radiators, the condensed steam leaving at 82 °C. What mass of steam supplies the same heat as 1 kg of hot water under the old system?', fr: 'Chauffage d\'usine : l\'eau entre à 60 °C et sort à 38 °C. Nouveau système : vapeur à 100 °C qui se condense et ressort à 82 °C. Quelle masse de vapeur donne la même chaleur que 1 kg d\'eau dans l\'ancien système ?',
+        sol: String.raw`<p>Ancien : \(1\times4190\times22=92\,180\) J. Vapeur : \(m(l_v+4190\times18)=m\times2{,}325\times10^6\) (avec \(l_v=2{,}25\times10^6\)) → \(m\approx\) <b>0,0396 kg</b>.</p>` },
+      { src: 'Blackboard', niveau: 1, en: 'Q2.1 — A railway track consists of steel rails each 20 m long, laid at 25 °C with no gaps. What gap will appear when the temperature falls to 0 °C?', fr: 'Rails d\'acier de 20 m posés à 25 °C sans espace. Quel espace apparaît à 0 °C ?',
+        sol: String.raw`<p>\(\delta L=12\times10^{-6}\times20\times25=0{,}006\) m = <b>6 mm</b>.</p>` },
+      { src: 'Blackboard', niveau: 1, en: 'Q2.2 — An aluminium sphere of diameter 0.5 m undergoes a temperature increase of 50 °C. Find the percentage increase in its (i) diameter, (ii) surface area, (iii) volume.', fr: 'Sphère d\'aluminium de 0,5 m, +50 °C. Pourcentage d\'augmentation du diamètre, de la surface, du volume ?',
+        sol: String.raw`<p>\(\alpha\delta\theta=24\times10^{-6}\times50=1{,}2\times10^{-3}\) → (i) <b>0,12 %</b>, (ii) ×2 = <b>0,24 %</b>, (iii) ×3 = <b>0,36 %</b>. Le diamètre de départ ne sert pas.</p>` },
+      { src: 'Blackboard', niveau: 2, en: 'Q2.3 — (a) A brass shaft of diameter 2.50 mm at room temperature (18 °C) is to be shrunk fit into the hole of a steel gear wheel; the hole is 2.49 mm at room temperature. To what temperature must the brass shaft be cooled to give a push fit? (b) To what temperature must the steel wheel be heated instead?', fr: '(a) Arbre en laiton de 2,50 mm à 18 °C, trou de 2,49 mm dans une roue en acier. À quelle température refroidir l\'arbre pour qu\'il entre ? (b) À quelle température chauffer plutôt la roue ?',
+        sol: String.raw`<p>(a) \(\delta\theta=\dfrac{-0{,}01}{2{,}50\times21\times10^{-6}}\approx-190{,}5\) °C → <b>−172,5 °C</b>. (b) \(\delta\theta=\dfrac{0{,}01}{2{,}49\times12\times10^{-6}}\approx334{,}7\) °C → <b>352,7 °C</b>.</p>` },
+      { src: 'Blackboard', niveau: 3, en: 'Q2.4 — A pendulum (brass bar L1 and steel bar L2, see sketch on the sheet) must have a length L0 = 1 m from pivot to bob, independent of temperature. What lengths must L1 and L2 be? (α_steel = 1.2×10⁻⁵ K⁻¹, α_brass = 2.1×10⁻⁵ K⁻¹)', fr: 'Pendule compensé : barre de laiton L1 et barre d\'acier L2, la distance pivot-masse doit rester 1 m quelle que soit la température. Calcule L1 et L2.',
+        sol: String.raw`<p>Les dilatations doivent s'annuler : \(\alpha_b L_1=\alpha_s L_2\), et \(L_2-L_1=1\) m. Donc \(L_1=\frac{12}{21}L_2\) → \(L_2(1-\frac{12}{21})=1\) → \(L_2=\frac{21}{9}\approx\) <b>2,33 m</b> (acier), \(L_1\approx\) <b>1,33 m</b> (laiton). Attention : sur la feuille, les réponses (4) et (5) sont inversées.</p>` },
+      { src: 'Blackboard', niveau: 3, en: 'Q2.5 — A bimetallic strip of brass and steel, each 2 mm thick, is straight and 10.0 cm long at 20 °C. Find its radius of curvature r at 100 °C.', fr: 'Bilame laiton/acier, chaque lame fait 2 mm d\'épaisseur, droit et long de 10,0 cm à 20 °C. Rayon de courbure à 100 °C ?',
+        sol: String.raw`<p>Les deux lames font le même angle \(\theta\) ; leurs lignes médianes sont distantes de \(t=2\) mm. \(\frac{(r+t)\theta}{r\theta}=\frac{1+\alpha_b\delta\theta}{1+\alpha_s\delta\theta}\) → \(\frac{t}{r}\approx(\alpha_b-\alpha_s)\delta\theta=9\times10^{-6}\times80=7{,}2\times10^{-4}\) → \(r\approx\frac{0{,}002}{7{,}2\times10^{-4}}\approx\) <b>2,78 m</b>. La longueur de 10 cm ne sert pas.</p>` },
+      { src: 'Claude', niveau: 1, en: 'A 1 L glass bottle is full of ethyl alcohol at 15 °C and warmed to 35 °C. How much spills out? (β_alcohol = 1.08×10⁻³ K⁻¹, α_glass = 8×10⁻⁶ K⁻¹)', fr: 'Une bouteille en verre de 1 L pleine d\'alcool à 15 °C est chauffée à 35 °C. Combien de liquide déborde ?',
+        sol: String.raw`<p>Alcool : \(+1000\times1{,}08\times10^{-3}\times20=21{,}6\) ml ; bouteille : \(+1000\times24\times10^{-6}\times20=0{,}48\) ml. Débordement ≈ <b>21,1 ml</b> (dilatation apparente).</p>` }
     ]
   };
 })();
