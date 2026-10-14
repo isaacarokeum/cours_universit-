@@ -34,5 +34,8 @@ Dans le fichier de la matière : `S[n] = { titre, titreFr, resume, sources, en, 
 - Les diapos de Maths A sont des IMAGES : toujours les rendre en images et les lire visuellement.
 - Annonces : `/courses/{id}/announcements`. Échéances : `/v2/courses/{id}/gradebook/columns`.
 
+## Hors ligne
+- `sw.js` met toute l'app en cache (liste `LOCAL` + KaTeX). Si tu ajoutes un fichier (page ou data/*.js), ajoute-le à `LOCAL` et augmente le numéro de `CACHE`.
+
 ## Avant de pousser
 `for f in data/*.js app.js; do node --check $f; done`, puis commit + push sur main.
