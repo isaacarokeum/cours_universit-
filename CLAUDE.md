@@ -4,7 +4,7 @@ App perso d'Isaac (University of Southampton Malaysia, Foundation Year) : ses co
 **Ne JAMAIS rien modifier sur Blackboard : lecture seule.**
 
 ## Structure
-- Pages : `index.html` (accueil), `matiere.html?m=ID`, `cours.html?m=ID&w=N`, `edt.html`, `devoirs.html`, `vocab.html`. Rendu dans `app.js`, style dans `style.css`.
+- Pages : `index.html` (accueil), `matiere.html?m=ID`, `cours.html?m=ID&w=N`, `edt.html`, `devoirs.html`, `formules.html` (formules par matière, `?m=ID`), `vocab.html`. Rendu dans `app.js`, style dans `style.css`.
 - Données : `data/base.js` (matières, devoirs, emploi du temps) + un fichier par matière :
   `math-a.js` (ma), `mechanical-science.js` (ms), `engineering-principles.js` (ep), `routes-to-success.js` (rs), `coursework.js` (cw).
 - Electricity & Electronics (GENG0004) : NE PAS inclure (demande d'Isaac).
