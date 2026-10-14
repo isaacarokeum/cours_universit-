@@ -48,6 +48,7 @@
         <a href="edt.html" class="${tab === 'edt' ? 'on' : ''}"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span>Planning</a>
         <a href="devoirs.html" class="${tab === 'dev' ? 'on' : ''}"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6M8 3h8v3H8z"/><rect x="5" y="5" width="14" height="16" rx="2"/><path d="M9 12l2 2 4-4"/></svg>${nb ? `<i class="dot">${nb}</i>` : ''}</span>Devoirs</a>
         <a href="notes.html" class="${tab === 'notes' ? 'on' : ''}"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12l-4 4H4z"/><path d="M16 20v-4h4M8 9h8M8 13h5"/></svg></span>Notes</a>
+        <a href="formules.html" class="${tab === 'form' ? 'on' : ''}"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4H6l6 8-6 8h12"/></svg></span>Formules</a>
         <a href="vocab.html" class="${tab === 'voc' ? 'on' : ''}"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19l4-12 4 12M5.5 15h5M15 9h5l-5 10h5"/></svg></span>Lexique</a>
       </nav>`);
   }
@@ -335,6 +336,26 @@
         store.set('notes', store.get('notes', []).filter((y) => y.id !== b.dataset.del)); draw(); });
     };
     draw();
+  };
+
+  pages.formules = function () {
+    const id = qs.get('m'); const m = id && D.matieres[id];
+    const weeksOf = (mm) => Object.entries(mm.semaines).filter(([, w]) => w.formules && w.formules.length).sort((a, b) => a[0] - b[0]);
+    const count = (mm) => weeksOf(mm).reduce((t, [, w]) => t + w.formules.length, 0);
+    if (!m) {
+      shell('Formules', { tab: 'form', sub: 'Toutes les formules à connaître, par matière' });
+      const ids = Object.keys(D.matieres).filter((k) => count(D.matieres[k]) > 0);
+      $('#app').innerHTML = `<div class="grid">${ids.map((k) => { const mm = D.matieres[k]; const c = count(mm);
+        return `<a class="subj" style="--c:${mm.couleur}" href="formules.html?m=${k}"><div class="ico">${k.toUpperCase()}</div>
+          <div class="n">${esc(mm.nom)}</div><div class="c">${c} formule${c > 1 ? 's' : ''}</div></a>`; }).join('')}</div>`;
+      return;
+    }
+    shell(m.nom, { tab: 'form', back: 'formules.html', color: m.couleur, sub: `Formules à connaître · ${count(m)} au total` });
+    const ws = weeksOf(m);
+    $('#app').innerHTML = ws.length ? ws.map(([n, w]) => `<h2 class="sec">Semaine ${n} — ${esc(w.titreFr || w.titre)}</h2>
+      <div class="card">${w.formules.map((f) => `<div class="formula"><div class="nm">${f.nom}</div><div class="tex">$$${f.tex}$$</div>${f.why ? `<div class="why">${f.why}</div>` : ''}</div>`).join('')}
+      <a class="fl-link" href="cours.html?m=${id}&w=${n}">Ouvrir le cours de la semaine ${n} ›</a></div>`).join('')
+      : '<div class="card muted">Pas encore de formule pour cette matière.</div>';
   };
 
   pages.vocab = function () {
