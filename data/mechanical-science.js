@@ -313,7 +313,7 @@ Le Dr Beh a publié les copies corrigées des étudiants (Q1 à Q9). Toutes les 
     titre: 'Lecture 4 — Vectors 1',
     titreFr: 'Cours 4 — Vecteurs (1) : composantes et vecteur résultant',
     resume: 'Scalaires et vecteurs, notations, composantes x, y, z, norme et direction, multiplication par un scalaire, addition et soustraction de vecteurs (calcul et schéma), exemple du bateau sur la rivière.',
-    sources: '2026-27 MS L4 Vectors 1 (diapos « blank », 10 oct.) · Course notes L4.pdf (Blackboard)',
+    sources: '2026-27 MS L4 Vectors 1 (diapos « blank » 10 oct. et « filled » 15 oct.) · Course notes L4.pdf · vidéo du cours L4 Vectors 1 (Recorded Lectures, Blackboard)',
     en: String.raw`
 <h4>Lecture 4 — Vectors 1</h4>
 <p><b>Learning outcomes:</b> (1) resolve a vector in \(x\)-, \(y\)- and \(z\)-directions; (2) find the resultant vector by applying vector addition or subtraction.</p>
@@ -345,7 +345,17 @@ $$\mathbf{a}\pm\mathbf{b}=(a_x\pm b_x)\mathbf{i}+(a_y\pm b_y)\mathbf{j}+(a_z\pm 
 <p>A boat attempts to travel straight across a river at 2 m s⁻¹, but the current flows at 1.20 m s⁻¹ to the right. What is the actual velocity of the boat? Then: if the boat really wants to reach straight across, with the same speeds, what should its direction be? (Worked in the exercises.)</p>
 <h5>Summary</h5>
 <ul><li>A 2-D vector is resolved into \(x\)- and \(y\)-components.</li><li>The resultant vector is the outcome of adding or subtracting vectors.</li></ul>
-<p><i>Note : les diapos 5 (« Resolve the following vectors ») et 8 (somme et différence par schéma) sont des figures complétées en cours ; elles seront ajoutées avec la version « filled ».</i></p>`,
+<h5>Resolving vectors example (slide 5, filled in class)</h5>
+<table><tr><th>Vector</th><th>Given</th><th>Components</th></tr>
+<tr><td>\(\mathbf{a}\)</td><td>from the origin to (3, 4)</td><td>\(\mathbf{a}=\begin{pmatrix}3\\4\end{pmatrix}\), \(\tan\theta=4/3\), \(\theta=53.1^\circ\)</td></tr>
+<tr><td>\(\mathbf{b}\)</td><td>\(|\mathbf{b}|=10\) at \(120^\circ\)</td><td>\(\begin{pmatrix}10\cos120^\circ\\10\sin120^\circ\end{pmatrix}=\begin{pmatrix}-5\\8.66\end{pmatrix}\)</td></tr>
+<tr><td>\(\mathbf{c}\)</td><td>\(|\mathbf{c}|=7\) at \(20^\circ\) below the \(-x\) axis, i.e. \(180^\circ+20^\circ\)</td><td>\(\begin{pmatrix}7\cos200^\circ\\7\sin200^\circ\end{pmatrix}=\begin{pmatrix}-6.58\\-2.39\end{pmatrix}\)</td></tr>
+<tr><td>\(\mathbf{d}\)</td><td>\(|\mathbf{d}|=2\) at \(45^\circ\) below the \(+x\) axis, i.e. \(270^\circ+45^\circ\)</td><td>\(\begin{pmatrix}2\cos315^\circ\\2\sin315^\circ\end{pmatrix}=\begin{pmatrix}1.41\\-1.41\end{pmatrix}\)</td></tr></table>
+<p>Method used in class: always convert the angle to one measured <b>anticlockwise from +\(x\)</b>, then the signs of \(\cos\) and \(\sin\) give the correct signs of the components automatically.</p>
+<h5>Resultant by sketching (slide 8, filled in class)</h5>
+<ul><li>\(\mathbf{a}+\mathbf{b}\): draw \(\mathbf{a}\), then draw \(\mathbf{b}\) starting from the <b>tip</b> of \(\mathbf{a}\) (tip-to-tail). The resultant goes from the start point of \(\mathbf{a}\) to the end point of \(\mathbf{b}\). \(\mathbf{b}+\mathbf{a}\) gives the same resultant.</li>
+<li>\(\mathbf{a}-\mathbf{b}=\mathbf{a}+(-\mathbf{b})\): reverse \(\mathbf{b}\), then add tip-to-tail. Note \(\mathbf{b}-\mathbf{a}=-(\mathbf{a}-\mathbf{b})\) (same length, opposite direction).</li>
+<li>To find the size and angle of the resultant from the sketch you need trigonometry: Pythagoras, the sine rule and the cosine rule.</li></ul>`,
     fr: String.raw`
 <h4>1. Scalaire ou vecteur ?</h4>
 <p>Un <b>scalaire</b>, c'est juste un nombre avec une unité : ta masse (70 kg), la durée d'un cours (1 h), une température. Ça n'a pas de sens de dire « 70 kg vers la gauche ».</p>
@@ -409,6 +419,10 @@ i : \(1+(-5)-0=-4\) · j : \(-3+2-6=-7\) · k : \(4+(-1)-(-7)=10\).<br>Résultat
         sol: '<p>|v| = √(2² + 1,2²) = √5,44 ≈ <b>2,33 m/s</b>, à tan⁻¹(1,2/2) ≈ <b>31,0°</b> vers la droite (en aval) par rapport à la traversée perpendiculaire (soit ≈ 59,0° par rapport à la berge).</p>' },
       { src: 'Blackboard', niveau: 3, en: 'Slides: continuing, if the boat really wants to reach straight across the river, with the same current and boat speed, what should the direction of the boat be?', fr: 'Diapos : suite. Pour arriver juste en face, dans quelle direction le bateau doit-il viser ?',
         sol: '<p>La composante du bateau vers l\'amont doit annuler le courant : 2 sin θ = 1,2 → sin θ = 0,6 → <b>θ ≈ 36,9° vers l\'amont (à gauche)</b> par rapport à la perpendiculaire aux berges. Vitesse de traversée : 2 cos 36,9° = 1,6 m/s.</p>' },
+      { src: 'Blackboard', niveau: 2, en: 'Slide 5: resolve b, of magnitude 10 at 120° from the +x axis, and c, of magnitude 7 at 20° below the −x axis.', fr: 'Diapo 5 : décompose b (norme 10, à 120° de l\'axe +x) et c (norme 7, à 20° sous l\'axe −x).',
+        sol: '<p>b = (10 cos 120°, 10 sin 120°) = <b>(−5 ; 8,66)</b>. Pour c, l\'angle depuis +x dans le sens direct vaut 180° + 20° = 200° : c = (7 cos 200°, 7 sin 200°) = <b>(−6,58 ; −2,39)</b>. Vérification : √(6,58² + 2,39²) ≈ 7.</p>' },
+      { src: 'Blackboard', niveau: 1, en: 'Slide 5: resolve d, of magnitude 2 at 45° below the +x axis, and find the angle of a = (3, 4).', fr: 'Diapo 5 : décompose d (norme 2, à 45° sous l\'axe +x) et trouve l\'angle de a = (3 ; 4).',
+        sol: '<p>Angle de d depuis +x : 270° + 45° = 315° → d = (2 cos 315°, 2 sin 315°) = <b>(1,41 ; −1,41)</b>. Pour a : tan θ = 4/3 → <b>θ = 53,1°</b>.</p>' },
       { src: 'Claude', niveau: 1, en: 'Resolve a force of 50 N acting at 30° above the +x axis into x- and y-components.', fr: 'Décompose une force de 50 N à 30° au-dessus de l\'axe +x.',
         sol: '<p>Fx = 50 cos 30° = <b>43,3 N</b> ; Fy = 50 sin 30° = <b>25,0 N</b>.</p>' },
       { src: 'Claude', niveau: 1, en: 'Find the magnitude of a = 2i − 3j + 6k.', fr: 'Trouve la norme de a = 2i − 3j + 6k.',
