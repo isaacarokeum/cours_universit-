@@ -6,7 +6,7 @@ App perso d'Isaac (University of Southampton Malaysia, Foundation Year) : ses co
 ## Structure
 - Pages : `index.html` (accueil), `matiere.html?m=ID`, `cours.html?m=ID&w=N`, `edt.html`, `devoirs.html`, `formules.html` (formules par matière, `?m=ID`), `vocab.html`. Rendu dans `app.js`, style dans `style.css`.
 - Données : `data/base.js` (matières, devoirs, emploi du temps) + un fichier par matière :
-  `math-a.js` (ma), `mechanical-science.js` (ms), `engineering-principles.js` (ep), `routes-to-success.js` (rs), `coursework.js` (cw).
+  `math-a.js` (ma), `mechanical-science.js` (ms), `engineering-principles.js` (ep), `routes-to-success.js` (rs), `coursework.js` (cw), `english.js` (en = GENG0016 English for Engineers and Scientists, Ms Effa, Blackboard `_237623_1`).
 - Electricity & Electronics (GENG0004) : NE PAS inclure (demande d'Isaac).
 - Mathematics B (GENG0002) : commence au semestre 2, ne pas l'ajouter avant (demande d'Isaac).
 - Semaine 1 = lundi 28 sept 2026 (calcul automatique dans app.js).
@@ -28,7 +28,8 @@ Dans le fichier de la matière : `S[n] = { titre, titreFr, resume, sources, en, 
 
 ## Récupérer les cours sur Blackboard (navigateur intégré, session d'Isaac)
 - API : `fetch('https://blackboard.soton.ac.uk/learn/api/public/v1/courses/{id}/contents…', {credentials:'include'})` (URL absolue).
-- IDs : ma `_237607_1`, ms `_237611_1`, ep `_237615_1`, rs `_237619_1`, cw `_237621_1`.
+- IDs : ma `_237607_1`, ms `_237611_1`, ep `_237615_1`, rs `_237619_1`, cw `_237621_1`, en `_237623_1`.
+- GENG0016 : aussi dans le SharePoint de Ms Effa (dossier « Support Folder for Late Comer students / Engineering Foundation Year 26-27 / GENG0016… »), avec les PowerPoint. Les .pptx/.docx s'y lisent par l'API SharePoint (`/teams/SoFUoSM/_api/web/GetFileByServerRelativePath(decodedurl='…')/$value`) + décompression zip maison (DecompressionStream 'deflate-raw'), car le navigateur intégré bloque les téléchargements Office depuis Blackboard.
 - PDF texte : naviguer (navigateur intégré) vers le lien de téléchargement (redirige vers prod01-euc1-prod01-xythos.prod.files.blackboard.com), puis extraire le texte avec pdf.js (cdnjs) via fetch(location.href).
 - PowerPoint / Word / PDF en images (diapos de maths, notes manuscrites) : utiliser **Chrome (Claude in Chrome)**. Ouvrir un NOUVEL onglet par fichier, naviguer vers le lien de téléchargement, attendre 2 s, puis sur la page xythos : `fetch(location.href)` → blob → `<a download="nom">` .click(). Le fichier arrive dans C:\Users\ISHAQ\Downloads (dossier connecté) → device_stage_files → lire (zip XML pour pptx/docx, `pdftoppm` + lecture des images pour les PDF scannés). Fermer les onglets ensuite.
 - Les diapos de Maths A sont des IMAGES : toujours les rendre en images et les lire visuellement.

@@ -1,13 +1,13 @@
 // Mes Cours — fonctionne hors ligne.
 // À l'installation : toute l'app (pages, données, KaTeX, police) est mise en cache.
 // Ensuite : réseau d'abord pour avoir les derniers cours, cache si pas de connexion.
-const CACHE = 'mes-cours-v7';
+const CACHE = 'mes-cours-v8';
 const LOCAL = [
   './', 'index.html', 'matiere.html', 'cours.html', 'section.html', 'edt.html', 'devoirs.html',
   'notes.html', 'formules.html', 'vocab.html', 'app.js', 'style.css', 'manifest.json',
   'icon-192.png', 'icon-512.png',
   'data/base.js', 'data/math-a.js', 'data/mechanical-science.js', 'data/engineering-principles.js',
-  'data/routes-to-success.js', 'data/coursework.js'
+  'data/routes-to-success.js', 'data/coursework.js', 'data/english.js'
 ];
 const KATEX = 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/';
 const REMOTE = [

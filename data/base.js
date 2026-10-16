@@ -8,12 +8,15 @@ window.DATA = {
     ms: { code: 'GENG0003', nom: 'Mechanical Science', icone: '⚙️', couleur: '#e5736b', bb: '_237611_1', prof: 'Dr Beh Shiao Lin', semaines: {} },
     ep: { code: 'GENG0005', nom: 'Engineering Principles', icone: '🔥', couleur: '#b47ccf', bb: '_237615_1', prof: 'Dr Kok-Geng Lim', semaines: {} },
     rs: { code: 'GENG0014', nom: 'Routes to Success', icone: '🧭', couleur: '#5aae8f', bb: '_237619_1', prof: 'Dr Beh · Mr Ivan Lai · Mr Lee Shing Chuan', semaines: {} },
-    cw: { code: 'GENG0015', nom: 'Coursework', icone: '💻', couleur: '#5a9fd6', bb: '_237621_1', prof: 'Dr Kok-Geng Lim', semaines: {} }
+    cw: { code: 'GENG0015', nom: 'Coursework', icone: '💻', couleur: '#5a9fd6', bb: '_237621_1', prof: 'Dr Kok-Geng Lim', semaines: {} },
+    en: { code: 'GENG0016', nom: 'English for Engineers', icone: '', couleur: '#d4889f', bb: '_237623_1', prof: 'Ms Effa (Siti Nor Effadila Su\'aif)', semaines: {} }
   },
 
   // ---------- Devoirs / échéances ----------
   // date en ISO (heure de Malaisie = UTC+8)
   devoirs: [
+    { matiere: 'en', titre: 'Summary — résumé d\'un article technique', type: 'Devoir (10 %)', date: '2026-12-04T17:00:00+08:00', url: 'https://blackboard.soton.ac.uk/ultra/courses/_237623_1/outline',
+      details: 'Résumé individuel d\'un article technique donné par Ms Effa (thèmes des semaines 6 à 9 : paraphrase, résumé, références Harvard). Plan et brouillon faits en novembre. Dépôt sur Turnitin, police 12, interligne 1,15, justifié. Date du 4 décembre d\'après le guide du module (l\'heure n\'est pas encore précisée) ; le lien de dépôt n\'est pas encore publié.' },
     { matiere: 'cw', titre: 'Digital Capabilities Worksheet', type: 'Questionnaire Blackboard', rendu: true, url: 'https://blackboard.soton.ac.uk/ultra/courses/_237621_1/assessment/_8267422_1/overview?courseId=_237621_1', date: '2026-10-05T17:00:00+08:00',
       details: 'Fiche « Digital Capabilities » (CA Semaine 1) à remplir sur Blackboard.' },
     { matiere: 'cw', titre: 'ESSENTIAL READING — Information Literacy', type: 'Parcours LinkedIn Learning (formatif)', url: 'https://blackboard.soton.ac.uk/ultra/courses/_237621_1/assessment/_8271320_1/overview?courseId=_237621_1', date: '2026-10-30T18:00:00+00:00',
@@ -31,7 +34,7 @@ window.DATA = {
     { jour: 0, debut: '10:00', fin: '11:00', matiere: 'ms', titre: 'Mechanical Science', type: 'Cours magistral', salle: '2R014', prof: 'Beh', groupes: null },
     { jour: 0, debut: '11:00', fin: '13:00', matiere: 'ma', titre: 'Mathematics A', type: 'Cours magistral', salle: '2R014', prof: 'Lee', groupes: null },
     { jour: 0, debut: '14:00', fin: '15:00', matiere: 'cw', titre: 'Coursework', type: 'Cours magistral', salle: '2R014', prof: 'KG Lim', groupes: null },
-    { jour: 0, debut: '15:00', fin: '17:00', matiere: null, titre: 'GENG0016', type: 'Cours magistral', salle: '2R013', prof: 'Effa', groupes: null },
+    { jour: 0, debut: '15:00', fin: '17:00', matiere: 'en', titre: 'English for Engineers', type: 'Cours magistral', salle: '2R013', prof: 'Effa', groupes: null },
 
     { jour: 1, debut: '11:00', fin: '12:00', matiere: 'rs', titre: 'Routes to Success', type: 'Cours magistral', salle: '2R014', prof: 'Beh', groupes: null },
     { jour: 1, debut: '12:00', fin: '13:00', matiere: 'cw', titre: 'Coursework — labo CA', type: 'Labo', salle: '2R004', prof: 'KG Lim', groupes: [1] },
@@ -57,7 +60,7 @@ window.DATA = {
     { jour: 3, debut: '14:00', fin: '16:00', matiere: 'ma', titre: 'Mathematics A — TD', type: 'TD', salle: '3R024', prof: 'Lee', groupes: [1] },
     { jour: 3, debut: '14:00', fin: '16:00', matiere: 'ma', titre: 'Mathematics A — TD (G4/G2)', type: 'TD', salle: '3R022', prof: 'Beh', groupes: [4] },
 
-    { jour: 4, debut: '09:00', fin: '11:00', matiere: null, titre: 'GENG0016', type: 'TD', salle: '3R024', prof: 'Effa', groupes: null },
+    { jour: 4, debut: '09:00', fin: '11:00', matiere: 'en', titre: 'English for Engineers — TD EFY', type: 'TD', salle: '3R024', prof: 'Effa', groupes: null },
     { jour: 4, debut: '11:00', fin: '12:00', matiere: 'ma', titre: 'Mathematics A — TD', type: 'TD', salle: '3R022', prof: 'Lee', groupes: [3] }
   ]
 };

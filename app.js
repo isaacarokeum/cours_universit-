@@ -301,7 +301,7 @@
       const notes = store.get('notes', []);
       const list = notes.filter((x) => filtre === 'tout' || (filtre === 'reviser' ? x.reviser && !x.fait : x.m === filtre))
         .sort((a, b) => (a.fait - b.fait) || (b.reviser - a.reviser) || (b.t - a.t));
-      const opts = Object.entries(D.matieres).map(([k, m]) => `<option value="${k}" ${k === (fm || '') ? 'selected' : ''}>${m.icone} ${m.nom}</option>`).join('');
+      const opts = Object.entries(D.matieres).map(([k, m]) => `<option value="${k}" ${k === (fm || '') ? 'selected' : ''}>${m.nom}</option>`).join('');
       $('#app').innerHTML = `
         <div class="card noteform">
           <select id="nm"><option value="">Général</option>${opts}</select>
