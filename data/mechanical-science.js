@@ -439,4 +439,79 @@ i : \(1+(-5)-0=-4\) · j : \(-3+2-6=-7\) · k : \(4+(-1)-(-7)=10\).<br>Résultat
         sol: '<p>A cos 60° = 10 × 0,5 = <b>5 N</b>.</p>' }
     ]
   };
+  S[4] = {
+    titre: 'Lecture 6 — Vectors 2',
+    titreFr: 'Cours 6 — Vecteurs (2) : produit scalaire et produit vectoriel',
+    resume: 'Les deux façons de multiplier deux vecteurs : le produit scalaire (donne un nombre et l\'angle entre les vecteurs) et le produit vectoriel (donne un vecteur perpendiculaire). Vecteurs perpendiculaires et parallèles.',
+    sources: '2026-27 MS L6 Vectors 2 blank.pdf (Blackboard, 18 oct.) — la version « filled » sera ajoutée quand elle sera publiée',
+    en: String.raw`
+<p><b>Learning outcomes:</b> (1) identify two methods of multiplying vectors; (2) perform scalar multiplication of vectors.</p>
+<h4>Scalar and vector multiplication</h4>
+<p>There are two ways to multiply two vectors, named after their outcome:</p>
+<ul><li><b>Scalar multiplication</b>, also called the <b>dot product</b>, gives a <b>scalar</b>.</li>
+<li><b>Vector multiplication</b>, also called the <b>cross product</b>, gives a <b>vector</b>.</li></ul>
+<h4>Dot product</h4>
+<p>For \(\mathbf{a}=(a_x, a_y, a_z)\) and \(\mathbf{b}=(b_x, b_y, b_z)\):</p>
+$$\mathbf{a}\cdot\mathbf{b}=a_xb_x+a_yb_y+a_zb_z$$
+<p>The dot product also gives the angle \(\theta\) between the two vectors:</p>
+$$\mathbf{a}\cdot\mathbf{b}=|\mathbf{a}|\,|\mathbf{b}|\cos\theta\quad\Rightarrow\quad\cos\theta=\frac{\mathbf{a}\cdot\mathbf{b}}{|\mathbf{a}|\,|\mathbf{b}|}$$
+<h5>Example (slide 5)</h5>
+<p>Sketch \(\mathbf{a}=(2,3)\) and \(\mathbf{b}=(4,1)\), then find the angle between them.</p>
+<div class="ex">\(\mathbf{a}\cdot\mathbf{b}=2\times4+3\times1=11\), \(|\mathbf{a}|=\sqrt{13}\), \(|\mathbf{b}|=\sqrt{17}\), so \(\cos\theta=\dfrac{11}{\sqrt{13}\sqrt{17}}=0.740\) and \(\theta\approx42.3^\circ\).</div>
+<h5>Perpendicular vectors (slide 6)</h5>
+<p>If two vectors are perpendicular, \(\theta=90^\circ\), \(\cos90^\circ=0\), so \(\mathbf{a}\cdot\mathbf{b}=0\).</p>
+<div class="ex">\(\mathbf{a}=(-3,4)\), \(\mathbf{b}=(4,3)\): \(\mathbf{a}\cdot\mathbf{b}=-12+12=0\), so they are perpendicular.</div>
+<h5>Parallel vectors (slide 7)</h5>
+<p>Same direction: \(\theta=0^\circ\). Opposite directions: \(\theta=180^\circ\).</p>
+<div class="ex">\(\mathbf{a}=(4,3)\), \(\mathbf{b}=(8,6)\): \(\mathbf{a}\cdot\mathbf{b}=50=5\times10\), \(\cos\theta=1\), \(\theta=0^\circ\). With \(\mathbf{b}=(-4,-3)\): \(\mathbf{a}\cdot\mathbf{b}=-25=5\times5\times(-1)\), \(\theta=180^\circ\).</div>
+<h4>Cross product</h4>
+$$\mathbf{a}\times\mathbf{b}=(a_yb_z-a_zb_y)\,\mathbf{i}+(a_zb_x-a_xb_z)\,\mathbf{j}+(a_xb_y-a_yb_x)\,\mathbf{k}$$
+<p>The angle is given by \(|\mathbf{a}\times\mathbf{b}|=|\mathbf{a}|\,|\mathbf{b}|\sin\theta\). The details are covered in the Mathematics module; for now remember that (1) the result is a <b>vector</b> and (2) its direction is <b>perpendicular to both</b> \(\mathbf{a}\) and \(\mathbf{b}\).</p>
+<h4>Summary</h4>
+<ul><li>Two ways to multiply vectors: dot product and cross product.</li><li>\(\mathbf{a}\cdot\mathbf{b}=a_xb_x+a_yb_y+a_zb_z=|\mathbf{a}|\,|\mathbf{b}|\cos\theta\).</li></ul>
+<p><i>The worked solutions above were computed from the blank slides; the teacher's filled version will be added when it is published.</i></p>`,
+    fr: String.raw`
+<h4>Deux façons de multiplier deux vecteurs</h4>
+<ul><li><b>Produit scalaire</b> (dot product, noté \(\mathbf{a}\cdot\mathbf{b}\)) : le résultat est un <b>nombre</b>.</li>
+<li><b>Produit vectoriel</b> (cross product, noté \(\mathbf{a}\times\mathbf{b}\)) : le résultat est un <b>vecteur</b>.</li></ul>
+<h4>Le produit scalaire</h4>
+<p>On multiplie les composantes une à une, puis on additionne :</p>
+$$\mathbf{a}\cdot\mathbf{b}=a_xb_x+a_yb_y+a_zb_z$$
+<div class="ex"><div class="lab">Exemple concret</div>\(\mathbf{a}=(2,3)\), \(\mathbf{b}=(4,1)\) : \(2\times4+3\times1=8+3=11\). Le résultat est juste le nombre 11, pas un vecteur.</div>
+<h4>Trouver l'angle entre deux vecteurs</h4>
+<p>On utilise aussi \(\mathbf{a}\cdot\mathbf{b}=|\mathbf{a}|\,|\mathbf{b}|\cos\theta\), donc :</p>
+$$\cos\theta=\frac{\mathbf{a}\cdot\mathbf{b}}{|\mathbf{a}|\,|\mathbf{b}|}$$
+<div class="ex"><div class="lab">Exemple concret (diapo 5)</div>\(\mathbf{a}\cdot\mathbf{b}=11\), \(|\mathbf{a}|=\sqrt{2^2+3^2}=\sqrt{13}\approx3{,}61\), \(|\mathbf{b}|=\sqrt{4^2+1^2}=\sqrt{17}\approx4{,}12\).<br>\(\cos\theta=11/(3{,}61\times4{,}12)\approx0{,}740\) → \(\theta=\cos^{-1}(0{,}740)\approx42{,}3°\).</div>
+<h4>Deux cas à reconnaître tout de suite</h4>
+<ul><li><b>Produit scalaire = 0</b> → les vecteurs sont <b>perpendiculaires</b> (90°). Ex : \((-3,4)\cdot(4,3)=-12+12=0\).</li>
+<li><b>\(\cos\theta=1\)</b> → même direction (0°) ; <b>\(\cos\theta=-1\)</b> → directions opposées (180°). Ex : \((4,3)\) et \((8,6)\) donnent 0° ; \((4,3)\) et \((-4,-3)\) donnent 180°.</li></ul>
+<div class="tip"><div class="lab">Astuce</div>Si un vecteur est un multiple de l'autre (\((8,6)=2\times(4,3)\)), ils sont parallèles : pas besoin de calculer.</div>
+<h4>Le produit vectoriel (pour l'instant, juste l'idée)</h4>
+<p>Le résultat est un vecteur <b>perpendiculaire aux deux</b> vecteurs de départ, et sa norme vaut \(|\mathbf{a}|\,|\mathbf{b}|\sin\theta\). Le calcul détaillé sera vu en maths.</p>
+<div class="warnbox">Ne confonds pas : le point « · » donne un nombre (avec cos), la croix « × » donne un vecteur (avec sin).</div>`,
+    vocab: [
+      ['dot product / scalar product', 'produit scalaire'], ['cross product / vector product', 'produit vectoriel'],
+      ['scalar multiplication', 'multiplication scalaire (produit scalaire)'], ['perpendicular', 'perpendiculaire'],
+      ['parallel', 'parallèle'], ['angle between two vectors', 'angle entre deux vecteurs'], ['outcome', 'résultat'],
+      ['magnitude', 'norme (longueur) d\'un vecteur'], ['opposite direction', 'sens opposé']
+    ],
+    formules: [
+      { nom: 'Produit scalaire (composantes)', tex: String.raw`\mathbf{a}\cdot\mathbf{b}=a_xb_x+a_yb_y+a_zb_z`, why: 'Le résultat est un nombre.' },
+      { nom: 'Angle entre deux vecteurs', tex: String.raw`\cos\theta=\frac{\mathbf{a}\cdot\mathbf{b}}{|\mathbf{a}|\,|\mathbf{b}|}`, why: 'Vient de a·b = |a||b|cos θ.' },
+      { nom: 'Vecteurs perpendiculaires', tex: String.raw`\mathbf{a}\perp\mathbf{b}\iff\mathbf{a}\cdot\mathbf{b}=0`, why: 'cos 90° = 0.' },
+      { nom: 'Produit vectoriel', tex: String.raw`\mathbf{a}\times\mathbf{b}=(a_yb_z-a_zb_y)\mathbf{i}+(a_zb_x-a_xb_z)\mathbf{j}+(a_xb_y-a_yb_x)\mathbf{k}`, why: 'Résultat perpendiculaire à a et b ; |a×b| = |a||b|sin θ.' }
+    ],
+    exos: [
+      { src: 'Blackboard', niveau: 2, en: 'Slide 5: sketch a = (2, 3) and b = (4, 1), then label and calculate the angle between a and b.', fr: 'Diapo 5 : dessine a = (2 ; 3) et b = (4 ; 1), puis calcule l\'angle entre eux.',
+        sol: '<p>a·b = 8 + 3 = 11 ; |a| = √13, |b| = √17 ; cos θ = 11/√221 ≈ 0,740 → <b>θ ≈ 42,3°</b>.</p>' },
+      { src: 'Blackboard', niveau: 1, en: 'Slide 6: show by calculation that a = (−3, 4) and b = (4, 3) are perpendicular.', fr: 'Diapo 6 : montre par le calcul que a = (−3 ; 4) et b = (4 ; 3) sont perpendiculaires.',
+        sol: '<p>a·b = (−3)(4) + (4)(3) = −12 + 12 = <b>0</b>, donc cos θ = 0 et θ = 90°.</p>' },
+      { src: 'Blackboard', niveau: 1, en: 'Slide 7: find the angle between a = (4, 3) and b = (8, 6); repeat for a = (4, 3) and b = (−4, −3).', fr: 'Diapo 7 : angle entre (4 ; 3) et (8 ; 6), puis entre (4 ; 3) et (−4 ; −3).',
+        sol: '<p>(4,3)·(8,6) = 50 = 5 × 10 → cos θ = 1 → <b>0°</b>. (4,3)·(−4,−3) = −25 = 5 × 5 × (−1) → cos θ = −1 → <b>180°</b>.</p>' },
+      { src: 'Claude', niveau: 2, en: 'Find the angle between a = (3, 0, 4) and b = (1, 2, 2).', fr: 'Trouve l\'angle entre a = (3 ; 0 ; 4) et b = (1 ; 2 ; 2).',
+        sol: '<p>a·b = 3 + 0 + 8 = 11 ; |a| = 5, |b| = 3 ; cos θ = 11/15 ≈ 0,733 → <b>θ ≈ 42,8°</b>.</p>' },
+      { src: 'Claude', niveau: 2, en: 'Find k so that (k, 2) is perpendicular to (3, −6).', fr: 'Trouve k pour que (k ; 2) soit perpendiculaire à (3 ; −6).',
+        sol: '<p>3k − 12 = 0 → <b>k = 4</b>.</p>' }
+    ]
+  };
 })();
