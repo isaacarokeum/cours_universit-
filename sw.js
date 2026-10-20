@@ -1,7 +1,7 @@
 // Mes Cours — fonctionne hors ligne.
 // À l'installation : toute l'app (pages, données, KaTeX, police) est mise en cache.
 // Ensuite : réseau d'abord pour avoir les derniers cours, cache si pas de connexion.
-const CACHE = 'mes-cours-v8';
+const CACHE = 'mes-cours-v9';
 const LOCAL = [
   './', 'index.html', 'matiere.html', 'cours.html', 'section.html', 'edt.html', 'devoirs.html',
   'notes.html', 'formules.html', 'vocab.html', 'app.js', 'style.css', 'manifest.json',

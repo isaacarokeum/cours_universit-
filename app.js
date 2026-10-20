@@ -145,7 +145,7 @@
 
   pages.home = function () {
     shell('Mes Cours', { tab: 'home', sub: 'University of Southampton Malaysia · Foundation Year' });
-    const group = store.get('groupe', null);
+    const group = store.get('groupe', D.groupe || null);
     const dow = (NOW.getDay() + 6) % 7; // 0 = lundi
     const today = dow < 5 ? slotsFor(dow, group) : [];
     const next = upcoming().filter((d) => hoursLeft(d.date) > 0 && !isDone(d)).slice(0, 3);
@@ -260,7 +260,7 @@
   pages.edt = function () {
     shell('Emploi du temps', { tab: 'edt', sub: D.edtInfo });
     const draw = () => {
-      const group = store.get('groupe', null);
+      const group = store.get('groupe', D.groupe || null);
       const dow = (NOW.getDay() + 6) % 7;
       const jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi'];
       $('#app').innerHTML = `
@@ -271,7 +271,7 @@
           ${sl.length ? sl.map(slotHTML).join('') : '<div class="card muted">Pas de cours</div>'}</div>`; }).join('')}
         <div class="card muted" style="font-size:13px;margin-top:14px">${D.edtNote}</div>`;
       document.querySelectorAll('.groups button').forEach((b) => b.onclick = () => {
-        const g = Number(b.dataset.g); store.set('groupe', store.get('groupe', null) === g ? null : g); draw(); });
+        const g = Number(b.dataset.g); store.set('groupe', store.get('groupe', D.groupe || null) === g ? null : g); draw(); });
     };
     draw();
   };

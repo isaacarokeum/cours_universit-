@@ -12,6 +12,9 @@ window.DATA = {
     en: { code: 'GENG0016', nom: 'English for Engineers', icone: '', couleur: '#d4889f', bb: '_237623_1', prof: 'Ms Effa (Siti Nor Effadila Su\'aif)', semaines: {} }
   },
 
+  // Groupe de TD d'Isaac (Dr Beh, mail du 19 oct. : Groupe 1, sous-groupe 1A)
+  groupe: 1,
+
   // ---------- Devoirs / échéances ----------
   // date en ISO (heure de Malaisie = UTC+8)
   devoirs: [
@@ -21,6 +24,9 @@ window.DATA = {
       details: 'Fiche « Digital Capabilities » (CA Semaine 1) à remplir sur Blackboard.' },
     { matiere: 'cw', titre: 'ESSENTIAL READING — Information Literacy', type: 'Parcours LinkedIn Learning (formatif)', url: 'https://blackboard.soton.ac.uk/ultra/courses/_237621_1/assessment/_8271320_1/overview?courseId=_237621_1', date: '2026-10-30T18:00:00+00:00',
       details: 'Parcours de vidéos LinkedIn Learning « University of Southampton – Information Literacy » (trouver et évaluer des sources, citer, éviter le plagiat), lancé depuis Blackboard. Évaluation formative : ne compte pas dans la note finale. Tentative commencée, à terminer. Si le lien affiche « Contenu non disponible », désactiver les protections Brave pour Blackboard ou utiliser Chrome/Edge.' },
+    { matiere: 'cw', titre: 'Digital Literacy Poster — Academic Responsibility Agreement', type: 'Engagement à valider sur Blackboard', date: '2026-11-16T10:00:00+00:00',
+      url: 'https://blackboard.soton.ac.uk/ultra/courses/_237621_1/outline',
+      details: 'Déclaration d\'intégrité académique à valider avant de rendre le poster « Digital Literacy » (Coursework). Échéance : lundi 16 nov., 10:00 GMT (18:00 en Malaisie). Source : notification Blackboard du 19 oct.' },
     { matiere: 'rs', titre: 'Part A — Devoir d\'analyse de données', type: 'Devoir (20 %)', date: '2026-11-30T17:00:00+08:00',
       url: 'https://blackboard.soton.ac.uk/ultra/courses/_237619_1/outline',
       details: 'Devoir individuel d\'analyse de données (Excel ou logiciel équivalent). Sujet publié le lundi 19 oct. à 17 h, à rendre le lundi 30 nov. avant 17 h (heure de Malaisie). Remplir aussi l\'Academic Responsibility Agreement (sur Blackboard) avant la même date. À noter : le quiz Part A (10 %, sur R5 Errors and Uncertainty, 45 min, documents autorisés) aura lieu en semaine 8 (16–20 nov.) en TD. Source : Part A assessment info.pdf (10 oct.).' }
@@ -29,7 +35,7 @@ window.DATA = {
   // ---------- Emploi du temps (semaine type, d'après « EFY – W1 ») ----------
   // jour : 0 = lundi … 4 = vendredi · groupes : null = tout le monde
   edtInfo: 'Semaine type · Campus de Malaisie',
-  edtNote: '<b>Cours en présentiel sur le campus</b> depuis le mardi 13 oct. (seul le lundi 12 oct. était en ligne à cause de la brume). <b>Mathematics A</b> : heures de consultation de Lee SC lundi 11h–17h, mardi 9h–17h (sauf 14h–16h), vendredi 9h–17h (sauf 11h–12h), foyer du 2e étage. <b>GENG0016 English</b> (Ms Effa) : enregistrement du cours du 12 oct. demandé par mail. Source : emploi du temps EFY Semaine 1 et annonces Blackboard. Les cours d\'Electricity & Electronics ne sont pas affichés.',
+  edtNote: '<b>Ton groupe : Groupe 1, sous-groupe 1A</b> (Dr Beh, 19 oct.). <b>Cours en présentiel sur le campus</b> depuis le mardi 13 oct. (seul le lundi 12 oct. était en ligne à cause de la brume). <b>Mathematics A</b> : heures de consultation de Lee SC lundi 11h–17h, mardi 9h–17h (sauf 14h–16h), vendredi 9h–17h (sauf 11h–12h), foyer du 2e étage. <b>GENG0016 English</b> (Ms Effa) : enregistrement du cours du 12 oct. demandé par mail. Source : emploi du temps EFY Semaine 1 et annonces Blackboard. Les cours d\'Electricity & Electronics ne sont pas affichés.',
   edt: [
     { jour: 0, debut: '10:00', fin: '11:00', matiere: 'ms', titre: 'Mechanical Science', type: 'Cours magistral', salle: '2R014', prof: 'Beh', groupes: null },
     { jour: 0, debut: '11:00', fin: '13:00', matiere: 'ma', titre: 'Mathematics A', type: 'Cours magistral', salle: '2R014', prof: 'Lee', groupes: null },
