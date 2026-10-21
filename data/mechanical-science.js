@@ -313,7 +313,7 @@ Le Dr Beh a publié les copies corrigées des étudiants (Q1 à Q9). Toutes les 
     titre: 'Lecture 4 — Vectors 1',
     titreFr: 'Cours 4 — Vecteurs (1) : composantes et vecteur résultant',
     resume: 'Scalaires et vecteurs, notations, composantes x, y, z, norme et direction, multiplication par un scalaire, addition et soustraction de vecteurs (calcul et schéma), exemple du bateau sur la rivière.',
-    sources: '2026-27 MS L4 Vectors 1 (diapos « blank » 10 oct. et « filled » 15 oct.) · Course notes L4.pdf · vidéo du cours L4 Vectors 1 (Recorded Lectures, Blackboard)',
+    sources: '2026-27 MS L4 Vectors 1 (diapos « blank » 10 oct. et « filled » 15 oct.) · Course notes L4.pdf · vidéo du cours L4 Vectors 1 (Recorded Lectures) · Worksheet 3 (L4) (Blackboard, 18 oct.)',
     en: String.raw`
 <h4>Lecture 4 — Vectors 1</h4>
 <p><b>Learning outcomes:</b> (1) resolve a vector in \(x\)-, \(y\)- and \(z\)-directions; (2) find the resultant vector by applying vector addition or subtraction.</p>
@@ -437,13 +437,26 @@ i : \(1+(-5)-0=-4\) · j : \(-3+2-6=-7\) · k : \(4+(-1)-(-7)=10\).<br>Résultat
         sol: '<p>2e trajet : (4 cos 60°, 4 sin 60°) = (2 ; 3,46). Total : (5 ; 3,46) km. Norme = √(25 + 12) = √37 ≈ <b>6,08 km</b>, direction tan⁻¹(3,46/5) ≈ <b>34,7° au nord de l\'est</b>.</p>' },
       { src: 'Claude', niveau: 1, en: 'Vector A has magnitude 10 N and makes an angle of 60° with vector B. Find the projection of A onto the direction of B.', fr: 'A vaut 10 N et fait 60° avec B. Projection de A sur la direction de B ?',
         sol: '<p>A cos 60° = 10 × 0,5 = <b>5 N</b>.</p>' }
+      ,
+      { src: 'Blackboard', niveau: 1, en: String.raw`Worksheet 3, Q1.1–1.4: find the question marks. 1.1: vector to \((-3,4)\), magnitude and angle? 1.2: magnitude 10 at 60° to the y-axis (pointing up-left). 1.3: magnitude 7 at 20° below the negative x-axis (pointing down-left). 1.4: magnitude 2 at 40° below the positive x-axis (pointing down-right).`, fr: 'Feuille de TD 3 : trouve les composantes, la norme ou l\'angle de chaque vecteur.',
+        sol: String.raw`<p>1.1 : \(|\mathbf v|=\sqrt{9+16}=5\) ; angle depuis l'axe des x positifs : \(180^\circ-\tan^{-1}(4/3)=180-53.1=126.9^\circ\) (soit 53,1° avec l'axe des x négatifs).<br>1.2 : \((-10\sin60^\circ,\;10\cos60^\circ)=(-8.66,\;5)\).<br>1.3 : \((-7\cos20^\circ,\;-7\sin20^\circ)=(-6.58,\;-2.39)\).<br>1.4 : \((2\cos40^\circ,\;-2\sin40^\circ)=(1.53,\;-1.29)\).<br>Vérifie toujours les signes avec le quadrant du dessin.</p>` },
+      { src: 'Blackboard', niveau: 1, en: String.raw`Worksheet 3, Q1.5–1.8: with \(\mathbf E=(3,4)\), \(\mathbf F=(1,-2)\), \(\mathbf G=(0,-5)\), \(\mathbf H=(6,0)\), sketch and find \(\mathbf E+\mathbf G\), \(\mathbf H-\mathbf E\), \(\mathbf G-\mathbf F\), \(\mathbf F+\mathbf H\).`, fr: 'Feuille de TD 3 : dessine les vecteurs et leur résultante.',
+        sol: String.raw`<p>\(\mathbf E+\mathbf G=(3,-1)\), norme 3,16 · \(\mathbf H-\mathbf E=(3,-4)\), norme 5 · \(\mathbf G-\mathbf F=(-1,-3)\), norme 3,16 · \(\mathbf F+\mathbf H=(7,-2)\), norme 7,28.<br>Pour dessiner une soustraction : \(\mathbf H-\mathbf E=\mathbf H+(-\mathbf E)\), on retourne \(\mathbf E\) puis on met les flèches bout à bout.</p>` },
+      { src: 'Blackboard', niveau: 2, en: 'Worksheet 3, Q2: A ship is towed by two tugs. One rope is at 60° above the direction of motion, the other (tension 52 kN) at 30° below it (top view). Calculate the resultant force on the ship.', fr: 'Feuille de TD 3 : un navire tiré par deux remorqueurs ; calcule la force résultante.',
+        sol: String.raw`<p>Le navire avance tout droit, donc les composantes perpendiculaires s'annulent : \(T\sin60^\circ=52\sin30^\circ\) → \(T=\dfrac{26}{0.866}=30.0\) kN.<br>Résultante (dans la direction du mouvement) : \(30.0\cos60^\circ+52\cos30^\circ=15.0+45.0=60.0\) kN.</p>` },
+      { src: 'Blackboard', niveau: 1, en: 'Worksheet 3, Q3: An aircraft flies 500 km due south and then 600 km due west. Calculate the resultant displacement.', fr: 'Feuille de TD 3 : avion 500 km vers le sud puis 600 km vers l\'ouest ; déplacement résultant ?',
+        sol: String.raw`<p>\((-600,\;-500)\) km. Norme \(\sqrt{600^2+500^2}=781\) km. Direction : \(\tan^{-1}(600/500)=50.2^\circ\) à l'ouest du sud (S 50,2° O).</p>` },
+      { src: 'Blackboard', niveau: 2, en: 'Worksheet 3, Q4: A car travels at 50 km/h towards west, a lorry at 120 km/h towards south. Find the velocity of the lorry relative to the car (V_lorry − V_car).', fr: 'Feuille de TD 3 : vitesse du camion vue depuis la voiture.',
+        sol: String.raw`<p>\(\mathbf V_{lorry}-\mathbf V_{car}=(0,-120)-(-50,0)=(50,-120)\) km/h. Norme \(\sqrt{50^2+120^2}=130\) km/h, direction \(\tan^{-1}(50/120)=22.6^\circ\) à l'est du sud.</p>` },
+      { src: 'Blackboard', niveau: 3, en: 'Worksheet 3, Q5: To a cyclist riding at 3 m/s towards east, the wind appears to come from the south at 5.2 m/s. Determine the true speed and direction of the wind.', fr: 'Feuille de TD 3 : vent apparent pour un cycliste ; trouve le vrai vent.',
+        sol: String.raw`<p>Vent apparent = vrai vent − vitesse du cycliste. Venant du sud, il souffle vers le nord : \((0,\;5.2)\).<br>Vrai vent \(=(0,5.2)+(3,0)=(3,\;5.2)\) m/s. Norme \(\sqrt{9+27.04}=6.0\) m/s ; il souffle vers N 30° E (\(\tan^{-1}(3/5.2)=30^\circ\)), c'est-à-dire qu'il <b>vient du sud-ouest</b> (S 30° O).</p>` }
     ]
   };
   S[4] = {
     titre: 'Lecture 6 — Vectors 2',
     titreFr: 'Cours 6 — Vecteurs (2) : produit scalaire et produit vectoriel',
     resume: 'Les deux façons de multiplier deux vecteurs : le produit scalaire (donne un nombre et l\'angle entre les vecteurs) et le produit vectoriel (donne un vecteur perpendiculaire). Vecteurs perpendiculaires et parallèles.',
-    sources: '2026-27 MS L6 Vectors 2 blank.pdf (Blackboard, 18 oct.) — la version « filled » sera ajoutée quand elle sera publiée',
+    sources: '2026-27 MS L6 Vectors 2 blank.pdf (18 oct.) et filled.pdf (annotée en cours, 19–20 oct.) · vidéo « L4 Vectors 1 S9-12 & L6 Vectors 2 » (Recorded Lectures, Blackboard)',
     en: String.raw`
 <p><b>Learning outcomes:</b> (1) identify two methods of multiplying vectors; (2) perform scalar multiplication of vectors.</p>
 <h4>Scalar and vector multiplication</h4>
@@ -469,7 +482,13 @@ $$\mathbf{a}\times\mathbf{b}=(a_yb_z-a_zb_y)\,\mathbf{i}+(a_zb_x-a_xb_z)\,\mathb
 <p>The angle is given by \(|\mathbf{a}\times\mathbf{b}|=|\mathbf{a}|\,|\mathbf{b}|\sin\theta\). The details are covered in the Mathematics module; for now remember that (1) the result is a <b>vector</b> and (2) its direction is <b>perpendicular to both</b> \(\mathbf{a}\) and \(\mathbf{b}\).</p>
 <h4>Summary</h4>
 <ul><li>Two ways to multiply vectors: dot product and cross product.</li><li>\(\mathbf{a}\cdot\mathbf{b}=a_xb_x+a_yb_y+a_zb_z=|\mathbf{a}|\,|\mathbf{b}|\cos\theta\).</li></ul>
-<p><i>The worked solutions above were computed from the blank slides; the teacher's filled version will be added when it is published.</i></p>`,
+<p><i>The worked solutions above were computed from the blank slides; the teacher's filled version will be added when it is published.</i></p>
+<h4>Worked in class (filled slides)</h4>
+<ul><li>3D example: \(\mathbf a=(1,2,3)\), \(\mathbf b=(4,5,6)\): \(\mathbf a\cdot\mathbf b=1\times4+2\times5+3\times6=4+10+18=32\); \(\cos\theta=\dfrac{32}{\sqrt{14}\sqrt{77}}=0.97\), so \(\theta\approx12.9^\circ\).</li>
+<li>Slide 5: \(\cos\theta=\dfrac{11}{\sqrt{13}\sqrt{17}}=0.74\), \(\theta\approx42^\circ\). On the sketch, \(\theta=\beta-\alpha\) where \(\alpha\) and \(\beta\) are the angles of \(\mathbf b\) and \(\mathbf a\) with the x-axis — a way to check the answer.</li>
+<li>Perpendicular: \(\mathbf a=(-3,4)\), \(\mathbf b=(4,3)\): \(\mathbf a\cdot\mathbf b=-12+12=0\), so \(\cos\theta=0\) and \(\theta=90^\circ\). Also \(\mathbf c=(3,0)\) and \(\mathbf d=(0,4)\): \(\mathbf c\cdot\mathbf d=0\).</li>
+<li>Parallel: \(\mathbf a=(4,3)\), \(\mathbf b=(8,6)=2\mathbf a\): \(\mathbf a\cdot\mathbf b=32+18=50\), \(\cos\theta=\dfrac{50}{5\times10}=1\), \(\theta=0^\circ\). With \(\mathbf c=(-4,-3)\): \(\cos\theta=\dfrac{-16-9}{5\times5}=-1\), \(\theta=180^\circ\).</li>
+<li>Cross product: the outcome is a <b>vector</b>, \(\mathbf a\times\mathbf b=(a_yb_z-a_zb_y,\;a_zb_x-a_xb_z,\;a_xb_y-a_yb_x)\), whose direction is <b>normal</b> (perpendicular) to both \(\mathbf a\) and \(\mathbf b\) — right-hand rule. \(|\mathbf a\times\mathbf b|=|\mathbf a||\mathbf b|\sin\theta\). The details are for the Mathematics module.</li></ul>`,
     fr: String.raw`
 <h4>Deux façons de multiplier deux vecteurs</h4>
 <ul><li><b>Produit scalaire</b> (dot product, noté \(\mathbf{a}\cdot\mathbf{b}\)) : le résultat est un <b>nombre</b>.</li>
@@ -488,7 +507,15 @@ $$\cos\theta=\frac{\mathbf{a}\cdot\mathbf{b}}{|\mathbf{a}|\,|\mathbf{b}|}$$
 <div class="tip"><div class="lab">Astuce</div>Si un vecteur est un multiple de l'autre (\((8,6)=2\times(4,3)\)), ils sont parallèles : pas besoin de calculer.</div>
 <h4>Le produit vectoriel (pour l'instant, juste l'idée)</h4>
 <p>Le résultat est un vecteur <b>perpendiculaire aux deux</b> vecteurs de départ, et sa norme vaut \(|\mathbf{a}|\,|\mathbf{b}|\sin\theta\). Le calcul détaillé sera vu en maths.</p>
-<div class="warnbox">Ne confonds pas : le point « · » donne un nombre (avec cos), la croix « × » donne un vecteur (avec sin).</div>`,
+<div class="warnbox">Ne confonds pas : le point « · » donne un nombre (avec cos), la croix « × » donne un vecteur (avec sin).</div>
+<h4>Ce que le prof a écrit en cours</h4>
+<div class="ex"><div class="lab">Exemple en 3D</div>
+\(\mathbf a=(1,2,3)\) et \(\mathbf b=(4,5,6)\) : on multiplie case par case et on additionne : \(4+10+18=32\). Normes \(\sqrt{14}\) et \(\sqrt{77}\), donc \(\cos\theta=0{,}97\) et \(\theta\approx12{,}9^\circ\) : les deux vecteurs pointent presque dans la même direction.</div>
+<div class="tip"><div class="lab">Les 3 cas à reconnaître d'un coup d'œil</div>
+\(\mathbf a\cdot\mathbf b=0\) → <b>perpendiculaires</b> (90°), ex. \((-3,4)\cdot(4,3)=-12+12=0\).<br>
+\(\cos\theta=1\) → <b>même direction</b> (0°), ex. \((8,6)=2\times(4,3)\).<br>
+\(\cos\theta=-1\) → <b>sens opposés</b> (180°), ex. \((-4,-3)\) et \((4,3)\).</div>
+<p>Produit vectoriel : le résultat est un <b>vecteur</b> perpendiculaire aux deux autres (règle de la main droite). Le prof a précisé que les calculs détaillés seront vus en <b>Mathematics</b> ; ici il faut juste retenir ces deux idées.</p>`,
     vocab: [
       ['dot product / scalar product', 'produit scalaire'], ['cross product / vector product', 'produit vectoriel'],
       ['scalar multiplication', 'multiplication scalaire (produit scalaire)'], ['perpendicular', 'perpendiculaire'],
@@ -512,6 +539,9 @@ $$\cos\theta=\frac{\mathbf{a}\cdot\mathbf{b}}{|\mathbf{a}|\,|\mathbf{b}|}$$
         sol: '<p>a·b = 3 + 0 + 8 = 11 ; |a| = 5, |b| = 3 ; cos θ = 11/15 ≈ 0,733 → <b>θ ≈ 42,8°</b>.</p>' },
       { src: 'Claude', niveau: 2, en: 'Find k so that (k, 2) is perpendicular to (3, −6).', fr: 'Trouve k pour que (k ; 2) soit perpendiculaire à (3 ; −6).',
         sol: '<p>3k − 12 = 0 → <b>k = 4</b>.</p>' }
+      ,
+      { src: 'Blackboard', niveau: 2, en: String.raw`Filled slide 4: find \(\mathbf a\cdot\mathbf b\) and the angle between \(\mathbf a=(1,2,3)\) and \(\mathbf b=(4,5,6)\).`, fr: 'Diapo complétée en cours : produit scalaire et angle en 3D.',
+        sol: String.raw`<p>\(\mathbf a\cdot\mathbf b=4+10+18=32\). \(|\mathbf a|=\sqrt{14}=3.742\), \(|\mathbf b|=\sqrt{77}=8.775\). \(\cos\theta=\dfrac{32}{32.83}=0.975\) → \(\theta=12.9^\circ\).</p>` }
     ]
   };
 })();
