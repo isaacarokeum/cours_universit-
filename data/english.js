@@ -276,7 +276,7 @@
     titre: 'Sentence Problems — Why Do They Happen?',
     titreFr: 'Les problèmes de phrases : pourquoi ils arrivent et comment les corriger',
     resume: 'Les 7 causes des phrases mal construites (écrire comme on pense, grammaire mal maîtrisée, phrases trop simples ou trop chargées, pas de relecture, habitudes de style, pression du style académique), avec à chaque fois un avant / après.',
-    sources: 'Additional Note Week 4.pdf (Blackboard, 19 oct.) — les diapos « 4 Sentence Problem.pptx » n\'ont pas encore pu être lues (fichier PowerPoint), elles seront ajoutées ensuite',
+    sources: 'Additional Note Week 4.pdf et diapos « 4 Sentence Problem.pptx » (Blackboard, 19 oct.)',
     en: `
 <h4>Why do sentence problems happen?</h4>
 <p>The Week 4 additional note lists seven reasons why students write unclear or incorrect sentences. Each one comes with a situation, a weak version and an improved version.</p>
@@ -301,7 +301,19 @@
 <div class="ex"><b>Habit A:</b> We wanted to meet online and one member was visiting family and there was a time difference so we changed the meeting time and everyone could join.<br><b>Habit B:</b> We wanted to meet online. One member was visiting family. There was a time difference. We changed the time. Everyone could join.<br><b>Balanced:</b> One group member was visiting family in a different time zone, so we changed the online meeting time. Everyone could then join.</div>
 <h5>7. Pressure of academic or formal writing</h5>
 <div class="ex"><b>Trying too hard to sound academic:</b> The experimental procedure was undertaken with the intention of investigating the effect of an increase in temperature on the rate of the reaction.<br><b>Trying too hard to sound simple:</b> We heated the solution. We measured the reaction rate. We compared the results.<br><b>Clear academic version:</b> We investigated how temperature affected the reaction rate by heating the solution and comparing measurements at different temperatures.</div>
-`,
+
+<h4>Lecture slides: the 5 types of sentence problems</h4>
+<p>A sentence problem (also called a sentence error or a faulty sentence) is a sentence that deviates from the standard grammatical rules of a complete sentence. It disrupts clarity, coherence and flow, and makes the message difficult to understand. The five types are: <b>parallelism, fragment, choppy, run-on, stringy</b>.</p>
+<h5>Choppy sentences</h5>
+<p>Sentences that are too short, with many repeated words. Overusing short sentences is a poor style of academic writing: the writing appears unsophisticated and the ideas seem disconnected. Fix: combine the short sentences, but be careful with the ideas.</p>
+<ul><li>If the sentences express <b>equal</b> ideas, use <b>coordinators</b>: "Wind is an enduring source of power. Water is also an unlimited energy source. Dams produce hydraulic power. They have existed for a long time. Windmills are relatively new." → "Both wind and water are enduring sources of power. Dams have produced hydraulic power for a long time, but windmills are relatively new."</li>
+<li>If one idea is <b>less important</b>, use <b>subordinators</b>: "We must find new sources of energy. Natural sources of energy are decreasing. Solar energy is a promising new source of energy. Solar energy is energy from the sun." → "We must find new sources of energy because natural sources of energy are decreasing. Solar energy, which is energy from the sun, is a promising new source."</li></ul>
+<h5>Run-on sentences</h5>
+<p>Two or more independent clauses written one after another with no punctuation, or joined only by a comma without a coordinator. Common among novice writers. Identify sentences with two or more independent clauses (subjects and verbs).</p>
+<p>"My family went to Australia then they emigrated to Canada." can be repaired with a full stop, a semicolon ("…Australia; then they…"), a coordinator ("…Australia, and then they…") or a subordinator ("…Australia before they emigrated to Canada" / "After my family went to Australia, they emigrated to Canada").</p>
+<h5>Stringy sentences</h5>
+<p>Several complete thoughts strung together with too many clauses, joined by <i>and, but, so</i> and sometimes <i>because</i>. They are so long that the reader forgets the beginning before reaching the end. Difference with run-ons: a run-on is a <b>grammar/punctuation error</b>; a stringy sentence is <b>grammatically correct but weak style</b> (wordy, overloaded).</p>
+<p>"Many students attend classes all morning, and then they work all afternoon, and they also have to study at night, so they are usually exhausted by the weekend." → "Because many students attend classes all morning, work all afternoon and study at night, they are usually exhausted by the weekend."</p>`,
     fr: `
 <h4>L'idée de la semaine</h4>
 <p>Une phrase « ratée » n'arrive pas par hasard. Ms Effa donne <b>7 causes</b>. Si tu reconnais la cause, tu sais comment corriger. Ce cours prolonge les semaines 2 et 3 (phrases simples, composées, complexes et conjonctions).</p>
@@ -330,7 +342,18 @@
 <div class="warnbox">À retenir : clair &gt; compliqué. Une phrase académique réussie est précise, pas longue.</div>
 <h5>Grille de relecture</h5>
 <ul><li>Deux phrases complètes collées ? → virgule + conjonction, ou point.</li><li>Liste ? → même forme partout.</li><li>Plus de 30–35 mots ? → couper.</li><li>Trois phrases très courtes de suite ? → regrouper avec because / so / although.</li><li>Mots inutiles (<i>undertaken with the intention of</i>) ? → verbe simple et précis.</li></ul>
-`,
+
+<h4>Les 5 types de problèmes de phrase (diapos du cours)</h4>
+<p><b>Parallélisme</b>, <b>fragment</b>, <b>phrases hachées</b> (choppy), <b>phrases soudées</b> (run-on) et <b>phrases à rallonge</b> (stringy).</p>
+<table><tr><th>Type</th><th>Le problème</th><th>La correction</th></tr>
+<tr><td>Choppy</td><td>que des phrases très courtes, ça fait « enfantin »</td><td>les relier : <i>and, but</i> (idées égales) ou <i>because, which, although</i> (une idée moins importante)</td></tr>
+<tr><td>Run-on</td><td>deux phrases collées sans ponctuation, ou juste avec une virgule : <b>faute de grammaire</b></td><td>point, point-virgule, virgule + <i>and/but</i>, ou subordonnant (<i>before, after, because</i>)</td></tr>
+<tr><td>Stringy</td><td>phrase correcte mais interminable, avec des <i>and… and… so…</i></td><td>couper en deux, ou réorganiser avec <i>because / although</i> et une liste</td></tr></table>
+<div class="ex"><div class="lab">Exemple concret — un message de groupe</div>
+Choppy : « The lab is at 10. It is in 2R004. Bring a laptop. The laptop must be charged. »<br>
+Mieux : « The lab is at 10 in 2R004, so bring a charged laptop. »<br>
+Run-on : « The lab is at 10 bring a laptop. » → « The lab is at 10, so bring a laptop. »</div>
+<div class="warnbox"><div class="lab">Ne pas confondre</div>Une phrase <b>run-on</b> est <b>fausse</b> (grammaire). Une phrase <b>stringy</b> est <b>juste</b> mais mal écrite (trop longue). Au Summary et à l'examen, les deux font perdre des points.</div>`,
     vocab: [
       ['run-on sentence', 'phrase « collée » (deux propositions sans ponctuation ni conjonction)'],
       ['parallelism', 'parallélisme (même forme grammaticale dans une liste)'],
@@ -355,6 +378,13 @@
         sol: '<p>Exemple : The old load cell was damaged during transport, so we tested the beam on Tuesday with a new one. This delay meant that the whole group had to change its schedule.</p>' },
       { src: 'Claude', niveau: 3, en: 'Rewrite in a clear academic style: "The analysis was carried out with the purpose of making a determination of the extent to which humidity has an influence on the drying time of the paint."', fr: 'Réécris dans un style académique clair.',
         sol: '<p>Exemple : We analysed how humidity affects the drying time of the paint.</p>' }
+      ,
+      { src: 'Blackboard', niveau: 1, en: 'Slides exercise: decide if each sentence is a run-on or a complete sentence. (1) My personal academic tutor told me not to skip any classes for semester 1 I\'m regretting not having listened to her. (2) Organizations that promise students a scholarship if they pay an extraordinarily high application fee are most likely scams. (3) The student fell asleep in class everyone thought this was rude behaviour. (4) Because Rose was late for the all-you-can-eat buffet, she had to order from the main menu. (5) My cat was upset all day he didn\'t get canned food for breakfast.', fr: 'Exercice des diapos : run-on ou phrase complète ? Puis répare les run-ons.',
+        sol: '<p>(1) run-on · (2) complète · (3) run-on · (4) complète · (5) run-on.<br>Réparations possibles : (1) « …for semester 1, and I\'m regretting not having listened to her. » (3) « The student fell asleep in class, which everyone thought was rude behaviour. » (5) « My cat was upset all day because he didn\'t get canned food for breakfast. »</p>' },
+      { src: 'Blackboard', niveau: 2, en: 'Slides exercise: stringy or complete? (1) We watch animals other than birds, and one Saturday, Uncle Raymond spotted a chipmunk, and another time, I noticed a doe and her fawn behind a tree, and we always see a lot of butterflies and moths. (2) She completed her literature review, but she still needs to work on her methods section, even though she finished her methods course last semester. (3) Although he organized his sources by theme, he decided to arrange them chronologically, and he carefully followed the MEAL plan for organization, and so he got perfect score for his project. (4) With pizza and soda at hand, they studied APA rules for many hours, and they decided that writing in APA made sense because it was clear, concise, and objective. (5) After getting home from work, my brother and I went to the mall last night, while my sister stayed home and studied.', fr: 'Exercice des diapos : phrase à rallonge (stringy) ou complète ? Puis répare les stringy.',
+        sol: '<p>(1) stringy · (2) complète · (3) stringy · (4) complète · (5) complète.<br>Réparations possibles : (1) « We watch animals other than birds. One Saturday, Uncle Raymond spotted a chipmunk, and another time I noticed a doe and her fawn behind a tree. We always see a lot of butterflies and moths. » (3) « Although he had organized his sources by theme, he arranged them chronologically. Because he carefully followed the MEAL plan, he got a perfect score for his project. »</p>' },
+      { src: 'Blackboard', niveau: 1, en: 'Slides: combine the choppy sentences. "Wind is an enduring source of power. Water is also an unlimited energy source. Dams produce hydraulic power. They have existed for a long time. Windmills are relatively new."', fr: 'Diapos : relie ces phrases hachées.',
+        sol: '<p>« Both wind and water are enduring sources of power. Dams have produced hydraulic power for a long time, but windmills are relatively new. »</p>' }
     ]
   };
 })();

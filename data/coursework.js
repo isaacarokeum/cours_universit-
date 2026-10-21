@@ -338,7 +338,7 @@
     titre: 'CA Week 4 — Academic Posters (The Poster Sprint)',
     titreFr: 'CA semaine 4 — Le poster scientifique',
     resume: 'Comment faire un bon poster académique : un message principal, une hiérarchie claire, les règles C·R·A·P, les tailles de police, les couleurs et le bon usage de l\'IA (elle propose, tu décides). Le labo « Poster Sprint » te fait produire un premier brouillon de ton poster Digital Literacy (Assignment 1).',
-    sources: 'Poster_Sprint_Lab.pdf (fiche du labo, Dr Lim) · page « CA Week 4: Academic Posters » et liens « Research Poster Design », « #BetterPoster » (Blackboard, 19 oct.). Les fichiers « GENG0015_Assignment1_and_Poster_Sprint_Lab_UoSM.pptx » et « GENG0015_Poster_Assignment_2026-27_UoSM.docx » (sujet officiel) ne s\'ouvrent pas depuis ici : à lire sur Blackboard.',
+    sources: 'Poster_Sprint_Lab.pdf (fiche du labo, Dr Lim) · page « CA Week 4: Academic Posters » et liens « Research Poster Design », « #BetterPoster » (Blackboard, 19 oct.). GENG0015_Assignment1_and_Poster_Sprint_Lab_UoSM.pptx (diapos du cours) · GENG0015_Poster_Assignment_2026-27_UoSM.docx (sujet officiel de l\'Assignment 1).',
     en: String.raw`
 <h4>The Poster Sprint (lab, about 50 min)</h4>
 <p>Five missions. Use GenAI as your co-designer, then build the poster yourself in PowerPoint, Canva or any tool. You leave with a full-size first draft of your Assignment 1 poster. Bring a laptop, a GenAI tool (Microsoft Copilot with your University account is recommended) and a pen. XP points are just for fun and do not count.</p>
@@ -364,7 +364,15 @@
 <li><b>Type:</b> max 2 fonts, left-aligned. Out of space? Cut words, not font size.</li>
 <li><b>Colour &amp; space:</b> 60-30-10 (neutral · main · accent); 30–40 % white space. Images: openverse.org, commons.wikimedia.org, unsplash.com.</li>
 <li><b>3-30-3 rule:</b> where does the eye go 1st, 2nd and 3rd?</li></ul>
-<p class="muted" style="font-size:13px">The lab sheet says Assignment 1 is due Monday 2 November 2026, 10:00 (one PDF on Blackboard), but the Blackboard submission link shows Monday 16 November 2026, 10:00 GMT. Check with Dr Lim.</p>`,
+<h4>Assignment 1 — Digital and Information Literacy Poster (official brief)</h4>
+<ul><li><b>Formative</b> assessment, marked out of 20. Deadline: <b>Monday 16 November 2026, 4:00 PM</b>, on Blackboard.</li>
+<li>Submit <b>three PDF files</b>: (1) the poster; (2) a LinkedIn Learning certificate; (3) a ~100-word summary of the course content and how it contributed to your digital literacy.</li>
+<li><b>Topics:</b> A1 Deepfakes; A2 AI search summaries and the library; A3 Using generative AI responsibly at university; B1 Voice cloning and deepfake scams; B2 Social engineering (M&amp;S and Jaguar Land Rover attacks); B3 Prompt injection and AI agents; B4 Online age checks; C1 Copyright and generative AI; C2 The energy and water cost of AI; or your own topic (not the example poster's topic, AI-invented references).</li>
+<li><b>Content:</b> a definition and why it matters; practical tips; one or more real examples or case studies; visual aids.</li>
+<li><b>Design:</b> 48 × 36 in (1219.2 × 914.4 mm); about 600–1,000 words and at least three visuals; title, name, student ID, module code; clear sections; at least <b>six references</b> in one style (Harvard or IEEE), at least two from the library discovery tool and at least one peer-reviewed article; licensing for every image you did not create (TASL: title, author, source, licence); an AI use statement.</li>
+<li><b>LinkedIn Learning:</b> a course of about 1–3 hours linked to your topic or to digital/information literacy; complete all modules and download the certificate.</li>
+<li><b>Marking (20):</b> content and layout 4; organisation and narrative 6; mixed media, licensing and referencing 6; LinkedIn Learning 4 (summary 2, certificate 2). A reference that cannot be found is treated as an academic integrity issue.</li>
+<li><b>Time:</b> about 12–15 hours in total; work in small chunks over several weeks.</li></ul>`,
     fr: String.raw`
 <h4>À quoi sert un poster scientifique</h4>
 <p>Un poster, c'est une grande affiche (48 × 36 pouces, environ 122 × 91 cm) qui présente un sujet. Les gens passent devant en marchant : tu as <b>3 secondes</b> pour les accrocher, <b>30 secondes</b> pour leur faire passer ton message, et <b>3 minutes</b> s'ils s'arrêtent vraiment (règle 3-30-3).</p>
@@ -398,7 +406,16 @@ Interdit : présenter un texte écrit par l'IA comme le tien, citer des sources 
 <li><b>Combat de titres</b> : 3 titres à toi contre ceux de l'IA, vote à l'aveugle, puis c'est toi qui finalises.</li>
 <li><b>Croquis et construction</b> : 2 croquis sur papier, puis le poster en 48 × 36 in avec repères, palette, polices, une image principale et un graphique fait par toi.</li>
 <li><b>Critiques</b> : avis de l'IA + avis d'un camarade (il regarde 3 secondes et répète ton message), puis 3 corrections.</li></ol>
-<div class="warnbox"><div class="lab">Date à vérifier</div>La fiche du labo dit que le poster est à rendre le <b>lundi 2 novembre à 10h</b> (un PDF sur Blackboard), mais le lien de dépôt sur Blackboard indique le <b>lundi 16 novembre à 10h GMT</b> (18h en Malaisie). Demande confirmation au Dr Lim, et vise le 2 novembre pour être tranquille.</div>`,
+<h4>Le devoir : Assignment 1 (sujet officiel)</h4>
+<div class="tip"><div class="lab">L'essentiel</div>
+Évaluation <b>formative</b> (notée sur 20). À rendre le <b>lundi 16 novembre à 16h</b> sur Blackboard : <b>3 PDF</b> = ton poster + le certificat d'un cours LinkedIn Learning + un résumé de ce cours en 100 mots environ.</div>
+<ul><li><b>Choisis un sujet</b> : deepfakes, résumés IA des moteurs de recherche, bien utiliser l'IA à l'université, arnaques au clonage de voix, ingénierie sociale (attaques contre M&amp;S et Jaguar Land Rover), prompt injection, vérification d'âge en ligne, droit d'auteur et IA, coût en énergie et en eau de l'IA… ou ton propre sujet.</li>
+<li><b>Contenu</b> : une définition et pourquoi c'est important, des conseils pratiques, au moins un vrai exemple récent, des visuels.</li>
+<li><b>Format</b> : 48 × 36 in, 600 à 1 000 mots, au moins 3 visuels, ton nom, ton numéro étudiant et GENG0015.</li>
+<li><b>Références</b> : au moins 6 dans un seul style (Harvard ou IEEE), dont 2 trouvées avec le moteur de recherche de la bibliothèque et 1 article scientifique évalué par les pairs. Chaque image empruntée doit avoir son titre, auteur, source et licence (« Source: Google Images » ne compte pas).</li>
+<li><b>LinkedIn Learning</b> : un cours de 1 à 3 h en lien avec ton sujet (cherche « AI literacy », « cybersecurity awareness », « copyright »…), terminé avec le certificat.</li></ul>
+<table><tr><th>Critère</th><th>Points</th></tr><tr><td>Contenu et mise en page</td><td>4</td></tr><tr><td>Organisation et explications</td><td>6</td></tr><tr><td>Visuels, licences, références, déclaration IA</td><td>6</td></tr><tr><td>LinkedIn Learning (résumé 2, certificat 2)</td><td>4</td></tr></table>
+<div class="warnbox"><div class="lab">Attention aux fausses références</div>Les IA inventent des références qui ont l'air vraies. Une référence introuvable est traitée comme une fraude académique, même si c'est l'IA qui l'a inventée. N'écris que des sources que tu as toi-même trouvées et lues. Prévois 12 à 15 h de travail, en plusieurs fois.</div>`,
     vocab: [
       ['academic poster', 'poster scientifique'],
       ['main message', 'message principal'],

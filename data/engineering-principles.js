@@ -239,7 +239,7 @@ Somme = 0 → \(37{,}5c=18\,951\) → \(c\approx505\) J/(kg·K).</div>
     titre: 'Heat 5: Latent Heat · Heat 6: Thermal Expansion 1',
     titreFr: 'Chaleur latente · Dilatation thermique',
     resume: 'Les changements d\'état (chaleur latente, paliers de température), puis la dilatation thermique : linéaire, surfacique et volumique, liquides, dilatation apparente, cas de l\'eau, et applications (frettage, bilame, pendule compensé). Example Sheet 2.',
-    sources: 'Lecture notes « 2. Heat Capacity and Latent Heat », section 3 · Lecture notes « 3. Thermal Expansion » · diapos « Thermal Expansion (part 1) » (Prof Ling Wang) · Example Sheet 2 · GENG0005 Timetable (Blackboard)',
+    sources: 'Lecture notes « 2. Heat Capacity and Latent Heat », section 3 · Lecture notes « 3. Thermal Expansion » · diapos « Thermal Expansion (part 1) » et « (part 2) » (Prof Ling Wang) · notes du tableau « Thermal expansion part II » · Example Sheet 2 · GENG0005 Timetable (Blackboard)',
     en: String.raw`
 <h4>Heat 5 — Latent heat</h4>
 <p>During a change of state, the heat absorbed or released changes the bonds between molecules; <b>there is no temperature change</b>. Heating ice from −5 °C: (A) ice warms to 0 °C, (B) ice melts at 0 °C, (C) water warms to 100 °C, (D) water boils at 100 °C, (E) steam is superheated.</p>
@@ -272,7 +272,10 @@ Somme = 0 → \(37{,}5c=18\,951\) → \(c\approx505\) J/(kg·K).</div>
 <h5>Apparent expansion</h5>
 <p>The container also expands, with the volume expansivity of its own material (imagine a solid glass insert that fits exactly). Glass bottle: \(\delta V=1000\times(3\times8\times10^{-6})\times(-20)=-0.48\) ml. The expansivity measured ignoring the container is the <b>apparent</b> expansivity: \(\beta_{true}=\beta_{apparent}+\beta_{container}=\beta_{apparent}+3\alpha_{container}\).</p>
 <h5>4. Properties of water</h5>
-<p>When cooled, water contracts until about <b>4 °C</b> (minimum volume, maximum density), then expands again down to 0 °C. On freezing it expands significantly (ice ≈ 900 kg/m³): this bursts pipes, makes ice float, and makes water freeze from the top (the coldest water, below 4 °C, rises).</p>`,
+<p>When cooled, water contracts until about <b>4 °C</b> (minimum volume, maximum density), then expands again down to 0 °C. On freezing it expands significantly (ice ≈ 900 kg/m³): this bursts pipes, makes ice float, and makes water freeze from the top (the coldest water, below 4 °C, rises).</p>
+<h5>Thermal Expansion part 2 — slide example</h5>
+<p>A 1 litre bottle is filled with oil at 35 °C. How much short measure is there at 15 °C? (\(\beta=0.8\times10^{-3}\) K⁻¹)<br>\(\delta V=\beta V\delta\theta=0.8\times10^{-3}\times1000\times(-20)=-16\) ml (about a cap-full). Most liquids are sold by volume, so you tend to lose out in hot weather.</p>
+<p>Board notes: isotropic solids — linear \(\delta L=\alpha L\delta\theta\), area \(\delta A=2\alpha A\delta\theta\), volume \(\delta V=3\alpha V\delta\theta=\beta V\delta\theta\). Real and apparent expansion: \(\beta_{true}=\beta_{apparent}+\beta_{container}=\beta_{apparent}+3\alpha\).</p>`,
     fr: String.raw`
 <h4>La chaleur latente (changement d'état)</h4>
 <p>Quand la glace fond ou que l'eau bout, on continue à fournir de la chaleur mais <b>la température ne bouge pas</b> : toute l'énergie sert à casser les liaisons entre molécules. C'est la <b>chaleur latente</b>.</p>
@@ -312,7 +315,9 @@ Somme = 0 → \(37{,}5c=18\,951\) → \(c\approx505\) J/(kg·K).</div>
 <h4>À quoi ça sert</h4>
 <ul><li><b>Frettage</b> (shrink fitting) : on chauffe la pièce percée (ou on refroidit l'arbre dans l'azote liquide à −196 °C), on assemble, et en revenant à température ambiante les pièces se serrent très fort.</li>
 <li><b>Bilame</b> : deux métaux collés qui ne se dilatent pas pareil ; en chauffant, la lame se courbe. C'est le principe des thermostats (grille-pain, fer à repasser).</li>
-<li><b>Pendule compensé</b> de Harrison (1725) : des tiges de laiton et d'acier dont les dilatations s'annulent, pour que l'horloge reste juste quelle que soit la température.</li></ul>`,
+<li><b>Pendule compensé</b> de Harrison (1725) : des tiges de laiton et d'acier dont les dilatations s'annulent, pour que l'horloge reste juste quelle que soit la température.</li></ul>
+<div class="ex"><div class="lab">Exemple des diapos — l'huile qui « rétrécit »</div>
+Bouteille d'1 L remplie d'huile à 35 °C, puis refroidie à 15 °C : \(\delta V=0{,}8\times10^{-3}\times1000\times(-20)=-16\) ml. Il manque l'équivalent d'un bouchon ! C'est pour ça qu'on est perdant quand on achète de l'essence quand il fait très chaud : on paie le volume, pas la masse.</div>`,
     vocab: [
       ['latent heat', 'chaleur latente'], ['specific latent heat of fusion', 'chaleur latente massique de fusion'],
       ['specific latent heat of vaporisation', 'chaleur latente massique de vaporisation'], ['change of state / phase change', 'changement d\'état'],
@@ -368,7 +373,7 @@ Somme = 0 → \(37{,}5c=18\,951\) → \(c\approx505\) J/(kg·K).</div>
     titre: 'Heat 7–10: Conduction (parts 1 to 3)',
     titreFr: 'La conduction thermique',
     resume: 'Comment la chaleur traverse un matériau : la loi de la conduction (conductivité thermique k), la température qui varie en ligne droite le long d\'une barre, les matériaux en série (paroi + isolant), la résistance thermique (comme une résistance électrique) et l\'équation générale de la conduction.',
-    sources: 'Lecture notes « 4. Conduction » (GENG0005-4-Conduction.pdf) · notes du tableau « analogy.pdf » (résistances thermiques en série et en parallèle) · Example Sheet 3 (Conduction) avec réponses (Blackboard, mis à jour les 19–21 oct.). Les diapos PowerPoint « 7-Thermal Expansion (part 2) », « 8/9/10-Conduction » ne s\'ouvrent pas depuis ici : à ajouter plus tard.',
+    sources: 'Lecture notes « 4. Conduction » (GENG0005-4-Conduction.pdf) · notes du tableau « analogy.pdf » (résistances thermiques en série et en parallèle) · Example Sheet 3 (Conduction) avec réponses (Blackboard, mis à jour les 19–21 oct.). Diapos « 8-Conduction (part 1) », « 9-Conduction (part 2) » et « 10-Conduction (part 3) » (Prof Ling Wang) · notes du tableau « Heat conduction », « conduction2 », « conduction3 ».',
     en: String.raw`
 <h4>1. Thermal conductivity</h4>
 <p>Conduction of heat takes place through collisions between the basic particles of the material (molecules, atoms or sometimes electrons). These tend to transfer energy from the faster, more energetic (hotter) particles to the slower, less energetic (cooler) ones.</p>
@@ -404,7 +409,14 @@ Somme = 0 → \(37{,}5c=18\,951\) → \(c\approx505\) J/(kg·K).</div>
 <h4>5. More general treatment</h4>
 <p>For a bar whose section and/or conductivity vary along its length: $$\dot Q=-kA\frac{dT}{dx}$$ This is the <b>heat conduction equation</b>. \(dT/dx\) is the temperature (thermal) gradient, the slope of the graph of temperature against position. The negative sign appears because heat flows in the direction of falling temperature. If \(k\) and \(A\) are constant and there is no heat loss, the gradient is constant (straight line).</p>
 <h4>6. Temperature variation with heat loss</h4>
-<p>If there are heat losses from the sides, \(\dot Q\) must fall as \(x\) increases, so the temperature gradient must also fall (the curve flattens). If heat is gained from the surroundings, the gradient increases. Bars whose cross-section changes require integration, beyond the scope of this course.</p>`,
+<p>If there are heat losses from the sides, \(\dot Q\) must fall as \(x\) increases, so the temperature gradient must also fall (the curve flattens). If heat is gained from the surroundings, the gradient increases. Bars whose cross-section changes require integration, beyond the scope of this course.</p>
+<h4>Extra examples from the slides (Conduction parts 2 and 3)</h4>
+<ul><li><b>Copper + steel in series</b> (same L and A), \(T_1=100\) °C, \(T_2=0\) °C: \(T_3=88.7\) °C. The drop in the copper (11.3 °C) is only about 11 % of the total.</li>
+<li><b>Materials in parallel</b> (same L, A and temperature difference): the heat flow rates are in proportion to the thermal conductivities, so with copper and steel side by side, about <b>89 %</b> of the heat travels through the copper (\(393/(393+50)\)).</li>
+<li><b>Heat conduction equation example:</b> a uniform bar of cross-section 80 mm², k = 0.32 kW m⁻¹ K⁻¹, temperature gradients \(4.0\times10^2\) and \(1.8\times10^2\) K m⁻¹ at two cross-sections. Power lost between them: \(kA(4.0-1.8)\times10^2=320\times80\times10^{-6}\times220=5.63\) W.</li>
+<li><b>Refrigerator:</b> the plate should be aluminium (k = 200) rather than stainless steel (k = 15), because it takes heat away from the food faster. A layer of ice (k = 2.4) slows conduction, so the fridge works worse when iced up.</li>
+<li><b>Building wall:</b> plasterboard (k = 0.3, 1 mm), brick (k = 0.6, 1.5 mm), wood (k = 0.10, 3 mm), area 3 m², 27 °C inside, 0 °C outside. \(R=R_p+R_b+R_w=0.01193\) K/W, so \(\dot Q=27/0.01193\approx2.26\) kW.</li>
+<li><b>R-value</b> (building industry): \(R\text{-value}=RA\), in K m² W⁻¹. A double-glazed window has about 2.5 times the R-value of a single-glazed one.</li></ul>`,
     fr: String.raw`
 <h4>L'idée de la conduction</h4>
 <p>La conduction, c'est la chaleur qui <b>traverse un objet solide</b> sans que la matière bouge. Les particules chaudes vibrent fort et bousculent leurs voisines plus lentes, qui bousculent les suivantes… comme une rumeur qui se propage de proche en proche.</p>
@@ -452,7 +464,15 @@ Verre (k = 1) + lame d'air (k = 0,026) + verre. L'air immobile conduit 40 fois m
 La chaleur sort de ta chambre par le mur ET par la fenêtre en même temps : deux chemins en <b>parallèle</b>. Une fenêtre mal isolée, c'est comme une petite résistance en parallèle : elle laisse filer presque toute la chaleur, même si le mur est très bien isolé.</div>
 
 <h4>L'équation générale (pour aller plus loin)</h4>
-<p>\(\dot Q=-kA\dfrac{dT}{dx}\) : le débit est proportionnel à la <b>pente</b> de la courbe de température. Le signe « − » dit que la chaleur va vers le froid. Si la barre perd de la chaleur par les côtés, moins de chaleur arrive au bout, donc la pente s'adoucit (la courbe se tasse) ; si elle en gagne, la pente augmente.</p>`,
+<p>\(\dot Q=-kA\dfrac{dT}{dx}\) : le débit est proportionnel à la <b>pente</b> de la courbe de température. Le signe « − » dit que la chaleur va vers le froid. Si la barre perd de la chaleur par les côtés, moins de chaleur arrive au bout, donc la pente s'adoucit (la courbe se tasse) ; si elle en gagne, la pente augmente.</p>
+<h4>Les autres exemples des diapos</h4>
+<div class="ex"><div class="lab">Cuivre et acier côte à côte (en parallèle)</div>
+Même longueur, même surface, même écart de température : la chaleur se partage selon les conductivités. Le cuivre (393) en fait passer \(\frac{393}{393+50}\approx89\,\%\), l'acier seulement 11 %. En série, c'est l'inverse : 89 % de la <b>chute de température</b> se fait dans l'acier (\(T_3=88{,}7\) °C entre 100 °C et 0 °C).</div>
+<div class="ex"><div class="lab">Le frigo</div>
+La plaque froide doit être en <b>aluminium</b> (k = 200) plutôt qu'en inox (k = 15) : elle aspire la chaleur des aliments plus vite. Quand du <b>givre</b> se forme (k = 2,4), il fait isolant et le frigo refroidit moins bien. C'est pour ça qu'on dégivre un congélateur.</div>
+<div class="ex"><div class="lab">Une barre qui perd de la chaleur</div>
+Barre de 80 mm², k = 320 W/(m·K). La pente de température passe de 400 K/m à 180 K/m entre deux points : le débit a baissé de \(320\times80\times10^{-6}\times220=5{,}63\) W. C'est la chaleur perdue par les côtés entre ces deux points.</div>
+<p><b>R-value</b> : dans le bâtiment, on utilise \(R\times A\) (en K·m²/W). Un double vitrage a une R-value environ 2,5 fois plus grande qu'un simple vitrage.</p>`,
     vocab: [
       ['conduction', 'conduction'],
       ['thermal conductivity (k)', 'conductivité thermique', 'en W/(m·K)'],
@@ -500,6 +520,13 @@ La chaleur sort de ta chambre par le mur ET par la fenêtre en même temps : deu
         sol: String.raw`<p>\(\dot Q=\dfrac{1\times1.2\times10}{0.004}=3000\) W. Énorme : en réalité, des couches d'air immobile collées au verre réduisent beaucoup ce chiffre.</p>` },
       { src: 'Claude', niveau: 2, en: 'Calculate the thermal resistance of a 10 cm brick wall of area 5 m² (k = 0.6 W/mK) and of 5 cm of foam (k = 0.04) on the same area. Total resistance and heat flow for a 20 °C difference?', fr: 'Mur en brique + mousse : résistances, total et débit de chaleur.',
         sol: String.raw`<p>\(R_{brique}=0.1/(0.6\times5)=0.0333\) K/W ; \(R_{mousse}=0.05/(0.04\times5)=0.25\) K/W. Série : \(R=0.283\) K/W. \(\dot Q=20/0.283=70.6\) W. 5 cm de mousse isolent 7,5 fois mieux que 10 cm de brique.</p>` }
+      ,
+      { src: 'Blackboard', niveau: 2, en: 'Conduction part 3 slides: a uniform bar of cross-sectional area 80 mm² is made of metal of thermal conductivity 0.32 kW m⁻¹ K⁻¹, with one end kept at a steady high temperature. The temperature gradients at two cross-sections are 4.0×10² K m⁻¹ and 1.8×10² K m⁻¹. Calculate the power loss from the surface between these two cross-sections.', fr: 'Diapos : puissance perdue par la surface d\'une barre entre deux sections.',
+        sol: String.raw`<p>\(\dot Q_1=kA\left|\tfrac{dT}{dx}\right|_1=320\times80\times10^{-6}\times400=10.24\) W ; \(\dot Q_2=320\times80\times10^{-6}\times180=4.61\) W. Perte = \(10.24-4.61=5.63\) W.</p>` },
+      { src: 'Blackboard', niveau: 2, en: 'Conduction part 3 slides: plasterboard (k = 0.3 W/mK, 1 mm), brick (k = 0.6 W/mK, 1.5 mm) and wood (k = 0.10 W/mK, 3 mm) are sandwiched together; area 3 m²; inside 27 °C, outside 0 °C. Find the heat flow rate.', fr: 'Diapos : débit de chaleur à travers trois matériaux de construction en série.',
+        sol: String.raw`<p>\(R_p=\dfrac{0.001}{0.3\times3}=1.11\times10^{-3}\), \(R_b=\dfrac{0.0015}{0.6\times3}=0.83\times10^{-3}\), \(R_w=\dfrac{0.003}{0.1\times3}=10\times10^{-3}\) K/W. Total \(0.01193\) K/W. \(\dot Q=\dfrac{27}{0.01193}=2263\) W ≈ 2,26 kW.</p>` },
+      { src: 'Blackboard', niveau: 1, en: 'Conduction part 3 slides: should a refrigerator plate be aluminium (k = 200 W/mK) or stainless steel (k = 15 W/mK)? Does it work better or worse when coated with ice (k = 2.4 W/mK)?', fr: 'Diapos : aluminium ou inox pour la plaque du frigo ? Et avec du givre ?',
+        sol: '<p>Aluminium : meilleure conductivité, il évacue la chaleur des aliments plus vite. Avec du givre, c\'est moins bien : la glace conduit mal et ajoute une résistance thermique en série.</p>' }
     ]
   };
 })();
