@@ -1,4 +1,4 @@
-// GENG0015 Coursework — Semaines 1 et 2 (Computer Applications)
+// GENG0015 Coursework — Semaines 1 à 4 (Computer Applications)
 (function () {
   const S = DATA.matieres.cw.semaines;
 
@@ -331,6 +331,99 @@
         sol: '<p>Exemple : « Tu es un tuteur de mécanique (rôle). Explique ce qu\'est un vecteur et comment additionner deux vecteurs (tâche), pour un étudiant de Foundation Year en ingénierie (contexte). Utilise les notations i, j standard (source). Langage simple, un exemple chiffré avec des forces, moins de 250 mots (attentes). »</p>' },
       { src: 'Claude', niveau: 1, en: 'Why does the University recommend Microsoft 365 Copilot rather than any public AI tool?', fr: 'Pourquoi l\'université recommande-t-elle Copilot plutôt qu\'une IA publique ?',
         sol: '<p>C\'est un outil approuvé et pris en charge, intégré à Microsoft 365, et <b>protégé</b> : les prompts et les données de l\'université ne servent pas à entraîner le modèle.</p>' }
+    ]
+  };
+  // =========================== SEMAINE 4 ===========================
+  S[4] = {
+    titre: 'CA Week 4 — Academic Posters (The Poster Sprint)',
+    titreFr: 'CA semaine 4 — Le poster scientifique',
+    resume: 'Comment faire un bon poster académique : un message principal, une hiérarchie claire, les règles C·R·A·P, les tailles de police, les couleurs et le bon usage de l\'IA (elle propose, tu décides). Le labo « Poster Sprint » te fait produire un premier brouillon de ton poster Digital Literacy (Assignment 1).',
+    sources: 'Poster_Sprint_Lab.pdf (fiche du labo, Dr Lim) · page « CA Week 4: Academic Posters » et liens « Research Poster Design », « #BetterPoster » (Blackboard, 19 oct.). Les fichiers « GENG0015_Assignment1_and_Poster_Sprint_Lab_UoSM.pptx » et « GENG0015_Poster_Assignment_2026-27_UoSM.docx » (sujet officiel) ne s\'ouvrent pas depuis ici : à lire sur Blackboard.',
+    en: String.raw`
+<h4>The Poster Sprint (lab, about 50 min)</h4>
+<p>Five missions. Use GenAI as your co-designer, then build the poster yourself in PowerPoint, Canva or any tool. You leave with a full-size first draft of your Assignment 1 poster. Bring a laptop, a GenAI tool (Microsoft Copilot with your University account is recommended) and a pen. XP points are just for fun and do not count.</p>
+<table><tr><th>#</th><th>Mission</th><th>You will…</th><th>Time</th></tr>
+<tr><td>M1</td><td>Poster Autopsy</td><td>find 6 design mistakes in a bad poster, the principle each breaks (contrast, alignment, hierarchy, typography, colour, white space, credits) and a fix</td><td>5 min</td></tr>
+<tr><td>M2</td><td>Brief &amp; One Sentence</td><td>spin an audience twist; write your main message without AI: ≤ 20 words, specific, saying what to do</td><td>7 min</td></tr>
+<tr><td>M3</td><td>Title Fight</td><td>write 3 titles (≤ 8 words: a question, a bold claim, a contrast), generate AI titles, blind vote; you make the final edit</td><td>8 min</td></tr>
+<tr><td>M4</td><td>Sketch &amp; Build</td><td>sketch two layouts on paper, set up the canvas, choose palette and fonts, build the best one</td><td>20 min</td></tr>
+<tr><td>M5</td><td>Critic Clash &amp; Gallery</td><td>AI critique + peer critique (3-second test, one Glow, one Grow), apply 3 fixes, vote</td><td>10 min</td></tr></table>
+<h4>GenAI rules (same as Assignment 1): AI suggests, you decide</h4>
+<ul><li><b>Fine:</b> ideas, search terms, palette and layout suggestions, feedback on headings and readability, labelled illustrative images.</li>
+<li><b>Not acceptable:</b> passing off AI-written text as your own; citing sources you haven't found and read yourself; unlabelled AI images; AI images of real events or data.</li>
+<li>Note each prompt as you go, to write an honest <b>AI use statement</b> (≤ 50 words): which tool, what for, what you did yourself.</li></ul>
+<h4>Setting up the poster</h4>
+<ul><li>PowerPoint: Design → Slide Size → Custom → <b>48 × 36 in</b>; View → Guides: 1 in margins and 3–4 columns (Canva: Custom size 48 × 36 in). Always set the page size first.</li>
+<li>Choose 3–4 colours; text contrast <b>≥ 4.5 : 1</b> (webaim.org contrast checker). Avoid red/green pairs.</li>
+<li>2 fonts: title ≥ 100 pt, headings 60–80 pt, body 32–40 pt, captions ≥ 20 pt.</li>
+<li>One hero visual (AI image or licensed photo) and one chart or diagram made by you. AI images: no text inside, and a caption "Fig. X Generated with [tool], [date]".</li>
+<li>Place: title + subtitle; name / ID / GENG0015; the main message as the biggest text after the title; numbered section headings; visuals with numbered captions; a footer strip for references, image credits and the AI statement. Zoom to 25 %: can you still read the title and message?</li></ul>
+<h4>Cheat sheet: what good looks like</h4>
+<ul><li><b>Structure:</b> short title + subtitle; one main message; numbered sections What → Why → Examples → Action; footer with references, image credits (TASL) and AI statement.</li>
+<li><b>C·R·A·P:</b> Contrast (different things look very different), Repetition (same style for the same job), Alignment (nothing placed by eye), Proximity (group related items).</li>
+<li><b>Type:</b> max 2 fonts, left-aligned. Out of space? Cut words, not font size.</li>
+<li><b>Colour &amp; space:</b> 60-30-10 (neutral · main · accent); 30–40 % white space. Images: openverse.org, commons.wikimedia.org, unsplash.com.</li>
+<li><b>3-30-3 rule:</b> where does the eye go 1st, 2nd and 3rd?</li></ul>
+<p class="muted" style="font-size:13px">The lab sheet says Assignment 1 is due Monday 2 November 2026, 10:00 (one PDF on Blackboard), but the Blackboard submission link shows Monday 16 November 2026, 10:00 GMT. Check with Dr Lim.</p>`,
+    fr: String.raw`
+<h4>À quoi sert un poster scientifique</h4>
+<p>Un poster, c'est une grande affiche (48 × 36 pouces, environ 122 × 91 cm) qui présente un sujet. Les gens passent devant en marchant : tu as <b>3 secondes</b> pour les accrocher, <b>30 secondes</b> pour leur faire passer ton message, et <b>3 minutes</b> s'ils s'arrêtent vraiment (règle 3-30-3).</p>
+<div class="ex"><div class="lab">Exemple concret — une affiche dans le couloir</div>
+Une affiche avec un titre de 2 lignes en WordArt arc-en-ciel et du texte en taille 12 : personne ne la lit. Une affiche avec « Deepfake call? Hang up and call back » en énorme et une image claire : tu retiens le message en passant. C'est le principe du poster.</div>
+
+<h4>Le message principal</h4>
+<p>Avant de dessiner quoi que ce soit, écris <b>une seule phrase</b> (20 mots maximum) qui dit à ton public quoi retenir ou quoi faire. Exemple de la fiche : « Call back on a number you know: it stops most deepfake scams. » Cette phrase sera le plus gros texte après le titre.</p>
+<p>Le titre : 8 mots maximum. Trois styles possibles : une <b>question</b>, une <b>affirmation forte</b>, un <b>contraste</b>.</p>
+
+<h4>Les règles de design (C·R·A·P)</h4>
+<ul><li><b>Contraste</b> : ce qui est différent doit avoir l'air très différent (titre énorme, texte normal).</li>
+<li><b>Répétition</b> : même style pour le même rôle (tous les titres de section pareils).</li>
+<li><b>Alignement</b> : rien n'est posé « à l'œil », tout est calé sur des repères (guides).</li>
+<li><b>Proximité</b> : on regroupe ce qui va ensemble (une image et sa légende).</li></ul>
+<table><tr><th>Élément</th><th>Taille</th></tr>
+<tr><td>Titre</td><td>≥ 100 pt</td></tr><tr><td>Titres de section</td><td>60–80 pt</td></tr>
+<tr><td>Texte</td><td>32–40 pt</td></tr><tr><td>Légendes</td><td>≥ 20 pt</td></tr></table>
+<div class="tip"><div class="lab">Astuce</div>Plus de place ? On coupe des <b>mots</b>, jamais la taille de police. Et fais le test : zoome à 25 % ; si tu lis encore le titre et le message, c'est bon.</div>
+<p>Couleurs : règle 60-30-10 (60 % couleur neutre, 30 % couleur principale, 10 % couleur d'accent), 30 à 40 % d'espace vide, contraste du texte d'au moins 4,5 : 1, et jamais rouge contre vert (les daltoniens ne voient pas la différence).</p>
+
+<h4>L'IA : elle propose, tu décides</h4>
+<div class="warnbox"><div class="lab">Règles pour le poster (Assignment 1)</div>
+Autorisé : demander des idées, des mots-clés de recherche, des palettes de couleurs, des propositions de mise en page, un avis sur la lisibilité, des images d'illustration <b>légendées</b>.<br>
+Interdit : présenter un texte écrit par l'IA comme le tien, citer des sources que tu n'as pas trouvées et lues toi-même, des images IA sans légende, des images IA d'événements ou de données réels.<br>
+À la fin : une <b>déclaration d'usage de l'IA</b> de 50 mots maximum (quel outil, pour quoi faire, ce que tu as fait toi-même).</div>
+
+<h4>Le labo « Poster Sprint » en 5 missions</h4>
+<ol><li><b>Autopsie</b> : trouver 6 erreurs de design dans un mauvais poster et dire comment les corriger.</li>
+<li><b>Le message</b> : écrire ta phrase principale sans IA.</li>
+<li><b>Combat de titres</b> : 3 titres à toi contre ceux de l'IA, vote à l'aveugle, puis c'est toi qui finalises.</li>
+<li><b>Croquis et construction</b> : 2 croquis sur papier, puis le poster en 48 × 36 in avec repères, palette, polices, une image principale et un graphique fait par toi.</li>
+<li><b>Critiques</b> : avis de l'IA + avis d'un camarade (il regarde 3 secondes et répète ton message), puis 3 corrections.</li></ol>
+<div class="warnbox"><div class="lab">Date à vérifier</div>La fiche du labo dit que le poster est à rendre le <b>lundi 2 novembre à 10h</b> (un PDF sur Blackboard), mais le lien de dépôt sur Blackboard indique le <b>lundi 16 novembre à 10h GMT</b> (18h en Malaisie). Demande confirmation au Dr Lim, et vise le 2 novembre pour être tranquille.</div>`,
+    vocab: [
+      ['academic poster', 'poster scientifique'],
+      ['main message', 'message principal'],
+      ['audience', 'public visé'],
+      ['layout', 'mise en page'],
+      ['hierarchy', 'hiérarchie (ordre d\'importance visuelle)'],
+      ['alignment / guides', 'alignement / repères'],
+      ['white space', 'espace vide (blanc)'],
+      ['contrast ratio', 'taux de contraste'],
+      ['palette', 'palette de couleurs'],
+      ['caption', 'légende'],
+      ['image credits', 'crédits des images'],
+      ['AI use statement', 'déclaration d\'usage de l\'IA'],
+      ['draft', 'brouillon'],
+      ['peer feedback', 'avis d\'un camarade'],
+      ['glow / grow', 'point fort / point à améliorer']
+    ],
+    formules: [],
+    exos: [
+      { src: 'Blackboard', niveau: 1, en: 'Poster Sprint, M1: a poster title is a whole sentence written in rainbow WordArt. Which principle does it break, and how do you fix it?', fr: 'Mission 1 : quel principe est cassé et comment corriger ?',
+        sol: '<p>Hiérarchie et typographie. Correction : un titre de 8 mots maximum, une seule police en gras.</p>' },
+      { src: 'Claude', niveau: 1, en: 'Name the four C·R·A·P principles and give one example of each on a poster.', fr: 'Cite les 4 principes C·R·A·P avec un exemple chacun.',
+        sol: '<p>Contrast : titre 100 pt contre texte 36 pt · Repetition : tous les titres de section dans la même couleur · Alignment : colonnes calées sur des repères · Proximity : chaque graphique collé à sa légende.</p>' },
+      { src: 'Claude', niveau: 2, en: 'Is each use of AI acceptable for the poster? (a) asking for 3 colour palettes; (b) pasting an AI paragraph as your introduction; (c) an AI illustration captioned "Fig. 2 Generated with Copilot, 20 Oct 2026"; (d) citing a paper suggested by the AI without reading it.', fr: 'Ces usages de l\'IA sont-ils autorisés pour le poster ?',
+        sol: '<p>(a) oui · (b) non (texte IA présenté comme le tien) · (c) oui (image légendée) · (d) non (source non trouvée et lue par toi).</p>' }
     ]
   };
 })();
