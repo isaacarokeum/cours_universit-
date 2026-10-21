@@ -1,4 +1,4 @@
-// GENG0014 Routes to Success — Semaines 1 et 2
+// GENG0014 Routes to Success — Semaines 1 à 4
 (function () {
   const S = DATA.matieres.rs.semaines;
 
@@ -226,6 +226,132 @@
         sol: '<p>Vitesse initiale nulle ; poids 20 N (g = 10) ; pas de frottement (« lisse »).</p>' },
       { src: 'Claude', niveau: 2, en: 'A student finds that a kettle takes 3 hours to boil 1 L of water. Use the "check your answer" questions to explain why this is suspicious.', fr: 'Un étudiant trouve qu\'une bouilloire met 3 heures à faire bouillir 1 L d\'eau. Avec les questions de vérification, explique pourquoi c\'est louche.',
         sol: '<p>L\'ordre de grandeur n\'est pas raisonnable (une bouilloire met quelques minutes). Vérifier les unités (kW et W ? minutes et secondes ?) et chaque étape.</p>' }
+    ]
+  };
+  // =========================== SEMAINE 4 ===========================
+  S[4] = {
+    titre: 'R3 — Data Analysis Skills',
+    titreFr: 'R3 — Analyser et présenter des données',
+    resume: 'Les types de données (discrètes, continues, catégorielles, ordinales), comment faire un bon tableau de résultats, quel graphique choisir (nuage de points, courbe, barres, camembert) et comment écrire l\'analyse d\'un graphique. C\'est la base du devoir A.2 (Excel, à rendre le 30 nov.).',
+    sources: 'R3 Data Analysis Skills.pdf (diapos) · vidéo R3 (.mp4) · A.2 Assignment brief.pdf (Blackboard, 19–20 oct.)',
+    en: String.raw`
+<h4>Route 3 — what we will discuss</h4>
+<ul><li>Types of data</li><li>How to present data</li><li>How to write an analytical report</li></ul>
+<h4>Types of data</h4>
+<p>When you plan an experiment or data collection, think about the best way to record and present your data. Experiments always involve some measurement, and it all depends on what sort of data you have.</p>
+<ul><li><b>Discrete data:</b> obtained by <b>counting</b>; the results are integers (e.g. the number of cars entering the city each day). Scatter graphs and bar charts are often used.</li>
+<li><b>Continuous data:</b> obtained by <b>measuring</b> on a scale; can take any value, including decimals (e.g. gauge length 50.4 mm, potential difference 2.1 mV). Accuracy is limited by the instrument. Best shown with a line graph or scatter graph.</li>
+<li><b>Categoric data:</b> values sorted into categories (e.g. brass, wood, glass, steel; types of air pollutant). Use a pie chart or bar chart.</li>
+<li><b>Ordered (ordinal) data:</b> categories that can be put in order (e.g. "low", "fairly high", "very high"). A bar chart is often used.</li></ul>
+<h4>Tables of data</h4>
+<p>Your results table should include:</p>
+<ol><li>Space for the <b>independent variable</b> (the thing you change) and the <b>dependent variable</b> (the thing you measure).</li>
+<li>Units in the <b>headers</b>, not after each value (e.g. "Time / s", "Current / A").</li>
+<li>Space to <b>repeat</b> each test, to see how precise and repeatable the results are.</li>
+<li>Space for <b>data processing</b> (e.g. the mean of the repeats, to 3 d.p.).</li>
+<li>A <b>title</b>: "Table 1: …" (preferred) with the caption <b>above</b> the table, or "Figure 1: …" with the caption <b>below</b>.</li></ol>
+<table><tr><th>Time / s</th><th>Current / A (1)</th><th>Current / A (2)</th><th>Current / A (3)</th><th>Mean current / A</th></tr>
+<tr><td>0.0</td><td>0.370</td><td>0.368</td><td>0.371</td><td>0.370</td></tr>
+<tr><td>1.0</td><td>0.218</td><td>0.219</td><td>0.172</td><td>0.219</td></tr>
+<tr><td>2.0</td><td>0.118</td><td>0.122</td><td>0.116</td><td>0.119</td></tr></table>
+<p class="muted" style="font-size:13px">At t = 1.0 s, 0.172 is an anomaly, so the mean is taken from the two other readings.</p>
+<h4>Presenting data using graphs</h4>
+<ul><li><b>Scatter graphs</b> show how two sets of data are related (<b>correlated</b>): positive, negative or no correlation. Only use "correlation" for a linear relationship (e.g. Hooke's law, Ohm's law, gas law).</li>
+<li><b>Curved graphs:</b> for a non-linear relationship (e.g. charging capacitor), draw a smooth curve of best fit with about the same number of points on each side.</li>
+<li><b>Straight-line graphs:</b> \(y=mx+c\), where \(m\) is the gradient and \(c\) the y-intercept; you can use them to work out values and the relationship. A good graph has a caption below, label and unit on each axis, and the equation of the line.</li>
+<li><b>Bar charts:</b> vertical, horizontal, grouped, stacked.</li>
+<li><b>Pie charts:</b> the whole circle is the total, each slice a part (percentage). Needs categorical variables and numerical values.</li></ul>
+<h4>Analytical skills</h4>
+<p>Before interpreting, check: what type of presentation was chosen and why; is there a title; are there labels, headings, legends; what do the points, lines, colours represent; what units are used (percentages, coefficients, index numbers?).</p>
+<h4>Writing about graphs</h4>
+<ol><li>Locate the key words: title, labels, units, type of graph.</li>
+<li>Identify the trend: max, min, steady value, sharp rise or drop.</li>
+<li>Make notes: what is happening, the main change over time, the most noticeable thing, the pattern.</li></ol>
+<p><b>Introduction:</b> first sentence describes the graph ("The graph shows…"); second sentence gives the overall trend ("Overall, …").</p>
+<p><b>Describing the trend:</b> start with a sentence with no number ("City size increased sharply over the period."), follow with an example with a number, and keep alternating.</p>
+<p><b>Don'ts:</b> don't say "x-axis"/"y-axis" — give the information; don't describe everything — pick the biggest, smallest, main trends and group similar things; don't write "the line went up" — write about the idea ("the number of people going to work by train increased gradually"); don't use "I feel", "as you can see" — keep it professional.</p>
+<h4>Activities</h4>
+<p>Activity 1 and 2: fill in the gaps of two graph descriptions (gold sales; consumption of butter, margarine and low-fat spreads 1981–2007). Activity 3: linear regression on wind data (Camborne, May 2015). Then a self-reflection: grade your confidence from 1 to 5.</p>`,
+    fr: String.raw`
+<h4>Les 4 types de données</h4>
+<table><tr><th>Type</th><th>Comment on l'obtient</th><th>Exemple</th><th>Graphique conseillé</th></tr>
+<tr><td><b>Discrète</b></td><td>en <b>comptant</b> (nombres entiers)</td><td>nombre de voitures par jour</td><td>barres, nuage de points</td></tr>
+<tr><td><b>Continue</b></td><td>en <b>mesurant</b> (décimales possibles)</td><td>longueur 50,4 mm, tension 2,1 mV</td><td>courbe, nuage de points</td></tr>
+<tr><td><b>Catégorielle</b></td><td>des catégories sans ordre</td><td>laiton, bois, verre, acier</td><td>camembert, barres</td></tr>
+<tr><td><b>Ordinale</b></td><td>des catégories qu'on peut classer</td><td>faible / moyen / élevé</td><td>barres</td></tr></table>
+<div class="ex"><div class="lab">Exemple concret — ton téléphone</div>
+Le nombre de notifications par jour : <b>discrète</b> (on compte). Le temps d'écran en heures : <b>continue</b> (on mesure, 3,7 h). Les applis (Instagram, WhatsApp, YouTube) : <b>catégorielle</b> → camembert du temps passé par appli. Ton niveau de batterie « faible / moyen / plein » : <b>ordinale</b>.</div>
+
+<h4>Un bon tableau de résultats</h4>
+<ul><li>Une colonne pour ce que tu <b>fais varier</b> (variable indépendante, souvent à gauche) et une pour ce que tu <b>mesures</b> (variable dépendante).</li>
+<li>Les <b>unités dans l'en-tête</b> : « Temps / s », jamais « 2 s, 3 s… » dans chaque case.</li>
+<li>Des colonnes pour les <b>répétitions</b> (mesure 1, 2, 3) et une pour la <b>moyenne</b>.</li>
+<li>Un titre : « Table 1 : … » <b>au-dessus</b> du tableau (préféré), ou « Figure 1 : … » <b>en dessous</b>.</li></ul>
+<div class="tip"><div class="lab">Valeur aberrante</div>Dans l'exemple du cours, à 1,0 s on lit 0,218 ; 0,219 ; 0,172. Le 0,172 est très différent des deux autres : c'est une <b>anomalie</b>, on ne la prend pas dans la moyenne (0,219).</div>
+
+<h4>Quel graphique choisir ?</h4>
+<ul><li><b>Nuage de points</b> : pour voir si deux grandeurs sont liées (<b>corrélation</b> positive, négative ou nulle). Ex. : plus on tire sur un ressort, plus il s'allonge (loi de Hooke).</li>
+<li><b>Droite</b> \(y=mx+c\) : \(m\) = pente, \(c\) = ordonnée à l'origine. Excel peut afficher l'équation de la droite (« trendline »).</li>
+<li><b>Courbe</b> lisse : quand la relation n'est pas une droite (charge d'un condensateur, comme en Maths cette semaine).</li>
+<li><b>Barres</b> : verticales, horizontales, groupées (plusieurs séries côte à côte), empilées (les parts s'additionnent).</li>
+<li><b>Camembert</b> : les parts d'un tout, en pourcentages.</li></ul>
+<div class="warnbox"><div class="lab">Un bon graphique a toujours</div>un <b>titre</b> (ou une légende « Figure 1 : … » en dessous), un <b>nom et une unité sur chaque axe</b>, et une <b>légende</b> s'il y a plusieurs séries. C'est exactement ce que regarde la grille de notation du devoir A.2.</div>
+
+<h4>Écrire l'analyse d'un graphique</h4>
+<ol><li><b>Repère</b> : titre, axes, unités, type de graphique.</li>
+<li><b>Trouve la tendance</b> : maximum, minimum, palier, forte hausse, chute.</li>
+<li><b>Introduction</b> en 2 phrases : « The graph shows… » puis « Overall, … » (la tendance générale).</li>
+<li><b>Paragraphe</b> : une phrase sans chiffre (l'idée), puis une phrase avec un chiffre (la preuve), et on alterne.</li></ol>
+<div class="ex"><div class="lab">Exemple concret — la pluie à Johor Bahru (chiffres inventés)</div>
+« The graph shows the average monthly rainfall in Johor Bahru in 2025. Overall, rainfall was highest at the end of the year. » → idée : « Rainfall increased sharply in November. » → chiffre : « It rose from about 200 mm in October to over 300 mm in December. »</div>
+<div class="warnbox"><div class="lab">À ne pas faire</div>
+Ne pas écrire « l'axe des x montre… » : dis directement de quoi il s'agit.<br>
+Ne pas tout décrire : garde le plus grand, le plus petit, les grandes tendances.<br>
+Ne pas écrire « la courbe monte » : écris « la consommation a augmenté progressivement ».<br>
+Pas de « I feel », « as you can see » : ton professionnel.</div>
+<p>Vocabulaire des tendances : <i>rise / increase / grow</i> (monter), <i>fall / drop / decline / decrease</i> (baisser), <i>remain steady</i> (rester stable), <i>reach a peak</i> (atteindre un pic), <i>reach a low point</i> (atteindre un minimum), <i>double</i> (doubler), <i>recover</i> (remonter après une baisse). Et l'intensité : <i>slightly / gradually / steadily / sharply / dramatically</i>.</p>
+
+<h4>Le lien avec le devoir A.2</h4>
+<p>Le devoir A.2 (20 %) te demande exactement ces compétences sur des données d'énergie du Royaume-Uni (1970–2025) : calculs dans Excel avec des formules visibles, trois graphiques (dont un combiné et un camembert en %), puis 750 mots d'analyse. Les détails sont dans l'onglet <b>Devoirs</b>. Rappel : l'IA générative est <b>interdite</b> pour faire ce devoir ; tu peux seulement t'en servir pour comprendre le cours.</p>`,
+    vocab: [
+      ['discrete data', 'données discrètes', 'obtenues en comptant'],
+      ['continuous data', 'données continues', 'obtenues en mesurant'],
+      ['categoric data', 'données catégorielles'],
+      ['ordered (ordinal) data', 'données ordinales'],
+      ['independent variable', 'variable indépendante', 'ce qu\'on fait varier'],
+      ['dependent variable', 'variable dépendante', 'ce qu\'on mesure'],
+      ['header', 'en-tête (de colonne)'],
+      ['repeatable / precise', 'reproductible / précis'],
+      ['caption', 'légende (titre sous ou sur une figure)'],
+      ['scatter graph', 'nuage de points'],
+      ['correlation', 'corrélation'],
+      ['line of best fit', 'droite (courbe) de tendance'],
+      ['gradient / y-intercept', 'pente / ordonnée à l\'origine'],
+      ['bar chart (grouped, stacked)', 'diagramme en barres (groupées, empilées)'],
+      ['pie chart', 'diagramme circulaire (camembert)'],
+      ['trend', 'tendance'],
+      ['to reach a peak / a low point', 'atteindre un pic / un minimum'],
+      ['sharply / gradually / steadily', 'fortement / progressivement / régulièrement'],
+      ['linear regression', 'régression linéaire']
+    ],
+    formules: [
+      { nom: 'Équation d\'une droite', tex: 'y = mx + c', why: 'm = pente (gradient), c = ordonnée à l\'origine.' },
+      { nom: 'Moyenne', tex: '\\bar x = \\dfrac{x_1 + x_2 + \\dots + x_n}{n}', why: 'Moyenne des répétitions (sans les valeurs aberrantes).' },
+      { nom: 'Pourcentage d\'une part (camembert)', tex: '\\% = \\dfrac{\\text{partie}}{\\text{total}} \\times 100', why: 'Angle de la part = % × 3,6°.' }
+    ],
+    exos: [
+      { src: 'Blackboard', niveau: 1, en: 'R3 Activity 1: fill the gaps (words: remained, from, dropped, doubled, decline, a low point, sudden, recovered, rising, increased, slight, were, sharply, to). "In January, gold sales ___ about 200 million dirhams per month. In February they ___ to Dhs 220 million, ___ to a peak of Dhs 350 million in March. Over the next four months, sales ___ steadily, reaching ___ of Dhs 120 million in July. In August, there was a ___ increase. Sales almost ___, rising ___ Dhs 120 million in July to Dhs 210 million in August. This was followed by a ___ in September to Dhs 120 million. From September to October, sales ___ from Dhs 120 million to Dhs 180 million. In October and November, sales ___ steady, and there was a small increase in December ___ Dhs 190 million."', fr: 'Activité 1 : complète la description des ventes d\'or avec les bons mots.',
+        sol: '<p>were · increased · rising · dropped · a low point · sudden · doubled · from · decline · recovered · remained · to. (« slight » et « sharply » ne servent pas.)</p>' },
+      { src: 'Blackboard', niveau: 2, en: 'R3 Activity 2: complete the description of butter, margarine and low-fat spread consumption (1981–2007) with: a significant decrease, more popular, a significant rise, a steady downward trend, a sharp decline, reached a peak, exceeded, a marked increase.', fr: 'Activité 2 : complète la description (beurre, margarine, pâtes à tartiner allégées).',
+        sol: '<p>1. a significant decrease · 2. a significant rise · 3. reached a peak · 4. a sharp decline · 5. exceeded · 6. a steady downward trend · 7. a marked increase · 8. more popular</p>' },
+      { src: 'Blackboard', niveau: 2, en: String.raw`R3 Activity 3: daily mean windspeed \(w\) and daily maximum gust \(g\) (knots), Camborne, 1–15 May 2015: w = 14, 13, 13, 9, 18, 18, 7, 15, 10, 14, 11, 9, 8, 10, 7; g = 33, 37, 29, 23, 43, 38, 17, 30, 28, 29, 29, 23, 21, 28, 20. (1) Plot the data. (2) Describe the correlation. (3) The regression line is \(g=1.82w+7.23\): (i) interpret the gradient; (ii) justify the use of a linear regression.`, fr: 'Activité 3 : vent moyen et rafale maximale — corrélation et droite de régression.',
+        sol: String.raw`<p>(2) Corrélation <b>positive</b> (assez forte) : les jours plus venteux ont des rafales plus fortes.<br>(3)(i) Quand la vitesse moyenne du vent augmente de 1 nœud, la rafale maximale augmente en moyenne d'environ <b>1,82 nœud</b>.<br>(ii) Les points sont à peu près alignés (relation linéaire, forte corrélation positive), donc une droite décrit bien les données.<br>Exemple : pour \(w=12\), \(g\approx1.82\times12+7.23=29.1\) nœuds.</p>` },
+      { src: 'Claude', niveau: 1, en: 'Classify each data type and choose a graph: (a) number of students in each tutorial group; (b) temperature of a cooling cup of coffee every minute; (c) favourite mode of transport to campus; (d) satisfaction: poor / fair / good / excellent.', fr: 'Donne le type de données et le graphique adapté.',
+        sol: '<p>(a) discrète → barres · (b) continue → courbe (temps en abscisse) · (c) catégorielle → camembert ou barres · (d) ordinale → barres (dans l\'ordre).</p>' },
+      { src: 'Claude', niveau: 1, en: 'What is wrong with this table header: "Length | Force" with values "12 cm | 3 N", "15 cm | 4 N"?', fr: 'Qu\'est-ce qui ne va pas dans ce tableau ?',
+        sol: '<p>Les unités doivent être dans l\'en-tête (« Length / cm », « Force / N ») et pas dans chaque case. Il manque aussi un titre (« Table 1: … »), et la variable indépendante (la force qu\'on applique) devrait être dans la première colonne.</p>' },
+      { src: 'Claude', niveau: 2, en: 'Rewrite these sentences in a professional style: (a) "As you can see, the line goes up a lot in 2020." (b) "The y-axis shows the sales and the x-axis shows the years."', fr: 'Réécris ces phrases dans un style professionnel.',
+        sol: '<p>(a) « Sales increased sharply in 2020. » (puis donne le chiffre). (b) « The graph shows annual sales between 2015 and 2025. »</p>' }
     ]
   };
 })();

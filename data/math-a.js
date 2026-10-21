@@ -1,4 +1,4 @@
-// GENG0001 Mathematics A — Semaines 1 à 3
+// GENG0001 Mathematics A — Semaines 1 à 4
 (function () {
   const S = DATA.matieres.ma.semaines;
 
@@ -499,6 +499,160 @@ Une distance de 384 400 km : scientifique \(3{,}844\times10^5\) km, ingénieur \
         sol: String.raw`<p>\(16^{3/4}=(\sqrt[4]{16})^3=2^3=8\) · \(27^{-2/3}=\dfrac1{(\sqrt[3]{27})^2}=\dfrac19\) · \(5^0=1\)</p>` },
       { src: 'Claude', niveau: 2, en: 'A capacitor has C = 0.000047 F and a resistor has R = 2 200 000 Ω. Write both in engineering notation and compute RC (in seconds).', fr: 'Écris C et R en notation ingénieur, puis calcule RC (en secondes).',
         sol: String.raw`<p>\(C=47\cdot10^{-6}\) F (47 µF), \(R=2.2\cdot10^{6}\) Ω (2,2 MΩ). \(RC=47\times2{,}2\times10^{-6+6}=103{,}4\) s.</p>` }
+    ]
+  };
+  // =========================== SEMAINE 4 ===========================
+  S[4] = {
+    titre: 'Logarithms & Exponentials',
+    titreFr: 'Logarithmes et fonctions exponentielles',
+    resume: '2 chapitres : le logarithme (définition, ln et log, les 4 lois, changement de base) pour résoudre des équations où l\'inconnue est en exposant ; la fonction exponentielle e^x et son usage en ingénierie (charge d\'un condensateur).',
+    sources: 'GENG0001 07 Logarithms et GENG0001 08 Exponential Functions (diapos « blank » et « filled » annotées en cours, publiées le 19 oct., Blackboard)',
+    en: String.raw`
+<h4>Chapter 07 — Logarithms</h4>
+<p><b>Learning outcomes:</b> (1) write different expressions of logarithm using the laws of logarithms; (2) apply the laws of logarithms to solve equations involving logarithms and indices.</p>
+<p>Written on the slide in class: \(a=b^x\) (exponential form) \(\Longleftrightarrow\) \(\log_b a=x\) (logarithmic form).</p>
+<h5>7.1 Logarithms</h5>
+<p>If \(a=b^x\), then \(x\) is called the <b>logarithm of \(a\) to the base \(b\)</b>. Symbolically \(x=\log_b(a)\). We <i>require</i> that the base \(b\) is a positive number, not equal to 1.</p>
+<p><b>Examples:</b> \(\log_3 9=2\) (because \(3^2=9\)), \(\log_2(32)=5\) (because \(2^5=32\)), \(\log_{10}(1000)=3\) (because \(10^3=1000\)).</p>
+<p><b>Notation:</b></p>
+<ul><li>\(\log(a):=\log_{10}(a)\) (used in engineering);</li>
+<li>\(\ln(a):=\log_e(a)\), where \(e=2.7183\) (to 4 d.p.). "ln" is called the <b>natural logarithm</b>, and \(e\) is <b>Euler's constant</b>.</li></ul>
+<p><b>Note:</b> \(\log_{10}(a)=0\) for \(a=1\); \(>0\) for \(a>1\); \(&lt;0\) for \(0&lt;a&lt;1\); does not exist for \(a\le0\). (In class: "\(\log_{10}(-1)=\,?\)" — it does not exist.)</p>
+<p>The graph of \(y=\ln(x)\) passes through \((1,0)\), increases slowly, and goes to \(-\infty\) as \(x\) gets close to 0.</p>
+<h5>7.2 Laws of logarithms</h5>
+<p><b>Rule 1:</b> \(\log_b(M\cdot N)=\log_b M+\log_b N\). <i>The log of a product equals the sum of the logs.</i></p>
+<p>Proof: if \(M=b^x\) then \(x=\log_b M\); if \(N=b^y\) then \(y=\log_b N\). \(M\cdot N=b^xb^y=b^{x+y}\), so \(\log_b(MN)=x+y=\log_b M+\log_b N\).</p>
+<p><b>Rule 2:</b> \(\log_b(N^a)=a\cdot\log_b N\).</p>
+<p>Proof: if \(N=b^y\), then \(N^a=(b^y)^a=b^{ya}\), so \(\log_b(N^a)=ya=a\log_b N\).</p>
+<p><b>Rule 3:</b> \(\log_b\left(\dfrac{M}{N}\right)=\log_b M-\log_b N\). <i>The log of a quotient equals the difference of the logs.</i></p>
+<p>Proof: \(M\div N=b^x\div b^y=b^{x-y}\), so \(\log_b\frac MN=x-y\).</p>
+<p><b>Rule 4 (change of base):</b> \(\log_b(N)=\dfrac{\log_c(N)}{\log_c(b)}\). In class, \(c=10\) was used: \(\log_b N=\dfrac{\log_{10}N}{\log_{10}b}\).</p>
+<p>Proof: \(b^{\log_b N}=N\), so \(\log_c\left(b^{\log_b N}\right)=\log_c N\), i.e. \(\log_b(N)\times\log_c(b)=\log_c(N)\).</p>
+<p><b>Example (worked in class):</b> \(\log_7(3.857)=\dfrac{\log_{10}3.857}{\log_{10}7}=\dfrac{0.5862}{0.8451}=0.6936\). Check: \(7^{0.6936}=3.856\approx3.857\).</p>
+<h5>7.3 Indicial equations</h5>
+<p>An indicial equation has the unknown in the exponent. Take logs of both sides.</p>
+<p><b>Problem:</b> solve \(3^x=7\). Method 1: \(x=\log_3 7=1.771\). Method 2: \(\log_{10}3^x=\log_{10}7\Rightarrow x\log_{10}3=\log_{10}7\Rightarrow x=\dfrac{\log_{10}7}{\log_{10}3}=1.771\).</p>
+<p><b>Problem:</b> solve \(2^{x-1}=3^{2x+3}\). Taking \(\log_{10}\): \((x-1)\log_{10}2=(2x+3)\log_{10}3\Rightarrow0.301x-0.301=0.954x+1.431\Rightarrow-0.653x=1.732\Rightarrow x=-2.652\).</p>
+<p><b>Problem:</b> solve \(4^x+2^x-20=0\) (left for you — see exercises).</p>
+
+<h4>Chapter 08 — Exponential Functions</h4>
+<p><b>Learning outcomes:</b> (1) define the exponential function; (2) solve real world engineering problems involving exponential functions.</p>
+<p>If \(f(x)=b^x\) for some number \(b\), then \(f(x)\) is called an <b>exponential function</b>. There is a particular one: \(\exp(x):=e^x\), where \(e=2.71828\ldots\) is Euler's constant. The graph of \(e^x\) passes through \((0,1)\) and grows very fast; the graph of \(\left(\tfrac12\right)^x\) also passes through \((0,1)\) but decreases.</p>
+<p>Some <i>non-examinable</i> motivation for using base \(e\) (more in Mathematics B):</p>
+<ul><li>If \(f(x)=e^x\), then \(f'(x)=f(x)\) (the derivative of exp is the same function again).</li>
+<li>\(\int\frac1x\,dx=\ln(x)+C\).</li>
+<li>\(e=1+\frac11+\frac1{1\cdot2}+\frac1{1\cdot2\cdot3}+\ldots=\sum\frac1{n!}\).</li>
+<li>\(e=\lim_{n\to\infty}\left(1+\frac1n\right)^n\) (used for compound interest).</li>
+<li>\(e^{i\phi}=\cos\phi+i\sin\phi\) (Euler's formula), which gives \(e^{i\pi}+1=0\).</li></ul>
+<p><b>Problem (worked in class):</b> in a circuit containing a capacitor, the instantaneous voltage across the capacitor is \(v=V\left(1-e^{-t/RC}\right)\), where \(V\) is the supply voltage, \(R\) the resistance, \(C\) the capacitance and \(t\) the time since connection. If \(V=200\) V, \(R=10\) kΩ and \(C=20\) µF, calculate the time when \(v=100\) V.</p>
+<p>Solution: \(RC=10\times10^3\times20\times10^{-6}=0.2\) s. \(100=200\left(1-e^{-t/0.2}\right)\Rightarrow e^{-t/0.2}=0.5\Rightarrow-\frac t{0.2}=\ln(0.5)\Rightarrow t=0.1386\) s.</p>`,
+    fr: String.raw`
+<h4>Partie 1 — C'est quoi un logarithme ?</h4>
+<p>Le logarithme répond à la question : <b>« à quelle puissance je dois mettre la base pour obtenir ce nombre ? »</b></p>
+<p>\(\log_2 32=5\) parce que \(2^5=32\). C'est la même information écrite dans l'autre sens :</p>
+<p style="text-align:center">\(a=b^x \;\Longleftrightarrow\; \log_b a=x\)</p>
+<div class="ex"><div class="lab">Exemple concret — compter les zéros</div>
+\(\log_{10}1000=3\) : 1000 a 3 zéros, c'est \(10^3\). \(\log_{10}1\,000\,000=6\). Le log en base 10, c'est (en gros) « combien de chiffres a le nombre ». C'est pour ça que les décibels (son) et l'échelle de Richter (séismes) utilisent des logs : un son de 60 dB est 10 fois plus intense qu'un son de 50 dB.</div>
+<p>Les deux logs de ta calculatrice :</p>
+<ul><li><b>log</b> = base 10 (très utilisé en ingénierie) ;</li>
+<li><b>ln</b> = base \(e\approx2{,}718\), le <b>logarithme naturel</b> (\(e\) = constante d'Euler).</li></ul>
+<div class="warnbox"><div class="lab">Où le log n'existe pas</div>On ne peut prendre le log que d'un nombre <b>strictement positif</b>. \(\log(0)\) et \(\log(-1)\) n'existent pas (le prof l'a demandé en cours : aucune puissance de 10 ne donne −1). Et \(\log 1=0\) dans toutes les bases, car \(b^0=1\).</div>
+<p>Signe du log (base 10) : positif si le nombre est plus grand que 1, négatif s'il est entre 0 et 1 (\(\log 0{,}01=-2\)).</p>
+
+<h4>Les 4 lois des logarithmes</h4>
+<ol><li><b>Produit → somme</b> : \(\log_b(MN)=\log_b M+\log_b N\).</li>
+<li><b>Puissance → multiplication</b> : \(\log_b(N^a)=a\log_b N\). L'exposant « descend » devant.</li>
+<li><b>Quotient → différence</b> : \(\log_b\frac MN=\log_b M-\log_b N\).</li>
+<li><b>Changement de base</b> : \(\log_b N=\dfrac{\log N}{\log b}\) (avec le log de la calculatrice).</li></ol>
+<p>Pourquoi ça marche : un log, c'est un exposant. Et quand on multiplie des puissances de même base, on <b>additionne</b> les exposants (\(10^2\times10^3=10^5\)). Les lois des logs sont juste les lois des puissances de la semaine 3, vues à l'envers.</p>
+<div class="ex"><div class="lab">Exemple du cours — \(\log_7(3{,}857)\)</div>
+Ta calculatrice n'a pas de touche « log base 7 ». Changement de base :<br>
+\(\log_7 3{,}857=\dfrac{\log 3{,}857}{\log 7}=\dfrac{0{,}5862}{0{,}8451}=0{,}6936\).<br>
+Vérification faite par le prof : \(7^{0{,}6936}\approx3{,}856\). ✓</div>
+<div class="warnbox"><div class="lab">Pièges classiques</div>
+\(\log(M+N)\neq\log M+\log N\) : la loi 1 marche pour un <b>produit</b>, pas pour une somme.<br>
+\(\dfrac{\log M}{\log N}\neq\log\dfrac MN\) : le quotient de deux logs, c'est un changement de base, pas la loi 3.</div>
+
+<h4>Résoudre une équation avec l'inconnue en exposant</h4>
+<p>Méthode : <b>prendre le log des deux côtés</b>, puis utiliser la loi 2 pour faire « descendre » l'exposant.</p>
+<div class="ex"><div class="lab">Exemple du cours — \(3^x=7\)</div>
+Façon 1 : \(x=\log_3 7\), puis changement de base = 1,771.<br>
+Façon 2 : \(\log 3^x=\log 7\) → \(x\log 3=\log 7\) → \(x=\dfrac{\log 7}{\log 3}=\dfrac{0{,}8451}{0{,}4771}=1{,}771\).<br>
+Vérif : \(3^{1{,}771}\approx7{,}0\). ✓</div>
+<div class="ex"><div class="lab">Exemple du cours — \(2^{x-1}=3^{2x+3}\)</div>
+On prend le log : \((x-1)\log2=(2x+3)\log3\).<br>
+On remplace : \(0{,}301x-0{,}301=0{,}954x+1{,}431\).<br>
+On regroupe les \(x\) : \(0{,}301x-0{,}954x=1{,}431+0{,}301\) → \(-0{,}653x=1{,}732\) → \(x=-2{,}652\).</div>
+<div class="ex"><div class="lab">Exemple concret — l'argent qui double</div>
+Tu places 1 000 RM à 5 % par an. Au bout de \(n\) ans tu as \(1000\times1{,}05^n\). Quand as-tu 2 000 RM ?<br>
+\(1{,}05^n=2\) → \(n\log1{,}05=\log2\) → \(n=\dfrac{0{,}3010}{0{,}0212}\approx14{,}2\). Il faut environ 14 ans et 3 mois.</div>
+
+<h4>Partie 2 — La fonction exponentielle</h4>
+<p>Une fonction exponentielle, c'est \(f(x)=b^x\) : l'inconnue est en exposant. La plus importante est \(e^x\) (touche <b>e^x</b> de la calculatrice), avec \(e=2{,}71828\ldots\)</p>
+<ul><li>\(e^x\) passe par \((0;1)\) et grimpe de plus en plus vite : c'est la croissance « explosive ».</li>
+<li>\(\left(\tfrac12\right)^x\) passe aussi par \((0;1)\) mais diminue : chaque pas divise par 2 (décroissance, comme la radioactivité).</li>
+<li>\(\ln\) et \(e^x\) s'annulent l'une l'autre : \(\ln(e^x)=x\) et \(e^{\ln x}=x\). C'est ce qui permet de « sortir » \(x\) d'un exposant avec \(e\).</li></ul>
+<p class="muted" style="font-size:13px">Les propriétés de \(e\) vues en cours (dérivée de \(e^x\) = elle-même, \(e^{i\pi}+1=0\)…) sont <b>hors programme</b> à l'examen ; tu les reverras en Mathematics B.</p>
+<div class="ex"><div class="lab">Exemple du cours — charge d'un condensateur</div>
+La tension d'un condensateur qui se charge : \(v=V\left(1-e^{-t/RC}\right)\). Avec \(V=200\) V, \(R=10\) kΩ, \(C=20\) µF, quand a-t-on \(v=100\) V ?<br>
+1. \(RC=10\times10^3\times20\times10^{-6}=0{,}2\) s.<br>
+2. \(100=200(1-e^{-t/0{,}2})\) → \(1-e^{-t/0{,}2}=0{,}5\) → \(e^{-t/0{,}2}=0{,}5\).<br>
+3. On prend ln : \(-\dfrac t{0{,}2}=\ln 0{,}5=-0{,}693\) → \(t=0{,}1386\) s.<br>
+Le condensateur est à moitié chargé en 0,139 s. Tu retrouveras cette formule en <b>Electricity</b> et en physique.</div>
+<div class="tip"><div class="lab">Astuce</div>Pour isoler un \(e^{\ldots}\) : d'abord tout isoler (\(e^{\ldots}=\) un nombre), <b>ensuite</b> prendre ln. Ne prends pas ln d'une somme.</div>`,
+    vocab: [
+      ['logarithm', 'logarithme'],
+      ['base', 'base', 'le b de log_b'],
+      ['natural logarithm (ln)', 'logarithme naturel (népérien)', 'base e'],
+      ['common logarithm (log)', 'logarithme décimal', 'base 10'],
+      ['Euler\'s constant (e)', 'constante d\'Euler (e ≈ 2,718)'],
+      ['laws of logarithms', 'règles de calcul des logarithmes'],
+      ['product / quotient', 'produit / quotient'],
+      ['change of base', 'changement de base'],
+      ['indicial equation', 'équation exponentielle', 'inconnue dans l\'exposant'],
+      ['exponential function', 'fonction exponentielle'],
+      ['exponential growth / decay', 'croissance / décroissance exponentielle'],
+      ['non-examinable', 'hors programme (pas à l\'examen)'],
+      ['instantaneous voltage', 'tension instantanée'],
+      ['supply voltage', 'tension d\'alimentation'],
+      ['capacitor / capacitance', 'condensateur / capacité'],
+      ['resistance', 'résistance'],
+      ['compound interest', 'intérêts composés']
+    ],
+    formules: [
+      { nom: 'Définition du logarithme', tex: 'a = b^x \\;\\Longleftrightarrow\\; \\log_b a = x', why: 'b > 0, b ≠ 1 et a > 0.' },
+      { nom: 'Valeurs à connaître', tex: '\\log_b 1 = 0 \\qquad \\log_b b = 1 \\qquad \\ln(e^x) = x \\qquad e^{\\ln x} = x', why: '' },
+      { nom: 'Loi 1 — produit', tex: '\\log_b(MN) = \\log_b M + \\log_b N', why: 'Le log d\'un produit est la somme des logs.' },
+      { nom: 'Loi 2 — puissance', tex: '\\log_b(N^a) = a\\,\\log_b N', why: 'Sert à faire descendre une inconnue de l\'exposant.' },
+      { nom: 'Loi 3 — quotient', tex: '\\log_b\\left(\\dfrac{M}{N}\\right) = \\log_b M - \\log_b N', why: '' },
+      { nom: 'Loi 4 — changement de base', tex: '\\log_b N = \\dfrac{\\log_{10} N}{\\log_{10} b} = \\dfrac{\\ln N}{\\ln b}', why: 'Pour calculer n\'importe quel log avec la calculatrice.' },
+      { nom: 'Charge d\'un condensateur', tex: 'v = V\\left(1 - e^{-t/RC}\\right)', why: 'RC = constante de temps (en secondes).' }
+    ],
+    exos: [
+      { src: 'Blackboard', niveau: 1, en: String.raw`Slides: complete \(\log_3 9\), \(\log_2(32)\), \(\log_{10}(1000)\).`, fr: 'Diapos : calcule ces logarithmes.',
+        sol: String.raw`<p>2 (\(3^2=9\)) · 5 (\(2^5=32\)) · 3 (\(10^3=1000\))</p>` },
+      { src: 'Blackboard', niveau: 1, en: String.raw`Slides: evaluate \(\log_7(3.857)\).`, fr: 'Diapos : calcule avec le changement de base.',
+        sol: String.raw`<p>\(\dfrac{\log 3.857}{\log 7}=\dfrac{0.5862}{0.8451}=0.6936\). Vérif : \(7^{0.6936}\approx3.857\).</p>` },
+      { src: 'Blackboard', niveau: 1, en: String.raw`Slides: solve \(3^x=7\).`, fr: 'Diapos : résous l\'équation.',
+        sol: String.raw`<p>\(x\log3=\log7\) → \(x=\dfrac{\log7}{\log3}=1.771\).</p>` },
+      { src: 'Blackboard', niveau: 2, en: String.raw`Slides: solve \(2^{x-1}=3^{2x+3}\).`, fr: 'Diapos : résous l\'équation.',
+        sol: String.raw`<p>\((x-1)\log2=(2x+3)\log3\) → \(0.301x-0.301=0.954x+1.431\) → \(-0.653x=1.732\) → \(x=-2.652\).<br>Avec ln : \((x-1)(0.6931)=(2x+3)(1.0986)\) → \(-1.5041x=3.9889\) → même résultat.</p>` },
+      { src: 'Blackboard', niveau: 3, en: String.raw`Slides: solve \(4^x+2^x-20=0\).`, fr: 'Diapos : résous l\'équation (indice : 4^x = (2^x)²).',
+        sol: String.raw`<p>On pose \(y=2^x\) : \(4^x=(2^2)^x=(2^x)^2=y^2\). L'équation devient \(y^2+y-20=0\) → \((y+5)(y-4)=0\).<br>\(y=-5\) est impossible (\(2^x>0\)). \(y=4\) → \(2^x=4\) → \(x=2\).<br>Vérif : \(16+4-20=0\) ✓.</p>` },
+      { src: 'Blackboard', niveau: 2, en: String.raw`Slides: \(v=V(1-e^{-t/RC})\) with \(V=200\) V, \(R=10\) kΩ, \(C=20\) µF. Find \(t\) when \(v=100\) V.`, fr: 'Diapos : trouve le temps pour lequel la tension vaut 100 V.',
+        sol: String.raw`<p>\(RC=0.2\) s. \(e^{-t/0.2}=0.5\) → \(t=-0.2\ln0.5=0.1386\) s.</p>` },
+      { src: 'Claude', niveau: 1, en: String.raw`Write in logarithmic form: \(5^3=125\), \(10^{-2}=0.01\). Write in exponential form: \(\log_4 64=3\).`, fr: 'Passe d\'une forme à l\'autre.',
+        sol: String.raw`<p>\(\log_5 125=3\) · \(\log_{10}0.01=-2\) · \(4^3=64\)</p>` },
+      { src: 'Claude', niveau: 1, en: String.raw`Write as a single logarithm: \(\log 5+\log 4\), \(3\log2\), \(\log 50-\log 5\).`, fr: 'Écris avec un seul logarithme.',
+        sol: String.raw`<p>\(\log 20\) (loi 1) · \(\log 8\) (loi 2) · \(\log 10=1\) (loi 3)</p>` },
+      { src: 'Claude', niveau: 2, en: String.raw`Expand: \(\log_b\left(\dfrac{x^2y}{z^3}\right)\).`, fr: 'Développe avec les lois des logarithmes.',
+        sol: String.raw`<p>\(2\log_b x+\log_b y-3\log_b z\)</p>` },
+      { src: 'Claude', niveau: 2, en: String.raw`Solve \(5e^{2x}=40\).`, fr: 'Résous l\'équation.',
+        sol: String.raw`<p>\(e^{2x}=8\) → \(2x=\ln8=2.079\) → \(x=1.040\). Vérif : \(5e^{2.079}=5\times8=40\) ✓.</p>` },
+      { src: 'Claude', niveau: 2, en: String.raw`Solve \(\log_2(x+3)+\log_2(x-3)=4\).`, fr: 'Résous l\'équation (attention au domaine).',
+        sol: String.raw`<p>Loi 1 : \(\log_2((x+3)(x-3))=4\) → \(x^2-9=16\) → \(x^2=25\) → \(x=\pm5\).<br>\(x=-5\) donne \(\log_2(-2)\) qui n'existe pas. Seule solution : \(x=5\).</p>` },
+      { src: 'Claude', niveau: 3, en: String.raw`A capacitor discharges as \(v=V e^{-t/RC}\) with \(V=12\) V, \(R=4.7\) kΩ, \(C=100\) µF. How long until \(v=3\) V?`, fr: 'Décharge d\'un condensateur : combien de temps pour descendre à 3 V ?',
+        sol: String.raw`<p>\(RC=4.7\times10^3\times100\times10^{-6}=0.47\) s. \(e^{-t/0.47}=\frac3{12}=0.25\) → \(t=-0.47\ln0.25=0.47\times1.386=0.652\) s.</p>` }
     ]
   };
 })();

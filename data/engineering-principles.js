@@ -1,4 +1,4 @@
-// GENG0005 Engineering Principles — Semaines 1 et 2
+// GENG0005 Engineering Principles — Semaines 1 à 5
 (function () {
   const S = DATA.matieres.ep.semaines;
 
@@ -361,6 +361,145 @@ Somme = 0 → \(37{,}5c=18\,951\) → \(c\approx505\) J/(kg·K).</div>
         sol: String.raw`<p>Les deux lames font le même angle \(\theta\) ; leurs lignes médianes sont distantes de \(t=2\) mm. \(\frac{(r+t)\theta}{r\theta}=\frac{1+\alpha_b\delta\theta}{1+\alpha_s\delta\theta}\) → \(\frac{t}{r}\approx(\alpha_b-\alpha_s)\delta\theta=9\times10^{-6}\times80=7{,}2\times10^{-4}\) → \(r\approx\frac{0{,}002}{7{,}2\times10^{-4}}\approx\) <b>2,78 m</b>. La longueur de 10 cm ne sert pas.</p>` },
       { src: 'Claude', niveau: 1, en: 'A 1 L glass bottle is full of ethyl alcohol at 15 °C and warmed to 35 °C. How much spills out? (β_alcohol = 1.08×10⁻³ K⁻¹, α_glass = 8×10⁻⁶ K⁻¹)', fr: 'Une bouteille en verre de 1 L pleine d\'alcool à 15 °C est chauffée à 35 °C. Combien de liquide déborde ?',
         sol: String.raw`<p>Alcool : \(+1000\times1{,}08\times10^{-3}\times20=21{,}6\) ml ; bouteille : \(+1000\times24\times10^{-6}\times20=0{,}48\) ml. Débordement ≈ <b>21,1 ml</b> (dilatation apparente).</p>` }
+    ]
+  };
+  // =========================== SEMAINES 4 et 5 ===========================
+  S[4] = {
+    titre: 'Heat 7–10: Conduction (parts 1 to 3)',
+    titreFr: 'La conduction thermique',
+    resume: 'Comment la chaleur traverse un matériau : la loi de la conduction (conductivité thermique k), la température qui varie en ligne droite le long d\'une barre, les matériaux en série (paroi + isolant), la résistance thermique (comme une résistance électrique) et l\'équation générale de la conduction.',
+    sources: 'Lecture notes « 4. Conduction » (GENG0005-4-Conduction.pdf) · notes du tableau « analogy.pdf » (résistances thermiques en série et en parallèle) · Example Sheet 3 (Conduction) avec réponses (Blackboard, mis à jour les 19–21 oct.). Les diapos PowerPoint « 7-Thermal Expansion (part 2) », « 8/9/10-Conduction » ne s\'ouvrent pas depuis ici : à ajouter plus tard.',
+    en: String.raw`
+<h4>1. Thermal conductivity</h4>
+<p>Conduction of heat takes place through collisions between the basic particles of the material (molecules, atoms or sometimes electrons). These tend to transfer energy from the faster, more energetic (hotter) particles to the slower, less energetic (cooler) ones.</p>
+<p>Consider a bar of material, insulated so that heat cannot leave its sides, with the two ends held at constant temperatures \(T_1\) and \(T_2\). If \(T_1=T_2\) no heat flows; if \(T_1>T_2\), heat flows from the hotter end to the cooler. The rate of heat flow depends on four things:</p>
+<ul><li>the temperature difference \(T_1-T_2\) — the rate of flow is <b>proportional</b> to it;</li>
+<li>the length \(L\) — the flow is <b>inversely proportional</b> to it;</li>
+<li>the cross-sectional area \(A\) — the flow is proportional to it;</li>
+<li>the material of which the bar is made.</li></ul>
+<p>$$\dot Q=\frac{kA(T_1-T_2)}{L}$$</p>
+<p>where \(\dot Q\) is the rate of heat flow (a power, in W) and \(k\) is the <b>thermal conductivity</b> of the material, in W m⁻¹ K⁻¹. \(k\) depends somewhat on temperature, but we assume it is constant at its room-temperature value.</p>
+<table><tr><th>Material</th><th>Copper</th><th>Mild steel</th><th>Stainless steel</th><th>Glass</th><th>Water</th><th>Firebrick</th><th>Nylon</th><th>Engine oil</th><th>Air</th></tr>
+<tr><td>k (W/(m K))</td><td>393</td><td>50</td><td>15</td><td>1</td><td>0.6</td><td>0.4</td><td>0.2</td><td>0.15</td><td>0.026</td></tr></table>
+<p>(A version of this table is in the Foundation Year Data Booklet.) Very good thermal conductors (such as copper) are also very good electrical conductors: the energy is carried by electrons in both cases. But there are no very good thermal insulators in the way there are electrical insulators: the ratio of electrical conductivity between copper and nylon is about \(10^{22}\), while for thermal conductivity it is about 2000. Values for fluids assume no convection (as in foam materials and double glazing).</p>
+<p><b>Example:</b> a domestic hot water cylinder has a surface area of 2 m² and is lagged with 35 mm of foam (k = 0.04 W m⁻¹ K⁻¹). It contains water at 45 °C in a room at 15 °C. What power must the immersion heater provide to maintain the temperature?<br>
+\(\dot Q=0.04\times(45-15)\times2/0.035=68.6\) W (3 s.f.).</p>
+<h4>2. Temperature distribution</h4>
+<p>If we cut the bar in half (keeping the halves in contact), the heat flow is the same in both halves (conservation of energy), the area and conductivity are the same, but the length is halved — so the temperature difference must be halved. The outcome is that the temperature varies <b>linearly</b> from one end to the other:</p>
+<p>$$T=T_1-\frac xL(T_1-T_2)$$ where \(x\) is the distance from the hot end.</p>
+<p><b>Example:</b> a barbecue skewer is 30 cm long between the sausage (150 °C) and the handle (40 °C). How far from the handle is the temperature 100 °C?<br>
+\(\dfrac xL=\dfrac{T_1-T}{T_1-T_2}=\dfrac{150-100}{150-40}=0.455\), so \(x=0.455\times30=13.6\) cm from the hot end, i.e. \(30-13.6=16.4\) cm from the handle. This is independent of the material of the skewer. Notice the use of ratios.</p>
+<h4>3. Combinations of material</h4>
+<p>Consider a bar made of 50 cm of copper attached to 50 cm of steel, same cross-section. What is the temperature \(T_3\) at the junction? For the copper \(\dot Q=k_1A(T_1-T_3)/L\), for the steel \(\dot Q=k_2A(T_3-T_2)/L\). By conservation of energy the heat flow is the same in both, so</p>
+<p>$$\frac{\text{temperature drop in copper}}{\text{temperature drop in steel}}=\frac{T_1-T_3}{T_3-T_2}=\frac{k_2}{k_1}=\frac{50}{393}=\frac1{7.86}$$</p>
+<p>The temperature drop in the copper is only about 11 % of the total. General result: where a good conductor and a poorer one are in series, <b>most of the temperature drop occurs across the poorer conductor</b>. It is often appropriate to neglect the drop across a good conductor.</p>
+<p><b>Example:</b> in the hot water cylinder above, the cylinder is copper 1 mm thick (k = 393). Temperature difference across (a) the copper, (b) the insulation?<br>
+\(\dfrac{T_3-T_2}{T_1-T_3}=\dfrac{k_{copper}L_{insulation}}{k_{insulation}L_{copper}}=\dfrac{393\times0.035}{0.04\times0.001}=344\,000\). The difference across the copper is only about 0.0001 °C, while that across the insulation is almost 30 °C.</p>
+<h4>4. Thermal resistance</h4>
+<p>For a given piece of material, \(k\), \(A\) and \(L\) are constant, so \(\Delta T=R\dot Q\) with $$R=\frac{L}{kA}$$ the <b>thermal resistance</b> (units K W⁻¹). This is similar to Ohm's law (\(V=RI\)). Thermal resistances obey the same rules as electrical ones:</p>
+<ul><li><b>In series</b> (same heat flow): \(\Delta T_{total}=(R_1+R_2)\dot Q\), so \(R_{total}=R_1+R_2\).</li>
+<li><b>In parallel</b> (same temperature drop): \(\dot Q=\dot Q_A+\dot Q_B\), so \(\dfrac1{R_{total}}=\dfrac1{R_1}+\dfrac1{R_2}\).</li></ul>
+<p>Hot water cylinder again: \(R_{copper}=0.001/(393\times2)=1.27\times10^{-6}\) K W⁻¹, \(R_{insulation}=0.035/(0.04\times2)=0.438\) K W⁻¹. They are in series; the insulation obviously dominates.</p>
+<p><b>Analogy (board notes):</b> thermal — \(\Delta T\) ↔ voltage \(V\), \(\dot Q\) ↔ current \(I\), \(R\) ↔ \(R\). Electrical: in parallel \(I=I_A+I_B\), \(V=V_A=V_B\), \(\frac1R=\frac1{R_A}+\frac1{R_B}\); in series \(I_A=I_B=I\), \(V=V_A+V_B\), \(R=R_A+R_B\).</p>
+<h4>5. More general treatment</h4>
+<p>For a bar whose section and/or conductivity vary along its length: $$\dot Q=-kA\frac{dT}{dx}$$ This is the <b>heat conduction equation</b>. \(dT/dx\) is the temperature (thermal) gradient, the slope of the graph of temperature against position. The negative sign appears because heat flows in the direction of falling temperature. If \(k\) and \(A\) are constant and there is no heat loss, the gradient is constant (straight line).</p>
+<h4>6. Temperature variation with heat loss</h4>
+<p>If there are heat losses from the sides, \(\dot Q\) must fall as \(x\) increases, so the temperature gradient must also fall (the curve flattens). If heat is gained from the surroundings, the gradient increases. Bars whose cross-section changes require integration, beyond the scope of this course.</p>`,
+    fr: String.raw`
+<h4>L'idée de la conduction</h4>
+<p>La conduction, c'est la chaleur qui <b>traverse un objet solide</b> sans que la matière bouge. Les particules chaudes vibrent fort et bousculent leurs voisines plus lentes, qui bousculent les suivantes… comme une rumeur qui se propage de proche en proche.</p>
+<div class="ex"><div class="lab">Exemple concret — la cuillère dans le thé</div>
+Tu laisses une cuillère en métal dans un thé chaud : au bout d'une minute le manche brûle. Avec une cuillère en bois, non. Le métal est un bon <b>conducteur</b> thermique, le bois un <b>isolant</b>.</div>
+<h4>La formule clé</h4>
+<p style="text-align:center">\(\dot Q=\dfrac{kA(T_1-T_2)}{L}\)</p>
+<ul><li>\(\dot Q\) (« Q point ») : le <b>débit de chaleur</b>, en joules par seconde, donc en <b>watts</b>.</li>
+<li>\(k\) : la <b>conductivité thermique</b> du matériau (cuivre 393, acier 50, verre 1, air 0,026).</li>
+<li>\(A\) : la surface traversée (m²). Plus c'est large, plus ça passe.</li>
+<li>\(T_1-T_2\) : l'écart de température. Plus il est grand, plus ça passe.</li>
+<li>\(L\) : l'épaisseur (m). Plus c'est épais, moins ça passe.</li></ul>
+<div class="ex"><div class="lab">Exemple du cours — le ballon d'eau chaude</div>
+Ballon de 2 m², isolé par 35 mm de mousse (k = 0,04), eau à 45 °C, pièce à 15 °C.<br>
+\(\dot Q=\dfrac{0{,}04\times2\times30}{0{,}035}=68{,}6\) W.<br>
+Le chauffe-eau doit donc fournir en continu 68,6 W, juste pour compenser les pertes (comme une petite ampoule allumée en permanence).</div>
+<div class="warnbox"><div class="lab">Piège des unités</div>Mets toujours \(L\) en <b>mètres</b> (35 mm = 0,035 m) et \(A\) en <b>m²</b> (10 cm × 10 cm = 0,01 m²). Un écart en °C est le même qu'en K : \(45-15=30\) °C = 30 K.</div>
+<p>Pourquoi le cuivre conduit bien la chaleur ET l'électricité : ce sont les mêmes électrons libres qui transportent les deux. Mais même le meilleur isolant thermique (le nylon) n'est que 2 000 fois moins bon que le cuivre, alors qu'en électricité l'écart est de \(10^{22}\).</p>
+
+<h4>La température le long d'une barre : une ligne droite</h4>
+<p>Si la barre est isolée sur les côtés, la température baisse <b>régulièrement</b> du bout chaud au bout froid : à mi-chemin, on est pile à mi-température.</p>
+<p style="text-align:center">\(T=T_1-\dfrac xL(T_1-T_2)\) &nbsp; (x mesuré depuis le bout chaud)</p>
+<div class="ex"><div class="lab">Exemple du cours — la brochette du barbecue</div>
+Brochette de 30 cm, saucisse à 150 °C, manche à 40 °C. Où fait-il 100 °C ?<br>
+On a descendu 50 °C sur les 110 °C d'écart : \(\dfrac{50}{110}=0{,}455\) de la longueur, soit \(0{,}455\times30=13{,}6\) cm depuis la saucisse, donc <b>16,4 cm depuis le manche</b>.<br>
+Le matériau n'intervient pas : bois ou métal, la répartition est la même (seul le débit change).</div>
+
+<h4>Deux matériaux à la suite (en série)</h4>
+<p>La même chaleur traverse les deux couches (rien ne se perd au milieu). Donc là où ça conduit mal, il faut un plus grand écart de température pour faire passer le même débit.</p>
+<div class="tip"><div class="lab">À retenir</div>Quand un bon conducteur et un mauvais sont collés, <b>presque toute la chute de température se fait dans le mauvais conducteur</b>. Cuivre + acier : 11 % de la chute dans le cuivre, 89 % dans l'acier.</div>
+<div class="ex"><div class="lab">Exemple du cours — la paroi du ballon</div>
+Ballon en cuivre de 1 mm + 35 mm de mousse. La chute dans le cuivre est 344 000 fois plus petite que dans la mousse : environ 0,0001 °C dans le cuivre contre presque 30 °C dans la mousse. C'est pour ça qu'on a pu ignorer le cuivre dans le premier calcul.</div>
+<div class="ex"><div class="lab">Exemple concret — ta fenêtre à double vitrage</div>
+Verre (k = 1) + lame d'air (k = 0,026) + verre. L'air immobile conduit 40 fois moins bien que le verre : c'est lui qui fait presque toute l'isolation. C'est la question 1.6 de la feuille d'exercices.</div>
+
+<h4>La résistance thermique : comme en électricité</h4>
+<p>On peut écrire la loi comme la loi d'Ohm : \(\Delta T=R\,\dot Q\), avec \(R=\dfrac{L}{kA}\) (en K/W).</p>
+<table><tr><th>Électricité</th><th>Chaleur</th></tr>
+<tr><td>tension \(V\)</td><td>écart de température \(\Delta T\)</td></tr>
+<tr><td>courant \(I\)</td><td>débit de chaleur \(\dot Q\)</td></tr>
+<tr><td>résistance \(R\)</td><td>résistance thermique \(R=L/(kA)\)</td></tr></table>
+<ul><li><b>En série</b> (couches empilées, la chaleur traverse l'une puis l'autre) : \(R=R_1+R_2\).</li>
+<li><b>En parallèle</b> (côte à côte, la chaleur a deux chemins) : \(\dfrac1R=\dfrac1{R_1}+\dfrac1{R_2}\).</li></ul>
+<div class="ex"><div class="lab">Exemple concret — un mur avec une fenêtre</div>
+La chaleur sort de ta chambre par le mur ET par la fenêtre en même temps : deux chemins en <b>parallèle</b>. Une fenêtre mal isolée, c'est comme une petite résistance en parallèle : elle laisse filer presque toute la chaleur, même si le mur est très bien isolé.</div>
+
+<h4>L'équation générale (pour aller plus loin)</h4>
+<p>\(\dot Q=-kA\dfrac{dT}{dx}\) : le débit est proportionnel à la <b>pente</b> de la courbe de température. Le signe « − » dit que la chaleur va vers le froid. Si la barre perd de la chaleur par les côtés, moins de chaleur arrive au bout, donc la pente s'adoucit (la courbe se tasse) ; si elle en gagne, la pente augmente.</p>`,
+    vocab: [
+      ['conduction', 'conduction'],
+      ['thermal conductivity (k)', 'conductivité thermique', 'en W/(m·K)'],
+      ['rate of heat flow', 'débit (flux) de chaleur', 'Q point, en watts'],
+      ['cross-sectional area', 'aire de la section'],
+      ['lagged / lagging', 'calorifugé / isolant (calorifuge)'],
+      ['hot water cylinder', 'ballon d\'eau chaude'],
+      ['immersion heater', 'thermoplongeur (résistance chauffante)'],
+      ['temperature distribution', 'répartition de la température'],
+      ['in series / in parallel', 'en série / en parallèle'],
+      ['temperature drop', 'chute de température'],
+      ['thermal resistance', 'résistance thermique', 'R = L/(kA), en K/W'],
+      ['temperature (thermal) gradient', 'gradient de température (pente)'],
+      ['heat conduction equation', 'équation de la conduction'],
+      ['heat loss / heat gain', 'perte / gain de chaleur'],
+      ['double glazing', 'double vitrage'],
+      ['fire cement', 'ciment réfractaire'],
+      ['lime scale', 'calcaire (tartre)']
+    ],
+    formules: [
+      { nom: 'Loi de la conduction', tex: '\\dot Q = \\dfrac{kA(T_1 - T_2)}{L}', why: 'Q point en W, k en W/(m·K), A en m², L en m.' },
+      { nom: 'Température le long d\'une barre', tex: 'T = T_1 - \\dfrac{x}{L}(T_1 - T_2)', why: 'x depuis le bout chaud ; barre isolée sur les côtés.' },
+      { nom: 'Deux matériaux en série (même L, même A)', tex: '\\dfrac{T_1 - T_3}{T_3 - T_2} = \\dfrac{k_2}{k_1}', why: 'La chute est plus grande dans le moins bon conducteur.' },
+      { nom: 'Résistance thermique', tex: '\\Delta T = R\\,\\dot Q \\qquad R = \\dfrac{L}{kA}', why: 'Comme la loi d\'Ohm V = RI.' },
+      { nom: 'Série et parallèle', tex: 'R_{série} = R_1 + R_2 \\qquad \\dfrac{1}{R_{par}} = \\dfrac{1}{R_1} + \\dfrac{1}{R_2}', why: '' },
+      { nom: 'Plusieurs couches empilées', tex: '\\dot Q = \\dfrac{A(T_2 - T_1)}{\\dfrac{L_1}{k_1} + \\dfrac{L_2}{k_2} + \\dfrac{L_3}{k_3}}', why: 'Question 1.6 de l\'Example Sheet 3 ; marche pour n couches.' },
+      { nom: 'Équation de la conduction', tex: '\\dot Q = -kA\\,\\dfrac{dT}{dx}', why: 'Le signe − : la chaleur va vers le froid.' }
+    ],
+    exos: [
+      { src: 'Blackboard', niveau: 1, en: 'Example Sheet 3, Q1.1: A furnace is surrounded by a layer of fire cement 20 mm thick. Inside 1200 °C, outside 40 °C. How much power is lost through a square area of wall 10 cm on each side? (k = 0.5 W/mK)', fr: 'Four entouré de 20 mm de ciment réfractaire : quelle puissance perdue à travers un carré de 10 cm de côté ?',
+        sol: String.raw`<p>\(A=0.1\times0.1=0.01\) m². \(\dot Q=\dfrac{0.5\times0.01\times1160}{0.02}=290\) W.</p>` },
+      { src: 'Blackboard', niveau: 2, en: 'Example Sheet 3, Q1.2: The bit of a 60 W soldering iron is a copper cylinder 25 mm long and 7 mm diameter, heated at one end; the other end is in molten solder at 480 K. Ignoring losses: (a) temperature of the heated end? (b) same if the bit were steel? (k_Cu = 393, k_steel = 50 W/mK)', fr: 'Panne de fer à souder en cuivre : température du bout chauffé ? et si elle était en acier ?',
+        sol: String.raw`<p>\(A=\pi(0.0035)^2=3.85\times10^{-5}\) m². \(\Delta T=\dfrac{\dot QL}{kA}\).<br>(a) \(\Delta T=\dfrac{60\times0.025}{393\times3.85\times10^{-5}}=99\) K → \(T=480+99=579\) K.<br>(b) \(\Delta T=\dfrac{1.5}{50\times3.85\times10^{-5}}=780\) K → \(T=1259\) K. L'acier conduit 8 fois moins bien : il faudrait chauffer beaucoup plus fort.</p>` },
+      { src: 'Blackboard', niveau: 1, en: 'Example Sheet 3, Q1.3: A submarine window: glass 0.3 m wide, 0.2 m high, 5 cm thick. Inner surface 23 °C, outer −2 °C. Estimate the rate of heat loss. (k = 1 W/mK)', fr: 'Hublot de sous-marin : estime la perte de chaleur par conduction.',
+        sol: String.raw`<p>\(\dot Q=\dfrac{1\times0.06\times25}{0.05}=30\) W.</p>` },
+      { src: 'Blackboard', niveau: 3, en: 'Example Sheet 3, Q1.4: A steam boiler is copper plate 7 mm thick; inside 200 °C, outside combustion gases 350 °C. (a) Heat flow across 1 m². (b) Mass of water evaporated per second per m². (c) With 0.5 mm of lime scale inside (k = 1 W/mK), new heat flow and evaporation rate. (k_Cu = 393 W/mK)', fr: 'Chaudière en cuivre : débit de chaleur, eau évaporée, puis effet d\'une couche de calcaire.',
+        sol: String.raw`<p>(a) \(\dot Q=\dfrac{393\times1\times150}{0.007}=8.4\times10^6\) W = 8,4 MW.<br>(b) Chaleur latente de vaporisation de l'eau \(\approx2.26\times10^6\) J/kg : \(\dot m=\dfrac{8.4\times10^6}{2.26\times10^6}=3.7\) kg/s.<br>(c) Résistances en série (pour 1 m²) : \(\dfrac{0.007}{393}+\dfrac{0.0005}{1}=1.78\times10^{-5}+5\times10^{-4}=5.18\times10^{-4}\) K/W. \(\dot Q=\dfrac{150}{5.18\times10^{-4}}=2.9\times10^5\) W = 290 kW, soit \(0.13\) kg/s. Un demi-millimètre de calcaire divise le débit par presque 30 !</p>` },
+      { src: 'Blackboard', niveau: 3, en: 'Example Sheet 3, Q1.5: A component: a layer of steel sandwiched between two layers of copper, each 20 mm thick; the component is 60 mm high and 60 mm wide. Heat flow when (a) side A is at 240 °C and side C at 20 °C (B and D insulated), (b) side B is at 240 °C and side D at 20 °C (A and C insulated).', fr: 'Sandwich cuivre-acier-cuivre : débit de chaleur à travers les couches (a), puis le long des couches (b).',
+        sol: String.raw`<p>(a) La chaleur traverse les 3 couches : <b>série</b>. \(A=0.06\times0.06=0.0036\) m². \(R=2\times\dfrac{0.02}{393\times0.0036}+\dfrac{0.02}{50\times0.0036}=0.0283+0.1111=0.139\) K/W. \(\dot Q=220/0.139=1580\) W.<br>(b) La chaleur longe les 3 couches : <b>parallèle</b>. Chaque couche : \(A=0.02\times0.06=0.0012\) m², \(L=0.06\) m. \(\dot Q=\dfrac{(393+50+393)\times0.0012\times220}{0.06}=3680\) W.</p>` },
+      { src: 'Blackboard', niveau: 2, en: 'Example Sheet 3, Q1.6: For a double glazed window (glass k1, air k2, glass k3, thicknesses L1, L2, L3), (a) show that the rate of heat flow is Q = A(T2 − T1)/(L1/k1 + L2/k2 + L3/k3); (b) deduce whether this can be generalised to any number of materials.', fr: 'Double vitrage : démontre la formule du débit à travers 3 couches, puis généralise.',
+        sol: String.raw`<p>(a) Même débit \(\dot Q\) dans chaque couche : \(\Delta T_i=\dot Q\dfrac{L_i}{k_iA}\). On additionne : \(T_2-T_1=\Delta T_1+\Delta T_2+\Delta T_3=\dfrac{\dot Q}{A}\left(\dfrac{L_1}{k_1}+\dfrac{L_2}{k_2}+\dfrac{L_3}{k_3}\right)\), d'où la formule.<br>(b) Oui : pour n couches en série, \(\dot Q=\dfrac{A\,\Delta T}{\sum L_i/k_i}\) (les résistances s'additionnent).</p>` },
+      { src: 'Blackboard', niveau: 1, en: 'Lecture notes: a 30 cm skewer, sausage end at 150 °C, handle at 40 °C. How far from the handle is the temperature 100 °C?', fr: 'Notes de cours : la brochette.',
+        sol: String.raw`<p>\(x/L=(150-100)/(150-40)=0.455\) → 13,6 cm du côté chaud → <b>16,4 cm</b> du manche.</p>` },
+      { src: 'Claude', niveau: 1, en: 'A 4 mm thick glass window measures 1.2 m × 1.0 m. Inside 22 °C, outside 32 °C (Malaysia, air-conditioned room). Heat flow through the glass? (k = 1 W/mK)', fr: 'Vitre de ta chambre climatisée : quel débit de chaleur entre par le verre ?',
+        sol: String.raw`<p>\(\dot Q=\dfrac{1\times1.2\times10}{0.004}=3000\) W. Énorme : en réalité, des couches d'air immobile collées au verre réduisent beaucoup ce chiffre.</p>` },
+      { src: 'Claude', niveau: 2, en: 'Calculate the thermal resistance of a 10 cm brick wall of area 5 m² (k = 0.6 W/mK) and of 5 cm of foam (k = 0.04) on the same area. Total resistance and heat flow for a 20 °C difference?', fr: 'Mur en brique + mousse : résistances, total et débit de chaleur.',
+        sol: String.raw`<p>\(R_{brique}=0.1/(0.6\times5)=0.0333\) K/W ; \(R_{mousse}=0.05/(0.04\times5)=0.25\) K/W. Série : \(R=0.283\) K/W. \(\dot Q=20/0.283=70.6\) W. 5 cm de mousse isolent 7,5 fois mieux que 10 cm de brique.</p>` }
     ]
   };
 })();
