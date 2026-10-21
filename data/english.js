@@ -271,4 +271,90 @@
         sol: '<p>(a) oui, (c) oui, (d) oui. (b) non : c\'est une connaissance générale.</p>' }
     ]
   };
+
+  S[4] = {
+    titre: 'Sentence Problems — Why Do They Happen?',
+    titreFr: 'Les problèmes de phrases : pourquoi ils arrivent et comment les corriger',
+    resume: 'Les 7 causes des phrases mal construites (écrire comme on pense, grammaire mal maîtrisée, phrases trop simples ou trop chargées, pas de relecture, habitudes de style, pression du style académique), avec à chaque fois un avant / après.',
+    sources: 'Additional Note Week 4.pdf (Blackboard, 19 oct.) — les diapos « 4 Sentence Problem.pptx » n\'ont pas encore pu être lues (fichier PowerPoint), elles seront ajoutées ensuite',
+    en: `
+<h4>Why do sentence problems happen?</h4>
+<p>The Week 4 additional note lists seven reasons why students write unclear or incorrect sentences. Each one comes with a situation, a weak version and an improved version.</p>
+<h5>1. Thinking vs writing gap</h5>
+<p>We write ideas in the order they appear in our head, joined by "and".</p>
+<div class="ex"><b>Situation:</b> explaining why you arrived late for class.<br><b>Thoughts:</b> late bus… heavy rain… forgot umbrella… classroom changed… couldn't find it!<br><b>Writing that follows the thoughts:</b> The bus was late and it was raining and I forgot my umbrella and the classroom changed and I couldn't find it.<br><b>Clearer:</b> I arrived late because my bus was delayed by heavy rain. Then I had trouble finding the new classroom.</div>
+<h5>2. Weak grammar control</h5>
+<p><b>i. Run-on sentence</b> — two independent clauses joined with no punctuation or conjunction.</p>
+<div class="ex"><b>Before:</b> Our report is ready we still need to check the references.<br><b>After:</b> Our report is ready, but we still need to check the references.</div>
+<p><b>ii. Parallelism</b> — items in a list must have the same grammatical form.</p>
+<div class="ex"><b>Before:</b> Our preparation involved reading articles, making slides and to practise the presentation.<br><b>After:</b> Our preparation involved reading articles, making slides and practising the presentation.</div>
+<h5>3. Over-simplification</h5>
+<p>Only short simple sentences: the links between ideas are lost.</p>
+<div class="ex"><b>Before:</b> I joined a study group. The students were friendly. They explained the task. I felt more confident.<br><b>After:</b> I felt more confident after joining a study group because the other students were friendly and explained the task.</div>
+<h5>4. Overloading information</h5>
+<p>Too many details in one long sentence.</p>
+<div class="ex"><b>Before:</b> Our group repeated the experiment on Friday in the engineering laboratory using a different sensor borrowed from another group because the original sensor gave inconsistent readings during the first trial, which meant that we had to update the results before submitting the report on Monday.<br><b>After:</b> Our original sensor gave inconsistent readings, so we repeated the experiment on Friday using a sensor borrowed from another group. We then had to update the results before Monday's report deadline.</div>
+<h5>5. Lack of editing / revision</h5>
+<div class="ex"><b>First draft:</b> I could not upload my assignment the file was too large I tried again it still did not work can I send it by email?<br><b>After revision:</b> I could not upload my assignment because the file was too large. I tried again, but the upload still failed. May I send it by email?</div>
+<h5>6. Stylistic habits</h5>
+<p>Habit A: connecting everything. Habit B: using only short bursts. The aim is a balance.</p>
+<div class="ex"><b>Habit A:</b> We wanted to meet online and one member was visiting family and there was a time difference so we changed the meeting time and everyone could join.<br><b>Habit B:</b> We wanted to meet online. One member was visiting family. There was a time difference. We changed the time. Everyone could join.<br><b>Balanced:</b> One group member was visiting family in a different time zone, so we changed the online meeting time. Everyone could then join.</div>
+<h5>7. Pressure of academic or formal writing</h5>
+<div class="ex"><b>Trying too hard to sound academic:</b> The experimental procedure was undertaken with the intention of investigating the effect of an increase in temperature on the rate of the reaction.<br><b>Trying too hard to sound simple:</b> We heated the solution. We measured the reaction rate. We compared the results.<br><b>Clear academic version:</b> We investigated how temperature affected the reaction rate by heating the solution and comparing measurements at different temperatures.</div>
+`,
+    fr: `
+<h4>L'idée de la semaine</h4>
+<p>Une phrase « ratée » n'arrive pas par hasard. Ms Effa donne <b>7 causes</b>. Si tu reconnais la cause, tu sais comment corriger. Ce cours prolonge les semaines 2 et 3 (phrases simples, composées, complexes et conjonctions).</p>
+<h5>1. Écrire comme on pense</h5>
+<p>Dans ta tête, les idées arrivent en vrac. Si tu les écris dans cet ordre avec des « and » partout, la phrase devient une chaîne interminable.</p>
+<div class="ex"><div class="lab">Exemple concret</div>« The bus was late <b>and</b> it was raining <b>and</b> I forgot my umbrella <b>and</b>… » → on garde l'essentiel et on montre la cause : « I arrived late <b>because</b> my bus was delayed by heavy rain. Then I had trouble finding the new classroom. »</div>
+<div class="tip">Astuce : avant d'écrire, demande-toi « quelle est l'idée principale ? » et « quel est le lien (cause, opposition, suite) ? ».</div>
+<h5>2. Grammaire mal maîtrisée</h5>
+<p><b>Run-on sentence</b> : deux phrases complètes collées sans ponctuation ni conjonction. Correction : virgule + FANBOYS (and, but, so…), point-virgule, ou deux phrases.</p>
+<div class="ex"><div class="lab">Exemple concret</div>« Our report is ready we still need to check the references. » → « Our report is ready<b>, but</b> we still need to check the references. »</div>
+<p><b>Parallélisme</b> : dans une liste, tous les éléments ont la même forme (tous en -ing, ou tous en « to + verbe »).</p>
+<div class="ex"><div class="lab">Exemple concret</div>« reading articles, making slides and <s>to practise</s> » → « reading, making and <b>practising</b> ». Autre exemple : « The robot can lift, rotate and <s>it moves</s> » → « lift, rotate and <b>move</b> ».</div>
+<h5>3. Trop simplifier</h5>
+<p>Que des petites phrases : le lecteur ne voit plus les liens. On regroupe avec <i>because, after, when</i>.</p>
+<div class="ex"><div class="lab">Exemple concret</div>4 phrases sur le groupe d'étude → « I felt more confident <b>after</b> joining a study group <b>because</b> the other students were friendly and explained the task. »</div>
+<h5>4. Trop charger une phrase</h5>
+<p>L'inverse : une seule phrase avec tous les détails (quand, où, pourquoi, conséquence…). On coupe en 2 phrases et on garde l'ordre logique : problème → action → conséquence.</p>
+<div class="ex"><div class="lab">Exemple concret</div>Le compte rendu de TP de 60 mots devient : « Our original sensor gave inconsistent readings, so we repeated the experiment on Friday using a sensor borrowed from another group. We then had to update the results before Monday's report deadline. »</div>
+<h5>5. Ne pas se relire</h5>
+<p>Un premier jet écrit vite est presque toujours plein de run-ons. Relis-toi toujours, surtout un mail à un prof.</p>
+<div class="ex"><div class="lab">Exemple concret</div>« I could not upload my assignment the file was too large I tried again… » → « I could not upload my assignment <b>because</b> the file was too large. I tried again, <b>but</b> the upload still failed. May I send it by email? »</div>
+<h5>6. Les habitudes de style</h5>
+<p>Certains relient tout (habitude A), d'autres ne font que des phrases courtes (habitude B). Le bon style <b>mélange</b> les deux.</p>
+<h5>7. La pression du style académique</h5>
+<p>Vouloir « faire savant » donne des phrases lourdes ; vouloir « faire simple » donne un style haché. Le bon niveau : un verbe précis (<i>investigated</i>), un lien clair (<i>by heating…</i>).</p>
+<div class="warnbox">À retenir : clair &gt; compliqué. Une phrase académique réussie est précise, pas longue.</div>
+<h5>Grille de relecture</h5>
+<ul><li>Deux phrases complètes collées ? → virgule + conjonction, ou point.</li><li>Liste ? → même forme partout.</li><li>Plus de 30–35 mots ? → couper.</li><li>Trois phrases très courtes de suite ? → regrouper avec because / so / although.</li><li>Mots inutiles (<i>undertaken with the intention of</i>) ? → verbe simple et précis.</li></ul>
+`,
+    vocab: [
+      ['run-on sentence', 'phrase « collée » (deux propositions sans ponctuation ni conjonction)'],
+      ['parallelism', 'parallélisme (même forme grammaticale dans une liste)'],
+      ['over-simplification', 'simplification excessive'],
+      ['overloading', 'surcharge (trop d\'informations dans une phrase)'],
+      ['editing / revision', 'relecture / révision'],
+      ['first draft', 'premier jet, brouillon'],
+      ['stylistic habit', 'habitude de style'],
+      ['inconsistent readings', 'mesures incohérentes'],
+      ['deadline', 'date limite'],
+      ['to upload', 'déposer, téléverser (un fichier)']
+    ],
+    formules: [],
+    exos: [
+      { src: 'Claude', niveau: 1, en: 'Correct these run-on sentences: (a) The motor overheated we switched it off. (b) The data was incomplete the analysis was delayed.', fr: 'Corrige ces phrases « collées ».',
+        sol: '<p>(a) The motor overheated, so we switched it off. (b) The data was incomplete; therefore, the analysis was delayed. (Ou deux phrases séparées par un point.)</p>' },
+      { src: 'Claude', niveau: 1, en: 'Fix the parallelism: "The technician is responsible for checking the equipment, to record the results and cleaning the bench."', fr: 'Corrige le parallélisme.',
+        sol: '<p>The technician is responsible for checking the equipment, recording the results and cleaning the bench.</p>' },
+      { src: 'Claude', niveau: 2, en: 'Combine into one or two clear sentences: "The bridge was old. It had cracks. Engineers inspected it. They closed it to traffic."', fr: 'Regroupe en une ou deux phrases claires.',
+        sol: '<p>Exemple : Engineers inspected the old bridge and closed it to traffic because it had cracks.</p>' },
+      { src: 'Claude', niveau: 2, en: 'Split this overloaded sentence: "We tested the beam in the lab on Tuesday with a new load cell because the old one was damaged during transport, which delayed the tests and meant we had to change the schedule for the whole group."', fr: 'Découpe cette phrase trop chargée.',
+        sol: '<p>Exemple : The old load cell was damaged during transport, so we tested the beam on Tuesday with a new one. This delay meant that the whole group had to change its schedule.</p>' },
+      { src: 'Claude', niveau: 3, en: 'Rewrite in a clear academic style: "The analysis was carried out with the purpose of making a determination of the extent to which humidity has an influence on the drying time of the paint."', fr: 'Réécris dans un style académique clair.',
+        sol: '<p>Exemple : We analysed how humidity affects the drying time of the paint.</p>' }
+    ]
+  };
 })();
