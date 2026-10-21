@@ -303,7 +303,7 @@ Bonus : cette forme donne directement le <b>sommet</b> de la parabole : \((-3 ; 
     titre: 'Inequalities & Indices',
     titreFr: 'Inéquations et puissances (indices)',
     resume: '2 chapitres : résoudre une inéquation (linéaire, du second degré, rationnelle) et l\'écrire sur la droite des réels ; les lois des puissances et l\'écriture scientifique / ingénieur des nombres.',
-    sources: 'GENG0001 05 Inequalities et GENG0001 06 Indices (Blank Lecture Notes, diapos, publiées le 12 oct.)',
+    sources: 'GENG0001 05 Inequalities et GENG0001 06 Indices (diapos « blank » du 12 oct. et « filled » annotées en cours, publiées le 19 oct., Blackboard)',
     en: String.raw`
 <h4>Chapter 05 — Inequalities</h4>
 <p><b>Learning outcomes:</b> (1) write inequality statements involving different inequality symbols; (2) determine the range of values of a variable that satisfies an inequality statement.</p>
@@ -356,7 +356,16 @@ Bonus : cette forme donne directement le <b>sommet</b> de la parabole : \((-3 ; 
 <tr><td>17</td><td>\(1.7\cdot10^1\)</td><td>17</td></tr>
 <tr><td>21</td><td>\(2.1\cdot10^1\)</td><td>21</td></tr>
 <tr><td>17 425</td><td>\(1.7425\cdot10^4\)</td><td>\(17.425\cdot10^3\)</td></tr>
-<tr><td>150, −242, 713 527, 0.0002, −0.00007</td><td colspan="2">to complete (see exercises)</td></tr></table>`,
+<tr><td>150, −242, 713 527, 0.0002, −0.00007</td><td colspan="2">to complete (see exercises)</td></tr></table>
+<h4>Worked in class (filled slides)</h4>
+<p><b>Lecturer's method for rational inequalities:</b> multiply both sides by the <b>square</b> of the denominator (always positive, so the inequality sign does not change), note that the denominator cannot be 0, then solve the quadratic inequality by sketching the parabola.</p>
+<ul><li>\(\dfrac{2x-5}{x-7}&lt;0\), \(x\neq7\): \((2x-5)(x-7)&lt;0\), roots \(\tfrac52\) and 7, parabola below the axis between the roots: \(\tfrac52&lt;x&lt;7\).</li>
+<li>\(\dfrac{3x+8}{x-1}\ge-2\), \(x\neq1\): \((3x+8)(x-1)\ge-2(x-1)^2\) → \(3x^2+5x-8\ge-2x^2+4x-2\) → \(5x^2+x-6\ge0\) → \((5x+6)(x-1)\ge0\): \(x\le-\tfrac65\) or \(x>1\).</li>
+<li>\(\dfrac{x-1}{x-2}&lt;0\), \(x\neq2\): \((x-1)(x-2)&lt;0\): \(1&lt;x&lt;2\).</li>
+<li>\(\dfrac{3x-2}{1+x}\le1\), \(x\neq-1\): \((3x-2)(1+x)\le(1+x)^2\) → \(2x^2-x-3\le0\) → \((2x-3)(x+1)\le0\): \(-1&lt;x\le\tfrac32\).</li>
+<li>\(-3x+2>11\): \(-3x>9\), dividing by −3 reverses the sign: \(x&lt;-3\). Check with \(x=-4\): \(-3(-4)+2=14>11\) ✓ (and \(x=-2\) gives \(8\), not \(>11\)).</li>
+<li>Indices: \((x^3)^{-2}=x^{-6}\); \(((-x)^4)^{-5}=(x^4)^{-5}=x^{-20}\); \(\left(\dfrac{t}{t^{-3}}\right)^2=(t^{1-(-3)})^2=t^8\); the long simplification gives \(x^{13/3}y^{-1}\).</li>
+<li>Scientific notation: 150 = \(1.5\times10^2\); −242 = \(-2.42\times10^2\); 713 527 = \(7.13527\times10^5\) = \(713.527\times10^3\); 0.0002 = \(2\times10^{-4}\) = \(200\times10^{-6}\); −0.00007 = \(-7\times10^{-5}\).</li></ul>`,
     fr: String.raw`
 <h4>Partie 1 — Les inéquations</h4>
 <p>Une <b>inéquation</b>, c'est comme une équation, mais avec un signe de comparaison à la place du « = ». La réponse n'est plus un seul nombre mais <b>tout un intervalle</b> de nombres.</p>
@@ -434,7 +443,15 @@ Réponse : \(x\le-\tfrac65\) ou \(x>1\).</div>
 Une résistance de 4 700 Ω : scientifique \(4{,}7\times10^3\) Ω, ingénieur \(4{,}7\times10^3\) Ω = 4,7 kΩ.<br>
 Un courant de 0,00035 A : scientifique \(3{,}5\times10^{-4}\) A, ingénieur \(350\times10^{-6}\) A = 350 µA.<br>
 Une distance de 384 400 km : scientifique \(3{,}844\times10^5\) km, ingénieur \(384{,}4\times10^3\) km.</div>
-<p>Astuce : pour l'écriture ingénieur, déplace la virgule <b>par paquets de 3 chiffres</b>.</p>`,
+<p>Astuce : pour l'écriture ingénieur, déplace la virgule <b>par paquets de 3 chiffres</b>.</p>
+<h4>La méthode du prof (diapos complétées en cours)</h4>
+<div class="tip"><div class="lab">Astuce du prof pour les fractions</div>
+Au lieu d'un tableau de signes, il <b>multiplie les deux côtés par le dénominateur au carré</b>. Un carré est toujours positif, donc le signe de l'inégalité ne change pas. On obtient une inéquation du second degré qu'on résout en dessinant la parabole. Sans oublier : la valeur qui annule le dénominateur est interdite.</div>
+<div class="ex"><div class="lab">Exemple du cours — \(\dfrac{3x+8}{x-1}\ge-2\)</div>
+On multiplie par \((x-1)^2\) : \((3x+8)(x-1)\ge-2(x-1)^2\).<br>
+On développe : \(3x^2+5x-8\ge-2x^2+4x-2\) → \(5x^2+x-6\ge0\) → \((5x+6)(x-1)\ge0\).<br>
+Parabole ∪ qui coupe l'axe en \(-\tfrac65\) et 1 : elle est au-dessus <b>à l'extérieur</b> des racines. Réponse : \(x\le-\tfrac65\) ou \(x>1\) (1 exclu car interdit). Même résultat que le tableau de signes.</div>
+<div class="warnbox"><div class="lab">Petite erreur sur la diapo 9</div>Sur la diapo complétée, le prof a écrit −0,00007 = −700 × 10⁻³ en écriture ingénieur. C'est faux : −700 × 10⁻³ = −0,7. La bonne réponse est <b>−70 × 10⁻⁶</b> (= −7 × 10⁻⁵). Vérifie toujours en remettant le nombre en écriture décimale.</div>`,
     vocab: [
       ['inequality', 'inégalité / inéquation'],
       ['less than / greater than', 'inférieur à / supérieur à (strictement)'],
