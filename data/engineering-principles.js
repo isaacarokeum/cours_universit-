@@ -1,4 +1,4 @@
-// GENG0005 Engineering Principles — Semaines 1 à 5
+// GENG0005 Engineering Principles — Semaines 1 à 6
 (function () {
   const S = DATA.matieres.ep.semaines;
 
@@ -527,6 +527,89 @@ Barre de 80 mm², k = 320 W/(m·K). La pente de température passe de 400 K/m à
         sol: String.raw`<p>\(R_p=\dfrac{0.001}{0.3\times3}=1.11\times10^{-3}\), \(R_b=\dfrac{0.0015}{0.6\times3}=0.83\times10^{-3}\), \(R_w=\dfrac{0.003}{0.1\times3}=10\times10^{-3}\) K/W. Total \(0.01193\) K/W. \(\dot Q=\dfrac{27}{0.01193}=2263\) W ≈ 2,26 kW.</p>` },
       { src: 'Blackboard', niveau: 1, en: 'Conduction part 3 slides: should a refrigerator plate be aluminium (k = 200 W/mK) or stainless steel (k = 15 W/mK)? Does it work better or worse when coated with ice (k = 2.4 W/mK)?', fr: 'Diapos : aluminium ou inox pour la plaque du frigo ? Et avec du givre ?',
         sol: '<p>Aluminium : meilleure conductivité, il évacue la chaleur des aliments plus vite. Avec du givre, c\'est moins bien : la glace conduit mal et ajoute une résistance thermique en série.</p>' }
+    ]
+  };
+  // =========================== SEMAINE 6 ===========================
+  S[6] = {
+    titre: 'Heat 11–12: Convection',
+    titreFr: 'La convection',
+    resume: 'La chaleur transportée par un fluide qui bouge : convection naturelle (l\'air chaud monte) et forcée (ventilateur, pompe). La loi de Newton du refroidissement, le coefficient d\'échange h et le U-value des bâtiments pour calculer la puissance de chauffage d\'une maison.',
+    sources: 'Lecture notes « 5. Convection » (GENG0005-5-Convection.pdf) · Example Sheet 4 (Convection) avec réponses (Blackboard, publiés le 22 oct. pour la semaine 6). Diapos « 11/12-Convection » et notes « convection.docx » à ajouter.',
+    en: String.raw`
+<h4>1. Free convection</h4>
+<p><b>Convection</b> is the transfer of heat from one place to another by movement of a material (a fluid, liquid or gas). Example: a central heating "radiator". The air next to it gains heat by conduction, expands, its density falls, so it rises; cooler air moves in to take its place. Inside the radiator, the hot water loses heat, sinks to the bottom and returns to the boiler. This is <b>natural</b> or <b>free convection</b>: it needs no power source other than the heat source.</p>
+<ul><li>To <b>heat</b> a fluid, put the heat in at the <b>bottom</b> (kettle element, room heaters near the floor): free convection mixes the fluid so it heats uniformly. The sea heated by the sun from above is warm at the surface and cold below — no convection to mix it.</li>
+<li>To <b>cool</b> a fluid, remove the heat at the <b>top</b> (freezer compartment at the top of a fridge, air-conditioning vents high up).</li>
+<li>Water between 0 °C and 4 °C contracts slightly as it warms, so free convection goes "the other way"; ice floats, and the lack of convection under it keeps water warm enough for fish. (Burst pipes are caused by ice being less dense than water.)</li>
+<li>Weather and ocean circulations are free convection driven by the sun. A factory chimney uses free convection to pull fresh combustion air into the furnace.</li></ul>
+<h4>2. Forced convection</h4>
+<p>When free convection is inadequate or impossible (e.g. zero gravity), the fluid is forced over the surface by a pump or fan. Car engines lose about 2/3 of the fuel energy as heat: air is forced through the radiator by the motion of the car, and an electric fan starts when the car stops; a water pump circulates the coolant. Other examples: blowing on food, cooling fans, convector heaters, wind chill, fan ovens, hair dryers, nuclear reactors.</p>
+<h4>3. Convection calculations</h4>
+<p>There is no simple theory, but the rate of heat transfer increases with (1) the temperature difference between the surface and the bulk fluid, (2) the area (hence <b>fins</b> on air-cooled engines), (3) the fluid velocity.</p>
+<p>Free convection, <b>five-fourths power law</b>: rate \(=kA(\Delta T)^{5/4}\), where \(\Delta T=T_{surface}-T_{surroundings}\) is the <b>excess temperature</b> and \(k\) is found experimentally. For small excess temperatures (up to about 30 °C) it simplifies to rate \(=hA\Delta T\), where \(h\) is the <b>heat transfer coefficient</b>.</p>
+<p>In forced convection, rate \(=hA\Delta T\) works well under most conditions: <b>Newton's law of cooling</b>.</p>
+<h4>4. The heat transfer coefficient or U-value</h4>
+<p>\(h\) is extended to cover heat transfer by any mode (or all modes together). It is not the thermal conductivity: it has no thickness in it, and describes heat entering or leaving a component. Builders use the <b>U-value</b>: the value of \(h\) under standard conditions (20 °C indoors, 0 °C outdoors, 4.4 m/s wind), lumping together convection, conduction and radiation for a particular element.</p>
+<table><tr><th>Component</th><th>U (W m⁻² K⁻¹)</th></tr>
+<tr><td>Single brick wall</td><td>3.3</td></tr><tr><td>Foam-filled cavity wall</td><td>0.6</td></tr><tr><td>Single-glazed window</td><td>5.5</td></tr><tr><td>Double-glazed window</td><td>1.9</td></tr><tr><td>Tiled roof</td><td>0.5</td></tr></table>
+<p><b>Example:</b> a house has 130 m² of foam-filled cavity walls, 24 m² of double-glazed windows, 4 m² of wooden doors (U = 6.0) and 140 m² of tiled roof. Power needed under standard conditions (\(\Delta T=20\) °C)? Walls \(0.6\times130\times20=1560\) W; roof \(0.5\times140\times20=1400\) W; windows \(1.9\times24\times20=912\) W; doors \(6.0\times4\times20=480\) W. Total 4352 W, about 4.5 kW; allowing for colder weather, opening doors and intermittent use, about 15 kW should be installed. With single glazing, about 1.7 kW more (+39 %).</p>`,
+    fr: String.raw`
+<h4>L'idée</h4>
+<p>Dans la conduction, la matière ne bouge pas. Dans la <b>convection</b>, c'est le fluide lui-même (air, eau) qui <b>se déplace</b> et emporte la chaleur avec lui.</p>
+<div class="ex"><div class="lab">Exemple concret — la casserole d'eau</div>
+Le feu chauffe l'eau du fond. Elle se dilate, devient plus légère et monte ; l'eau froide du haut descend prendre sa place. Ça tourne en boucle et toute l'eau chauffe. C'est la <b>convection naturelle</b> (ou libre) : pas besoin de moteur, juste la chaleur.</div>
+<ul><li>Pour <b>chauffer</b> un fluide, on chauffe par le <b>bas</b> (résistance de la bouilloire, radiateur près du sol).</li>
+<li>Pour <b>refroidir</b>, on enlève la chaleur par le <b>haut</b> (freezer en haut du frigo, clim placée en hauteur : l'air froid descend tout seul).</li>
+<li>La mer chauffée par le soleil reste froide en profondeur : la chaleur arrive par le haut, donc rien ne la mélange.</li></ul>
+<p><b>Convection forcée</b> : un ventilateur ou une pompe pousse le fluide. Exemples : le ventilateur de ton PC, un sèche-cheveux, le radiateur d'une voiture (l'air passe grâce à la vitesse, et un ventilateur s'allume quand la voiture est à l'arrêt), souffler sur sa soupe.</p>
+
+<h4>La formule : loi de Newton du refroidissement</h4>
+<p style="text-align:center">\(\dot Q=hA\Delta T\)</p>
+<ul><li>\(h\) : le <b>coefficient d'échange thermique</b> (en W/(m²·K)), mesuré par expérience.</li>
+<li>\(A\) : la surface en contact avec le fluide (d'où les <b>ailettes</b> sur les moteurs et les processeurs : plus de surface).</li>
+<li>\(\Delta T\) : l'écart entre la surface et le fluide autour (l'« excess temperature »).</li></ul>
+<p>En convection naturelle avec de grands écarts, la vraie loi est \(\dot Q=kA(\Delta T)^{5/4}\) (loi des cinq quarts) ; jusqu'à environ 30 °C d'écart, on garde la version simple \(hA\Delta T\).</p>
+<div class="warnbox"><div class="lab">Ne pas confondre</div>\(k\) (conductivité, conduction) contient une épaisseur : \(\dot Q=kA\Delta T/L\). \(h\) (et le U-value) n'en a pas : \(\dot Q=hA\Delta T\). \(h\) dit combien de chaleur entre ou sort par la surface.</div>
+
+<h4>Le U-value : chauffer une maison</h4>
+<p>Les architectes résument tout (convection, conduction, rayonnement) dans un seul nombre par élément : le <b>U-value</b>. Puissance perdue = \(U\times A\times\Delta T\) pour chaque partie, puis on additionne.</p>
+<div class="ex"><div class="lab">Exemple du cours — la maison</div>
+Écart standard 20 °C. Murs \(0{,}6\times130\times20=1560\) W, toit \(0{,}5\times140\times20=1400\) W, fenêtres double vitrage \(1{,}9\times24\times20=912\) W, portes \(6\times4\times20=480\) W.<br>
+Total ≈ <b>4,35 kW</b>. On installe plutôt 15 kW (froid extrême, portes ouvertes…). En simple vitrage (U = 5,5), il faudrait 1,7 kW de plus : +39 % de facture.</div>
+<div class="ex"><div class="lab">Exemple concret — ta chambre climatisée en Malaisie</div>
+Même calcul à l'envers : dehors 32 °C, dedans 24 °C. Une fenêtre simple vitrage de 2 m² laisse entrer \(5{,}5\times2\times8=88\) W de chaleur que la clim doit évacuer en permanence.</div>`,
+    vocab: [
+      ['convection', 'convection'],
+      ['free (natural) convection', 'convection naturelle (libre)'],
+      ['forced convection', 'convection forcée'],
+      ['density', 'masse volumique (densité)'],
+      ['fin', 'ailette'],
+      ['excess temperature', 'écart de température (surface – air ambiant)'],
+      ['heat transfer coefficient (h)', 'coefficient d\'échange thermique', 'en W/(m²·K)'],
+      ['Newton\'s law of cooling', 'loi de Newton du refroidissement'],
+      ['five-fourths power law', 'loi des cinq quarts'],
+      ['U-value', 'coefficient U (transmission thermique d\'une paroi)'],
+      ['cavity wall', 'mur creux (double paroi)'],
+      ['single / double glazing', 'simple / double vitrage'],
+      ['wind chill', 'refroidissement éolien (froid ressenti)'],
+      ['overhang', 'avancée (partie en surplomb)']
+    ],
+    formules: [
+      { nom: 'Loi de Newton du refroidissement', tex: '\\dot Q = hA\\,\\Delta T', why: 'Convection forcée, ou naturelle avec ΔT ≲ 30 °C.' },
+      { nom: 'Loi des cinq quarts (convection naturelle)', tex: '\\dot Q = kA\\,(\\Delta T)^{5/4}', why: 'k trouvé par expérience ; valable jusqu\'à plusieurs centaines de °C.' },
+      { nom: 'Pertes d\'un bâtiment', tex: '\\dot Q_{total} = \\sum U_i A_i\\,\\Delta T', why: 'U en W/(m²·K) ; conditions standard ΔT = 20 °C.' }
+    ],
+    exos: [
+      { src: 'Blackboard', niveau: 1, en: 'Example Sheet 4, Q1.2: A person loses heat at 10 W when exposed to the wind at 12 °C. At what rate would they lose heat (same clothing, same wind speed) at 0 °C? Body temperature 37 °C.', fr: 'Feuille 4 : perte de chaleur d\'une personne au vent, à 0 °C au lieu de 12 °C.',
+        sol: String.raw`<p>Newton : \(\dot Q\propto\Delta T\). \(\dot Q_2=10\times\dfrac{37-0}{37-12}=10\times\dfrac{37}{25}=14.8\) W.</p>` },
+      { src: 'Blackboard', niveau: 3, en: 'Example Sheet 4, Q1.3: An office is 6 m × 4 m, 3 m high, on a corner with two outside walls; the longer wall has a single-glazed window the full length and 2 m high. The two outside walls overhang the floor below by 1.5 m. No heat exchange with the rest of the building. Power to keep it at 20 °C when outside is 7 °C? (U walls = U floors = 0.6, U windows = 5.5 W m⁻² K⁻¹)', fr: 'Feuille 4 : puissance de chauffage d\'un bureau d\'angle.',
+        sol: String.raw`<p>\(\Delta T=13\) K. Mur long : \(6\times3-6\times2=6\) m² ; mur court : \(4\times3=12\) m² → murs 18 m² : \(0.6\times18\times13=140.4\) W.<br>Fenêtre \(6\times2=12\) m² : \(5.5\times12\times13=858\) W.<br>Plancher au-dessus du vide (bande de 1,5 m le long des deux murs) : \(6\times1.5+4\times1.5-1.5^2=12.75\) m² : \(0.6\times12.75\times13=99.5\) W.<br>Total ≈ <b>1098 W</b>. La fenêtre fait presque 80 % des pertes.</p>` },
+      { src: 'Blackboard', niveau: 2, en: 'Example Sheet 4, Q1.1 (optional): two cups of coffee are poured at the same time. Cold milk is added to one at once and stirred; five minutes later, cold milk is added to the other. Which cup is then hotter?', fr: 'Feuille 4 (facultative) : lait tout de suite ou 5 minutes après, quelle tasse est la plus chaude ?',
+        sol: '<p>Celle où le lait a été mis <b>tout de suite</b>. D\'après Newton, la perte de chaleur est proportionnelle à l\'écart avec la pièce : le café noir, plus chaud, perd sa chaleur plus vite pendant les 5 minutes. Le café au lait, moins chaud, en perd moins.</p>' },
+      { src: 'Blackboard', niveau: 1, en: 'Lecture notes: a house has 130 m² of foam-filled cavity walls (U = 0.6), 24 m² of double-glazed windows (U = 1.9), 4 m² of wooden doors (U = 6.0) and a tiled roof of 140 m² (U = 0.5). Power needed under standard conditions?', fr: 'Notes de cours : puissance de chauffage d\'une maison.',
+        sol: '<p>1560 + 1400 + 912 + 480 = <b>4352 W</b> ≈ 4,4 kW (ΔT = 20 °C).</p>' },
+      { src: 'Claude', niveau: 1, en: 'A hot plate at 80 °C in a room at 20 °C loses 120 W by convection. Using Newton\'s law, how much does it lose at 50 °C?', fr: 'Plaque chaude : combien perd-elle à 50 °C ?',
+        sol: '<p>\\(hA=120/60=2\\) W/K. À 50 °C : \\(2\\times30=60\\) W. (Écart divisé par 2 → pertes divisées par 2.)</p>' }
     ]
   };
 })();
